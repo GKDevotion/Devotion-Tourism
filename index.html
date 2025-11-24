@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devotion Tourism</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="asset/image/Devotion Real Estate.png" type="image/x-icon">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <!-- bootstrap 5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merienda:wght@300..900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            padding-top: 45px;
+            /* Adjust if needed */
+        }
+
+        .navbar {
+            position: fixed;
+
+            text-align: center;
+            left: 0;
+            background-color: #ffffff;
+            z-index: 1060;
+            width: 100%;
+            padding: 6px 40px;
+            border-radius: 0px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+
+        @media (min-width: 1400px) {
+
+            .container,
+            .container-lg,
+            .container-md,
+            .container-sm,
+            .container-xl,
+            .container-xxl {
+                max-width: 1838px;
+            }
+        }
+
+        .py-2 {
+            padding-top: .5rem !important;
+            padding-bottom: 1.5rem !important;
+        }
+
+        /* Custom CSS for the Hero Section */
+
+        .hero-section {
+            /* Define a fixed height for the hero area */
+            height: 73vh;
+            /* Full viewport height, adjust as needed */
+            position: relative;
+            /* Essential for positioning the overlay */
+        }
+
+        /* Carousel Image Styling */
+        .hero-img {
+            height: 68vh;
+            width: 100%;
+            object-fit: fill;
+            transition: transform 7s ease-in-out;
+        }
+
+        /* Zoom Only active image */
+        .carousel-item.active .hero-img {
+            transform: scale(1.15);
+        }
+
+        /* Fade transition fix */
+        .carousel-item {
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+
+        .carousel-item.active {
+            opacity: 1;
+        }
+
+        /* Overlay Content */
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 30px;
+            z-index: 10;
+            text-align: center;
+        }
+
+        /* Style for the clocks */
+        .clock-img {
+            width: 100px;
+            /* Adjust size as needed */
+            height: 100px;
+            margin-bottom: 5px;
+            opacity: 0.9;
+            /* Slightly transparent */
+        }
+
+        .clock-label {
+            color: #fff;
+            /* White text for contrast */
+            font-size: 0.8rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+            /* Shadow for better readability */
+        }
+
+        /* Style for the main tagline */
+        .hero-tagline {
+            color: #fff;
+            font-family: "Merienda", cursive;
+            font-size: 2.5rem;
+            font-style: italic;
+            font-weight: 400;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            margin-top: auto;
+            /* Pushes the tagline towards the bottom */
+        }
+
+        /* Make the clock section slightly spaced out */
+        .world-clock-item {
+            padding: 0 55px;
+            /* Add horizontal spacing between clocks */
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .clock-img {
+                width: 50px;
+                height: 50px;
+            }
+
+            .hero-tagline {
+                font-size: 1.6rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .clock-img {
+                width: 40px;
+                height: 40px;
+            }
+
+            .hero-tagline {
+                font-size: 1.3rem;
+            }
+        }
+
+
+        /* Custom CSS to perfectly match the image's aesthetic */
+        .travel-section {
+            background-image: url("../devotion-tourism/asset/image/CoverBg.webp");
+            background-size: cover;
+            background-position: center;
+            padding-top: 60px;
+            /* Add some padding above the content */
+            padding-bottom: 60px;
+            /* Add some padding below the content */
+        }
+
+        /* Golden-brown color for headings and statistic numbers */
+        .golden-text {
+            color: #a48557 !important;
+            /* Adjusted color to closely match the image's gold/tan */
+
+        }
+
+        /* Darker color for body text and statistic labels */
+        .dark-text {
+            color: #4a4a4a;
+            /* Darker gray for better contrast and match to the image */
+            font-size: medium;
+        }
+
+        .statistic-number {
+            font-weight: 500;
+            /* Adjust weight if needed */
+            line-height: 1.2;
+            /* Tighter line height for the number */
+            margin-bottom: 0.25rem;
+            /* Reduce space below the number */
+        }
+
+
+        /* Remove the separator on small screens if desired, or let it flow */
+        @media (max-width: 767.98px) {
+            .statistic-item:not(:last-child)::after {
+                content: none;
+                /* Remove line for mobile stacked layout */
+            }
+        }
+
+        /* Custom Colors & Backgrounds */
+        .bg-light-brown {
+            /* Using a light beige color similar to the image background */
+            background-color: #eee9e3;
+        }
+
+        .golden-text {
+            /* The primary statistic number color */
+            color: #ab823e;
+            font-weight: 700;
+            /* Bolder font for the numbers */
+        }
+
+        .statistic-label {
+            /* Style for the text underneath the numbers */
+            color: #8c8c8c;
+            font-size: 1rem;
+            text-transform: capitalize;
+        }
+
+        /* Vertical Divider Styling */
+        .statistics-row .statistic-item {
+            /* Ensure the item is positioned relatively for the absolute divider */
+            position: relative;
+            /* Center the text within the column */
+            text-align: center;
+        }
+
+        .statistics-row .statistic-item:not(:last-child):after {
+            content: '';
+            /* Position the divider on the right side of the item */
+            position: absolute;
+            top: 50%;
+            /* Start vertical positioning */
+            right: 0;
+            transform: translateY(-50%);
+            /* Center vertically */
+
+            /* Divider dimensions and color */
+            height: 80%;
+            /* Height relative to the item */
+            width: 1px;
+            background-color: #d1c9bd;
+            /* A subtle, light line color */
+
+            /* On small screens, hide the divider to prevent clutter */
+            display: none;
+        }
+
+        /* Show the divider only on medium screens and up (md) */
+        @media (min-width: 768px) {
+            .statistics-row .statistic-item:not(:last-child):after {
+                display: block;
+            }
+        }
+
+        .faq-header {
+            font-family: "Merienda", cursive;
+            color: #ab823e;
+            /* Gold/Brown color from the image */
+            font-size: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            letter-spacing: 0.1rem;
+        }
+
+        /* Custom Styles for the Container 
+        - Apply a rounded white background with a large, soft shadow 
+        */
+        .nav-container-wrapper {
+            background: white;
+            border-radius: 2.5rem;
+            /* Highly rounded corners */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15), 0 0 10px rgba(0, 0, 0, 0.05);
+            padding: 0.5rem;
+            max-width: 900px;
+            /* Limit the width to mimic the original image */
+            margin: 0 auto;
+        }
+
+        /* Styling the Nav Pills (The Unselected Links) 
+        - Use Tailwind's text color utilities, but override in CSS for exact color
+        */
+        .nav-pills .nav-link {
+            color: #594d40;
+            /* Darker text for unselected links */
+            font-weight: 500;
+            border-radius: 2rem;
+            /* Ensure pills are rounded */
+            padding: 0.75rem 1.5rem;
+            transition: all 0.3s ease;
+            text-align: center;
+            /* Disable Bootstrap's default active background color */
+            background-color: transparent;
+        }
+
+        .nav-pills .nav-link:hover:not(.active) {
+            color: #b58d55;
+            /* Subtle hover effect */
+        }
+
+        /* Styling the Active Pill (The "Visa" Button) 
+        - This is the crucial part that gives it the button look
+        */
+        .nav-pills .nav-link.active {
+            background-color: #b58d55;
+            /* The signature gold/brown color */
+            color: white;
+            /* White text on the active pill */
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(181, 141, 85, 0.6);
+            /* Gold shadow for lift */
+        }
+
+        /* Ensure nav items fill the width equally */
+        .nav-pills.nav-justified .nav-item {
+            flex-grow: 1;
+            margin: 0 5px;
+            /* Add slight spacing between items */
+        }
+
+        /* Responsive adjustments for very small screens */
+        @media (max-width: 576px) {
+            .faq-header {
+                font-size: 3rem;
+            }
+
+            .nav-pills.nav-justified {
+                flex-direction: column;
+            }
+
+            .nav-pills.nav-justified .nav-item {
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        /* Beige icon circle (large icons for Call/Email/Location) */
+        .icon-circle {
+            width: 50px;
+            height: 50px;
+            background: #f7ecd7;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            color: #b8903b;
+            /* golden brown icon color */
+            margin: auto;
+        }
+
+        /* Small beige circle for social icons */
+        .icon-circle-small {
+            width: 50px;
+            height: 50px;
+            background: #f7ecd7;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #b8903b;
+            font-size: 26px;
+            text-decoration: none;
+        }
+
+        .icon-circle-small:hover {
+            opacity: 0.8;
+        }
+
+        /* Optional: cleaner fonts */
+        .footer-section {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        @media (min-width: 1400px) {
+            .custom-container {
+                max-width: 1320px;
+                margin: 0 auto;
+            }
+        }
+
+
+    </style>
+</head>
+
+<body>
+    
+
+
+    <div class="py-2 position-fixed top-0 start-0 w-100" style="background-color: #ab823e; z-index: 999;">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <div class="d-flex align-items-center gap-3">
+
+                <a href="https://www.youtube.com/@Devotiontravelandtourism" class="text-white d-inline-flex align-items-center">
+                    <img src="asset/image/icons/youtube-icon.png" alt="YouTube" width="25" height="25">
+                </a>
+
+                <a href="https://www.linkedin.com/company/92558268/admin/" class="text-white d-inline-flex align-items-center">
+                    <img src="asset/image/icons/linkedin-icon.png" width="25" height="25" alt="LinkedIn">
+                </a>
+
+                <a href="https://www.facebook.com/profile.php?id=100091695764298" class="text-white d-inline-flex align-items-center">
+                    <img src="asset/image/icons/facebook-icon.png" width="25" height="25" alt="Facebook">
+                </a>
+
+            </div>
+
+            <div class="d-flex align-items-center gap-3 text-white" style="font-size: 15px;">
+                <span><i class="bi bi-envelope"></i> support@devotiontourism.com</span>
+                <span>|</span>
+                <span><i class="bi bi-telephone"></i> +971 585775469</span>
+                <span>|</span>
+                <span><i class="bi bi-printer"></i> +971 44488538</span>
+            </div>
+        </div>
+    </div>
+
+
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+        <div class="container">
+
+            <a class="navbar-brand" href="#">
+                <img src="asset\image\Logo.png" alt="Devotion" style="height:50px;">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+                <ul class="navbar-nav gap-3">
+                    <li class="nav-item"><a href="index.html" class="nav-link fw-bold">Home</a></li>
+                    <li class="nav-item"><a href="aboutus.html" class="nav-link fw-bold">About Us</a></li>
+                    <li class="nav-item"><a href="corporate_package.html" class="nav-link fw-bold">Corporate
+                            Packages</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link fw-bold">Global Visa</a></li>
+                    <li class="nav-item"><a href="contactus.html" class="nav-link fw-bold">Contact Us</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <section class="hero-section position-relative">
+
+        <!-- Carousel -->
+        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="asset/image/slide1.webp" class="d-block w-100 hero-img" alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="asset/image/slide2.webp" class="d-block w-100 hero-img" alt="Slide 2">
+                </div>
+            </div>
+        </div>
+
+        <!-- Overlay -->
+        <div class="hero-overlay position-absolute top-50 start-50 translate-middle text-center w-100 px-3">
+
+            <!-- Clock Row -->
+            <div class="d-flex flex-wrap justify-content-center gap-3 mb-4">
+                <div class="clock-item text-center">
+                    <img src="asset/image/watch_bg.webp" class="clock-img" alt="Singapore Clock">
+                    <p class="clock-label mb-0">SINGAPORE</p>
+                </div>
+
+                <div class="clock-item text-center">
+                    <img src="asset/image/watch_bg.webp" class="clock-img" alt="New Delhi Clock">
+                    <p class="clock-label mb-0">NEW DELHI</p>
+                </div>
+
+                <div class="clock-item text-center">
+                    <img src="asset/image/watch_bg.webp" class="clock-img" alt="Dubai Clock">
+                    <p class="clock-label mb-0">DUBAI</p>
+                </div>
+
+                <div class="clock-item text-center">
+                    <img src="asset/image/watch_bg.webp" class="clock-img" alt="London Clock">
+                    <p class="clock-label mb-0">LONDON</p>
+                </div>
+
+                <div class="clock-item text-center">
+                    <img src="asset/image/watch_bg.webp" class="clock-img" alt="New York Clock">
+                    <p class="clock-label mb-0">NEW YORK</p>
+                </div>
+            </div>
+
+            <!-- Heading -->
+            <h1 class="hero-tagline fw-bold text-white">Your Premier Sightseeing Expert in Dubai</h1>
+        </div>
+
+    </section>
+
+
+    <section class="text-center travel-section">
+        <div class="container">
+            <h3 class=" mb-2 golden-text"
+                style="font-size: 2.5rem;  font-family: 'Merienda', cursive; font-weight: 500;">Begin Your Travel</h3>
+            <h2 class=" mb-4 golden-text" style="font-size: 3rem;  font-family: 'Merienda', cursive; font-weight: 300;">
+                Plans With The Best Travel Agency</h2>
+
+            <p class="lead mb-5 dark-text">
+                While we're happy to accommodate 11th-hour travel plans, you don't really have to wait until the last
+                minute. Call our travel experts to find the perfect itinerary for you.
+            </p>
+
+            <div class="row justify-content-center statistics-row">
+                <div class="col-6 col-md-auto mb-4 px-4 statistic-item">
+                    <h3 class="display-5 golden-text statistic-number">50+</h3>
+                    <p class="statistic-label">Sandy Beaches</p>
+                </div>
+
+                <div class="col-6 col-md-auto mb-4 px-4 statistic-item">
+                    <h3 class="display-5 golden-text statistic-number">90+</h3>
+                    <p class="statistic-label">Destinations</p>
+                </div>
+
+                <div class="col-6 col-md-auto mb-4 px-4 statistic-item">
+                    <h3 class="display-5 golden-text statistic-number">90%</h3>
+                    <p class="statistic-label">Thrilled Customers</p>
+                </div>
+
+                <div class="col-6 col-md-auto mb-4 px-4 statistic-item">
+                    <h3 class="display-5 golden-text statistic-number">100%</h3>
+                    <p class="statistic-label">Best Price Guarantee</p>
+                </div>
+
+                <div class="col-6 col-md-auto mb-4 px-4 statistic-item">
+                    <h3 class="display-5 golden-text statistic-number">24/7</h3>
+                    <p class="statistic-label">Support</p>
+                </div>
+            </div>
+        </div>
+    </section>>
+
+    <section class="py-5" style="background-color: #ffffff;">
+        <div class="container text-center custom-container">
+
+            <h1 class=" mb-3" style="font-family: 'Merienda', cursive; color: #ab823e;">
+                International Packages
+            </h1>
+            <p class=" mb-5 mx-auto" style=" font-size: 0.9rem;">
+                Business travel doesn't have to be a hassle. Our best in the industry travel advisors provide a complete
+                suite of travel services for discerning corporate clients, whether individual travelers or groups of any
+                size. From exclusively negotiated airfares & custom travel arrangements, to transfers, visas, and other
+                privileges, we strive to create authentic and personalized travel experiences.
+            </p>
+
+            <h3 class=" mb-5" style="font-family: 'Merienda', cursive; color: #ab823e; font-size: 2.5rem;">
+                Explore The World
+            </h3>
+
+            <div class="row justify-content-center row-cols-2 row-cols-sm-4 row-cols-md-5">
+
+                <div class="col">
+                    <div class="flag-item">
+                        <img src="../devotion-tourism/asset/image/New folder/uae.svg"
+                            class="img-fluid rounded-circle border  border-secondary mx-auto d-block"
+                            style="width: 100px; height: 100px; object-fit: cover;" alt="UAE Flag">
+                        <p class="mt-2 text-uppercase fw-semibold">UAE</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="flag-item">
+                        <img src="../devotion-tourism/asset/image/New folder/usa.svg"
+                            class="img-fluid rounded-circle border border-secondary mx-auto d-block"
+                            style="width: 100px; height: 100px; object-fit: cover;" alt="USA Flag">
+                        <p class="mt-2 text-uppercase fw-semibold">USA</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="flag-item">
+                        <img src="../devotion-tourism/asset/image/New folder/Canada.svg"
+                            class="img-fluid rounded-circle border border-secondary mx-auto d-block"
+                            style="width: 100px; height: 100px; object-fit: cover;" alt="Canada Flag">
+                        <p class="mt-2 text-uppercase fw-semibold">CANADA</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="flag-item">
+                        <img src="../devotion-tourism/asset/image/New folder/AUSTRALIA.svg"
+                            class="img-fluid rounded-circle border border-secondary mx-auto d-block"
+                            style="width: 100px; height: 100px; object-fit: cover;" alt="Australia Flag">
+                        <p class="mt-2 text-uppercase fw-semibold">AUSTRALIA</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="flag-item">
+                        <img src="../devotion-tourism/asset/image/New folder/Europe.png"
+                            class="img-fluid rounded-circle border border-secondary mx-auto d-block"
+                            style="width: 100px; height: 100px; object-fit: cover;" alt="Europe Flag">
+                        <p class="mt-2 text-uppercase fw-semibold">EUROPE</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row g-4 justify-content-center mt-4 row-cols-2 row-cols-sm-4 row-cols-md-5">
+
+                <div class="col">
+                    <div class="flag-item">
+                        <img src="../devotion-tourism/asset/image/New folder/indonasia.png"
+                            class="img-fluid rounded-circle border border-secondary mx-auto d-block"
+                            style="width: 100px; height: 100px; object-fit: cover;" alt="Indonesia Flag">
+                        <p class="mt-2 text-uppercase fw-semibold">INDONESIA</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="flag-item">
+                        <img src="../devotion-tourism/asset/image/New folder/japan.png"
+                            class="img-fluid rounded-circle border border-secondary mx-auto d-block"
+                            style="width: 100px; height: 100px; object-fit: cover;" alt="Japan Flag">
+                        <p class="mt-2 text-uppercase fw-semibold">JAPAN</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="flag-item">
+                        <img src="../devotion-tourism/asset/image/New folder/Korea.png"
+                            class="img-fluid rounded-circle border border-secondary mx-auto d-block"
+                            style="width: 100px; height: 100px; object-fit: cover;" alt="Korea Flag">
+                        <p class="mt-2 text-uppercase fw-semibold">KOREA</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="flag-item">
+                        <img src="../devotion-tourism/asset/image/New folder/London.png"
+                            class="img-fluid rounded-circle border border-secondary mx-auto d-block"
+                            style="width: 100px; height: 100px; object-fit: cover;" alt="United Kingdom Flag">
+                        <p class="mt-2 text-uppercase fw-semibold">LONDON</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="flag-item">
+                        <img src="../devotion-tourism/asset/image/New folder/Maldives.png"
+                            class="img-fluid rounded-circle border border-secondary mx-auto d-block"
+                            style="width: 100px; height: 100px; object-fit: cover;" alt="Maldives Flag">
+                        <p class="mt-2 text-uppercase fw-semibold">MALDIVES</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="flag-item">
+                        <img src="../devotion-tourism/asset/image/New folder//China.svg"
+                            class="img-fluid rounded-circle border border-secondary mx-auto d-block"
+                            style="width: 100px; height: 100px; object-fit: cover;" alt="Maldives Flag">
+                        <p class="mt-2 text-uppercase fw-semibold">MALDIVES</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container custom-container">
+            <div class="row">
+                <div class="col-12 text-center mb-4">
+                    <h2 style="font-family: 'Merienda', cursive; color: #ab823e;">
+                        Domestic Packages
+                    </h2>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-lg-12 ">
+
+                    <p class="mx-auto" style="font-size: 1.1rem; line-height: 1.8;">
+                        At Devotion, our team of local travel aficionados handpick the creme de la creme of
+                        destinations, hotels and experiences to create highly customized packages. Our knowledge,
+                        experience, and passion for this incredible city are apparent in all that we do, right down to
+                        the finest details. From crafting unique experiences tailored to your requirements to providing
+                        insights into local customs and traditions, we are your gateway to an unforgettable Dubai trip.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5" style="background-color: #ffffff;">
+        <div class="container custom-container">
+
+            <!-- Top Title: FAQs -->
+            <div class="text-center mb-5">
+                <h1 class="faq-header">FAQs</h1>
+            </div>
+
+            <!-- Navigation Container (The main white, shadowed box) -->
+            <div class="nav-container-wrapper">
+
+                <!-- Bootstrap Pills Navigation -->
+                <ul class="nav nav-pills nav-justified" id="faq-pills-tab" role="tablist">
+
+                    <li class="nav-item" role="presentation">
+                        <!-- Note: We are using data-bs-toggle="pill" for tab functionality on a single page -->
+                        <button class="nav-link active" id="pills-flight-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-flight" type="button" role="tab" aria-controls="pills-flight"
+                            aria-selected="false">
+                            Flight Booking
+                        </button>
+                    </li>
+
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-packages-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-packages" type="button" role="tab" aria-controls="pills-packages"
+                            aria-selected="false">
+                            Packages
+                        </button>
+                    </li>
+
+                    <li class="nav-item" role="presentation">
+                        <!-- This is the default active tab, styled with the custom gold/brown color -->
+                        <button class="nav-link" id="pills-visa-tab" data-bs-toggle="pill" data-bs-target="#pills-visa"
+                            type="button" role="tab" aria-controls="pills-visa" aria-selected="true">
+                            Visa
+                        </button>
+                    </li>
+
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-hotel-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-hotel" type="button" role="tab" aria-controls="pills-hotel"
+                            aria-selected="false">
+                            Hotel Booking
+                        </button>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- Tab Content Area -->
+            <div class="tab-content mt-5" id="faq-pills-content">
+
+                <!-- FLIGHT BOOKING Tab Content -->
+                <div class="tab-pane fade show active p-3 bg-white rounded-3 shadow-lg" id="pills-flight"
+                    role="tabpanel" aria-labelledby="pills-flight-tab">
+                    <h3 class="text-xl text-center text-gray-700">Flight Booking FAQs</h3>
+                </div>
+
+                <!-- VISA Tab Content (Default Active) -->
+                <div class="tab-pane fade p-3 bg-white rounded-3 shadow-lg" id="pills-visa" role="tabpanel"
+                    aria-labelledby="pills-visa-tab">
+                    <h3 class="text-xl text-center text-gray-700">Visa Application FAQs</h3>
+                </div>
+
+
+                <!-- PACKAGES Tab Content -->
+                <div class="tab-pane fade p-3 bg-white rounded-3 shadow-lg" id="pills-packages" role="tabpanel"
+                    aria-labelledby="pills-packages-tab">
+                    <h3 class="text-xl text-center text-gray-700">Package Packages FAQs</h3>
+                </div>
+
+                <!-- HOTEL BOOKING Tab Content -->
+                <div class="tab-pane fade p-3 bg-white rounded-3 shadow-lg" id="pills-hotel" role="tabpanel"
+                    aria-labelledby="pills-hotel-tab">
+                    <h3 class="text-xl text-center text-gray-700">Hotel Booking FAQs</h3>
+                </div>
+
+            </div>
+    </section>
+
+
+    <section class="py-5" style=" background: linear-gradient(to bottom, #ffffff 0%, #eee9e5 100%);">
+        <div class="container custom-container">
+            <div class="row g-4 align-items-center">
+
+                <div class="col-md-6 col-lg-5">
+                    <div class="mb-5">
+                        <h2 class="text-uppercase fw-normal mb-1"
+                            style="font-family: 'Merienda', cursive; color: #ab823e;">NEWSLETTER</h2>
+                        <p class="text-muted">Exclusive travel tips, giveaways, and more!</p>
+
+                        <form class="d-flex mt-3">
+                            <input type="email" class="form-control me-2" placeholder="Enter Email"
+                                aria-label="Enter Email" style="  width: 250px;
+                            height: 47px;
+                            border: 2px solid #fff;
+                            border-radius: 16px;
+                            padding: 7px 35px 7px 12px;
+                            color: #9a9a9a;
+                            background-color: #e9e9e7;
+                            box-shadow: none !important;">
+                            <button type="submit" class="btn text-white"
+                                style="background-color: #a47c3f;  border-radius: 16px; border-color: #a47c3f;">Join
+                                Devotion</button>
+                        </form>
+                    </div>
+
+                    <ul class="list-unstyled">
+                        <li class="d-flex align-items-start mb-2">
+                            <i class="bi bi-geo-alt-fill me-3 mt-1" style="color: #ab823e; font-size: 1.2rem;"></i>
+                            <div>
+                                <p class="mb-0">Aspect Tower, Bay Avenue - 2801,</p>
+                                <p class="mb-0">A-Zone, Business Bay, Dubai UAE</p>
+                            </div>
+                        </li>
+                        <li class="d-flex align-items-start mb-2">
+                            <i class="bi bi-telephone-fill me-3 mt-1" style="color: #ab823e; font-size: 1.2rem; "></i>
+                            <p class="mb-0">+971 585775469</p>
+                        </li>
+                        <li class="d-flex align-items-start">
+                            <i class="bi bi-envelope-fill me-3 mt-1" style="color: #ab823e; font-size: 1.2rem;"></i>
+                            <p class="mb-0">support@devotiontourism.com</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6 col-lg-7 d-none d-md-block">
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <img src="asset\image\flightG.webp" class="img-fluid rounded"
+                                alt="Woman winking with paper airplane">
+                        </div>
+                        <div class="col-sm-6">
+                            <img src="asset\image\333.webp" class="img-fluid rounded" alt="Woman walking in airport">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row py-5">
+
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-3" style="color: #ab823e;">UAE Activities</h5>
+                    <ul class="list-unstyled" style="line-height: 2rem;">
+                        <li><a href="#" class="text-decoration-none text-muted">Desert Safari Dubai</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Dubai City Tours</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Dhow Cruise Dubai</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Ras Al Khaimah Desert Safari</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Dubai Parks</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Burj Khalifa Tours</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Abu Dhabi City Tours</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Dubai Theme Park</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Dubai Water Activities</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Abu Dhabi Water Parks</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Dubai Adventure Tours</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Abu Dhabi Theme Parks</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Dubai Helicopter Tours</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h5 class="text-uppercase  mb-3" style="color: #ab823e;">Best Selling Activities</h5>
+                    <ul class="list-unstyled" style="line-height: 2rem;">
+                        <li><a href="#" class="text-decoration-none text-muted">Desert Safari</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Abu Dhabi City Tour</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Dubai Burj Khalifa</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Global Village Dubai</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Atlantis Aquaventure</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">The Green Planet Dubai</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Dhow Cruise Dinner Marina</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Ain Dubai</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">IMG Worlds of Adventure</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Private Limousine Rental Dubai</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Luxury Yacht Rental Dubai</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-3" style="color: #ab823e;">Thrilling Activities</h5>
+                    <ul class="list-unstyled" style="line-height: 2rem;">
+                        <li><a href="#" class="text-decoration-none text-muted">Private Limo</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Dubai Mall Aquarium</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Ski Dubai Tickets</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Motiongate Dubai</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Dhow Cruise</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">La Perle by Dragone Dubai</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Ferrari World Abu Dhabi</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3">
+                    <h5 class="text-uppercase mb-3" style="color: #ab823e;">International Visa</h5>
+                    <ul class="list-unstyled" style="line-height: 2rem;">
+                        <li><a href="#" class="text-decoration-none text-muted">UK Visa</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">UAE Visa</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">UAE Visa Extension</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Canada Visa</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">USA Visa</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Turkey Visa</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Egypt Visa</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Singapore Visa</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Thailand Visa</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Malaysia Visa</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Sri Lanka Visa</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="bg-white pt-5 text-center">
+        <!-- Top navigation -->
+        <div class="container">
+
+            <ul class="nav justify-content-center pt-3">
+                <li class="nav-item"><a class="nav-link text-dark fw-semibold" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link text-dark fw-semibold" href="aboutus.html">About US</a></li>
+                <li class="nav-item"><a class="nav-link text-dark fw-semibold" href="contactus.html">Contact Us</a></li>
+                <li class="nav-item"><a class="nav-link text-dark fw-semibold" href="carrear.html">Career</a></li>
+            </ul>
+            <hr style="padding-bottom: 20px;">
+
+            <div class="d-flex justify-content-center mb-5 align-items-center" style="gap: 2rem;">
+                <div class="mb-4">
+                    <img src="../devotion-tourism/asset/image/devotion-group-favicon.png" alt="logo" height="90"
+                        style="width: auto;">
+                </div>
+
+                <div>
+                    <div class="d-flex justify-content-center" style="gap: 3rem; margin-bottom: 0.5rem;">
+
+
+                        <a href="tel:+97144576077" class="d-flex align-items-center justify-content-center gap-2"
+                            style="text-decoration: none;">
+                            <div class="icon-circle d-flex align-items-center justify-content-center">
+                                <img src="asset/image/icons/phone-bg.png" alt="Call Icon" width="50" height="50">
+                            </div>
+                            <p class="fw-semibold text-dark mb-0">Call Us</p>
+                        </a>
+
+
+                        <a href="mailto:support@devotiontourism.com"
+                            class="d-flex align-items-center justify-content-center gap-2 text-center"
+                            style="text-decoration: none;">
+                            <div class="icon-circle d-flex align-items-center justify-content-center">
+                                <img src="asset/image/icons/Group3.png" alt="Email Icon" width="50" height="50">
+                            </div>
+                            <p class="fw-semibold text-dark mb-0">Email Us</p>
+                        </a>
+
+                        <a class="d-flex align-items-center justify-content-center gap-2 text-center"
+                            style="text-decoration: none;">
+                            <div class="icon-circle d-flex align-items-center justify-content-center">
+                                <img src="asset/image/icons/Group4.png" alt="Location Icon" width="50" height="50">
+                            </div>
+                            <p class="fw-semibold text-dark mb-0">Location</p>
+                        </a>
+
+                    </div>
+
+                    <div class="d-flex justify-content-center" style="gap: 1rem; margin-top: 1rem;">
+                        <a class="icon-circle-small d-flex align-items-center justify-content-center"
+                            href="https://www.facebook.com/profile.php?id=100091695764298">
+                            <img src="asset/image/icons/facebook-icon.png" width="50" height="50" alt="Facebook">
+                        </a>
+
+                        <a class="icon-circle-small d-flex align-items-center justify-content-center"
+                            href="https://www.instagram.com/devotiontourism/">
+                            <img src="asset/image/icons/insta-icon.png" width="50" height="50" alt="Instagram">
+                        </a>
+
+                        <a class="icon-circle-small d-flex align-items-center justify-content-center"
+                            href="https://www.linkedin.com/company/92558268/admin/">
+                            <img src="asset/image/icons/linkedin-icon.png" width="50" height="50" alt="LinkedIn">
+                        </a>
+
+                        <a class="icon-circle-small d-flex align-items-center justify-content-center"
+                            href="https://www.youtube.com/@Devotiontravelandtourism">
+                            <img src="asset/image/icons/youtube-icon.png" width="50" height="50" alt="YouTube">
+                        </a>
+
+                        <a class="icon-circle-small d-flex align-items-center justify-content-center"
+                            href="https://pin.it/1O6HPbY">
+                            <img src="asset/image/icons/pintrest.png" width="50" height="50" alt="Pinterest">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Legal -->
+            <div class="d-flex justify-content-center gap-3 small mb-2">
+                <a href="privacy_policy.html" class="text-dark text-decoration-none">Privacy Policy</a>
+                <span>|</span>
+                <a href="cookies.html" class="text-dark text-decoration-none">Terms of Service</a>
+                <span>|</span>
+                <a href="cookies.html" class="text-dark text-decoration-none">Cookies Settings</a>
+            </div>
+
+            <p class="small text-muted">2025 Devotion. All rights reserved.</p>
+        </div>
+        <!-- Skyline image -->
+        <div class="mt-4">
+            <img src="../devotion-tourism/asset/image/footerBG.png" class="img-fluid w-100" alt="skyline">
+        </div>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

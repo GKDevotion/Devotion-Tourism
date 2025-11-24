@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="asset/image/Devotion Real Estate.png" type="image/x-icon">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <!-- bootstrap 5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merienda:wght@300..900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            padding-top: 45px;
+            /* Adjust if needed */
+        }
+
+        .navbar {
+            position: fixed;
+
+            text-align: center;
+            left: 0;
+            background-color: #ffffff;
+            z-index: 1060;
+            width: 100%;
+            padding: 6px 40px;
+            border-radius: 0px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+        @media (min-width: 1400px) {
+
+            .container,
+            .container-lg,
+            .container-md,
+            .container-sm,
+            .container-xl,
+            .container-xxl {
+                max-width: 1838px;
+            }
+        }
+
+        .py-2 {
+            padding-top: .5rem !important;
+            padding-bottom: 1.5rem !important;
+        }
+
+        .contact-section {
+
+            background-size: cover;
+            color: white;
+            /* Set text color to white for better contrast on a dark image */
+            padding: 150px 0;
+            /* Adjust padding as needed */
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-bg {
+            position: relative;
+            width: 100%;
+            height: 450px;
+            /* Adjust height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .hero-bg::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            animation: slideshow 18s infinite linear;
+            z-index: -1;
+            transform: scale(1.5);
+            /* Start zoom out */
+        }
+
+        /* Zoom Out Slide Effect */
+        @keyframes slideshow {
+            0% {
+                background-image: url('../devotion-tourism/asset/image/about-us/banner1.webp');
+                transform: scale(1.2);
+            }
+
+            26% {
+                background-image: url('../devotion-tourism/asset/image/about-us/banner2.webp');
+                opacity: 1;
+                transform: scale(1.1);
+            }
+
+            33% {
+                background-image: url('../devotion-tourism/asset/image/about-us//banner3.webp');
+                transform: scale(1);
+            }
+
+            66% {
+                background-image: url('../devotion-tourism/asset/image/about-us/banner4.webp');
+                transform: scale(1.2);
+            }
+
+            100% {
+                background-image: url('../devotion-tourism/asset/image/about-us/banner1.webp');
+                transform: scale(1);
+            }
+        }
+
+        /* Text styling (optional) */
+        .hero-bg h2,
+        .hero-bg p {
+            color: #fff;
+            text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Optional: Add an overlay to make the text more readable */
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+        }
+
+        .contact-section .container {
+            position: relative;
+            /* Ensure container content is above the overlay */
+            z-index: 1;
+        }
+
+        .contact-section h2 {
+            font-family: "Merienda", cursive;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-section p {
+            font-size: 1rem;
+            max-width: 1300px;
+            font-weight: 500;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+
+        @media (min-width: 1400px) {
+            .custom-container {
+                max-width: 1320px;
+                margin: 0 auto;
+            }
+        }
+
+        /* Change radio button checked color */
+        .form-check-input:checked {
+            background-color: #ab823e !important;
+            border-color: #ab823e !important;
+        }
+
+        .icon-hover img {
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .icon-hover img:hover {
+            transform: scale(0.85);
+            /* Zoom-Out Effect */
+        }
+
+        .icon-hover img:hover {
+            transform: scale(0.85);
+            filter: brightness(1.1);
+            cursor: pointer;
+        }
+
+        /* service section */
+        .service-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .service-card:hover img {
+            transform: scale(1.1);
+
+        }
+
+        /* Overlay Section */
+        .overlay {
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.55);
+            color: #fff;
+            transition: all 0.5s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+
+        /* Hover Animation */
+        .service-card:hover .overlay {
+            bottom: 0;
+        }
+
+        .service-btn {
+            width: 40px;
+            height: 40px;
+            background: #ffffff;
+            border: none;
+            border-radius: 50%;
+            font-size: 22px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto 0;
+            /* Centers horizontally */
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        /* Button hover effect (optional) */
+        .service-btn:hover {
+            background: #b8860b;
+            color: #fff;
+            transform: translateY(-4px);
+        }
+
+
+        .why-choose-us {
+            background: url('../devotion-tourism/asset/image/why-choose-us/dubai.png') center/cover no-repeat;
+            position: relative;
+        }
+
+        .why-choose-us::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+        }
+
+        .why-choose-us .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .feature-item {
+            transition: all .3s ease;
+            width: 260px;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-item .icon i {
+            color: #fff;
+            transition: all .3s ease;
+        }
+
+        .feature-item:hover .icon i {
+            transform: scale(1.2);
+            color: #d4af37;
+        }
+
+        .icon-img {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            transition: all .3s ease;
+        }
+
+        .feature-item:hover .icon-img {
+            transform: scale(1.15);
+        }
+
+
+        /* Change radio button checked color */
+        .form-check-input:checked {
+            background-color: #ab823e !important;
+            border-color: #ab823e !important;
+        }
+
+        /* Optional: change hover/focus outline */
+        .form-check-input:focus {
+            border-color: #ab823e !important;
+            box-shadow: 0 0 0 0.25rem rgba(171, 130, 62, 0.25) !important;
+        }
+
+
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 15px;
+        }
+
+        .contact-icon {
+            color: #ab823e;
+            font-size: 20px;
+            margin-right: 12px;
+        }
+
+        .social-btn {
+            height: 40px;
+            width: 40px;
+            border: 1px solid #ab823e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background-color: #A3865D10;
+            font-size: 18px;
+            color: #ab823e;
+            text-decoration: none;
+            transition: 0.3s ease-in-out;
+        }
+
+        .social-btn:hover {
+            background-color: #ab823e;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        /* Beige icon circle (large icons for Call/Email/Location) */
+        .icon-circle {
+            width: 50px;
+            height: 50px;
+            background: #f7ecd7;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            color: #b8903b;
+            /* golden brown icon color */
+            margin: auto;
+        }
+
+        /* Small beige circle for social icons */
+        .icon-circle-small {
+            width: 50px;
+            height: 50px;
+            background: #f7ecd7;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #b8903b;
+            font-size: 26px;
+            text-decoration: none;
+        }
+
+        .icon-circle-small:hover {
+            opacity: 0.8;
+        }
+
+        /* Optional: cleaner fonts */
+        .footer-section {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .contact-section {
+            background: url('../devotion-tourism/asset/image/contact-us/contactsPage.webp') no-repeat center center;
+            background-size: cover;
+            color: white;
+            /* Set text color to white for better contrast on a dark image */
+            padding: 150px 0;
+            /* Adjust padding as needed */
+            text-align: center;
+            position: relative;
+        }
+
+        /* Optional: Add an overlay to make the text more readable */
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+        }
+
+        .contact-section .container {
+            position: relative;
+            /* Ensure container content is above the overlay */
+            z-index: 1;
+        }
+
+        .contact-section h2 {
+            font-family: "Merienda", cursive;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-section p {
+            font-size: 1rem;
+            max-width: 1000px;
+            font-weight: 500;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        footer ul,
+        footer h5,
+        footer li,
+        footer a {
+            text-align: left !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="py-2 position-fixed top-0 start-0 w-100" style="background-color: #ab823e; z-index: 999;">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <div class="d-flex align-items-center gap-3">
+                <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
+                <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
+            </div>
+
+            <div class="d-flex align-items-center gap-3">
+
+                <a href="https://www.youtube.com/@Devotiontravelandtourism" class="text-white d-inline-flex align-items-center">
+                    <img src="asset/image/icons/youtube-icon.png" alt="YouTube" width="25" height="25">
+                </a>
+
+                <a href="https://www.linkedin.com/company/92558268/admin/" class="text-white d-inline-flex align-items-center">
+                    <img src="asset/image/icons/linkedin-icon.png" width="25" height="25" alt="LinkedIn">
+                </a>
+
+                <a href="https://www.facebook.com/profile.php?id=100091695764298" class="text-white d-inline-flex align-items-center">
+                    <img src="asset/image/icons/facebook-icon.png" width="25" height="25" alt="Facebook">
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+        <div class="container">
+
+            <a class="navbar-brand" href="#">
+                <img src="asset\image\Logo.png" alt="Devotion" style="height:50px;">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+                <ul class="navbar-nav gap-3">
+                    <li class="nav-item"><a href="index.html" class="nav-link fw-bold">Home</a></li>
+                    <li class="nav-item"><a href="aboutus.html" class="nav-link fw-bold">About Us</a></li>
+                    <li class="nav-item"><a href="corporate_package.html" class="nav-link fw-bold">Corporate
+                            Packages</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link fw-bold">Global Visa</a></li>
+                    <li class="nav-item"><a href="contactus.html" class="nav-link fw-bold">Contact Us</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <section class="contact-section hero-bg">
+        <div class="container">
+            <h2 class="display-4">Welcome to Devotion Tourism!</h2>
+            <p class="lead">
+                We are a leading travel and tourism company that specializes in flight booking, hotel booking, and
+                corporate
+                travel services. With our unwavering commitment to excellence and personalized service, we strive to
+                make
+                your travel experiences truly memorable.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container custom-container">
+            <div class="row align-items-center pt-5">
+
+                <!-- Left Image -->
+                <div class="col-lg-6 mb-4 mb-lg-0 position-relative">
+                    <img src="asset\image\aboutus\mobile.webp" alt="Travel Image" class="img-fluid shadow" style="border-radius: 52px;     max-width: 100%;
+                        height: auto;">
+
+                    <!-- Floating Text Card -->
+                    <div class="bg-white shadow-lg p-3 rounded-4 position-absolute bottom-0 start-50 translate-end-x"
+                        style="width: 58%;">
+                        <p class="mb-0 fw-semibold" style="font-size: 14px; color: #ab823e;">
+                            Exceptional adventures, every time. Start designing your dream trip today.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right Content -->
+                <div class="col-lg-6" style="padding-left: 100px;">
+                    <h3 class="fw-bold mb-4" style="color: #ab823e; font-family: 'Merienda', cursive;">
+                        Start Your Journey Today!
+                    </h3>
+
+
+                    <!-- Icons Row -->
+                    <div class="d-flex justify-content-evenly icon-hover">
+                        <div class="text-center">
+                            <img src="asset/image/about-us/group1111.webp" width="80" class="mb-2">
+                        </div>
+                        <div class="text-center">
+                            <img src="asset/image/about-us/group2222.webp" width="80" class="mb-2">
+                        </div>
+                        <div class="text-center">
+                            <img src="asset/image/about-us/group3333333.webp" width="80" class="mb-2">
+                        </div>
+                    </div>
+
+
+                    <!-- Paragraph -->
+                    <p style="line-height: 1.8; text-align: justify;">
+                        At Devotion Tourism, we understand that travel is not just about reaching a destination
+                        but also about creating lasting memories. With our extensive expertise in the travel
+                        industry, we are dedicated to providing you with exceptional services that cater to all
+                        your travel needs. We are passionate about making your travel dreams come true.
+                        Our unwavering commitment to excellence, personalized service, and comprehensive
+                        solutions ensure an unforgettable travel experience. Contact us today to start planning
+                        your next adventure!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container text-center custom-container">
+
+            <h2 class="mb-5" style="font-family: 'Merienda', cursive; color:#ab823e;">What We Do?</h2>
+
+            <div class="row g-4 justify-content-center">
+
+                <!-- Card 1 -->
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <img src="asset\image\what-we-do\fly-11.webp" class="img-fluid rounded" />
+                        <div class="overlay">
+                            <h4 class="mb-3 text-white">Flight Booking</h4>
+                            <p class="text-white small" style="text-align: justify;">
+                                With our user-friendly online platform, you can easily book flights to any destination
+                                around the world. Whether you're planning a family vacation, a romantic getaway, or a
+                                business trip, our team of experienced travel experts will assist you in finding the
+                                best flight options that suit your preferences and budget. We also offer exclusive deals
+                                and discounts on flights to make your travel more affordable and convenient.
+                            </p>
+                            <button class="service-btn">
+                                →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <img src="asset\image\what-we-do\fly-22.webp" class="img-fluid rounded" />
+                        <div class="overlay">
+                            <h4 class="mb-3 text-white">Hotel Booking</h4>
+                            <p class="text-white small" style="text-align: justify;">
+                                Finding the perfect accommodation for your trip is essential, and we strive to provide
+                                you with a wide range of options to choose from. Our extensive network of partnerships
+                                with hotels and resorts worldwide allows us to offer competitive rates and exclusive
+                                deals for various types of accommodations, including luxury hotels, budget-friendly
+                                hotels, boutique hotels, and more.
+
+
+                            </p>
+                            <button class="service-btn">
+                                →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <img src="asset\image\what-we-do\fly-33.webp" class="img-fluid rounded" />
+                        <div class="overlay">
+                            <h4 class=" text-white">Corporate Travel</h4>
+                            <p class="text-white small" style="text-align: justify;">
+                                We understand that business travel requires meticulous planning and coordination. Our
+                                dedicated corporate travel team is well-equipped to handle all your business travel
+                                needs, from booking flights and hotels to managing complex itineraries and arranging for
+                                transportation. We strive to provide you with comprehensive solutions that cater to your
+                                specific business travel requirements, while ensuring cost-effectiveness and efficiency.
+                            </p>
+                            <button class="service-btn">
+                                →
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="why-choose-us py-5">
+        <div class="container text-center text-white custom-container">
+
+            <!-- Heading -->
+            <h1 class="fw-bold mb-5" style="font-family: 'Merienda', cursive;">Why Choose Us?</h1>
+
+            <!-- Features Row -->
+            <div class="row g-4">
+
+                <!-- Card 1 -->
+                <div class="col-md-4 col-lg-2 mx-auto">
+                    <div class="feature-item d-flex row gap-3">
+                        <div class="icon mb-3">
+                            <img src="asset\image\why-choose-us\Group29.png" alt="icon" class="icon-img">
+                        </div>
+                        <h5 class="fw-semibold mb-3">Personalized Service</h5>
+                        <p class="small opacity-75" style="text-align: justify;">
+                            We believe that every traveler is unique, and we go the extra mile to understand your
+                            preferences and requirements. Our experienced travel experts provide personalized service
+                            and attention to detail, ensuring that your travel plans are tailored to your needs and
+                            expectations.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-md-4 col-lg-2 mx-auto">
+                    <div class="feature-item d-flex row gap-3">
+                        <div class="icon mb-3">
+                            <img src="asset\image\why-choose-us\Group25.png" alt="icon" class="icon-img">
+                        </div>
+                        <h5 class="fw-semibold mb-3">Extensive Network</h5>
+                        <p class="small opacity-75" style="text-align: justify;">
+                            With our extensive network of partnerships with airlines, hotels, and other travel service
+                            providers, we offer a wide range of options to choose from. This allows us to provide you
+                            with competitive rates, exclusive deals, and a diverse range of travel options to suit your
+                            budget and preferences.
+
+
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-md-4 col-lg-2 mx-auto">
+                    <div class="feature-item d-flex row gap-3">
+                        <div class="icon mb-3">
+                            <img src="asset\image\why-choose-us\Group28.png" alt="icon" class="icon-img">
+                        </div>
+                        <h5 class="fw-semibold mb-3">Convenience</h5>
+                        <p class="small opacity-75" style="text-align: justify;">
+                            Our user-friendly online platform and dedicated customer support make your travel booking
+                            experience easy, convenient, and hassle-free. From flight bookings to hotel reservations, we
+                            strive to provide you with seamless and efficient services that save you time and effort.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-md-4 col-lg-2 mx-auto">
+                    <div class="feature-item d-flex row gap-3">
+                        <div class="icon mb-3">
+                            <img src="asset\image\why-choose-us\Group27.png" alt="icon" class="icon-img">
+                        </div>
+                        <h5 class="fw-semibold mb-3">Trustworthy & Reliable</h5>
+                        <p class="small opacity-75" style="text-align: justify;">
+                            Devotion Tourism is a reputable and reliable travel and tourism company with a track record
+                            of providing exceptional services to our clients. We are committed to maintaining the
+                            highest standards of professionalism, integrity, and customer satisfaction, and strive to
+                            exceed your expectations with our services.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="col-md-4 col-lg-2 mx-auto">
+                    <div class="feature-item d-flex row gap-3">
+                        <div class="icon mb-3">
+                            <img src="asset\image\why-choose-us\Group26.png" alt="icon" class="icon-img">
+                        </div>
+                        <h5 class="fw-semibold mb-3">Comprehensive Solutions</h5>
+                        <p class="small opacity-75" style="text-align: justify;">
+                            Whether you're planning a leisure trip, a business trip, or a corporate event, we offer
+                            comprehensive travel solutions that cater to your specific needs. Our team of experts will
+                            work closely with you to understand your requirements and provide you with customized
+                            solutions that meet your travel goals.s.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="bg-white pt-5 text-center">
+
+        <section class="py-5" style=" background: linear-gradient(to bottom, #ffffff 0%, #eee9e5 100%);">
+            <div class="container custom-container">
+
+                <div class="row py-5">
+
+                    <div class="col-md-3 mb-4 mb-md-0">
+                        <h5 class="text-uppercase mb-3" style="color: #ab823e;">UAE Activities</h5>
+                        <ul class="list-unstyled" style="line-height: 2rem;">
+                            <li><a href="#" class="text-decoration-none text-muted">Desert Safari Dubai</a></li>
+                            <li><a href="#" class="text-decoration-none text-muted">Dubai City Tours</a></li>
+                            <li><a href="#" class="text-decoration-none text-muted">Dhow Cruise Dubai</a></li>
+                            <li><a href="#" class="text-decoration-none text-muted">Ras Al Khaimah Desert Safari</a>
+                            </li>
+                            <li><a href="#" class="text-decoration-none text-muted">Dubai Parks</a></li>
+                            <li><a href="#" class="text-decoration-none text-muted">Burj Khalifa Tours</a></li>
+                            <li><a href="#" class="text-decoration-none text-muted">Abu Dhabi City Tours</a></li>
+                            <li><a href="#" class="text-decoration-none text-muted">Dubai Theme Park</a></li>
+                            <li><a href="#" class="text-decoration-none text-muted">Dubai Water Activities</a></li>
+                            <li><a href="#" class="text-decoration-none text-muted">Abu Dhabi Water Parks</a></li>
+                            <li><a href="#" class="text-decoration-none text-muted">Dubai Adventure Tours</a></li>
+                            <li><a href="#" class="text-decoration-none text-muted">Abu Dhabi Theme Parks</a></li>
+                            <li><a href="#" class="text-decoration-none text-muted">Dubai Helicopter Tours</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3 mb-4 mb-md-0">
+                        <h5 class="text-uppercase  mb-3" style="color: #ab823e;">Best Selling Activities</h5>
+                        <ul class="list-unstyled" style="line-height: 2rem;">
+                            <li><a href="#" class="text-decoration-none text-muted">Desert Safari</a></li>
+                            <li><a href="#" class="text-decoration-none text-muted">Abu Dhabi City Tour</a></li>
+                            <li><a href="#" class="text-decoration-none text-muted">Dubai Burj Khalifa</a></li>
+                            <li><a href="#" class="text-decoration-none text-muted">Global Village Dubai</a></li>
+                            <li><a href="#" class="text-decoration-none text-muted">Atlantis Aquaventure</a></li>
+                            <li><a href="#" class="text-decoration-none text-muted">The Green Planet Dubai</a></li>
+                            <li><a href="#" class="text-decoration-none text-muted">Dhow Cruise Dinner Marina</a></li>
+                            <li><a href="#" class="text-decoration-none text-muted">Ain Dubai</a></li>
+                            <li><a href="#" class="text-decoration-none text-muted">IMG Worlds of Adventure</a></li>
+                            <li><a href="#" class="text-decoration-none text-muted">Private Limousine Rental Dubai</a>
+                            </li>
+                            <li><a href="#" class="text-decoration-none text-muted">Luxury Yacht Rental Dubai</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3 mb-4 mb-md-0">
+                        <h5 class="text-uppercase mb-3" style="color: #ab823e;">Thrilling Activities</h5>
+                        <ul class="list-unstyled" style="line-height: 2rem;">
+                            <li><a href="#" class="text-decoration-none text-muted">Private Limo</a></li>
+                            <li><a href="#" class="text-decoration-none text-muted">Dubai Mall Aquarium</a></li>
+                            <li><a href="#" class="text-decoration-none text-muted">Ski Dubai Tickets</a></li>
+                            <li><a href="#" class="text-decoration-none text-muted">Motiongate Dubai</a></li>
+                            <li><a href="#" class="text-decoration-none text-muted">Dhow Cruise</a></li>
+                            <li><a href="#" class="text-decoration-none text-muted">La Perle by Dragone Dubai</a></li>
+                            <li><a href="#" class="text-decoration-none text-muted">Ferrari World Abu Dhabi</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3">
+                        <h5 class="text-uppercase mb-3" style="color: #ab823e;">International Visa</h5>
+                        <ul class="list-unstyled" style="line-height: 2rem;">
+                            <li><a href="#" class="text-decoration-none text-muted">UK Visa</a></li>
+                            <li><a href="#" class="text-decoration-none text-muted">UAE Visa</a></li>
+                            <li><a href="#" class="text-decoration-none text-muted">UAE Visa Extension</a></li>
+                            <li><a href="#" class="text-decoration-none text-muted">Canada Visa</a></li>
+                            <li><a href="#" class="text-decoration-none text-muted">USA Visa</a></li>
+                            <li><a href="#" class="text-decoration-none text-muted">Turkey Visa</a></li>
+                            <li><a href="#" class="text-decoration-none text-muted">Egypt Visa</a></li>
+                            <li><a href="#" class="text-decoration-none text-muted">Singapore Visa</a></li>
+                            <li><a href="#" class="text-decoration-none text-muted">Thailand Visa</a></li>
+                            <li><a href="#" class="text-decoration-none text-muted">Malaysia Visa</a></li>
+                            <li><a href="#" class="text-decoration-none text-muted">Sri Lanka Visa</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+             <!-- Top navigation -->
+        <div class="container">
+
+            <ul class="nav justify-content-center pt-3">
+                <li class="nav-item"><a class="nav-link text-dark fw-semibold" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link text-dark fw-semibold" href="aboutus.html">About US</a></li>
+                <li class="nav-item"><a class="nav-link text-dark fw-semibold" href="contactus.html">Contact Us</a></li>
+                <li class="nav-item"><a class="nav-link text-dark fw-semibold" href="carrear.html">Career</a></li>
+            </ul>
+                <hr style="padding-bottom: 20px;">
+
+            <div class="d-flex justify-content-center mb-5 align-items-center" style="gap: 2rem;">
+                <div class="mb-4">
+                    <img src="../devotion-tourism/asset/image/devotion-group-favicon.png" alt="logo" height="90"
+                        style="width: auto;">
+                </div>
+
+                <div>
+                    <div class="d-flex justify-content-center" style="gap: 3rem; margin-bottom: 0.5rem;">
+
+
+                        <a href="tel:+97144576077" class="d-flex align-items-center justify-content-center gap-2"
+                            style="text-decoration: none;">
+                            <div class="icon-circle d-flex align-items-center justify-content-center">
+                                <img src="asset/image/icons/phone-bg.png" alt="Call Icon" width="50" height="50">
+                            </div>
+                            <p class="fw-semibold text-dark mb-0">Call Us</p>
+                        </a>
+
+
+                        <a href="mailto:support@devotiontourism.com"
+                            class="d-flex align-items-center justify-content-center gap-2 text-center"
+                            style="text-decoration: none;">
+                            <div class="icon-circle d-flex align-items-center justify-content-center">
+                                <img src="asset/image/icons/Group3.png" alt="Email Icon" width="50" height="50">
+                            </div>
+                            <p class="fw-semibold text-dark mb-0">Email Us</p>
+                        </a>
+
+                        <a class="d-flex align-items-center justify-content-center gap-2 text-center"
+                            style="text-decoration: none;">
+                            <div class="icon-circle d-flex align-items-center justify-content-center">
+                                <img src="asset/image/icons/Group4.png" alt="Location Icon" width="50" height="50">
+                            </div>
+                            <p class="fw-semibold text-dark mb-0">Location</p>
+                        </a>
+
+                    </div>
+
+                    <div class="d-flex justify-content-center" style="gap: 1rem; margin-top: 1rem;">
+                        <a class="icon-circle-small d-flex align-items-center justify-content-center" href="https://www.facebook.com/profile.php?id=100091695764298">
+                            <img src="asset/image/icons/facebook-icon.png" width="50" height="50" alt="Facebook">
+                        </a>
+
+                        <a class="icon-circle-small d-flex align-items-center justify-content-center" href="https://www.instagram.com/devotiontourism/">
+                            <img src="asset/image/icons/insta-icon.png" width="50" height="50" alt="Instagram">
+                        </a>
+
+                        <a class="icon-circle-small d-flex align-items-center justify-content-center" href="https://www.linkedin.com/company/92558268/admin/">
+                            <img src="asset/image/icons/linkedin-icon.png" width="50" height="50" alt="LinkedIn">
+                        </a>
+
+                        <a class="icon-circle-small d-flex align-items-center justify-content-center" href="https://www.youtube.com/@Devotiontravelandtourism">
+                            <img src="asset/image/icons/youtube-icon.png" width="50" height="50" alt="YouTube">
+                        </a>
+
+                        <a class="icon-circle-small d-flex align-items-center justify-content-center" href="https://pin.it/1O6HPbY">
+                            <img src="asset/image/icons/pintrest.png" width="50" height="50" alt="Pinterest">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Legal -->
+            <div class="d-flex justify-content-center gap-3 small mb-2">
+                <a href="privacy_policy.html" class="text-dark text-decoration-none">Privacy Policy</a>
+                <span>|</span>
+                <a href="cookies.html" class="text-dark text-decoration-none">Terms of Service</a>
+                <span>|</span>
+                <a href="cookies.html" class="text-dark text-decoration-none">Cookies Settings</a>
+            </div>
+
+            <p class="small text-muted">2025 Devotion. All rights reserved.</p>
+        </div>
+
+        <p class="small text-muted">2025 Devotion. All rights reserved.</p>
+        </div>
+
+        <!-- Skyline image -->
+        <div class="mt-4">
+            <img src="../devotion-tourism/asset/image/footerBG.png" class="img-fluid w-100" alt="skyline">
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
