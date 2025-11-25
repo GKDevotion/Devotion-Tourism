@@ -183,43 +183,219 @@
             font-size: 22px;
             color: #ab823e;
         }
+
+                /* Show the divider only on medium screens and up (md) */
+        @media (min-width: 768px) {
+            .statistics-row .statistic-item:not(:last-child):after {
+                display: block;
+            }
+        }
+
+        .faq-header {
+            font-family: "Merienda", cursive;
+            color: #ab823e;
+            /* Gold/Brown color from the image */
+            font-size: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            letter-spacing: 0.1rem;
+        }
+
+        /* Custom Styles for the Container 
+        - Apply a rounded white background with a large, soft shadow 
+        */
+        .nav-container-wrapper {
+            background: white;
+            border-radius: 2.5rem;
+            /* Highly rounded corners */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15), 0 0 10px rgba(0, 0, 0, 0.05);
+            padding: 0.5rem;
+            max-width: 900px;
+            /* Limit the width to mimic the original image */
+            margin: 0 auto;
+        }
+
+        /* Styling the Nav Pills (The Unselected Links) 
+        - Use Tailwind's text color utilities, but override in CSS for exact color
+        */
+        .nav-pills .nav-link {
+            color: #594d40;
+            /* Darker text for unselected links */
+            font-weight: 500;
+            border-radius: 2rem;
+            /* Ensure pills are rounded */
+            padding: 0.75rem 1.5rem;
+            transition: all 0.3s ease;
+            text-align: center;
+            /* Disable Bootstrap's default active background color */
+            background-color: transparent;
+        }
+
+        .nav-pills .nav-link:hover:not(.active) {
+            color: #b58d55;
+            /* Subtle hover effect */
+        }
+
+        /* Styling the Active Pill (The "Visa" Button) 
+        - This is the crucial part that gives it the button look
+        */
+        .nav-pills .nav-link.active {
+            background-color: #b58d55;
+            /* The signature gold/brown color */
+            color: white;
+            /* White text on the active pill */
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(181, 141, 85, 0.6);
+            /* Gold shadow for lift */
+        }
+
+        /* Ensure nav items fill the width equally */
+        .nav-pills.nav-justified .nav-item {
+            flex-grow: 1;
+            margin: 0 5px;
+            /* Add slight spacing between items */
+        }
+
+        /* Responsive adjustments for very small screens */
+        @media (max-width: 576px) {
+            .faq-header {
+                font-size: 3rem;
+            }
+
+            .nav-pills.nav-justified {
+                flex-direction: column;
+            }
+
+            .nav-pills.nav-justified .nav-item {
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        /* Beige icon circle (large icons for Call/Email/Location) */
+        .icon-circle {
+            width: 50px;
+            height: 50px;
+            background: #f7ecd7;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            color: #b8903b;
+            /* golden brown icon color */
+            margin: auto;
+        }
+
+        /* Small beige circle for social icons */
+        .icon-circle-small {
+            width: 50px;
+            height: 50px;
+            background: #f7ecd7;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #b8903b;
+            font-size: 26px;
+            text-decoration: none;
+        }
+
+        .icon-circle-small:hover {
+            opacity: 0.8;
+        }
+
+        /* Optional: cleaner fonts */
+        .footer-section {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        @media (min-width: 1400px) {
+            .custom-container {
+                max-width: 1320px;
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .footer-logo {
+                display: none !important;
+            }
+        }
+
+        
+/* ------- MOBILE RESPONSIVE ------- */
+@media (max-width: 576px) {
+
+    .contact-links {
+        gap: 1rem !important;
+        flex-direction: column;
+    }
+
+    .contact-item {
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .icon-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .label {
+        font-size: 14px;
+    }
+
+    .social-links {
+        gap: 0.7rem;
+    }
+
+    .social-img {
+        width: 34px;
+        height: 34px;
+    }
+}
+
     </style>
 </head>
 
 <body>
 
-    <div class="py-2 position-fixed top-0 start-0 w-100" style="background-color: #ab823e; z-index: 999;">
-        <div class="container d-flex justify-content-between align-items-center">
-
-            <div class="d-flex align-items-center gap-3">
-
-                <a href="https://www.youtube.com/@Devotiontravelandtourism" class="text-white d-inline-flex align-items-center">
-                    <img src="asset/image/icons/youtube-icon.png" alt="YouTube" width="25" height="25">
-                </a>
-
-                <a href="https://www.linkedin.com/company/92558268/admin/" class="text-white d-inline-flex align-items-center">
-                    <img src="asset/image/icons/linkedin-icon.png" width="25" height="25" alt="LinkedIn">
-                </a>
-
-                <a href="https://www.facebook.com/profile.php?id=100091695764298" class="text-white d-inline-flex align-items-center">
-                    <img src="asset/image/icons/facebook-icon.png" width="25" height="25" alt="Facebook">
-                </a>
-
-            </div>
-
-            <div class="d-flex align-items-center gap-3 text-white" style="font-size: 15px;">
-                <span><i class="bi bi-envelope"></i> support@devotiontourism.com</span>
-                <span>|</span>
-                <span><i class="bi bi-telephone"></i> +971 585775469</span>
-                <span>|</span>
-                <span><i class="bi bi-printer"></i> +971 44488538</span>
-            </div>
-        </div>
-    </div>
-
-
     <nav class="navbar navbar-expand-lg bg-white shadow-sm">
-        <div class="container">
+     <div class="container">
+
+            <div class="py-1 position-fixed top-0 start-0 w-100" style="background-color: #ab823e; z-index: 999;">
+                <div class="container">
+                    <div class="row align-items-center text-white">
+
+                        <!-- Left: Social Icons -->
+                        <div
+                            class="col-12 col-md-4 d-flex justify-content-center justify-content-md-start gap-3 mb-2 mb-md-0">
+                            <a href="https://www.youtube.com/@Devotiontravelandtourism">
+                                <img src="asset/image/icons/youtube-icon.png" width="25" height="25" alt="YouTube">
+                            </a>
+                            <a href="https://www.linkedin.com/company/92558268/admin/">
+                                <img src="asset/image/icons/linkedin-icon.png" width="25" height="25" alt="LinkedIn">
+                            </a>
+                            <a href="https://www.facebook.com/profile.php?id=100091695764298">
+                                <img src="asset/image/icons/facebook-icon.png" width="25" height="25" alt="Facebook">
+                            </a>
+                        </div>
+
+                        <!-- Right: Contact Details -->
+                        <div class="col-12 col-md-8 text-center text-md-end" style="font-size:15px;">
+                            <span><i class="bi bi-envelope"></i> support@devotiontourism.com</span>
+                            <span class="d-none d-md-inline mx-2">|</span>
+
+                            <span><i class="bi bi-telephone"></i> +971 585775469</span>
+                            <span class="d-none d-md-inline mx-2">|</span>
+
+                            <span><i class="bi bi-printer"></i> +971 44488538</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
 
             <a class="navbar-brand" href="#">
                 <img src="asset\image\Logo.png" alt="Devotion" style="height:50px;">
@@ -326,7 +502,6 @@
         </div>
     </section>
 
-
     <footer class="bg-white pt-5 text-center">
 
         <section class="py-5" style=" background: linear-gradient(to bottom, #ffffff 0%, #eee9e5 100%);">
@@ -418,18 +593,18 @@
             <hr style="padding-bottom: 20px;">
 
             <div class="d-flex justify-content-center mb-5 align-items-center" style="gap: 2rem;">
-                <div class="mb-4">
-                    <img src="asset\image\devotion-group-favicon.png" alt="logo" height="90"
-                        style="width: auto;">
+                 <div class="mb-4 d-none d-md-block">
+                    <img src="asset/image/devotion-group-favicon.png" alt="logo" height="100" style="width: auto;">
                 </div>
+
 
                 <div>
                     <div class="d-flex justify-content-center" style="gap: 3rem; margin-bottom: 0.5rem;">
 
 
-                        <a href="tel:+97144576077" class="d-flex align-items-center justify-content-center gap-2"
+                        <a href="tel:+97144576077" class="d-flex align-items-center justify-content-center gap-2 contact-item"
                             style="text-decoration: none;">
-                            <div class="icon-circle d-flex align-items-center justify-content-center">
+                            <div class="icon-circle d-flex align-items-center  justify-content-center">
                                 <img src="asset/image/icons/phone-bg.png" alt="Call Icon" width="50" height="50">
                             </div>
                             <p class="fw-semibold text-dark mb-0">Call Us</p>
@@ -437,7 +612,7 @@
 
 
                         <a href="mailto:support@devotiontourism.com"
-                            class="d-flex align-items-center justify-content-center gap-2 text-center"
+                            class="d-flex align-items-center contact-item justify-content-center gap-2 text-center"
                             style="text-decoration: none;">
                             <div class="icon-circle d-flex align-items-center justify-content-center">
                                 <img src="asset/image/icons/Group3.png" alt="Email Icon" width="50" height="50">
@@ -445,7 +620,7 @@
                             <p class="fw-semibold text-dark mb-0">Email Us</p>
                         </a>
 
-                        <a class="d-flex align-items-center justify-content-center gap-2 text-center"
+                        <a class="d-flex align-items-center contact-item justify-content-center gap-2 text-center"
                             style="text-decoration: none;">
                             <div class="icon-circle d-flex align-items-center justify-content-center">
                                 <img src="asset/image/icons/Group4.png" alt="Location Icon" width="50" height="50">

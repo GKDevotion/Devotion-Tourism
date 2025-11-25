@@ -189,38 +189,42 @@
 
 <body>
 
-    <div class="py-2 position-fixed top-0 start-0 w-100" style="background-color: #ab823e; z-index: 999;">
-        <div class="container d-flex justify-content-between align-items-center">
-
-             <div class="d-flex align-items-center gap-3">
-
-                <a href="https://www.youtube.com/@Devotiontravelandtourism" class="text-white d-inline-flex align-items-center">
-                    <img src="asset/image/icons/youtube-icon.png" alt="YouTube" width="25" height="25">
-                </a>
-
-                <a href="https://www.linkedin.com/company/92558268/admin/" class="text-white d-inline-flex align-items-center">
-                    <img src="asset/image/icons/linkedin-icon.png" width="25" height="25" alt="LinkedIn">
-                </a>
-
-                <a href="https://www.facebook.com/profile.php?id=100091695764298" class="text-white d-inline-flex align-items-center">
-                    <img src="asset/image/icons/facebook-icon.png" width="25" height="25" alt="Facebook">
-                </a>
-
-            </div>
-
-            <div class="d-flex align-items-center gap-3 text-white" style="font-size: 15px;">
-                <span><i class="bi bi-envelope"></i> support@devotiontourism.com</span>
-                <span>|</span>
-                <span><i class="bi bi-telephone"></i> +971 585775469</span>
-                <span>|</span>
-                <span><i class="bi bi-printer"></i> +971 44488538</span>
-            </div>
-        </div>
-    </div>
-
-
     <nav class="navbar navbar-expand-lg bg-white shadow-sm">
         <div class="container">
+
+            <div class="py-1 position-fixed top-0 start-0 w-100" style="background-color: #ab823e; z-index: 999;">
+                <div class="container">
+                    <div class="row align-items-center text-white">
+
+                        <!-- Left: Social Icons -->
+                        <div
+                            class="col-12 col-md-4 d-flex justify-content-center justify-content-md-start gap-3 mb-2 mb-md-0">
+                            <a href="https://www.youtube.com/@Devotiontravelandtourism">
+                                <img src="asset/image/icons/youtube-icon.png" width="25" height="25" alt="YouTube">
+                            </a>
+                            <a href="https://www.linkedin.com/company/92558268/admin/">
+                                <img src="asset/image/icons/linkedin-icon.png" width="25" height="25" alt="LinkedIn">
+                            </a>
+                            <a href="https://www.facebook.com/profile.php?id=100091695764298">
+                                <img src="asset/image/icons/facebook-icon.png" width="25" height="25" alt="Facebook">
+                            </a>
+                        </div>
+
+                        <!-- Right: Contact Details -->
+                        <div class="col-12 col-md-8 text-center text-md-end" style="font-size:15px;">
+                            <span><i class="bi bi-envelope"></i> support@devotiontourism.com</span>
+                            <span class="d-none d-md-inline mx-2">|</span>
+
+                            <span><i class="bi bi-telephone"></i> +971 585775469</span>
+                            <span class="d-none d-md-inline mx-2">|</span>
+
+                            <span><i class="bi bi-printer"></i> +971 44488538</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
 
             <a class="navbar-brand" href="#">
                 <img src="asset\image\Logo.png" alt="Devotion" style="height:50px;">
@@ -234,8 +238,22 @@
                 <ul class="navbar-nav gap-3">
                     <li class="nav-item"><a href="index.html" class="nav-link fw-bold">Home</a></li>
                     <li class="nav-item"><a href="aboutus.html" class="nav-link fw-bold">About Us</a></li>
-                    <li class="nav-item"><a href="corporate_package.html" class="nav-link fw-bold">Corporate
-                            Packages</a></li>
+                    <!-- Our package Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fw-bold d-flex align-items-center gap-1" href=""
+                            id="propertyDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Packages
+
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="propertyDropdown" style="min-width: 200px;">
+                            <li class="nav-item"><a class="nav-link" href="package.html">Tour Packages</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="corporate_package.html">Corporate
+                                    Packages</a>
+                            </li>
+
+                        </ul>
+                    </li>
                     <li class="nav-item"><a href="#" class="nav-link fw-bold">Global Visa</a></li>
                     <li class="nav-item"><a href="contactus.html" class="nav-link fw-bold">Contact Us</a></li>
                 </ul>
@@ -321,7 +339,6 @@
             </p>
         </div>
     </section>
-
 
     <footer class="bg-white pt-5 text-center">
 
