@@ -1,0 +1,28 @@
+/* Custom Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 10px;
+    /* width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* track color */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #aa8038;
+    /* scrollbar color — your theme’s gold tone */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #aa8038;
+    /* darker shade on hover */
+}
+
+/* For Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #aa8038 #f1f1f1;
+}
