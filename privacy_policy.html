@@ -9,14 +9,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" href="asset/image/Devotion Real Estate.png" type="image/x-icon">
     <link rel="stylesheet" href="asset/css/custom.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
     <!-- bootstrap 5.3 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merienda:wght@300..900&display=swap"
+        rel="stylesheet">
 
     <style>
         body {
@@ -32,7 +39,6 @@
             background-color: #ffffff;
             z-index: 1060;
             width: 100%;
-            padding: 6px 40px;
             border-radius: 0px;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         }
@@ -176,7 +182,7 @@
             color: #ab823e;
         }
 
-                /* Show the divider only on medium screens and up (md) */
+        /* Show the divider only on medium screens and up (md) */
         @media (min-width: 768px) {
             .statistics-row .statistic-item:not(:last-child):after {
                 display: block;
@@ -313,175 +319,189 @@
             }
         }
 
-        
-/* ------- MOBILE RESPONSIVE ------- */
-@media (max-width: 576px) {
 
-    .contact-links {
-        gap: 1rem !important;
-        flex-direction: column;
-    }
+        /* ------- MOBILE RESPONSIVE ------- */
+        @media (max-width: 576px) {
 
-    .contact-item {
-        flex-direction: row;
-        justify-content: center;
-        gap: 10px;
-    }
+            .contact-links {
+                gap: 1rem !important;
+                flex-direction: column;
+            }
 
-    .icon-img {
-        width: 40px;
-        height: 40px;
-    }
+            .contact-item {
+                flex-direction: row;
+                justify-content: center;
+                gap: 10px;
+            }
 
-    .label {
-        font-size: 14px;
-    }
+            .icon-img {
+                width: 40px;
+                height: 40px;
+            }
 
-    .social-links {
-        gap: 0.7rem;
-    }
+            .label {
+                font-size: 14px;
+            }
 
-    .social-img {
-        width: 34px;
-        height: 34px;
-    }
-}
+            .social-links {
+                gap: 0.7rem;
+            }
 
+            .social-img {
+                width: 34px;
+                height: 34px;
+            }
+        }
     </style>
 </head>
 
 <body>
 
-<nav class="navbar navbar-expand-lg bg-white shadow-sm main-navbar">
-    <div class="container">
-<style>
-    /* Top Bar */
-.top-bar {
-    background-color: #ab823e;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1050;
-}
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm main-navbar">
+        <div class="container">
+            <style>
+                /* Top Bar */
+                .top-bar {
+                    background-color: #ab823e;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    z-index: 1050;
+                }
 
-/* Navbar offset under fixed bar */
-@media (max-width: 991px) {
-.main-navbar {
-    margin-top: 40px;
-}
-}
-@media (max-width: 991px) {
-.img-fluid{
-padding-top: 10vh;
-}
-}
-@media (max-width: 991px) {
-.hero-overlay{
-padding-top: 20vh;
-}}
-@media (max-width: 991px) {
-.custom-container{
-padding-top: 5vh;
-}
-}
-/* Mobile Dropdown Improvements */
-@media (max-width: 991px) {
-    .navbar-nav .nav-link {
-        padding: 12px 10px;
-        font-size: 16px;
-        border-bottom: 1px solid #eee;
-    }
 
-    .dropdown-menu {
-        width: 100% !important;
-        border: none;
-        background: #fff;
-        padding-left: 25px;
-    }
+                /* Remove top padding only on mobile */
+                @media (max-width: 991px) {
+                    body {
+                        padding-top: -96 !important;
+                    }
+                }
 
-    .dropdown-item {
-        padding: 10px 0;
-        font-size: 15px;
-        border-bottom: 1px solid #f1f1f1;
-    }
-}
-@media (max-width: 991px) {
-.contact-section{
-    padding-top: 65vh;
-}
-}
-@media (max-width: 991px) {
-.contact-section .container{
-padding-bottom: 30vh;
-}
-}
-/* Desktop View */
-@media (min-width: 992px) {
-    .top-bar {
-        padding: 5px 0;
-    }
-}
+                @media (max-width: 991px) {
+                    .hero-overlay {
+                        padding-top: 20vh;
+                    }
+                }
 
-</style>
-        <!-- Top Contact Bar -->
-        <div class="top-bar text-white">
-            <div class="container py-1">
-                <div class="row align-items-center">
+                /* Navbar should stick directly to top on mobile */
+                @media (max-width: 991px) {
+                    body {
+                        padding-top: 0 !important;
+                        /* Remove space above content */
+                        margin-top: 0 !important;
+                    }
 
-                    <!-- Social Icons (Left) -->
-                    <div class="col-12 col-md-4 d-flex justify-content-center justify-content-md-start gap-3 mb-2 mb-md-0">
-                        <a href="https://www.youtube.com/@Devotiontravelandtourism"><img src="asset/image/icons/youtube-icon.png" width="25"></a>
-                        <a href="https://www.linkedin.com/company/92558268/admin/"><img src="asset/image/icons/linkedin-icon.png" width="25"></a>
-                        <a href="https://www.facebook.com/profile.php?id=100091695764298"><img src="asset/image/icons/facebook-icon.png" width="25"></a>
+                    .main-navbar {
+                        margin-top: 0 !important;
+                        /* Remove navbar margin */
+                        top: 0;
+                    }
+
+                    .top-bar {
+                        display: none !important;
+                        /* Hide top bar on mobile */
+                    }
+                }
+
+
+                /* Mobile Dropdown Improvements */
+                @media (max-width: 991px) {
+                    .navbar-nav .nav-link {
+                        padding: 12px 10px;
+                        font-size: 16px;
+                        border-bottom: 1px solid #eee;
+                    }
+
+                    .dropdown-menu {
+                        width: 100% !important;
+                        border: none;
+                        background: #fff;
+                        padding-left: 25px;
+                    }
+
+                    .dropdown-item {
+                        padding: 10px 0;
+                        text-align: center;
+                        font-size: 15px;
+                        border-bottom: 1px solid #f1f1f1;
+                    }
+                }
+
+                @media (max-width: 991px) {
+                    .contact-section {
+                        padding-top: 65vh;
+                    }
+                }
+
+                @media (max-width: 991px) {
+                    .contact-section .container {
+                        padding-bottom: 30vh;
+                    }
+                }
+            </style>
+            <!-- Top Contact Bar -->
+            <div class="top-bar text-white d-none d-md-block">
+                <div class="container py-1">
+                    <div class="row align-items-center">
+
+                        <!-- Social Icons (Left) -->
+                        <div
+                            class="col-12 col-md-4 d-flex justify-content-center justify-content-md-start gap-3 mb-2 mb-md-0">
+                            <a href="https://www.youtube.com/@Devotiontravelandtourism"><img
+                                    src="asset/image/icons/youtube-icon.png" width="25"></a>
+                            <a href="https://www.linkedin.com/company/92558268/admin/"><img
+                                    src="asset/image/icons/linkedin-icon.png" width="25"></a>
+                            <a href="https://www.facebook.com/profile.php?id=100091695764298"><img
+                                    src="asset/image/icons/facebook-icon.png" width="25"></a>
+                        </div>
+
+                        <!-- Contact Details (Right) -->
+                        <div class="col-12 col-md-8 text-center text-md-end small">
+                            <span><i class="bi bi-envelope"></i> support@devotiontourism.com</span>
+                            <span class="d-none d-md-inline mx-2">|</span>
+                            <span><i class="bi bi-telephone"></i> +971 585775469</span>
+                            <span class="d-none d-md-inline mx-2">|</span>
+                            <span><i class="bi bi-printer"></i> +971 44488538</span>
+                        </div>
+
                     </div>
-
-                    <!-- Contact Details (Right) -->
-                    <div class="col-12 col-md-8 text-center text-md-end small">
-                        <span><i class="bi bi-envelope"></i> support@devotiontourism.com</span>
-                        <span class="d-none d-md-inline mx-2">|</span>
-                        <span><i class="bi bi-telephone"></i> +971 585775469</span>
-                        <span class="d-none d-md-inline mx-2">|</span>
-                        <span><i class="bi bi-printer"></i> +971 44488538</span>
-                    </div>
-
                 </div>
             </div>
+
+            <!-- Main Navbar -->
+            <a class="navbar-brand ms-2" href="#">
+                <img src="asset/image/Logo.png" alt="Devotion" style="height:50px;">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+                <ul class="navbar-nav gap-lg-3">
+                    <li class="nav-item"><a href="index.html" class="nav-link fw-bold">Home</a></li>
+                    <li class="nav-item"><a href="aboutus.html" class="nav-link fw-bold">About Us</a></li>
+
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="packagesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Packages
+                        </a>
+                        <ul class="dropdown-menu w-100" aria-labelledby="packagesDropdown">
+                            <li><a class="dropdown-item py-2" href="package.html">Tour Packages</a></li>
+                            <li><a class="dropdown-item py-2" href="corporate_package.html">Corporate Packages</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a href="#" class="nav-link fw-bold">Global Visa</a></li>
+                    <li class="nav-item"><a href="contactus.html" class="nav-link fw-bold">Contact Us</a></li>
+                </ul>
+            </div>
+
         </div>
-
-        <!-- Main Navbar -->
-        <a class="navbar-brand ms-2" href="#">
-            <img src="asset/image/Logo.png" alt="Devotion" style="height:50px;">
-        </a>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
-            <ul class="navbar-nav gap-lg-3">
-                <li class="nav-item"><a href="index.html" class="nav-link fw-bold">Home</a></li>
-                <li class="nav-item"><a href="aboutus.html" class="nav-link fw-bold">About Us</a></li>
-
-                <!-- Dropdown -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle fw-bold" href="#" id="packagesDropdown"
-                       role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Packages
-                    </a>
-                    <ul class="dropdown-menu w-100" aria-labelledby="packagesDropdown">
-                        <li><a class="dropdown-item py-2" href="package.html">Tour Packages</a></li>
-                        <li><a class="dropdown-item py-2" href="corporate_package.html">Corporate Packages</a></li>
-                    </ul>
-                </li>
-
-                <li class="nav-item"><a href="#" class="nav-link fw-bold">Global Visa</a></li>
-                <li class="nav-item"><a href="contactus.html" class="nav-link fw-bold">Contact Us</a></li>
-            </ul>
-        </div>
-
-    </div>
-</nav>
+    </nav>
 
     <section style="margin-top: 100px; background-color: #fff;">
         <div class="container custom-container">
@@ -657,13 +677,13 @@ padding-bottom: 30vh;
             <hr style="padding-bottom: 20px;">
 
             <div class="d-flex justify-content-center mb-5 align-items-center" style="gap: 2rem;">
-                 <div class="mb-4 d-none d-md-block">
+                <div class="mb-4 d-none d-md-block">
                     <img src="asset/image/devotion-group-favicon.png" alt="logo" height="100" style="width: auto;">
                 </div>
 
 
                 <div>
-                      <div class="d-flex justify-content-center" style="gap: 3rem; margin-bottom: 0.5rem;">
+                    <div class="d-flex justify-content-center" style="gap: 3rem; margin-bottom: 0.5rem;">
 
 
                         <a href="tel:+97144576077"
@@ -701,52 +721,58 @@ padding-bottom: 30vh;
                         /* ===========================
    📱 Tablet / Medium Screens
 =========================== */
-@media (max-width: 992px) {
-    .contact-row {
-        gap: 2rem;
-    }
-    .contact-item p {
-        font-size: 15px;
-    }
-}
+                        @media (max-width: 992px) {
+                            .contact-row {
+                                gap: 2rem;
+                            }
 
-/* ===========================
+                            .contact-item p {
+                                font-size: 15px;
+                            }
+                        }
+
+                        /* ===========================
    📱 Mobile Responsive
 =========================== */
-@media (max-width: 768px) {
-    .contact-row {
-        gap: 1.5rem;
-        flex-wrap: wrap;
-    }
-    .contact-item {
-        flex-direction: column;
-        text-align: center;
-    }
-    .contact-item p {
-        margin-top: 4px;
-        font-size: 14px;
-    }
-    .icon-circle img {
-        width: 45px;
-        height: 45px;
-    }
-}
+                        @media (max-width: 768px) {
+                            .contact-row {
+                                gap: 1.5rem;
+                                flex-wrap: wrap;
+                            }
 
-/* ===========================
+                            .contact-item {
+                                flex-direction: column;
+                                text-align: center;
+                            }
+
+                            .contact-item p {
+                                margin-top: 4px;
+                                font-size: 14px;
+                            }
+
+                            .icon-circle img {
+                                width: 45px;
+                                height: 45px;
+                            }
+                        }
+
+                        /* ===========================
    📱 Very Small Phones
 =========================== */
-@media (max-width: 480px) {
-    .contact-row {
-        gap: 1.2rem;
-    }
-    .icon-circle img {
-        width: 40px;
-        height: 40px;
-    }
-    .contact-item p {
-        font-size: 13px;
-    }
-}
+                        @media (max-width: 480px) {
+                            .contact-row {
+                                gap: 1.2rem;
+                            }
+
+                            .icon-circle img {
+                                width: 40px;
+                                height: 40px;
+                            }
+
+                            .contact-item p {
+                                font-size: 13px;
+                            }
+                        }
                     </style>
 
                     <div class="d-flex justify-content-center" style="gap: 1rem; margin-top: 1rem;">
@@ -795,6 +821,7 @@ padding-bottom: 30vh;
         </div>
     </footer>
 
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

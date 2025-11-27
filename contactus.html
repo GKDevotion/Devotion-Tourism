@@ -39,7 +39,6 @@
             background-color: #ffffff;
             z-index: 1060;
             width: 100%;
-            padding: 6px 40px;
             border-radius: 0px;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         }
@@ -229,119 +228,126 @@
 
 <body>
 
-  
-<nav class="navbar navbar-expand-lg bg-white shadow-sm main-navbar">
-    <div class="container">
-<style>
-    /* Top Bar */
-.top-bar {
-    background-color: #ab823e;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1050;
-}
 
-/* Navbar offset under fixed bar */
-@media (max-width: 991px) {
-.main-navbar {
-    margin-top: 40px;
-}
-}
-@media (max-width: 991px) {
-.hero-overlay{
-padding-top: 20vh;
-}}
-/* Mobile Dropdown Improvements */
-@media (max-width: 991px) {
-    .navbar-nav .nav-link {
-        padding: 12px 10px;
-        font-size: 16px;
-        border-bottom: 1px solid #eee;
-    }
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm main-navbar">
+        <div class="container">
+            <style>
+                /* Top Bar */
+                .top-bar {
+                    background-color: #ab823e;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    z-index: 1050;
+                }
 
-    .dropdown-menu {
-        width: 100% !important;
-        border: none;
-        background: #fff;
-        padding-left: 25px;
-    }
+                /* Remove top padding only on mobile */
+                @media (max-width: 991px) {
+                    body {
+                        padding-top: 0 !important;
+                    }
+                }
 
-    .dropdown-item {
-        padding: 10px 0;
-        font-size: 15px;
-        border-bottom: 1px solid #f1f1f1;
-    }
-}
+                @media (max-width: 991px) {
+                    .hero-overlay {
+                        padding-top: 20vh;
+                    }
+                }
+
+                /* Mobile Dropdown Improvements */
+                @media (max-width: 991px) {
+                    .navbar-nav .nav-link {
+                        padding: 12px 10px;
+                        font-size: 16px;
+                        border-bottom: 1px solid #eee;
+                    }
+
+                    .dropdown-menu {
+                        width: 100% !important;
+                        border: none;
+                        background: #fff;
+                        padding-left: 25px;
+                    }
+
+                    .dropdown-item {
+                        padding: 10px 0;
+                        font-size: 15px;
+                        text-align: center;
+                        border-bottom: 1px solid #f1f1f1;
+                    }
+                }
 
 
-/* Desktop View */
-@media (min-width: 992px) {
-    .top-bar {
-        padding: 5px 0;
-    }
-}
+                /* Desktop View */
+                @media (min-width: 992px) {
+                    .top-bar {
+                        padding: 5px 0;
+                    }
+                }
+            </style>
+            <!-- Top Contact Bar -->
+            <div class="top-bar text-white d-none d-md-block">
+                <div class="container py-1">
+                    <div class="row align-items-center">
 
-</style>
-        <!-- Top Contact Bar -->
-        <div class="top-bar text-white">
-            <div class="container py-1">
-                <div class="row align-items-center">
+                        <!-- Social Icons (Left) -->
+                        <div
+                            class="col-12 col-md-4 d-flex justify-content-center justify-content-md-start gap-3 mb-2 mb-md-0">
+                            <a href="https://www.youtube.com/@Devotiontravelandtourism"><img
+                                    src="asset/image/icons/youtube-icon.png" width="25"></a>
+                            <a href="https://www.linkedin.com/company/92558268/admin/"><img
+                                    src="asset/image/icons/linkedin-icon.png" width="25"></a>
+                            <a href="https://www.facebook.com/profile.php?id=100091695764298"><img
+                                    src="asset/image/icons/facebook-icon.png" width="25"></a>
+                        </div>
 
-                    <!-- Social Icons (Left) -->
-                    <div class="col-12 col-md-4 d-flex justify-content-center justify-content-md-start gap-3 mb-2 mb-md-0">
-                        <a href="https://www.youtube.com/@Devotiontravelandtourism"><img src="asset/image/icons/youtube-icon.png" width="25"></a>
-                        <a href="https://www.linkedin.com/company/92558268/admin/"><img src="asset/image/icons/linkedin-icon.png" width="25"></a>
-                        <a href="https://www.facebook.com/profile.php?id=100091695764298"><img src="asset/image/icons/facebook-icon.png" width="25"></a>
+                        <!-- Contact Details (Right) -->
+                        <div class="col-12 col-md-8 text-center text-md-end small">
+                            <span><i class="bi bi-envelope"></i> support@devotiontourism.com</span>
+                            <span class="d-none d-md-inline mx-2">|</span>
+                            <span><i class="bi bi-telephone"></i> +971 585775469</span>
+                            <span class="d-none d-md-inline mx-2">|</span>
+                            <span><i class="bi bi-printer"></i> +971 44488538</span>
+                        </div>
+
                     </div>
-
-                    <!-- Contact Details (Right) -->
-                    <div class="col-12 col-md-8 text-center text-md-end small">
-                        <span><i class="bi bi-envelope"></i> support@devotiontourism.com</span>
-                        <span class="d-none d-md-inline mx-2">|</span>
-                        <span><i class="bi bi-telephone"></i> +971 585775469</span>
-                        <span class="d-none d-md-inline mx-2">|</span>
-                        <span><i class="bi bi-printer"></i> +971 44488538</span>
-                    </div>
-
                 </div>
             </div>
+
+            <!-- Main Navbar -->
+            <a class="navbar-brand ms-2" href="#">
+                <img src="asset/image/Logo.png" alt="Devotion" style="height:50px;">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+                <ul class="navbar-nav gap-lg-3">
+                    <li class="nav-item"><a href="index.html" class="nav-link fw-bold">Home</a></li>
+                    <li class="nav-item"><a href="aboutus.html" class="nav-link fw-bold">About Us</a></li>
+
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="packagesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Packages
+                        </a>
+                        <ul class="dropdown-menu w-100" aria-labelledby="packagesDropdown">
+                            <li><a class="dropdown-item py-2" href="package.html">Tour Packages</a></li>
+                            <li><a class="dropdown-item py-2" href="corporate_package.html">Corporate Packages</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a href="#" class="nav-link fw-bold">Global Visa</a></li>
+                    <li class="nav-item"><a href="contactus.html" class="nav-link fw-bold">Contact Us</a></li>
+                </ul>
+            </div>
+
         </div>
-
-        <!-- Main Navbar -->
-        <a class="navbar-brand ms-2" href="#">
-            <img src="asset/image/Logo.png" alt="Devotion" style="height:50px;">
-        </a>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
-            <ul class="navbar-nav gap-lg-3">
-                <li class="nav-item"><a href="index.html" class="nav-link fw-bold">Home</a></li>
-                <li class="nav-item"><a href="aboutus.html" class="nav-link fw-bold">About Us</a></li>
-
-                <!-- Dropdown -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle fw-bold" href="#" id="packagesDropdown"
-                       role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Packages
-                    </a>
-                    <ul class="dropdown-menu w-100" aria-labelledby="packagesDropdown">
-                        <li><a class="dropdown-item py-2" href="package.html">Tour Packages</a></li>
-                        <li><a class="dropdown-item py-2" href="corporate_package.html">Corporate Packages</a></li>
-                    </ul>
-                </li>
-
-                <li class="nav-item"><a href="#" class="nav-link fw-bold">Global Visa</a></li>
-                <li class="nav-item"><a href="contactus.html" class="nav-link fw-bold">Contact Us</a></li>
-            </ul>
-        </div>
-
-    </div>
-</nav>
+    </nav>
 
     <section class="contact-section">
         <div class="container">

@@ -39,7 +39,6 @@
             background-color: #ffffff;
             z-index: 1060;
             width: 100%;
-            padding: 6px 40px;
             border-radius: 0px;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         }
@@ -201,16 +200,11 @@
                     z-index: 1050;
                 }
 
-                /* Navbar offset under fixed bar */
-                @media (max-width: 991px) {
-                    .main-navbar {
-                        margin-top: 40px;
-                    }
-                }
 
+                /* Remove top padding only on mobile */
                 @media (max-width: 991px) {
-                    .img-fluid {
-                        padding-top: 10vh;
+                    body {
+                        padding-top: -96 !important;
                     }
                 }
 
@@ -220,11 +214,26 @@
                     }
                 }
 
+                /* Navbar should stick directly to top on mobile */
                 @media (max-width: 991px) {
-                    .custom-container {
-                        padding-top: 5vh;
+                    body {
+                        padding-top: 0 !important;
+                        /* Remove space above content */
+                        margin-top: 0 !important;
+                    }
+
+                    .main-navbar {
+                        margin-top: 0 !important;
+                        /* Remove navbar margin */
+                        top: 0;
+                    }
+
+                    .top-bar {
+                        display: none !important;
+                        /* Hide top bar on mobile */
                     }
                 }
+
 
                 /* Mobile Dropdown Improvements */
                 @media (max-width: 991px) {
@@ -244,6 +253,7 @@
                     .dropdown-item {
                         padding: 10px 0;
                         font-size: 15px;
+                        text-align: center;
                         border-bottom: 1px solid #f1f1f1;
                     }
                 }
@@ -259,16 +269,9 @@
                         padding-bottom: 30vh;
                     }
                 }
-
-                /* Desktop View */
-                @media (min-width: 992px) {
-                    .top-bar {
-                        padding: 5px 0;
-                    }
-                }
             </style>
             <!-- Top Contact Bar -->
-            <div class="top-bar text-white">
+            <div class="top-bar text-white d-none d-md-block">
                 <div class="container py-1">
                     <div class="row align-items-center">
 
@@ -329,6 +332,7 @@
 
         </div>
     </nav>
+
 
     <section style="margin-top: 100px; background-color: #fff;">
         <div class="container custom-container">

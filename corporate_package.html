@@ -39,7 +39,6 @@
             background-color: #ffffff;
             z-index: 1060;
             width: 100%;
-            padding: 6px 40px;
             border-radius: 0px;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         }
@@ -264,10 +263,10 @@
                     z-index: 1050;
                 }
 
-                /* Navbar offset under fixed bar */
+               /* Remove top padding only on mobile */
                 @media (max-width: 991px) {
-                    .main-navbar {
-                        margin-top: 40px;
+                    body {
+                        padding-top: 0 !important;
                     }
                 }
 
@@ -289,6 +288,7 @@
                     .dropdown-item {
                         padding: 10px 0;
                         font-size: 15px;
+                        text-align: center;
                         border-bottom: 1px solid #f1f1f1;
                     }
                 }
@@ -307,7 +307,7 @@
                 }
             </style>
             <!-- Top Contact Bar -->
-            <div class="top-bar text-white">
+            <div class="top-bar text-white d-none d-md-block">
                 <div class="container py-1">
                     <div class="row align-items-center">
 
