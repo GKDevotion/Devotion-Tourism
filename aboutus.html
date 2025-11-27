@@ -38,7 +38,7 @@
             background-color: #ffffff;
             z-index: 1060;
             width: 100%;
-        
+
             border-radius: 0px;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         }
@@ -470,6 +470,30 @@
                     }
                 }
 
+
+                /* Tablet fix */
+                @media (max-width: 991px) {
+                    .feature-item {
+                        margin-left: auto;
+                        margin-right: auto;
+                        width: 100%;
+                        padding: 0 15px;
+                        /* prevent text touching edges */
+                    }
+                }
+
+                /* Mobile fix */
+                @media (max-width: 576px) {
+                    .why-choose-section {
+                        padding: 40px 10px;
+                    }
+
+                    .feature-item p {
+                        font-size: 14px;
+                    }
+                }
+
+
                 @media (max-width: 991px) {
                     .hero-overlay {
                         padding-top: 20vh;
@@ -515,6 +539,81 @@
                 @media (min-width: 992px) {
                     .top-bar {
                         padding: 5px 0;
+                    }
+                }
+
+
+                /* Responsive Fixes */
+                @media (max-width: 991px) {
+
+                    .right-content {
+                        padding-left: 0 !important;
+                        text-align: center;
+                        margin-top: 40px;
+                    }
+
+                    .icon-hover img {
+                        width: 65px;
+                    }
+
+                    .floating-card {
+                        width: 70%;
+                        bottom: -10px;
+                    }
+                }
+
+                @media (max-width: 768px) {
+
+                    .floating-card {
+                        width: 85%;
+                        bottom: -5px;
+                        padding: 12px;
+                    }
+
+                    .icon-hover {
+                        justify-content: center;
+                        gap: 20px;
+                    }
+                }
+
+                @media (max-width: 576px) {
+
+                    .floating-card {
+                        width: 90%;
+                        font-size: 13px;
+                    }
+
+                    .right-content h3 {
+                        font-size: 20px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                        line-height: 1.6;
+                    }
+                }
+
+                /* Mobile Centering Fix */
+                @media (max-width: 768px) {
+
+                    /* Center heading and text */
+                    .right-content {
+                        text-align: center !important;
+                        padding-left: 0 !important;
+                        padding-right: 0 !important;
+                    }
+
+                    /* Center icons and add spacing */
+                    .icon-hover {
+                        justify-content: center !important;
+                        gap: 20px;
+                        margin-bottom: 15px;
+                    }
+
+                    /* Improve paragraph spacing */
+                    .right-content p {
+                        text-align: center !important;
+                        margin: 0 auto;
                     }
                 }
             </style>
@@ -599,21 +698,79 @@
             <div class="row align-items-center pt-5">
 
                 <!-- Left Image -->
-                <div class="col-lg-6 mb-4 mb-lg-0 position-relative">
+                <div class="col-lg-6 mb-4 mb-lg-0 position-relative image-section">
+
                     <img src="asset\image\aboutus\mobile.webp" alt="Travel Image" class="img-fluid shadow" style="border-radius: 52px;     max-width: 100%;
                         height: auto;">
 
                     <!-- Floating Text Card -->
-                    <div class="bg-white shadow-lg p-3 rounded-4 position-absolute bottom-0 start-50 translate-end-x"
-                        style="width: 58%;">
-                        <p class="mb-0 fw-semibold" style="font-size: 14px; color: #ab823e;">
+                    <div class="bg-white shadow-lg p-3 rounded-4 position-absolute floating-card">
+                        <style>
+                            .floating-card {
+                                width: 58%;
+                                left: 363px;
+                                /* Move card slightly from left */
+                                bottom: -20px;
+                                transform: none;
+                                /* Remove centering */
+
+                            }
+
+                            /* Fix floating card position ONLY on mobile & tablets */
+                            @media (max-width: 991px) {
+                                .floating-card {
+                                    left: 0 !important;
+                                    /* Stick to left edge */
+                                    width: 80% !important;
+                                    /* Reduce size for mobile */
+                                    bottom: -10px !important;
+                                    transform: none !important;
+                                    margin-left: 10px;
+                                    /* Slight spacing from edge */
+                                }
+                            }
+
+                            @media (max-width: 576px) {
+                                .floating-card {
+                                    width: 90% !important;
+                                    /* Even better for small screens */
+                                    margin-left: 5px;
+                                }
+                            }
+
+                            .journey {
+                                padding-left: 100px;
+                            }
+
+                            @media (max-width: 576px) {
+                                .journey {
+                                    padding-left: 0px;
+                                    text-align: center;
+                                }
+                            }
+
+                            @media (max-width: 991px) {
+                                .journey {
+                                    padding-left: 0px;
+                                    text-align: center;
+                                }
+                            }
+
+                            @media (max-width: 991px) {
+                                .journey p {
+                                    padding: 20px;
+                                }
+                            }
+                        </style>
+                        <p class="mb-0 fw-semibold floating-card"
+                            style="font-size: 14px;  width: 358px; color: #ab823e;">
                             Exceptional adventures, every time. Start designing your dream trip today.
                         </p>
                     </div>
                 </div>
 
                 <!-- Right Content -->
-                <div class="col-lg-6" style="padding-left: 100px;">
+                <div class="col-lg-6 journey">
                     <h3 class="fw-bold mb-4" style="color: #ab823e; font-family: 'Merienda', cursive;">
                         Start Your Journey Today!
                     </h3>
@@ -656,7 +813,7 @@
             <div class="row g-4 justify-content-center">
 
                 <!-- Card 1 -->
-                <div class="col-md-4">
+                <div class=" col-md-4">
                     <div class="service-card">
                         <img src="asset\image\what-we-do\fly-11.webp" class="img-fluid rounded" />
                         <div class="overlay">
