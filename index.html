@@ -651,38 +651,61 @@
         /* ===========================
    📱 Small Phones (≤ 480px)
 =========================== */
-        @media (max-width: 480px) {
+     @media (max-width: 480px) {
 
-            .hero-section,
-            .hero-img {
-                height: 70vh;
-            }
+    /* Hero Section */
+    .hero-section {
+        height: auto !important;
+        padding-bottom: 20px;
+    }
 
+    .hero-img {
+        height: 55vh !important;
+        object-fit: cover;
+    }
 
-            .clock-item {
-                width: 60px;
-            }
+    /* Clocks row */
+    .clock-item {
+        width: 50px;
+        margin: 0 4px;  /* space between clocks */
+        text-align: center;
+    }
 
-            .clock-img {
-                width: 50px;
-                height: 50px;
-                background-size: contain;
-            }
+    .clock-img {
+        width: 70px;
+        height: 70px;
+        background-size: contain;
+    }
 
-            .clock-label {
-                font-size: 10px;
-            }
+    .clock-label {
+        font-size: 9px;
+        white-space: nowrap; /* Prevent text breaking */
+    }
 
-            .hero-tagline {
-                font-size: 18px;
-                width: 90%;
-                margin: 0 auto;
-            }
-        }
+    .clock-row {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px;
+        margin-top: 5px;
+    }
+
+    /* Tagline */
+    .hero-tagline {
+        font-size: 16px;
+        width: 100%;
+        margin-top: 15px;
+        text-align: center;
+        padding: 0 10px;
+        line-height: 1.3;
+    }
+}
+
     </style>
 </head>
 
 <body>
+    
     <nav class="navbar navbar-expand-lg bg-white shadow-sm main-navbar">
         <div class="container">
             <style>
