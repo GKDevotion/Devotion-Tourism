@@ -247,6 +247,47 @@
                         padding: 5px 0;
                     }
                 }
+
+                /* Tablet */
+                @media (max-width: 991px) {
+                    .hotel-box-view {
+                        flex-direction: column;
+                    }
+
+                    .hotel-box-view .box-media,
+                    .hotel-box-view .box-content {
+                        flex: 1 1 100%;
+                    }
+                }
+
+                /* Mobile */
+                @media (max-width: 576px) {
+                    .hotel-box-view {
+                        margin-bottom: 20px;
+                        border-radius: 10px;
+                    }
+
+                    .hotel-box-view .box-content {
+                        padding: 15px;
+                    }
+
+                    .hotel-box-view .box-content .title {
+                        font-size: 16px;
+                    }
+
+                    .hotel-box-view .box-content .details {
+                        font-size: 13px;
+                    }
+
+                    .hotel-box-view .box-content .price .amount {
+                        font-size: 18px;
+                    }
+
+                    .hotel-box-view .box-content .btn-plan {
+                        font-size: 13px;
+                        padding: 6px 12px;
+                    }
+                }
             </style>
             <!-- Top Contact Bar -->
             <div class="top-bar text-white d-none d-md-block">
@@ -278,7 +319,7 @@
             </div>
 
             <!-- Main Navbar -->
-            <a class="navbar-brand ms-2" href="#">
+            <a class="navbar-brand ms-2" href="index.html">
                 <img src="asset/image/Logo.png" alt="Devotion" style="height:50px;">
             </a>
 
@@ -324,48 +365,7 @@
         </div>
     </section>
 
-    <style>
-        /* Tablet */
-        @media (max-width: 991px) {
-            .hotel-box-view {
-                flex-direction: column;
-            }
 
-            .hotel-box-view .box-media,
-            .hotel-box-view .box-content {
-                flex: 1 1 100%;
-            }
-        }
-
-        /* Mobile */
-        @media (max-width: 576px) {
-            .hotel-box-view {
-                margin-bottom: 20px;
-                border-radius: 10px;
-            }
-
-            .hotel-box-view .box-content {
-                padding: 15px;
-            }
-
-            .hotel-box-view .box-content .title {
-                font-size: 16px;
-            }
-
-            .hotel-box-view .box-content .details {
-                font-size: 13px;
-            }
-
-            .hotel-box-view .box-content .price .amount {
-                font-size: 18px;
-            }
-
-            .hotel-box-view .box-content .btn-plan {
-                font-size: 13px;
-                padding: 6px 12px;
-            }
-        }
-    </style>
     <style>
         .hotel-listing {
             background: #fff;
@@ -711,6 +711,21 @@
             -o-transform: translateX(-50%);
             transform: translateX(-50%);
         }
+
+        .box-media .plan {
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s ease-in-out;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .hotel-box-view:hover .box-media .plan {
+            opacity: 1;
+            visibility: visible;
+        }
     </style>
 
     <section class="section-wrapper grey-color-bg view-section">
@@ -839,7 +854,7 @@
                                 </div>
                             </a>
                             <div class="location"><i class="fa fa-map-marker"></i> Malaysia </div>
-                              <p><a href="https://wa.me/+971503139469" target="_blank" class="plan">Plan Your Trip</a></p>
+                            <p><a href="https://wa.me/+971503139469" target="_blank" class="plan">Plan Your Trip</a></p>
                         </div>
                         <div class="hotel-box-view-body">
                             <h5>Malaysia </h5>
@@ -866,7 +881,7 @@
                                 </div>
                             </a>
                             <div class="location"><i class="fa fa-map-marker"></i> Bali </div>
-                              <p><a href="https://wa.me/+971503139469" target="_blank" class="plan">Plan Your Trip</a></p>
+                            <p><a href="https://wa.me/+971503139469" target="_blank" class="plan">Plan Your Trip</a></p>
                         </div>
                         <div class="hotel-box-view-body">
                             <h5>Bali</h5>
