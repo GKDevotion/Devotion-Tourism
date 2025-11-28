@@ -39,7 +39,7 @@
             background-color: #ffffff;
             z-index: 1060;
             width: 100%;
-       
+
             border-radius: 0px;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         }
@@ -651,62 +651,63 @@
         /* ===========================
    📱 Small Phones (≤ 480px)
 =========================== */
-     @media (max-width: 480px) {
+        @media (max-width: 480px) {
 
-    /* Hero Section */
-    .hero-section {
-        height: auto !important;
-        padding-bottom: 20px;
-    }
+            /* Hero Section */
+            .hero-section {
+                height: auto !important;
+                padding-bottom: 20px;
+            }
 
-    .hero-img {
-       
-        height: 75vh !important;
-        object-fit: cover;
-    }
+            .hero-img {
 
-    /* Clocks row */
-    .clock-item {
-        width: 50px;
-        margin: 0 4px;  /* space between clocks */
-        text-align: center;
-    }
+                height: 75vh !important;
+                object-fit: cover;
+            }
 
-    .clock-img {
-        width: 70px;
-        height: 70px;
-        background-size: contain;
-    }
+            /* Clocks row */
+            .clock-item {
+                width: 50px;
+                margin: 0 4px;
+                /* space between clocks */
+                text-align: center;
+            }
 
-    .clock-label {
-        font-size: 9px;
-        white-space: nowrap; /* Prevent text breaking */
-    }
+            .clock-img {
+                width: 70px;
+                height: 70px;
+                background-size: contain;
+            }
 
-    .clock-row {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 5px;
-        margin-top: 5px;
-    }
+            .clock-label {
+                font-size: 9px;
+                white-space: nowrap;
+                /* Prevent text breaking */
+            }
 
-    /* Tagline */
-    .hero-tagline {
-        font-size: 16px;
-        width: 100%;
-        margin-top: 15px;
-        text-align: center;
-        padding: 0 10px;
-        line-height: 1.3;
-    }
-}
+            .clock-row {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 5px;
+                margin-top: 5px;
+            }
 
+            /* Tagline */
+            .hero-tagline {
+                font-size: 16px;
+                width: 100%;
+                margin-top: 15px;
+                text-align: center;
+                padding: 0 10px;
+                line-height: 1.3;
+            }
+        }
     </style>
 </head>
 
 <body>
-    
+
     <nav class="navbar navbar-expand-lg bg-white shadow-sm main-navbar">
         <div class="container">
             <style>
@@ -957,8 +958,49 @@
             <h3 class=" mb-5" style="font-family: 'Merienda', cursive; color: #ab823e; font-size: 2.5rem;">
                 Explore The World
             </h3>
+            <style>
+                .flag-item {
+                    text-align: center;
+                }
 
-            <div class="row justify-content-center row-cols-2 row-cols-sm-4 row-cols-md-5">
+                .flag-item img {
+                    width: 100px;
+                    height: 100px;
+                    object-fit: cover;
+                    border: 2px solid #6c757d !important;
+                    border-radius: 50%;
+                    transition: transform 0.3s ease;
+                }
+
+                .flag-item img:hover {
+                    transform: scale(1.07);
+                }
+
+                /* Text style */
+                .flag-item p {
+                    margin-top: 10px;
+                    font-size: 14px;
+                    font-weight: 600;
+                }
+
+                /* 📱 Mobile Responsive Fix */
+                @media (max-width: 576px) {
+                    .row.row-cols-2.row-cols-sm-4.row-cols-md-5 {
+                        justify-content: center !important;
+                        gap: 20px 0;
+                    }
+
+                    .flag-item img {
+                        width: 80px;
+                        height: 80px;
+                    }
+
+                    .flag-item p {
+                        font-size: 12px;
+                    }
+                }
+            </style>
+            <div class="row g-4 justify-content-center mt-4 row-cols-2 row-cols-sm-4 row-cols-md-5">
 
                 <div class="col">
                     <div class="flag-item">
@@ -1004,10 +1046,6 @@
                         <p class="mt-2 text-uppercase fw-semibold">EUROPE</p>
                     </div>
                 </div>
-
-            </div>
-
-            <div class="row g-4 justify-content-center mt-4 row-cols-2 row-cols-sm-4 row-cols-md-5">
 
                 <div class="col">
                     <div class="flag-item">
@@ -1062,6 +1100,7 @@
                         <p class="mt-2 text-uppercase fw-semibold">China</p>
                     </div>
                 </div>
+
 
             </div>
         </div>
