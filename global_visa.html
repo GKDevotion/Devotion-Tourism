@@ -271,75 +271,75 @@
             object-fit: cover;
         }
 
+        
+/* ========================= */
+/* Mobile Layout Fixes Below */
+/* ========================= */
 
-        /* ========================= */
-        /* Mobile Layout Fixes Below */
-        /* ========================= */
+@media (max-width: 767px) {
 
-        @media (max-width: 767px) {
+    /* Reduce padding inside card */
+    .visa-card {
+        padding: 2rem 1.2rem;
+    }
 
-            /* Reduce padding inside card */
-            .visa-card {
-                padding: 2rem 1.2rem;
-            }
+    /* Flex row adjustments */
+    .visa-card .d-flex.align-items-center {
+        flex-direction: row;
+        gap: 10px;
+    }
 
-            /* Flex row adjustments */
-            .visa-card .d-flex.align-items-center {
-                flex-direction: row;
-          
-            }
+    /* Hide the large spacing of text group */
+    .visa-card .d-flex.flex-column.ms-4 {
+        margin-left: 0.5rem;
+    }
 
-            /* Hide the large spacing of text group */
-            .visa-card .d-flex.flex-column.ms-4 {
-                margin-left: 0.5rem;
-            }
+    /* Make Read More button smaller */
+    .read-btn {
+        font-size: 12px;
+        padding: 3px 6px;
+    }
 
-            /* Make Read More button smaller */
-            .read-btn {
-                font-size: 12px;
-                padding: 6px 12px;
-            }
+    /* Make the flag slightly smaller */
+    .flag-img {
+        width: 45px;
+        height: 45px;
+    }
 
-            /* Make the flag slightly smaller */
-            .flag-img {
-                width: 45px;
-                height: 45px;
-            }
+    /* Visa list spacing */
+    .visa-list li {
+        font-size: 13px;
+        gap: 4px;
+    }
 
-            /* Visa list spacing */
-            .visa-list li {
-                font-size: 13px;
-                gap: 4px;
-            }
+    /* Carousel: one card at a time, center properly */
+    #visaCarousel .carousel-item .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-            /* Carousel: one card at a time, center properly */
-            #visaCarousel .carousel-item .row {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
+    /* Card width full on mobile */
+    #visaCarousel .carousel-item .col-md-4 {
+        flex: 0 0 90%;
+        max-width: 90%;
+    }
 
-            /* Card width full on mobile */
-            #visaCarousel .carousel-item .col-md-4 {
-                flex: 0 0 90%;
-                max-width: 90%;
-            }
+    /* Adjust margin between cards */
+    #visaCarousel .carousel-item .col-md-4:not(:last-child) {
+        margin-bottom: 15px;
+    }
 
-            /* Adjust margin between cards */
-            #visaCarousel .carousel-item .col-md-4:not(:last-child) {
-                margin-bottom: 15px;
-            }
+    /* Reduce heading size */
+    h2 {
+        font-size: 1.5rem;
+    }
 
-            /* Reduce heading size */
-            h2 {
-                font-size: 1.5rem;
-            }
-
-            /* Reduce small paragraph size */
-            p.text-danger {
-                font-size: 12px;
-            }
-        }
+    /* Reduce small paragraph size */
+    p.text-danger {
+        font-size: 12px;
+    }
+}
     </style>
 </head>
 
@@ -475,204 +475,228 @@
             </p>
         </div>
     </section>
+<style>
+    /* @media (max-width: 767px) {
+
     
-    <section class="py-5" style="background:#111827;">
-        <div class="container text-center">
+    #visaCarousel .carousel-item {
+        display: block !important;
+    }
 
-            <p class="fw-bold mb-1" style="color: #ab823e;">SERVICES WE PROVIDE</p>
-            <h2 class="text-white mb-5">EXPLORE OUR VISA ASSISTANCE</h2>
+    #visaCarousel .carousel-item .row {
+        display: block !important;
+    }
 
-            <div id="visaCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators mb-0">
-                    <button type="button" data-bs-target="#visaCarousel" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#visaCarousel" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                </div>
+    #visaCarousel .carousel-item .col-md-4 {
+        width: 100% !important;
+        max-width: 100%;
+        display: none; 
+    }
 
-                <div class="carousel-inner">
+    #visaCarousel .carousel-item.active .col-md-4:first-child {
+        display: block !important;
+    }
 
-                    <div class="carousel-item active">
-                        <div class="row justify-content-center">
+    .carousel-inner {
+        overflow: hidden;
+    }
+} */
+/* @media (max-width: 767px) {
 
-                            <div class="col-md-4 mb-4">
-                                <div class="visa-card p-4">
-                                    <div class="d-flex justify-content-between align-items-center mb-3">
-                                        <div class="d-flex align-items-center">
-                                            <img src="asset/image/visa/japan.jpg" class="flag-img me-2"
-                                                alt="Japan Flag">
-                                            <div class="d-flex flex-column ms-4">
-                                                <p class="visa-service-label text-start mb-0">13-Jan-2025</p>
-                                                <h5 class="country-name text-start mb-0">Japan</h5>
-                                            </div>
-                                        </div>
-                                        <a href="#" class="btn read-btn">
-                                            READ MORE <i class="bi bi-arrow-right-circle-fill ms-1 d-none d-md-block"></i>
-                                        </a>
-                                    </div>
-                                    <ul class="visa-list row row-cols-1 row-cols-md-2 g-2 mt-2">
-                                        <li class="col"><i class="bi bi-arrow-right-circle"></i> Student Visa &
-                                            Admission</li>
-                                        <li class="col"><i class="bi bi-arrow-right-circle"></i> Work Visa – H1B</li>
-                                        <li class="col"><i class="bi bi-arrow-right-circle"></i> Tourist Visa</li>
-                                        <li class="col"><i class="bi bi-arrow-right-circle"></i> Business Visa</li>
-                                    </ul>
-                                </div>
-                            </div>
 
-                            <div class="col-md-4 mb-4">
-                                <div class="visa-card p-4">
-                                    <div class="d-flex justify-content-between align-items-center mb-3">
-                                        <div class="d-flex align-items-center">
-                                            <img src="asset/image/visa/canada.jpg" class="flag-img me-2"
-                                                alt="Canada Flag">
-                                            <div class="d-flex flex-column ms-4">
-                                                <p class="visa-service-label text-start mb-0">20-Dec-2025</p>
-                                                <h5 class="country-name text-start mb-0">Canada</h5>
-                                            </div>
-                                        </div>
-                                        <a href="#" class="btn read-btn">
-                                            READ MORE <i class="bi bi-arrow-right-circle-fill ms-1 d-none d-md-block"></i>
-                                        </a>
-                                    </div>
-                                    <ul class="visa-list row row-cols-1 row-cols-md-2 g-2 mt-2">
-                                        <li class="col"><i class="bi bi-arrow-right-circle"></i> Study Permit</li>
-                                        <li class="col"><i class="bi bi-arrow-right-circle"></i> Work Permit</li>
-                                        <li class="col"><i class="bi bi-arrow-right-circle"></i> Visitor Visa</li>
-                                        <li class="col"><i class="bi bi-arrow-right-circle"></i> Business & Investor
-                                            Visa</li>
-                                    </ul>
-                                </div>
-                            </div>
+    #visaCarousel .carousel-control-prev,
+    #visaCarousel .carousel-control-next {
+        display: none !important;
+    }
 
-                            <div class="col-md-4 mb-4">
-                                <div class="visa-card p-4">
-                                    <div class="d-flex justify-content-between align-items-center mb-3">
-                                        <div class="d-flex align-items-center">
-                                            <img src="asset/image/visa/australia.jpg" class="flag-img me-2"
-                                                alt="Australia Flag">
-                                            <div class="d-flex flex-column ms-4">
-                                                <p class="visa-service-label text-start mb-0">28-Nov-2025</p>
-                                                <h5 class="country-name text-start mb-0">Australia</h5>
-                                            </div>
-                                        </div>
-                                        <a href="#" class="btn read-btn">
-                                            READ MORE <i class="bi bi-arrow-right-circle-fill ms-1 d-none d-md-block"></i>
-                                        </a>
-                                    </div>
-                                    <ul class="visa-list row row-cols-1 row-cols-md-2 g-2 mt-2">
-                                        <li class="col"><i class="bi bi-arrow-right-circle"></i> Student Visa (Subclass
-                                            500)</li>
-                                        <li class="col"><i class="bi bi-arrow-right-circle"></i> Skilled Work Visa</li>
-                                        <li class="col"><i class="bi bi-arrow-right-circle"></i> Tourist Visa</li>
-                                        <li class="col"><i class="bi bi-arrow-right-circle"></i> Business & Investment
-                                            Visa</li>
-                                    </ul>
-                                </div>
-                            </div>
 
-                        </div>
-                    </div>
+    #visaCarousel .carousel-indicators {
+        display: none !important;
+    }
+} */
 
-                    <div class="carousel-item">
-                        <div class="row justify-content-center">
+</style>
 
-                            <div class="col-md-4 mb-4">
-                                <div class="visa-card p-4">
-                                    <div class="d-flex justify-content-between align-items-center mb-3">
-                                        <div class="d-flex align-items-center">
-                                            <img src="asset/image/visa/european-countries.jpg" class="flag-img me-2"
-                                                alt="European Countries Flag">
-                                            <div class="d-flex flex-column ms-4">
-                                                <p class="visa-service-label text-start mb-0">01-Feb-2025</p>
-                                                <h5 class="country-name text-start mb-0">European Countries</h5>
-                                            </div>
-                                        </div>
-                                        <a href="#" class="btn read-btn">
-                                            READ MORE <i class="bi bi-arrow-right-circle-fill ms-1 d-none d-md-block"></i>
-                                        </a>
-                                    </div>
-                                    <ul class="visa-list row row-cols-1 row-cols-md-2 g-2 mt-2">
-                                        <li class="col"><i class="bi bi-arrow-right-circle"></i> Student Visa &
-                                            Admission</li>
-                                        <li class="col"><i class="bi bi-arrow-right-circle"></i> Work Visa / Blue Card
-                                        </li>
-                                        <li class="col"><i class="bi bi-arrow-right-circle"></i> Tourist / Schengen Visa
-                                        </li>
-                                        <li class="col"><i class="bi bi-arrow-right-circle"></i> Business / Entrepreneur
-                                            Visa</li>
-                                    </ul>
-                                </div>
-                            </div>
+   <section class="py-5" style="background:#111827;">
+    <div class="container text-center">
 
-                            <div class="col-md-4 mb-4">
-                                <div class="visa-card p-4">
-                                    <div class="d-flex justify-content-between align-items-center mb-3">
-                                        <div class="d-flex align-items-center">
-                                            <img src="asset/image/visa/turkey.jpg" class="flag-img me-2"
-                                                alt="Turkey Flag">
-                                            <div class="d-flex flex-column ms-4">
-                                                <p class="visa-service-label text-start mb-0">12-June-2025</p>
-                                                <h5 class="country-name text-start mb-0">Turkey</h5>
-                                            </div>
-                                        </div>
-                                        <a href="#" class="btn read-btn">
-                                            READ MORE <i class="bi bi-arrow-right-circle-fill ms-1 d-none d-md-block"></i>
-                                        </a>
-                                    </div>
-                                    <ul class="visa-list row row-cols-1 row-cols-md-2 g-2 mt-2">
-                                        <li class="col"><i class="bi bi-arrow-right-circle"></i> Student Visa</li>
-                                        <li class="col"><i class="bi bi-arrow-right-circle"></i> Work Visa</li>
-                                        <li class="col"><i class="bi bi-arrow-right-circle"></i> Tourist Visa</li>
-                                        <li class="col"><i class="bi bi-arrow-right-circle"></i> Business / Investment
-                                            Visa</li>
-                                    </ul>
-                                </div>
-                            </div>
+        <p class="fw-bold mb-1" style="color: #ab823e;">SERVICES WE PROVIDE</p>
+        <h2 class="text-white mb-5">EXPLORE OUR VISA ASSISTANCE</h2>
 
-                            <div class="col-md-4 mb-4">
-                                <div class="visa-card p-4">
-                                    <div class="d-flex justify-content-between align-items-center mb-3">
-                                        <div class="d-flex align-items-center">
-                                            <img src="asset/image/visa/united-states.jpg" class="flag-img me-2"
-                                                alt="United States Flag">
-                                            <div class="d-flex flex-column ms-4">
-                                                <p class="visa-service-label text-start mb-0">30-Oct-2025</p>
-                                                <h5 class="country-name text-start mb-0">United States</h5>
-                                            </div>
-                                        </div>
-                                        <a href="#" class="btn read-btn">
-                                            READ MORE <i class="bi bi-arrow-right-circle-fill ms-1 d-none d-md-block"></i>
-                                        </a>
-                                    </div>
-                                    <ul class="visa-list row row-cols-1 row-cols-md-2 g-2 mt-2">
-                                        <li class="col"><i class="bi bi-arrow-right-circle"></i> F-1 Student Visa</li>
-                                        <li class="col"><i class="bi bi-arrow-right-circle"></i> H-1B Work Visa</li>
-                                        <li class="col"><i class="bi bi-arrow-right-circle"></i> B-1/B-2 Tourist Visa
-                                        </li>
-                                        <li class="col"><i class="bi bi-arrow-right-circle"></i> L-1 / Business Visa
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <button class="carousel-control-prev d-none" type="button" data-bs-target="#visaCarousel"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next d-none" type="button" data-bs-target="#visaCarousel"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-
+        <div id="visaCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators mb-0">
+                <button type="button" data-bs-target="#visaCarousel" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#visaCarousel" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
             </div>
+
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <div class="row justify-content-center">
+                        
+                        <div class="col-md-4 mb-4">
+                            <div class="visa-card p-4">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div class="d-flex align-items-center">
+                                        <img src="asset/image/visa/japan.jpg" class="flag-img me-2" alt="Japan Flag">
+                                        <div class="d-flex flex-column ms-4">
+                                            <p class="visa-service-label text-start mb-0">13-Jan-2025</p>
+                                            <h5 class="country-name text-start mb-0">Japan</h5>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn read-btn">
+                                        READ MORE <i class="bi bi-arrow-right-circle-fill ms-1"></i>
+                                    </a>
+                                </div>
+                                <ul class="visa-list row row-cols-1 row-cols-md-2 g-2 mt-2">
+                                    <li class="col"><i class="bi bi-arrow-right-circle"></i> Student Visa & Admission</li>
+                                    <li class="col"><i class="bi bi-arrow-right-circle"></i> Work Visa – H1B</li>
+                                    <li class="col"><i class="bi bi-arrow-right-circle"></i> Tourist Visa</li>
+                                    <li class="col"><i class="bi bi-arrow-right-circle"></i> Business Visa</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mb-4">
+                            <div class="visa-card p-4">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div class="d-flex align-items-center">
+                                        <img src="asset/image/visa/canada.jpg" class="flag-img me-2" alt="Canada Flag">
+                                        <div class="d-flex flex-column ms-4">
+                                            <p class="visa-service-label text-start mb-0">20-Dec-2025</p>
+                                            <h5 class="country-name text-start mb-0">Canada</h5>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn read-btn">
+                                        READ MORE <i class="bi bi-arrow-right-circle-fill ms-1"></i>
+                                    </a>
+                                </div>
+                                <ul class="visa-list row row-cols-1 row-cols-md-2 g-2 mt-2">
+                                    <li class="col"><i class="bi bi-arrow-right-circle"></i> Study Permit</li>
+                                    <li class="col"><i class="bi bi-arrow-right-circle"></i> Work Permit</li>
+                                    <li class="col"><i class="bi bi-arrow-right-circle"></i> Visitor Visa</li>
+                                    <li class="col"><i class="bi bi-arrow-right-circle"></i> Business & Investor Visa</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mb-4">
+                            <div class="visa-card p-4">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div class="d-flex align-items-center">
+                                        <img src="asset/image/visa/australia.jpg" class="flag-img me-2" alt="Australia Flag">
+                                        <div class="d-flex flex-column ms-4">
+                                            <p class="visa-service-label text-start mb-0">28-Nov-2025</p>
+                                            <h5 class="country-name text-start mb-0">Australia</h5>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn read-btn">
+                                        READ MORE <i class="bi bi-arrow-right-circle-fill ms-1"></i>
+                                    </a>
+                                </div>
+                                <ul class="visa-list row row-cols-1 row-cols-md-2 g-2 mt-2">
+                                    <li class="col"><i class="bi bi-arrow-right-circle"></i> Student Visa (Subclass 500)</li>
+                                    <li class="col"><i class="bi bi-arrow-right-circle"></i> Skilled Work Visa</li>
+                                    <li class="col"><i class="bi bi-arrow-right-circle"></i> Tourist Visa</li>
+                                    <li class="col"><i class="bi bi-arrow-right-circle"></i> Business & Investment Visa</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+
+                        <div class="col-md-4 mb-4">
+                            <div class="visa-card p-4">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div class="d-flex align-items-center">
+                                        <img src="asset/image/visa/european-countries.jpg" class="flag-img me-2" alt="European Countries Flag">
+                                        <div class="d-flex flex-column ms-4">
+                                            <p class="visa-service-label text-start mb-0">01-Feb-2025</p>
+                                            <h5 class="country-name text-start mb-0">European Countries</h5>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn read-btn">
+                                        READ MORE <i class="bi bi-arrow-right-circle-fill ms-1"></i>
+                                    </a>
+                                </div>
+                                <ul class="visa-list row row-cols-1 row-cols-md-2 g-2 mt-2">
+                                    <li class="col"><i class="bi bi-arrow-right-circle"></i> Student Visa & Admission</li>
+                                    <li class="col"><i class="bi bi-arrow-right-circle"></i> Work Visa / Blue Card</li>
+                                    <li class="col"><i class="bi bi-arrow-right-circle"></i> Tourist / Schengen Visa</li>
+                                    <li class="col"><i class="bi bi-arrow-right-circle"></i> Business / Entrepreneur Visa</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mb-4">
+                            <div class="visa-card p-4">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div class="d-flex align-items-center">
+                                        <img src="asset/image/visa/turkey.jpg" class="flag-img me-2" alt="Turkey Flag">
+                                        <div class="d-flex flex-column ms-4">
+                                            <p class="visa-service-label text-start mb-0">12-June-2025</p>
+                                            <h5 class="country-name text-start mb-0">Turkey</h5>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn read-btn">
+                                        READ MORE <i class="bi bi-arrow-right-circle-fill ms-1"></i>
+                                    </a>
+                                </div>
+                                <ul class="visa-list row row-cols-1 row-cols-md-2 g-2 mt-2">
+                                    <li class="col"><i class="bi bi-arrow-right-circle"></i> Student Visa</li>
+                                    <li class="col"><i class="bi bi-arrow-right-circle"></i> Work Visa</li>
+                                    <li class="col"><i class="bi bi-arrow-right-circle"></i> Tourist Visa</li>
+                                    <li class="col"><i class="bi bi-arrow-right-circle"></i> Business / Investment Visa</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mb-4">
+                            <div class="visa-card p-4">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div class="d-flex align-items-center">
+                                        <img src="asset/image/visa/united-states.jpg" class="flag-img me-2" alt="United States Flag">
+                                        <div class="d-flex flex-column ms-4">
+                                            <p class="visa-service-label text-start mb-0">30-Oct-2025</p>
+                                            <h5 class="country-name text-start mb-0">United States</h5>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn read-btn">
+                                        READ MORE <i class="bi bi-arrow-right-circle-fill ms-1"></i>
+                                    </a>
+                                </div>
+                                <ul class="visa-list row row-cols-1 row-cols-md-2 g-2 mt-2">
+                                    <li class="col"><i class="bi bi-arrow-right-circle"></i> F-1 Student Visa</li>
+                                    <li class="col"><i class="bi bi-arrow-right-circle"></i> H-1B Work Visa</li>
+                                    <li class="col"><i class="bi bi-arrow-right-circle"></i> B-1/B-2 Tourist Visa</li>
+                                    <li class="col"><i class="bi bi-arrow-right-circle"></i> L-1 / Business Visa</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev d-none" type="button" data-bs-target="#visaCarousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next d-none" type="button" data-bs-target="#visaCarousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+
         </div>
-    </section>
+    </div>
+</section>
 
     <footer class="bg-white pt-5 text-center">
 
