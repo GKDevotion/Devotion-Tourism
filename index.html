@@ -1051,14 +1051,27 @@
                             <li><a class="dropdown-item py-1" href="#">MICE</a></li>
                         </ul>
                     </li>
+<style>
+    /* Show submenu on hover (desktop) */
+.dropdown-submenu:hover > .dropdown-menu {
+    display: block;
+}
 
+/* Position submenu */
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+}
+
+</style>
                     <!-- Exclusive -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="corporateMenu" role="button"
+                        <a class="nav-link dropdown-toggle fw-bold" href="#"  id="exclusiveMenu" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Exclusive
                         </a>
-                        <ul class="dropdown-menu shadow border-0 mt-2" aria-labelledby="corporateMenu">
+                        <ul class="dropdown-menu shadow border-0 mt-2" aria-labelledby="exclusiveMenu">
                             <li><a class="dropdown-item py-1" href="#">Senior</a></li>
                             <li><a class="dropdown-item py-1" href="#">Destination Wedding</a></li>
                             <li><a class="dropdown-item py-1" href="#">Student Tour</a></li>
@@ -1079,7 +1092,6 @@
 
                     </li>
 
-                    
                     <!-- Travel Guide -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle fw-bold" href="#" id="visaMenu" role="button"
@@ -2022,6 +2034,17 @@
                 992: { slidesPerView: 3 }
             }
         });
+
+        document.querySelectorAll('.dropdown-submenu > a').forEach(function(element){
+    element.addEventListener('click', function (e) {
+        let nextEl = this.nextElementSibling;
+        if(nextEl && nextEl.classList.contains('dropdown-menu')){
+            e.preventDefault();
+            nextEl.classList.toggle('show');
+        }
+    });
+});
+
     </script>
 
 </body>
