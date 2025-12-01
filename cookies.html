@@ -312,20 +312,152 @@
                 <ul class="navbar-nav gap-lg-3">
                     <li class="nav-item"><a href="index.html" class="nav-link fw-bold">Home</a></li>
                     <li class="nav-item"><a href="aboutus.html" class="nav-link fw-bold">About Us</a></li>
-
-                    <!-- Dropdown -->
+            <!-- Packages Dropdown -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="packagesDropdown" role="button"
+                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="packagesMenu" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Packages
                         </a>
-                        <ul class="dropdown-menu w-100" aria-labelledby="packagesDropdown">
-                            <li><a class="dropdown-item py-2" href="package.html">Tour Packages</a></li>
-                            <li><a class="dropdown-item py-2" href="corporate_package.html">Corporate Packages</a></li>
+
+                        <ul class="dropdown-menu shadow border-0 mt-2 py-2" aria-labelledby="packagesMenu">
+
+                            <!-- Domestic -->
+                            <li class="dropdown-submenu dropend">
+                                <a class="dropdown-item dropdown-toggle py-1 fw-semibold" href="#">
+                                    Domestic
+                                </a>
+                                <ul class="dropdown-menu shadow border-0">
+                                    <li><a class="dropdown-item py-1" href="#">Adventure</a></li>
+                                    <li><a class="dropdown-item py-1" href="#">Leisure</a></li>
+                                    <li><a class="dropdown-item py-1" href="#">Desert Safari</a></li>
+                                    <li><a class="dropdown-item py-1" href="#">Theme Park</a></li>
+                                    <li><a class="dropdown-item py-1" href="#">Day Tour</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- International -->
+                            <li class="dropdown-submenu dropend">
+                                <a class="dropdown-item dropdown-toggle py-1 fw-semibold" href="#">
+                                    International
+                                </a>
+                                <ul class="dropdown-menu shadow border-0">
+                                    <li><a class="dropdown-item py-1" href="#">Europe</a></li>
+                                    <li><a class="dropdown-item py-1" href="#">Asian</a></li>
+                                    <li><a class="dropdown-item py-1" href="#">Middle East</a></li>
+                                    <li><a class="dropdown-item py-1" href="#">Africa</a></li>
+                                    <li><a class="dropdown-item py-1" href="#">USA & Canada</a></li>
+                                </ul>
+                            </li>
+
                         </ul>
                     </li>
 
-                    <li class="nav-item"><a href="#" class="nav-link fw-bold">Global Visa</a></li>
+                    <!-- Visa -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="visaMenu" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Visa
+                        </a>
+                        <ul class="dropdown-menu shadow border-0 mt-2" aria-labelledby="visaMenu">
+                            <li><a class="dropdown-item py-1" href="#">Country Visa</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Corporate Tour -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="corporateMenu" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Corporate Tour
+                        </a>
+                        <ul class="dropdown-menu shadow border-0 mt-2" aria-labelledby="corporateMenu">
+                            <li><a class="dropdown-item py-1" href="#">Corporate</a></li>
+                            <li><a class="dropdown-item py-1" href="#">Delegation & Trade</a></li>
+                            <li><a class="dropdown-item py-1" href="#">Trade Fair & Exhibition</a></li>
+                            <li><a class="dropdown-item py-1" href="#">MICE</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Exclusive -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="exclusiveMenu" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Exclusive
+                        </a>
+                        <ul class="dropdown-menu shadow border-0 mt-2" aria-labelledby="exclusiveMenu">
+                            <li><a class="dropdown-item py-1" href="#">Senior</a></li>
+                            <li><a class="dropdown-item py-1" href="#">Destination Wedding</a></li>
+                            <li><a class="dropdown-item py-1" href="#">Student Tour</a></li>
+                            <!-- Domestic -->
+                            <li class="dropdown-submenu dropend">
+                                <a class="dropdown-item dropdown-toggle py-1" href="#">
+                                    Gift
+                                </a>
+                                <ul class="dropdown-menu shadow border-0">
+                                    <li><a class="dropdown-item py-1" href="#">Anniversary</a></li>
+                                    <li><a class="dropdown-item py-1" href="#">Birthday</a></li>
+                                    <li><a class="dropdown-item py-1" href="#">Reitrement</a></li>
+                                    <li><a class="dropdown-item py-1" href="#">HoneyMoon</a></li>
+                                </ul>
+                            </li>
+                      
+                        </ul>
+                    </li>
+
+                    <!-- Travel Guide -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="visaMenu" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Travel Guide
+                        </a>
+                        <ul class="dropdown-menu shadow border-0 mt-2" aria-labelledby="visaMenu">
+                            <li><a class="dropdown-item py-1" href="#">Flight Booking</a></li>
+                            <li><a class="dropdown-item py-1" href="#">Passport</a></li>
+                            <li><a class="dropdown-item py-1" href="#">Hotel Booking</a></li>
+                            <li><a class="dropdown-item py-1" href="#">Insurance</a></li>
+                            <li><a class="dropdown-item py-1" href="#">Forex</a></li>
+                            <li><a class="dropdown-item py-1" href="#">Rent a car</a></li>
+                        </ul>
+                    </li>
+
+
+                    <style>
+                        /* Multi-Level Positioning */
+                        .dropdown-submenu {
+                            position: relative;
+                        }
+
+                        .dropdown-submenu>.dropdown-menu {
+                            top: 0;
+                            left: 100%;
+                            margin-left: .1rem;
+                        }
+
+                        /* Hover Effect Enabled Only on Desktop */
+                        @media (min-width: 992px) {
+                            .dropdown-menu {
+                                display: block;
+                                opacity: 0;
+                                visibility: hidden;
+                                transform: translateY(10px);
+                                transition: .25s ease;
+                            }
+
+                            .nav-item.dropdown:hover>.dropdown-menu,
+                            .dropdown-submenu:hover>.dropdown-menu {
+                                opacity: 1;
+                                visibility: visible;
+                                transform: translateY(0);
+                            }
+                        }
+
+                        /* Item Styling */
+                        .dropdown-item:hover {
+                            background-color: #e4d3ae;
+                            color: #000;
+                            font-weight: 600;
+                        }
+                    </style>
+
                     <li class="nav-item"><a href="contactus.html" class="nav-link fw-bold">Contact Us</a></li>
                 </ul>
             </div>

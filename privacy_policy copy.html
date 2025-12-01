@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Devotion Tourism - Carrear</title>
+    <title>Devotion Tourism - Privacy Policy</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" href="asset/image/Devotion Real Estate.png" type="image/x-icon">
@@ -60,6 +60,213 @@
             padding-bottom: 1.5rem !important;
         }
 
+        /* Beige icon circle (large icons for Call/Email/Location) */
+        .icon-circle {
+            width: 50px;
+            height: 50px;
+            background: #f7ecd7;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            color: #b8903b;
+            /* golden brown icon color */
+            margin: auto;
+        }
+
+        /* Small beige circle for social icons */
+        .icon-circle-small {
+            width: 50px;
+            height: 50px;
+            background: #f7ecd7;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #b8903b;
+            font-size: 26px;
+            text-decoration: none;
+        }
+
+        .icon-circle-small:hover {
+            opacity: 0.8;
+        }
+
+        /* Optional: cleaner fonts */
+        .footer-section {
+            font-family: 'Poppins', sans-serif;
+        }
+
+
+
+
+        @media (min-width: 1400px) {
+            .custom-container {
+                max-width: 1320px;
+                margin: 0 auto;
+            }
+        }
+
+        /* Change radio button checked color */
+        .form-check-input:checked {
+            background-color: #ab823e !important;
+            border-color: #ab823e !important;
+        }
+
+        /* Optional: change hover/focus outline */
+        .form-check-input:focus {
+            border-color: #ab823e !important;
+            box-shadow: 0 0 0 0.25rem rgba(171, 130, 62, 0.25) !important;
+        }
+
+        .icon-circle {
+            height: 46px;
+            width: 46px;
+            background-color: #f2f2f2;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ab823e;
+            font-size: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 15px;
+        }
+
+        .contact-icon {
+            color: #ab823e;
+            font-size: 20px;
+            margin-right: 12px;
+        }
+
+        .social-btn {
+            height: 40px;
+            width: 40px;
+            border: 1px solid #ab823e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background-color: #A3865D10;
+            font-size: 18px;
+            color: #ab823e;
+            text-decoration: none;
+            transition: 0.3s ease-in-out;
+        }
+
+        .social-btn:hover {
+            background-color: #ab823e;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        footer ul,
+        footer h5,
+        footer li,
+        footer a {
+            text-align: left !important;
+        }
+
+        .paragraph {
+            padding-bottom: 30px;
+        }
+
+        .heading {
+            font-size: 22px;
+            color: #ab823e;
+        }
+
+        /* Show the divider only on medium screens and up (md) */
+        @media (min-width: 768px) {
+            .statistics-row .statistic-item:not(:last-child):after {
+                display: block;
+            }
+        }
+
+        .faq-header {
+            font-family: "Merienda", cursive;
+            color: #ab823e;
+            /* Gold/Brown color from the image */
+            font-size: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            letter-spacing: 0.1rem;
+        }
+
+        /* Custom Styles for the Container 
+        - Apply a rounded white background with a large, soft shadow 
+        */
+        .nav-container-wrapper {
+            background: white;
+            border-radius: 2.5rem;
+            /* Highly rounded corners */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15), 0 0 10px rgba(0, 0, 0, 0.05);
+            padding: 0.5rem;
+            max-width: 900px;
+            /* Limit the width to mimic the original image */
+            margin: 0 auto;
+        }
+
+        /* Styling the Nav Pills (The Unselected Links) 
+        - Use Tailwind's text color utilities, but override in CSS for exact color
+        */
+        .nav-pills .nav-link {
+            color: #594d40;
+            /* Darker text for unselected links */
+            font-weight: 500;
+            border-radius: 2rem;
+            /* Ensure pills are rounded */
+            padding: 0.75rem 1.5rem;
+            transition: all 0.3s ease;
+            text-align: center;
+            /* Disable Bootstrap's default active background color */
+            background-color: transparent;
+        }
+
+        .nav-pills .nav-link:hover:not(.active) {
+            color: #b58d55;
+            /* Subtle hover effect */
+        }
+
+        /* Styling the Active Pill (The "Visa" Button) 
+        - This is the crucial part that gives it the button look
+        */
+        .nav-pills .nav-link.active {
+            background-color: #b58d55;
+            /* The signature gold/brown color */
+            color: white;
+            /* White text on the active pill */
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(181, 141, 85, 0.6);
+            /* Gold shadow for lift */
+        }
+
+        /* Ensure nav items fill the width equally */
+        .nav-pills.nav-justified .nav-item {
+            flex-grow: 1;
+            margin: 0 5px;
+            /* Add slight spacing between items */
+        }
+
+        /* Responsive adjustments for very small screens */
+        @media (max-width: 576px) {
+            .faq-header {
+                font-size: 3rem;
+            }
+
+            .nav-pills.nav-justified {
+                flex-direction: column;
+            }
+
+            .nav-pills.nav-justified .nav-item {
+                margin-bottom: 0.5rem;
+            }
+        }
 
         /* Beige icon circle (large icons for Call/Email/Location) */
         .icon-circle {
@@ -99,80 +306,6 @@
             font-family: 'Poppins', sans-serif;
         }
 
-        .contact-section {
-            background: url('../devotion-tourism/asset/image/contact-us/contactsPage.webp') no-repeat center center;
-            background-size: cover;
-            color: white;
-            /* Set text color to white for better contrast on a dark image */
-            padding: 150px 0;
-            /* Adjust padding as needed */
-            text-align: center;
-            position: relative;
-        }
-
-        /* Optional: Add an overlay to make the text more readable */
-        .contact-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-
-        }
-
-        .contact-section .container {
-            position: relative;
-            /* Ensure container content is above the overlay */
-            z-index: 1;
-        }
-
-        .contact-section h2 {
-            font-family: "Merienda", cursive;
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-        }
-
-        .contact-section p {
-            font-size: 1rem;
-            max-width: 1000px;
-            font-weight: 500;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-
-        footer ul,
-        footer h5,
-        footer li,
-        footer a {
-            text-align: left !important;
-        }
-
-
-
-        .career-form .form-control {
-            border-radius: 10px;
-            padding: 12px;
-        }
-
-        .input-group-text {
-            background-color: #ffffff;
-            border-radius: 10px 0 0 10px;
-        }
-
-        .submit-btn {
-            background-color: #a88a6d;
-            border: none;
-            padding: 12px;
-            font-weight: 600;
-            border-radius: 10px;
-            transition: 0.3s ease-in-out;
-        }
-
-        .submit-btn:hover {
-            background-color: #8f7459;
-        }
-
         @media (min-width: 1400px) {
             .custom-container {
                 max-width: 1320px;
@@ -180,27 +313,49 @@
             }
         }
 
-        .form-control {
-            background-color: #fafafa;
-            border: 1px solid #e1e8ed;
-            font-size: 12px;
-            font-family: mona-sans-Medium;
-            color: #000;
-            position: relative;
-            width: 100%;
-            height: 40px;
-            padding-left: 20px;
+        @media (max-width: 767px) {
+            .footer-logo {
+                display: none !important;
+            }
         }
 
-        .career-section {
-            margin-top: 12%;
 
+        /* ------- MOBILE RESPONSIVE ------- */
+        @media (max-width: 576px) {
+
+            .contact-links {
+                gap: 1rem !important;
+                flex-direction: column;
+            }
+
+            .contact-item {
+                flex-direction: row;
+                justify-content: center;
+                gap: 10px;
+            }
+
+            .icon-img {
+                width: 40px;
+                height: 40px;
+            }
+
+            .label {
+                font-size: 14px;
+            }
+
+            .social-links {
+                gap: 0.7rem;
+            }
+
+            .social-img {
+                width: 34px;
+                height: 34px;
+            }
         }
     </style>
 </head>
 
 <body>
-
 
     <nav class="navbar navbar-expand-lg bg-white shadow-sm main-navbar">
         <div class="container">
@@ -267,8 +422,8 @@
 
                     .dropdown-item {
                         padding: 10px 0;
-                        font-size: 15px;
                         text-align: center;
+                        font-size: 15px;
                         border-bottom: 1px solid #f1f1f1;
                     }
                 }
@@ -327,152 +482,20 @@
                 <ul class="navbar-nav gap-lg-3">
                     <li class="nav-item"><a href="index.html" class="nav-link fw-bold">Home</a></li>
                     <li class="nav-item"><a href="aboutus.html" class="nav-link fw-bold">About Us</a></li>
-            <!-- Packages Dropdown -->
+
+                    <!-- Dropdown -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="packagesMenu" role="button"
+                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="packagesDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Packages
                         </a>
-
-                        <ul class="dropdown-menu shadow border-0 mt-2 py-2" aria-labelledby="packagesMenu">
-
-                            <!-- Domestic -->
-                            <li class="dropdown-submenu dropend">
-                                <a class="dropdown-item dropdown-toggle py-1 fw-semibold" href="#">
-                                    Domestic
-                                </a>
-                                <ul class="dropdown-menu shadow border-0">
-                                    <li><a class="dropdown-item py-1" href="#">Adventure</a></li>
-                                    <li><a class="dropdown-item py-1" href="#">Leisure</a></li>
-                                    <li><a class="dropdown-item py-1" href="#">Desert Safari</a></li>
-                                    <li><a class="dropdown-item py-1" href="#">Theme Park</a></li>
-                                    <li><a class="dropdown-item py-1" href="#">Day Tour</a></li>
-                                </ul>
-                            </li>
-
-                            <!-- International -->
-                            <li class="dropdown-submenu dropend">
-                                <a class="dropdown-item dropdown-toggle py-1 fw-semibold" href="#">
-                                    International
-                                </a>
-                                <ul class="dropdown-menu shadow border-0">
-                                    <li><a class="dropdown-item py-1" href="#">Europe</a></li>
-                                    <li><a class="dropdown-item py-1" href="#">Asian</a></li>
-                                    <li><a class="dropdown-item py-1" href="#">Middle East</a></li>
-                                    <li><a class="dropdown-item py-1" href="#">Africa</a></li>
-                                    <li><a class="dropdown-item py-1" href="#">USA & Canada</a></li>
-                                </ul>
-                            </li>
-
+                        <ul class="dropdown-menu w-100" aria-labelledby="packagesDropdown">
+                            <li><a class="dropdown-item py-2" href="package.html">Tour Packages</a></li>
+                            <li><a class="dropdown-item py-2" href="corporate_package.html">Corporate Packages</a></li>
                         </ul>
                     </li>
 
-                    <!-- Visa -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="visaMenu" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Visa
-                        </a>
-                        <ul class="dropdown-menu shadow border-0 mt-2" aria-labelledby="visaMenu">
-                            <li><a class="dropdown-item py-1" href="#">Country Visa</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- Corporate Tour -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="corporateMenu" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Corporate Tour
-                        </a>
-                        <ul class="dropdown-menu shadow border-0 mt-2" aria-labelledby="corporateMenu">
-                            <li><a class="dropdown-item py-1" href="#">Corporate</a></li>
-                            <li><a class="dropdown-item py-1" href="#">Delegation & Trade</a></li>
-                            <li><a class="dropdown-item py-1" href="#">Trade Fair & Exhibition</a></li>
-                            <li><a class="dropdown-item py-1" href="#">MICE</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- Exclusive -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="exclusiveMenu" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Exclusive
-                        </a>
-                        <ul class="dropdown-menu shadow border-0 mt-2" aria-labelledby="exclusiveMenu">
-                            <li><a class="dropdown-item py-1" href="#">Senior</a></li>
-                            <li><a class="dropdown-item py-1" href="#">Destination Wedding</a></li>
-                            <li><a class="dropdown-item py-1" href="#">Student Tour</a></li>
-                            <!-- Domestic -->
-                            <li class="dropdown-submenu dropend">
-                                <a class="dropdown-item dropdown-toggle py-1" href="#">
-                                    Gift
-                                </a>
-                                <ul class="dropdown-menu shadow border-0">
-                                    <li><a class="dropdown-item py-1" href="#">Anniversary</a></li>
-                                    <li><a class="dropdown-item py-1" href="#">Birthday</a></li>
-                                    <li><a class="dropdown-item py-1" href="#">Reitrement</a></li>
-                                    <li><a class="dropdown-item py-1" href="#">HoneyMoon</a></li>
-                                </ul>
-                            </li>
-                      
-                        </ul>
-                    </li>
-
-                    <!-- Travel Guide -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="visaMenu" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Travel Guide
-                        </a>
-                        <ul class="dropdown-menu shadow border-0 mt-2" aria-labelledby="visaMenu">
-                            <li><a class="dropdown-item py-1" href="#">Flight Booking</a></li>
-                            <li><a class="dropdown-item py-1" href="#">Passport</a></li>
-                            <li><a class="dropdown-item py-1" href="#">Hotel Booking</a></li>
-                            <li><a class="dropdown-item py-1" href="#">Insurance</a></li>
-                            <li><a class="dropdown-item py-1" href="#">Forex</a></li>
-                            <li><a class="dropdown-item py-1" href="#">Rent a car</a></li>
-                        </ul>
-                    </li>
-
-
-                    <style>
-                        /* Multi-Level Positioning */
-                        .dropdown-submenu {
-                            position: relative;
-                        }
-
-                        .dropdown-submenu>.dropdown-menu {
-                            top: 0;
-                            left: 100%;
-                            margin-left: .1rem;
-                        }
-
-                        /* Hover Effect Enabled Only on Desktop */
-                        @media (min-width: 992px) {
-                            .dropdown-menu {
-                                display: block;
-                                opacity: 0;
-                                visibility: hidden;
-                                transform: translateY(10px);
-                                transition: .25s ease;
-                            }
-
-                            .nav-item.dropdown:hover>.dropdown-menu,
-                            .dropdown-submenu:hover>.dropdown-menu {
-                                opacity: 1;
-                                visibility: visible;
-                                transform: translateY(0);
-                            }
-                        }
-
-                        /* Item Styling */
-                        .dropdown-item:hover {
-                            background-color: #e4d3ae;
-                            color: #000;
-                            font-weight: 600;
-                        }
-                    </style>
-
+                    <li class="nav-item"><a href="#" class="nav-link fw-bold">Global Visa</a></li>
                     <li class="nav-item"><a href="contactus.html" class="nav-link fw-bold">Contact Us</a></li>
                 </ul>
             </div>
@@ -480,47 +503,86 @@
         </div>
     </nav>
 
+    <section style="margin-top: 100px; background-color: #fff;">
+        <div class="container custom-container">
 
-    <section class="career-section ">
-        <div class="container custom-container text-white">
-            <div class="row align-items-center">
 
-                <!-- Left Image -->
-                <div class="col-md-6 text-center mb-4 mb-md-0">
-                    <img src="asset\image\333.webp" alt="Career Image" class="img-fluid career-image">
-                </div>
+            <h2 class="text-center  mb-4">PRIVACY POLICY</h2>
 
-                <!-- Right Form -->
-                <div class="col-md-6">
-                    <h2 class="mb-4 text-dark">Career</h2>
+            <p class="mb-4">
+                At Devotion Travel and Tourism, we respect our valued customer's privacy and ensure not to collect any
+                information other than the information relevant to make a booking with us. As such, we strive to take
+                care of our customer’s right to privacy in connection with their interaction with this website. Our
+                scope of commitment as part of the use of your information is outlined herein.
+            </p>
 
-                    <form class="career-form">
+            <h3 class=" mb-2 heading">Collection of Personal Information</h3>
+            <p class="mb-4 paragraph">
+                We collect your information mainly when you contact us to inquire about our products and services or
+                make a booking with us. This usually includes your name, contact details, email ID, physical address,
+                credit card or payment details, travel requisites, and referral source. Upon submission of information,
+                you give consent to Devotion Travel and Tourism to use your information to process orders in an accurate
+                and prompt manner.
+            </p>
 
-                        <input type="text" class="form-control mb-3" id="name" placeholder="Name">
+            <h4 class=" mb-2 heading">Use of Information</h4>
+            <p class="mb-4 paragraph">
+                Any personal information of a client obtained through this website will be utilised by Devotion Travel
+                and Tourism to process their booking, verify credit card details, and provide relevant information
+                associated with their travel or any other subsidiary services they would like to avail of. This
+                information will also be used for auditing, research, and activities focused on improving the
+                performance of our website.
+            </p>
 
-                        <input type="email" class="form-control mb-3" id="email" placeholder="Email">
+            <h4 class="mb-2 heading">Privacy of Your Information</h4>
+            <p class="mb-4 paragraph">
+                All information provided by our customers during online booking, such as their name, address, email ID,
+                and credit card details, is considered private and will not be disclosed or sold to anyone except for
+                certain suppliers or third parties whose involvement in the loop is fundamental for the successful
+                processing of your order. But before disclosing your information, we make sure that these third parties
+                abide by our privacy policy and adhere to strict safety measures.
+            </p>
 
-                        <div class="input-group mb-3">
-                            <span class="input-group-text">AED</span>
-                            <input type="tel" class="form-control" id="mobileNumber" placeholder="Mobile Number">
-                        </div>
+            <h4 class="heading mb-2">Legal Disclosure of Information</h4>
+            <p class="mb-4 paragraph">
+                We may disclose your information if we feel that such disclosure is pertinent to protect our company’s
+                rights and/or abide by a court order or a legal proceeding.
+            </p>
 
-                        <input type="text" class="form-control mb-3" id="designation" placeholder="Designation">
+            <h4 class="heading mb-2">Non-Personal Information</h4>
+            <p class="mb-0 paragraph">
+                Devotion Travel and Tourism consistently collects data from our website, with the help of patterns via
+                web logs and third-party service providers. But this data is mostly deployed to evaluate the efficiency
+                of our website’s content and features.
+            </p>
 
-                        <input type="text" class="form-control mb-3" id="totalExperience"
-                            placeholder="Total Experience">
+            <h4 class="heading mb-2">Opt-Out</h4>
+            <p class="mb-0 paragraph">
+                We provide options for visitors to our website to ‘opt-out’ of having their personal information used
+                for certain
+                purposes. For instance, if you don’t want to receive any marketing material by way of newsletters or
+                promotional
+                emails, you can choose to request us not to send advertising information from Devotion Travel and
+                Tourism or our
+                affiliate websites.
+            </p>
 
-                        <div class="mb-3">
-                            <label for="uploadResume" class="form-label text-dark">Upload Resume</label>
-                            <input type="file" class="form-control" id="uploadResume">
-                        </div>
+            <h4 class="heading mb-2">Contests and Surveys</h4>
+            <p class="mb-0 paragraph">
+                Devotion Travel and Tourism conducts contests, drawings, and surveys every now and then. Some contests
+                are organised in collaboration with a third-party sponsor, and visitors to our websites will be informed
+                at the time of the contest regarding the involvement of a particular third party and their extent of
+                using your personal information. Since participating in these contests is voluntary, it’s solely at your
+                discretion whether or not to partake in them and reveal your personal information.
+            </p>
 
-                        <button type="submit" class="btn submit-btn w-100"
-                            style="background-color: #ab823e; color: white;">Submit Now</button>
-
-                    </form>
-                </div>
-            </div>
+            <h4 class="heading">Secured Transaction</h4>
+            <p class="mb-0 paragraph">
+                In order to maintain the accuracy of data and avoid unauthorised access to our clients’ personal
+                information, we make sure that all transactions are carried out through our secured server. Moreover, we
+                utilise technical safeguard systems such as encryption, socket layers, and firewalls to secure your
+                sensitive information like credit card details
+            </p>
         </div>
     </section>
 
@@ -619,6 +681,7 @@
                     <img src="asset/image/devotion-group-favicon.png" alt="logo" height="100" style="width: auto;">
                 </div>
 
+
                 <div>
                     <div class="d-flex justify-content-center" style="gap: 3rem; margin-bottom: 0.5rem;">
 
@@ -713,18 +776,18 @@
                     </style>
 
                     <div class="d-flex justify-content-center" style="gap: 1rem; margin-top: 1rem;">
-                        <a class="icon-circle-small d-flex align-items-center justify-content-center"
-                            href="https://www.facebook.com/profile.php?id=100091695764298" target="_blank">
+                        <a class="icon-circle-small d-flex align-items-center justify-content-center" target="_blank"
+                            href="https://www.facebook.com/profile.php?id=100091695764298">
                             <img src="asset/image/icons/facebook-icon.png" width="50" height="50" alt="Facebook">
                         </a>
 
-                        <a class="icon-circle-small d-flex align-items-center justify-content-center"
-                            href="https://www.instagram.com/devotiontourism/" target="_blank">
+                        <a class="icon-circle-small d-flex align-items-center justify-content-center" target="_blank"
+                            href="https://www.instagram.com/devotiontourism/">
                             <img src="asset/image/icons/insta-icon.png" width="50" height="50" alt="Instagram">
                         </a>
 
-                        <a class="icon-circle-small d-flex align-items-center justify-content-center"
-                            href="https://www.linkedin.com/company/92558268/admin/" target="_blank">
+                        <a class="icon-circle-small d-flex align-items-center justify-content-center" target="_blank"
+                            href="https://www.linkedin.com/company/92558268/admin/">
                             <img src="asset/image/icons/linkedin-icon.png" width="50" height="50" alt="LinkedIn">
                         </a>
 
@@ -752,7 +815,6 @@
 
             <p class="small text-muted">2025 Devotion. All rights reserved.</p>
         </div>
-
         <!-- Skyline image -->
         <div class="mt-4">
             <img src="asset\image\footerBG.png" class="img-fluid w-100" alt="skyline">
