@@ -987,6 +987,62 @@
                     <li class="nav-item"><a href="index.html" class="nav-link fw-bold">Home</a></li>
                     <li class="nav-item"><a href="aboutus.html" class="nav-link fw-bold">About Us</a></li>
 
+                            <!-- Multi-level Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fw-semibold" href="#" data-bs-toggle="dropdown">
+            Packages
+          </a>
+
+          <ul class="dropdown-menu shadow border-0 mt-2">
+
+            <li class="dropdown-submenu dropend">
+              <a class="dropdown-item dropdown-toggle" href="#">Domestic</a>
+              <ul class="dropdown-menu shadow border-0">
+                <li><a class="dropdown-item" href="#">Manali</a></li>
+                <li><a class="dropdown-item" href="#">Goa</a></li>
+
+                <li class="dropdown-submenu dropend">
+                  <a class="dropdown-item dropdown-toggle" href="#">Himachal</a>
+                  <ul class="dropdown-menu shadow border-0">
+                    <li><a class="dropdown-item" href="#">Shimla</a></li>
+                    <li><a class="dropdown-item" href="#">Kasol</a></li>
+                  </ul>
+                </li>
+
+              </ul>
+            </li>
+
+            <li class="dropdown-submenu dropend">
+              <a class="dropdown-item dropdown-toggle" href="#">International</a>
+              <ul class="dropdown-menu shadow border-0">
+                <li><a class="dropdown-item" href="#">Dubai</a></li>
+                <li><a class="dropdown-item" href="#">Thailand</a></li>
+              </ul>
+            </li>
+
+          </ul>
+        </li>
+<style>/******** Multi-Level Dropdown ********/
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-left: .1rem;
+}
+
+/* Arrow Icon */
+.dropdown-menu .dropdown-toggle::after {
+  float: right;
+  margin-top: 6px;
+  border-left: .3em solid transparent;
+  border-right: .3em solid transparent;
+  border-top: .3em solid #000;
+}
+</style>
+
                     <!-- Packages Dropdown -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle fw-bold" href="#" id="packagesMenu" role="button"
@@ -1051,23 +1107,10 @@
                             <li><a class="dropdown-item py-1" href="#">MICE</a></li>
                         </ul>
                     </li>
-<style>
-    /* Show submenu on hover (desktop) */
-.dropdown-submenu:hover > .dropdown-menu {
-    display: block;
-}
 
-/* Position submenu */
-.dropdown-submenu .dropdown-menu {
-    top: 0;
-    left: 100%;
-    margin-top: -1px;
-}
-
-</style>
                     <!-- Exclusive -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle fw-bold" href="#"  id="exclusiveMenu" role="button"
+                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="exclusiveMenu" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Exclusive
                         </a>
@@ -1075,7 +1118,7 @@
                             <li><a class="dropdown-item py-1" href="#">Senior</a></li>
                             <li><a class="dropdown-item py-1" href="#">Destination Wedding</a></li>
                             <li><a class="dropdown-item py-1" href="#">Student Tour</a></li>
-                                <!-- Domestic -->
+                            <!-- Domestic -->
                             <li class="dropdown-submenu dropend">
                                 <a class="dropdown-item dropdown-toggle py-1" href="#">
                                     Gift
@@ -1087,9 +1130,8 @@
                                     <li><a class="dropdown-item py-1" href="#">HoneyMoon</a></li>
                                 </ul>
                             </li>
-                      
-                        </ul>
 
+                        </ul>
                     </li>
 
                     <!-- Travel Guide -->
@@ -2035,15 +2077,26 @@
             }
         });
 
-        document.querySelectorAll('.dropdown-submenu > a').forEach(function(element){
-    element.addEventListener('click', function (e) {
-        let nextEl = this.nextElementSibling;
-        if(nextEl && nextEl.classList.contains('dropdown-menu')){
-            e.preventDefault();
-            nextEl.classList.toggle('show');
-        }
+
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.dropdown-submenu > a').forEach(function (element) {
+        element.addEventListener('click', function (e) {
+            if (window.innerWidth < 992) { // Only on mobile
+                e.preventDefault();
+                let submenu = this.nextElementSibling;
+
+                // Close other open submenus
+                this.closest('.dropdown-menu').querySelectorAll('.show').forEach(function (openMenu) {
+                    if (openMenu !== submenu) {
+                        openMenu.classList.remove('show');
+                    }
+                });
+                submenu.classList.toggle('show');
+            }
+        });
     });
 });
+
 
     </script>
 
