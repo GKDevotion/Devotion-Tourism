@@ -1,31 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Devotion Tourism - Carrear</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" href="asset/image/Devotion Real Estate.png" type="image/x-icon">
-    <link rel="stylesheet" href="asset/css/custom.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
-    <!-- bootstrap 5.3 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merienda:wght@300..900&display=swap"
-        rel="stylesheet">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>World Analog Clocks — Singapore, New Delhi, Dubai, London, New York</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
+        .clamp-text {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            /* 2 lines */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            word-break: break-word;
+        }
+
+
+
         body {
             padding-top: 45px;
             /* Adjust if needed */
@@ -39,6 +34,7 @@
             background-color: #ffffff;
             z-index: 1060;
             width: 100%;
+
             border-radius: 0px;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         }
@@ -60,47 +56,13 @@
             padding-bottom: 1.5rem !important;
         }
 
-
-        /* Beige icon circle (large icons for Call/Email/Location) */
-        .icon-circle {
-            width: 50px;
-            height: 50px;
-            background: #f7ecd7;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 26px;
-            color: #b8903b;
-            /* golden brown icon color */
-            margin: auto;
-        }
-
-        /* Small beige circle for social icons */
-        .icon-circle-small {
-            width: 50px;
-            height: 50px;
-            background: #f7ecd7;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #b8903b;
-            font-size: 26px;
-            text-decoration: none;
-        }
-
-        .icon-circle-small:hover {
-            opacity: 0.8;
-        }
-
         /* Optional: cleaner fonts */
         .footer-section {
             font-family: 'Poppins', sans-serif;
         }
 
         .contact-section {
-            background: url('../devotion-tourism/asset/image/contact-us/contactsPage.webp') no-repeat center center;
+            background: url('asset/image/packages/bg5.avif') no-repeat center center;
             background-size: cover;
             color: white;
             /* Set text color to white for better contrast on a dark image */
@@ -135,42 +97,10 @@
 
         .contact-section p {
             font-size: 1rem;
-            max-width: 1000px;
+            max-width: 1300px;
             font-weight: 500;
             margin: 0 auto;
             line-height: 1.6;
-        }
-
-        footer ul,
-        footer h5,
-        footer li,
-        footer a {
-            text-align: left !important;
-        }
-
-
-
-        .career-form .form-control {
-            border-radius: 10px;
-            padding: 12px;
-        }
-
-        .input-group-text {
-            background-color: #ffffff;
-            border-radius: 10px 0 0 10px;
-        }
-
-        .submit-btn {
-            background-color: #a88a6d;
-            border: none;
-            padding: 12px;
-            font-weight: 600;
-            border-radius: 10px;
-            transition: 0.3s ease-in-out;
-        }
-
-        .submit-btn:hover {
-            background-color: #8f7459;
         }
 
         @media (min-width: 1400px) {
@@ -180,27 +110,297 @@
             }
         }
 
-        .form-control {
-            background-color: #fafafa;
-            border: 1px solid #e1e8ed;
-            font-size: 12px;
-            font-family: mona-sans-Medium;
-            color: #000;
-            position: relative;
-            width: 100%;
+        /* Change radio button checked color */
+        .form-check-input:checked {
+            background-color: #ab823e !important;
+            border-color: #ab823e !important;
+        }
+
+        /* Optional: change hover/focus outline */
+        .form-check-input:focus {
+            border-color: #ab823e !important;
+            box-shadow: 0 0 0 0.25rem rgba(171, 130, 62, 0.25) !important;
+        }
+
+        .icon-circle {
+            height: 46px;
+            width: 46px;
+            background-color: #f2f2f2;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ab823e;
+            font-size: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 15px;
+        }
+
+        .contact-icon {
+            color: #ab823e;
+            font-size: 20px;
+            margin-right: 12px;
+        }
+
+        .social-btn {
             height: 40px;
-            padding-left: 20px;
+            width: 40px;
+            border: 1px solid #ab823e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background-color: #A3865D10;
+            font-size: 18px;
+            color: #ab823e;
+            text-decoration: none;
+            transition: 0.3s ease-in-out;
         }
 
-        .career-section {
-            margin-top: 12%;
+        .social-btn:hover {
+            background-color: #ab823e;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        footer ul,
+        footer h5,
+        footer li,
+        footer a {
+            text-align: left !important;
+        }
+
+        /* Make both sides match height */
+        .hotel-box-view {
+
+            min-height: 300px;
+            height: 100%;
 
         }
+
+        .visa-card {
+            background: #ffffff;
+            border-radius: 10px;
+            border: 1px solid #2c2f3a;
+            transition: .3s;
+            margin-top: 15px;
+        }
+
+        .visa-card:hover {
+            transform: translateY(-8px);
+            border-color: #ab823e;
+        }
+
+        .flag-wrap {
+            width: 70px;
+            height: 70px;
+        }
+
+        .flag-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .visa-service-label {
+            color: #ab823e;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .country-name {
+            color: black;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .visa-list {
+            list-style: none;
+            padding-left: 010px;
+        }
+
+        .visa-list li {
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+
+            margin-bottom: 4px;
+            color: black;
+            /* optional if your card is dark */
+        }
+
+        .visa-list i {
+            font-size: 14px;
+            color: black;
+            /* soft icon color */
+        }
+
+
+        .read-btn {
+            background: #ab823e;
+            color: #fff;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            padding: 13px 31px;
+        }
+
+        .read-btn:hover {
+            background: #ab823e;
+            color: #fff;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            filter: invert(1);
+        }
+
+        .flag-img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+        }
+
+
+        /* ========================= */
+        /* Mobile Layout Fixes Below */
+        /* ========================= */
+
+        @media (max-width: 767px) {
+
+            /* Reduce padding inside card */
+            .visa-card {
+                padding: 2rem 1.2rem;
+            }
+
+            /* Flex row adjustments */
+            .visa-card .d-flex.align-items-center {
+                flex-direction: row;
+
+            }
+
+            /* Hide the large spacing of text group */
+            /* .visa-card .d-flex.flex-column.ms-4 {
+        margin-left: 0.5rem;
+    } */
+
+            /* Make Read More button smaller */
+            .read-btn {
+                font-size: 12px;
+                padding: 3px 6px;
+            }
+
+            /* Make the flag slightly smaller */
+            .flag-img {
+                width: 45px;
+                height: 45px;
+            }
+
+            /* Visa list spacing */
+            .visa-list li {
+                font-size: 13px;
+                gap: 4px;
+            }
+
+
+
+            /* Carousel: one card at a time, center properly */
+            #visaCarousel .carousel-item .row {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            /* Card width full on mobile */
+            #visaCarousel .carousel-item .col-md-4 {
+                flex: 0 0 90%;
+                max-width: 90%;
+            }
+
+            /* Adjust margin between cards */
+            #visaCarousel .carousel-item .col-md-4:not(:last-child) {
+                margin-bottom: 15px;
+            }
+
+            /* Reduce heading size */
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            /* Reduce small paragraph size */
+            p.text-danger {
+                font-size: 12px;
+            }
+        }
+
+        /* Pagination dots */
+        .myVisaSwiper .swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+            background: #7a7a7a;
+            /* default gray color */
+            opacity: 0.6;
+            margin: 0 6px !important;
+            transition: all 0.3s ease;
+        }
+
+        /* Active dot */
+        .myVisaSwiper .swiper-pagination-bullet-active {
+            background: #ab823e;
+            /* golden color */
+            width: 32px;
+            /* longer active indicator */
+            border-radius: 8px;
+            opacity: 1;
+        }
+
+        /* Hover animation */
+        .myVisaSwiper .swiper-pagination-bullet:hover {
+            background: #d1a464;
+            opacity: 1;
+            transform: scale(1.2);
+        }
+
+        .swiper-pagination {
+            position: unset;
+        }
+
+        .card-title {
+            color: #ab823e;
+        }
+
+        .read-more {
+            color: #ab823e;
+        }
+
+        .read-more:hover {
+            color: #ab823e;
+        }
+
+        .visa-price {
+            color: #ab823e;
+        }
+
+        .require-document {
+            padding-left: 19px;
+            color: #ab823e;
+        }
+
+        /* .accordion-button:not(.collapsed) {
+            color: #ffffff;
+            background-color: #ab823e;
+            box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
+        }
+  */
     </style>
 </head>
 
 <body>
-
 
     <nav class="navbar navbar-expand-lg bg-white shadow-sm main-navbar">
         <div class="container">
@@ -215,40 +415,12 @@
                     z-index: 1050;
                 }
 
-
                 /* Remove top padding only on mobile */
                 @media (max-width: 991px) {
                     body {
-                        padding-top: -96 !important;
-                    }
-                }
-
-                @media (max-width: 991px) {
-                    .hero-overlay {
-                        padding-top: 20vh;
-                    }
-                }
-
-                /* Navbar should stick directly to top on mobile */
-                @media (max-width: 991px) {
-                    body {
                         padding-top: 0 !important;
-                        /* Remove space above content */
-                        margin-top: 0 !important;
-                    }
-
-                    .main-navbar {
-                        margin-top: 0 !important;
-                        /* Remove navbar margin */
-                        top: 0;
-                    }
-
-                    .top-bar {
-                        display: none !important;
-                        /* Hide top bar on mobile */
                     }
                 }
-
 
                 /* Mobile Dropdown Improvements */
                 @media (max-width: 991px) {
@@ -275,13 +447,14 @@
 
                 @media (max-width: 991px) {
                     .contact-section {
-                        padding-top: 65vh;
+                        padding-top: 30vh;
                     }
                 }
 
-                @media (max-width: 991px) {
-                    .contact-section .container {
-                        padding-bottom: 30vh;
+                /* Desktop View */
+                @media (min-width: 992px) {
+                    .top-bar {
+                        padding: 5px 0;
                     }
                 }
             </style>
@@ -327,7 +500,8 @@
                 <ul class="navbar-nav gap-lg-3">
                     <li class="nav-item"><a href="index.html" class="nav-link fw-bold">Home</a></li>
                     <li class="nav-item"><a href="aboutus.html" class="nav-link fw-bold">About Us</a></li>
-            <!-- Packages Dropdown -->
+
+                    <!-- Packages Dropdown -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle fw-bold" href="#" id="packagesMenu" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
@@ -414,7 +588,7 @@
                                     <li><a class="dropdown-item py-1" href="#">HoneyMoon</a></li>
                                 </ul>
                             </li>
-                      
+
                         </ul>
                     </li>
 
@@ -473,7 +647,6 @@
                         }
                     </style>
 
-                     <li class="nav-item"><a href="visa.html" class="nav-link fw-bold">Global Visa</a></li>
                     <li class="nav-item"><a href="contactus.html" class="nav-link fw-bold">Contact Us</a></li>
                 </ul>
             </div>
@@ -481,49 +654,39 @@
         </div>
     </nav>
 
-
-    <section class="career-section ">
-        <div class="container custom-container text-white">
-            <div class="row align-items-center">
-
-                <!-- Left Image -->
-                <div class="col-md-6 text-center mb-4 mb-md-0">
-                    <img src="asset\image\333.webp" alt="Career Image" class="img-fluid career-image">
-                </div>
-
-                <!-- Right Form -->
-                <div class="col-md-6">
-                    <h2 class="mb-4 text-dark">Career</h2>
-
-                    <form class="career-form">
-
-                        <input type="text" class="form-control mb-3" id="name" placeholder="Name">
-
-                        <input type="email" class="form-control mb-3" id="email" placeholder="Email">
-
-                        <div class="input-group mb-3">
-                            <span class="input-group-text">AED</span>
-                            <input type="tel" class="form-control" id="mobileNumber" placeholder="Mobile Number">
-                        </div>
-
-                        <input type="text" class="form-control mb-3" id="designation" placeholder="Designation">
-
-                        <input type="text" class="form-control mb-3" id="totalExperience"
-                            placeholder="Total Experience">
-
-                        <div class="mb-3">
-                            <label for="uploadResume" class="form-label text-dark">Upload Resume</label>
-                            <input type="file" class="form-control" id="uploadResume">
-                        </div>
-
-                        <button type="submit" class="btn submit-btn w-100"
-                            style="background-color: #ab823e; color: white;">Submit Now</button>
-
-                    </form>
-                </div>
-            </div>
+    <section class="contact-section">
+        <div class="container">
+            <h2 class="display-4">Global Visa</h2>
+            <p class="lead">
+                Global Visa services help travelers explore the world with confidence and ease. From tourism to business
+                and long-term stays, we assist with fast and reliable visa processing for countries across the globe.
+                Our expert support ensures hassle-free documentation, transparent guidance, and timely approvals. Travel
+                anywhere — we make your global journey smoother.
+            </p>
         </div>
     </section>
+
+    <div class="container custom-container py-4">
+        <div class="row" id="visa-container"></div>
+    </div>
+
+    <!-- Description Modal -->
+    <div class="modal fade" id="descModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="descModalTitle"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="descModalBody"></div>
+
+                <h6 class=" require-document">Required Documents</h6>
+                <div class="modal-body" id="docuModalBody"></div>
+                <h6 class=" require-document">Notes</h6>
+                <div class="modal-body" id="notesModalBody"></div>
+            </div>
+        </div>
+    </div>
 
     <footer class="bg-white pt-5 text-center">
 
@@ -604,6 +767,7 @@
             </div>
         </section>
 
+
         <!-- Top navigation -->
         <div class="container">
 
@@ -619,6 +783,7 @@
                 <div class="mb-4 d-none d-md-block">
                     <img src="asset/image/devotion-group-favicon.png" alt="logo" height="100" style="width: auto;">
                 </div>
+
 
                 <div>
                     <div class="d-flex justify-content-center" style="gap: 3rem; margin-bottom: 0.5rem;">
@@ -657,8 +822,8 @@
 
                     <style>
                         /* ===========================
-   📱 Tablet / Medium Screens
-=========================== */
+                            📱 Tablet / Medium Screens
+                            =========================== */
                         @media (max-width: 992px) {
                             .contact-row {
                                 gap: 2rem;
@@ -670,8 +835,8 @@
                         }
 
                         /* ===========================
-   📱 Mobile Responsive
-=========================== */
+                        📱 Mobile Responsive
+                        =========================== */
                         @media (max-width: 768px) {
                             .contact-row {
                                 gap: 1.5rem;
@@ -695,8 +860,8 @@
                         }
 
                         /* ===========================
-   📱 Very Small Phones
-=========================== */
+                        📱 Very Small Phones
+                        =========================== */
                         @media (max-width: 480px) {
                             .contact-row {
                                 gap: 1.2rem;
@@ -760,7 +925,130 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap bundle (includes Popper) - required for modal behavior -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // RENDER UI
+        const container = document.getElementById("visa-container");
+
+        fetch("asset/json/GlobalVisa.json")
+            .then(res => res.json())
+            .then(json => {
+                json.response.forEach(country => {
+                    country.visaInfo.forEach(visa => {
+
+                        const flagsHtml = (visa.flags || []).map((f, index) => `
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading-${visa._id}-${index}">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                            data-bs-target="#collapse-${visa._id}-${index}" aria-expanded="false" 
+                            aria-controls="collapse-${visa._id}-${index}">
+                        ${f.serviceType}
+                    </button>
+                    </h2>
+                    <div id="collapse-${visa._id}-${index}" class="accordion-collapse collapse" 
+                        aria-labelledby="heading-${visa._id}-${index}" data-bs-parent="#accordion-${visa._id}">
+                    <div class="accordion-body">
+                        ${f.serviceDetails}
+                    </div>
+                    </div>
+                </div>
+                `).join("");
+
+                const accordionWrapper = `
+                <div class="accordion" id="accordion-${visa._id}">
+                ${flagsHtml}
+                </div>
+                `;
+
+
+                        const additionalHtml = (visa.addtionalService || []).map((a, idx) => `
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading-add-${visa._id}-${idx}">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-add-${visa._id}-${idx}" aria-expanded="false" aria-controls="collapse-add-${visa._id}-${idx}">
+                        ${a.serviceName}
+                    </button>
+                    </h2>
+                    <div id="collapse-add-${visa._id}-${idx}" class="accordion-collapse collapse" aria-labelledby="heading-add-${visa._id}-${idx}" data-bs-parent="#additionalAccordion-${visa._id}">
+                    <div class="accordion-body">
+                        ${a.serviceDescription}
+                    </div>
+                    </div>
+                </div>
+                `).join('');
+
+
+                        const showReadMore = (visa.description || "").length > 10;
+                        const encodedDesc = encodeURIComponent(visa.description || "");
+                        const encodedDocu = encodeURIComponent(visa.reqDocuments || "");
+                        const encodedNote = encodeURIComponent(visa.reqNotes || "");
+                        container.innerHTML += `
+              
+                <div class="col-lg-6 col-md-6 mb-4 ">
+                <div class="card mb-4 shadow-sm h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">${country.countryName}</h5>
+                    <h6 class="text-secondary">${visa.title}</h6>
+
+                    <p class="mt-2"><strong>Processing Days:</strong> ${country.processDaysStart}-${country.processDaysEnd} Days</p>
+
+                    <!-- clamped description -->
+                    <p class="small clamp-text description-text">
+                    ${visa.description || ''}
+                    </p>
+
+                    ${showReadMore ? `
+                    <button class="btn btn-link text-decoration-none border-0 shadow-none p-0 read-more"
+                    data-title="${encodeURIComponent(country.countryName + ' - ' + visa.title)}"
+                            data-desc="${encodedDesc}" data-docu="${encodedDocu}" data-notes="${encodedNote}">
+                    Read More
+                    </button>` : ''}
+
+                    <h6 class="mt-3">Visa Details</h6>
+                    <ul class="list-group mb-3">
+                      ${accordionWrapper}
+                    </ul>
+
+                    <h6 class="mt-3">Additional Services</h6>
+                    <div class="accordion" id="additionalAccordion-${visa._id}">
+                    ${additionalHtml}
+                    </div>
+
+                    <div class="d-flex justify-content-between p-2 align-items-center">
+                      <h5 class="visa-price mb-0">AED ${visa.price}</h5>
+                    </div>
+                  </div>
+                </div>
+         
+              </div>`;
+                    });
+                });
+            })
+            .catch(err => {
+                console.error("Failed to load JSON:", err);
+                container.innerHTML = `<div class="col-12"><div class="alert alert-danger">Failed to load data.</div></div>`;
+            });
+
+        // Use Bootstrap 5's Modal API (not jQuery .modal)
+        $(document).on("click", ".read-more", function () {
+            // decode safely
+            const title = decodeURIComponent($(this).data("title") || "");
+            const desc = decodeURIComponent($(this).data("desc") || "");
+            const docu = decodeURIComponent($(this).data("docu") || "");
+            const notes = decodeURIComponent($(this).data("notes") || "");
+            // fill modal
+            document.getElementById("descModalTitle").textContent = title;
+            // allow HTML if you want formatting: use innerHTML carefully
+            document.getElementById("descModalBody").innerHTML = desc.replace(/\n/g, "<br>");
+            document.getElementById("docuModalBody").innerHTML = docu.replace(/\n/g, "<br>");
+            document.getElementById("notesModalBody").innerHTML = notes.replace(/\n/g, "<br>");
+            // show modal using Bootstrap 5
+            const modalEl = document.getElementById('descModal');
+            const bsModal = new bootstrap.Modal(modalEl);
+            bsModal.show();
+        });
+    </script>
+
 </body>
 
 </html>
