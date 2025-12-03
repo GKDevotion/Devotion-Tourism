@@ -402,6 +402,30 @@
             filter: brightness(0) saturate(150%) invert(66%) sepia(15%) saturate(935%) hue-rotate(6deg) brightness(94%) contrast(100%);
         }
 
+                .alphabet-filter {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            margin: 20px auto;
+        }
+
+        .alphabet-filter button {
+            border: 1px solid #ab823e;
+            background: #fff;
+            color: #ab823e;
+            padding: 6px 12px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+        .alphabet-filter button:hover,
+        .alphabet-filter button.active {
+            background: #ab823e;
+            color: #fff;
+        }
+
         /* .accordion-button:not(.collapsed) {
             color: #ffffff;
             background-color: #ab823e;
@@ -559,7 +583,7 @@
                             Visa
                         </a>
                         <ul class="dropdown-menu shadow border-0 mt-2" aria-labelledby="visaMenu">
-                            <li><a class="dropdown-item py-1" href="#">Country Visa</a></li>
+                            <li><a class="dropdown-item py-1" href="country_visa.html">Country Visa</a></li>
                         </ul>
                     </li>
 
@@ -679,7 +703,7 @@
 
     <!-- A-Z Filter (replace your existing alphabet-filter div) -->
     <div class="alphabet-filter" role="tablist" aria-label="Filter by alphabet">
-        <button data-letter="ALL" class="active">ALL</button>
+        <!-- <button data-letter="ALL" class="active">ALL</button> -->
         <button data-letter="A">A</button>
         <button data-letter="B">B</button>
         <button data-letter="C">C</button>
@@ -707,36 +731,10 @@
         <button data-letter="Y">Y</button>
         <button data-letter="Z">Z</button>
     </div>
-    <style>
-        .alphabet-filter {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 8px;
-            margin: 20px auto;
-        }
-
-        .alphabet-filter button {
-            border: 1px solid #ab823e;
-            background: #fff;
-            color: #ab823e;
-            padding: 6px 12px;
-            cursor: pointer;
-            border-radius: 4px;
-            transition: 0.3s;
-        }
-
-        .alphabet-filter button:hover,
-        .alphabet-filter button.active {
-            background: #ab823e;
-            color: #fff;
-        }
-    </style>
 
     <div class="container custom-container py-4">
         <div class="row" id="visa-container"></div>
     </div>
-
 
     <!-- Description Modal -->
     <div class="modal fade" id="descModal" tabindex="-1" aria-hidden="true">
@@ -1097,8 +1095,8 @@
               </div>`;
                     });
                 });
-                // after rendering, ensure default filter state (show ALL)
-                applyAlphabetFilter("ALL");
+                // // after rendering, ensure default filter state (show ALL)
+                // applyAlphabetFilter("ALL");
             })
             .catch(err => {
                 console.error("Failed to load JSON:", err);
