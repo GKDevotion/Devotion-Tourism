@@ -704,7 +704,6 @@
 
     <!-- A-Z Filter (replace your existing alphabet-filter div) -->
     <div class="alphabet-filter" role="tablist" aria-label="Filter by alphabet">
-        <!-- <button data-letter="ALL" class="active">ALL</button> -->
         <button data-letter="A">A</button>
         <button data-letter="B">B</button>
         <button data-letter="C">C</button>
@@ -1096,8 +1095,9 @@
               </div>`;
                     });
                 });
-                // // after rendering, ensure default filter state (show ALL)
-                // applyAlphabetFilter("ALL");
+                // after rendering, ensure default filter state (show ALL)
+                applyAlphabetFilter("A"); // Default filter = A
+
             })
             .catch(err => {
                 console.error("Failed to load JSON:", err);
