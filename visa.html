@@ -391,6 +391,17 @@
             color: #ab823e;
         }
 
+        .accordion-button:not(.collapsed) {
+            color: #ab823e;
+            background-color: white;
+            box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
+        }
+
+
+        .accordion-button:not(.collapsed)::after {
+            filter: brightness(0) saturate(150%) invert(66%) sepia(15%) saturate(935%) hue-rotate(6deg) brightness(94%) contrast(100%);
+        }
+
         /* .accordion-button:not(.collapsed) {
             color: #ffffff;
             background-color: #ab823e;
@@ -666,9 +677,66 @@
         </div>
     </section>
 
+    <!-- A-Z Filter (replace your existing alphabet-filter div) -->
+    <div class="alphabet-filter" role="tablist" aria-label="Filter by alphabet">
+        <button data-letter="ALL" class="active">ALL</button>
+        <button data-letter="A">A</button>
+        <button data-letter="B">B</button>
+        <button data-letter="C">C</button>
+        <button data-letter="D">D</button>
+        <button data-letter="E">E</button>
+        <button data-letter="F">F</button>
+        <button data-letter="G">G</button>
+        <button data-letter="H">H</button>
+        <button data-letter="I">I</button>
+        <button data-letter="J">J</button>
+        <button data-letter="K">K</button>
+        <button data-letter="L">L</button>
+        <button data-letter="M">M</button>
+        <button data-letter="N">N</button>
+        <button data-letter="O">O</button>
+        <button data-letter="P">P</button>
+        <button data-letter="Q">Q</button>
+        <button data-letter="R">R</button>
+        <button data-letter="S">S</button>
+        <button data-letter="T">T</button>
+        <button data-letter="U">U</button>
+        <button data-letter="V">V</button>
+        <button data-letter="W">W</button>
+        <button data-letter="X">X</button>
+        <button data-letter="Y">Y</button>
+        <button data-letter="Z">Z</button>
+    </div>
+    <style>
+        .alphabet-filter {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            margin: 20px auto;
+        }
+
+        .alphabet-filter button {
+            border: 1px solid #ab823e;
+            background: #fff;
+            color: #ab823e;
+            padding: 6px 12px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+        .alphabet-filter button:hover,
+        .alphabet-filter button.active {
+            background: #ab823e;
+            color: #fff;
+        }
+    </style>
+
     <div class="container custom-container py-4">
         <div class="row" id="visa-container"></div>
     </div>
+
 
     <!-- Description Modal -->
     <div class="modal fade" id="descModal" tabindex="-1" aria-hidden="true">
@@ -930,11 +998,16 @@
     <script>
         // RENDER UI
         const container = document.getElementById("visa-container");
+        const alphabetContainer = document.querySelector(".alphabet-filter");
 
         fetch("asset/json/GlobalVisa.json")
             .then(res => res.json())
             .then(json => {
                 json.response.forEach(country => {
+                    // determine first letter; fallback to '#'
+                    const firstChar = (country.countryName || "").trim().charAt(0).toUpperCase();
+                    const letter = /[A-Z]/.test(firstChar) ? firstChar : "#";
+
                     country.visaInfo.forEach(visa => {
 
                         const flagsHtml = (visa.flags || []).map((f, index) => `
@@ -955,7 +1028,7 @@
                 </div>
                 `).join("");
 
-                const accordionWrapper = `
+                        const accordionWrapper = `
                 <div class="accordion" id="accordion-${visa._id}">
                 ${flagsHtml}
                 </div>
@@ -982,9 +1055,10 @@
                         const encodedDesc = encodeURIComponent(visa.description || "");
                         const encodedDocu = encodeURIComponent(visa.reqDocuments || "");
                         const encodedNote = encodeURIComponent(visa.reqNotes || "");
+
                         container.innerHTML += `
               
-                <div class="col-lg-6 col-md-6 mb-4 ">
+                <div class="col-lg-6 col-md-6 mb-4 global-visa-card" data-letter="${letter}">
                 <div class="card mb-4 shadow-sm h-100">
                   <div class="card-body">
                     <h5 class="card-title">${country.countryName}</h5>
@@ -1023,11 +1097,51 @@
               </div>`;
                     });
                 });
+                // after rendering, ensure default filter state (show ALL)
+                applyAlphabetFilter("ALL");
             })
             .catch(err => {
                 console.error("Failed to load JSON:", err);
                 container.innerHTML = `<div class="col-12"><div class="alert alert-danger">Failed to load data.</div></div>`;
             });
+
+        // ---------- Alphabet filter logic ----------
+        function applyAlphabetFilter(letter) {
+            // normalize
+            const normalized = (letter || "ALL").toString().toUpperCase();
+            // toggle button active class
+            document.querySelectorAll(".alphabet-filter button").forEach(btn => {
+                btn.classList.toggle("active", btn.dataset.letter === normalized);
+            });
+
+            const cards = document.querySelectorAll(".global-visa-card");
+            cards.forEach(card => {
+                const cardLetter = (card.dataset.letter || "").toUpperCase();
+                if (normalized === "ALL") {
+                    card.style.display = ""; // restore default (Bootstrap col will show)
+                } else {
+                    card.style.display = (cardLetter === normalized) ? "" : "none";
+                }
+            });
+        }
+
+        // attach click handlers to alphabet buttons (use event delegation)
+        alphabetContainer.addEventListener("click", function (e) {
+            const btn = e.target.closest("button[data-letter]");
+            if (!btn) return;
+            const letter = btn.dataset.letter;
+            applyAlphabetFilter(letter);
+            // optional: scroll to cards area when a letter is clicked
+            // document.getElementById('visa-container').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // keyboard accessibility: allow Enter on focused button
+        alphabetContainer.addEventListener("keydown", function (e) {
+            if ((e.key === "Enter" || e.key === " ") && document.activeElement.dataset?.letter) {
+                e.preventDefault();
+                applyAlphabetFilter(document.activeElement.dataset.letter);
+            }
+        });
 
         // Use Bootstrap 5's Modal API (not jQuery .modal)
         $(document).on("click", ".read-more", function () {
@@ -1047,6 +1161,17 @@
             const bsModal = new bootstrap.Modal(modalEl);
             bsModal.show();
         });
+
+        $(document).ready(function () {
+            $('#descModal').on('show.bs.modal', function () {
+                $('nav.navbar, footer').fadeOut(200);
+            });
+
+            $('#descModal').on('hide.bs.modal', function () {
+                $('nav.navbar, footer').fadeIn(200);
+            });
+        });
+
     </script>
 
 </body>
