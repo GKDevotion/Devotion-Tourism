@@ -6,6 +6,8 @@ storage/app
 storage/log
 docker
 vendor
+vendor-11
+vendor-12
 .env
 .env.backup
 .phpunit.result.cache
@@ -18,12 +20,13 @@ yarn-error.log
 /.vscode
 tests
 *.zip
-*.mp3
+/doc/*.mp3
 *.tmp
 *.exe
 *.mp4
 doc
 *-bkp.pdf
+*-bkp.php
 step-form
 composer.lock
 /public/backend/assets/css/custom.css
