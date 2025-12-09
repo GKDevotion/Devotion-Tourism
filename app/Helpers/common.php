@@ -1,23 +1,16 @@
 <?php
 
-use App\Models\Accounting;
-use App\Models\AccountManagememt;
 use App\Models\AdminLog;
-use App\Models\BankInformation;
 use App\Models\City;
-use App\Models\Client;
 use App\Models\Company;
 use App\Models\Continent;
 use App\Models\Country;
 use App\Models\Department;
-use App\Models\Industry;
-use App\Models\Religion;
 use App\Models\State;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Str;
+
 /*
 ++++++++++++++++++++++++++++++++++++++++++++++
 	display pagetitle and header title on browser
@@ -309,19 +302,6 @@ function convertToReadableSize($size){
 	return round(pow(1024, $base - floor($base)), 1) . $suffix[$f_base];
 }
 
-/**
- * get Religions
- */
-function getReligions(){
-
-    $response = [
-        'success' => true,
-        'data'    => Religion::where( [ 'status' => 1] )->orderBy( 'name', 'ASC' )->get()->toArray(),
-        'message' => "Retrive Religion successfully",
-    ];
-
-    return response()->json($response, 200);
-}
 
 /**
  * get country dropdown by continent id
@@ -407,49 +387,6 @@ function getCityByStateByID( $state_id = null ){
 }
 
 /**
- * get state by country id
- */
-function getSocialMediaPlatform(){
-
-    $response = [
-        'success' => true,
-        'data'    => SocialMediaPlatform::where( ['status' => 1] )->orderBy( 'name', 'ASC' )->get()->toArray(),
-        'message' => "Retrive Social Medias successfully",
-    ];
-
-    return response()->json($response, 200);
-}
-
-/**
- * get industry dropdown
- */
-function getIndustries(){
-
-    $response = [
-        'success' => true,
-        'data'    => Industry::where( [ 'status' => 1] )->orderBy( 'name', 'ASC' )->get()->toArray(),
-        'message' => "Retrive Industry successfully",
-    ];
-
-    return response()->json($response, 200);
-}
-
-/**
- * get company by industry id
- */
-function getCompanyByIndustryID( $industry_id = null ){
-
-    $industryObj = Industry::select('name')->find( $industry_id );
-    $response = [
-        'success' => true,
-        'data'    => Company::where( [ 'industry_id' => $industry_id, 'status' => 1] )->orderBy( 'name', 'ASC' )->get()->toArray(),
-        'message' => "Retrive ".$industryObj->name." successfully",
-    ];
-
-    return response()->json($response, 200);
-}
-
-/**
  * get company by industry id
  */
 function getDepartmentByCompanyID( $company_id = null ){
@@ -519,70 +456,6 @@ function getLogos(){
     ];
 
     return response()->json($response, 200);
-}
-
-/**
- * Undocumented function
- *
- * @param [type] $company_id
- * @return void
- */
-function getPaymentType( $company_id ){
-    return BankInformation::select( 'id', 'bank_name', 'account_number' )
-    ->where( [
-        'company_id' => $company_id,
-        'status' => 1
-    ] )
-    ->get();
-}
-
-/**
- * Undocumented function
- *
- * @param [type] $company_id
- * @return void
- */
-function getClientCompany( $company_id ){
-    return AccountManagememt::select( 'id', 'name', 'code' )
-    ->where( [
-        'company_id' => $company_id,
-        'status' => 1
-    ] )
-    ->get();
-}
-
-/**
- * Undocumented function
- *
- * @param [type] $company_id
- * @return void
- */
-function getCompanyBankAccount( $company_id ){
-    return BankInformation::select( 'id', 'bank_name', 'currency_id' )
-    ->where( [
-        'company_id' => $company_id,
-        'status' => 1
-    ] )
-    ->get();
-}
-
-/**
- *
- */
-function getCompanyBalanceBaseOnBank( $company_id, $payment_type=0){
-    $totalCreditAmount = Accounting::where([
-        'company_id' => $company_id,
-        'payment_type' => $payment_type
-    ])
-    ->sum('credit_amount');
-
-    $totalDebitAmount = Accounting::where([
-        'company_id' => $company_id,
-        'payment_type' => $payment_type
-    ])
-    ->sum('debit_amount');
-
-    return number_format( ( $totalCreditAmount - $totalDebitAmount ), 2 );
 }
 
 /**

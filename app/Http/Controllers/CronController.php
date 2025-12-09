@@ -2,45 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Resources\AwardResource;
-use App\Http\Resources\LeaveResource;
-use App\Http\Resources\PayrollResource;
-use App\Mail\NewEmployeeRegister;
-use App\Models\Address;
 use App\Models\AdminLog;
-use App\Models\Attendance;
-use App\Models\Award;
-use App\Models\BusinessType;
 use App\Models\City;
-use App\Models\Client;
-use App\Models\ClientCorporateUser;
-use App\Models\ClientEmployeeUser;
-use App\Models\Company;
 use App\Models\Configuration;
 use App\Models\Country;
-use App\Models\Department;
-use App\Models\Industry;
-use App\Models\Leave;
-use App\Models\NoticeBoard;
-use App\Models\Payroll;
 use App\Models\Permission;
-use App\Models\Person;
-use App\Models\PersonPersonalInformation;
-use App\Models\Portfolio;
-use App\Models\Religion;
 use App\Models\State;
-use App\Services\ActivityLogService;
 use App\User;
 use Carbon\Carbon;
-use EchoLabs\Prism\Prism;
 use Exception;
-use Faker\Factory;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
-use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
 use Spatie\Permission\Models\Role;
-use Illuminate\Support\Facades\Mail;
 
 class CronController extends Controller
 {
@@ -62,46 +36,6 @@ class CronController extends Controller
     public function index()
     {
         // return view('home');
-    }
-
-    /**
-     * Add Religions data
-     */
-    public function addReligion()
-    {
-        $arr = [
-            'African Traditional & Diasporic',
-            'Agnostic',
-            'Atheist',
-            'Baha\'i',
-            'Buddhism',
-            'Cao Dai',
-            'Chinese traditional religion',
-            'Christianity',
-            'Hinduism',
-            'Islam',
-            'Jainism',
-            'Juche',
-            'Judaism',
-            'Neo Paganism',
-            'Nonreligious',
-            'Rastafarianism',
-            'Secular',
-            'Shinto',
-            'Sikhism',
-            'Spiritism',
-            'Tenrikyo',
-            'Unitarian Universalism',
-            'Zoroastrianism',
-            'Primal Indigenous',
-            'Other'
-        ];
-
-        foreach ($arr as $ar) {
-            $reg = new Religion();
-            $reg->name = $ar;
-            $reg->save();
-        }
     }
 
     /**
@@ -199,166 +133,9 @@ class CronController extends Controller
     /**
      *
      */
-    public function getSocialMediaPlatform()
-    {
-        return getSocialMediaPlatform();
-    }
-
-    /**
-     *
-     */
-    public function updateIndustryHexCode()
-    {
-        $dataObj = Industry::all();
-
-        foreach ($dataObj as $data) {
-            $hexCode = generateRandomHexColor();
-            $rgbCode = hexToRgb($hexCode);
-
-            $data->hax_code = $hexCode;
-            $data->rgb_code = $rgbCode;
-            $data->save();
-        }
-    }
-
-    /**
-     *
-     */
-    public function updateCompany()
-    {
-        $getCompanies = Company::select('id', 'hax_code', 'rgb_code')->get();
-
-        foreach ($getCompanies as $company) {
-            $hax_code = generateRandomHexColor();
-            $company->hax_code = $hax_code;
-            $company->rgb_code = hexToRgb($hax_code);
-            $company->save();
-        }
-
-        echo "Success";
-    }
-
-    /**
-     *
-     */
-    public function updateDepartment()
-    {
-
-        Storage::makeDirectory('/app/public/1/personalDetails');
-
-        // $getDept = Department::select( 'id', 'hax_code', 'rgb_code' )->get();
-
-        // foreach( $getDept as $dept ){
-        //     $hax_code = generateRandomHexColor();
-        //     $dept->hax_code = $hax_code;
-        //     $dept->rgb_code = hexToRgb( $hax_code );
-        //     $dept->save();
-        // }
-
-        echo "Success";
-    }
-
-    /**
-     *
-     */
     public function getAdminMenu()
     {
         return getMultiLevelAdminMenuDropdown();
-    }
-
-    /**
-     *
-     */
-    public function getIndustries()
-    {
-        return getIndustries();
-    }
-
-    /**
-     *
-     */
-    public function getCompaniesByIndustryID($industry_id)
-    {
-
-        if (is_numeric($industry_id)) {
-            return getCompanyByIndustryID($industry_id);
-        } else {
-            try {
-                $industry_id = _de($industry_id);
-
-                $companyData = Company::where(['industry_id' => $industry_id, 'status' => 1])->orderBy('name', 'ASC')->get();
-                $responseArr = [];
-                foreach ($companyData as $k => $data) {
-                    $responseArr[$k]['id'] = _en($data->id);
-                    $responseArr[$k]['name'] = $data->name;
-                }
-
-                $response = [
-                    'success' => true,
-                    'data'    => $responseArr,
-                    'message' => "Retrive data successfully",
-                ];
-
-                return response()->json($response, 200);
-            } catch (Exception $e) {
-                $response = [
-                    'success' => false,
-                    'data'    => [],
-                    'message' => "Sorry !! You are Unauthorized to Access this company data!",
-                ];
-                return response()->json($response, 403);
-            }
-        }
-    }
-
-    /**
-     *
-     */
-    public function getDepartmentByCompanyID($company_id)
-    {
-        if (is_numeric($company_id)) {
-            return getDepartmentByCompanyID($company_id);
-        } else {
-            try {
-                $company_id = _de($company_id);
-
-                $companyData = Department::where(['company_id' => $company_id, 'status' => 1])->orderBy('name', 'ASC')->get();
-                $responseArr = [];
-                foreach ($companyData as $k => $data) {
-                    $responseArr[$k]['id'] = _en($data->id);
-                    $responseArr[$k]['name'] = $data->name;
-                }
-
-                $response = [
-                    'success' => true,
-                    'data'    => $responseArr,
-                    'message' => "Retrive data successfully",
-                ];
-
-                return response()->json($response, 200);
-            } catch (Exception $e) {
-                $response = [
-                    'success' => false,
-                    'data'    => [],
-                    'message' => "Sorry !! You are Unauthorized to Access this company data!",
-                ];
-                return response()->json($response, 403);
-            }
-        }
-    }
-
-    /**
-     *
-     */
-    public function getEmployeeNoticeHistory( $employeeId = null )
-    {
-        $response = [
-            'success' => true,
-            'data'    => NoticeBoard::where(['employee_id' => $employeeId])->get()->toArray(),
-            'message' => "Retrive Employee Notice History",
-        ];
-
-        return response()->json($response, 200);
     }
 
     /**
@@ -408,115 +185,9 @@ class CronController extends Controller
     /**
      *
      */
-    public function getShiftDetailList($id)
-    {
-        return getShiftDetailList($id);
-    }
-
-    /**
-     *
-     */
-    public function getHolidayList()
-    {
-        return getHolidayList();
-    }
-
-    /**
-     * update client Email id
-     */
-    public function updateClientEmail()
-    {
-        $clientObjs = Person::where('type', 3)->select('id', 'unique_id', 'email_id')->get();
-
-        foreach ($clientObjs as $cr) {
-            $cr->email_id = $cr->unique_id . "@mailinator.com";
-            $cr->save();
-        }
-    }
-
-    /**
-     * send temp mail
-     */
-    public function sendTempMail()
-    {
-        $data = [
-            'name' => "Gautam Kakadiya",
-            'company_name' => 'Devotion Business',
-            'register_link' => url('complete-register/' . _en(1)),
-        ];
-
-        Mail::to('gk@mailinator.com')->send(new NewEmployeeRegister($data));
-    }
-
-    /**
-     *
-     */
-    public function prismAI()
-    {
-        $prism = Prism::text()
-            ->using('openai', 'gpt-4o')
-            ->withSystemPrompt(view('prompts.ai'))
-            ->withPrompt('Explain quantum computing to a 5-year-old.');
-
-        $response = $prism();
-
-        echo $response->text;
-    }
-
-    /**
-     *
-     */
-    public function clearEmployeeDatabaseHistory()
-    {
-        //get Employee history
-        $empObjs = Person::where('type', 1)->get()->pluck('id');
-        if ($empObjs) {
-            foreach ($empObjs as $id) {
-                removeEmployeeHistoryData($id);
-            }
-        }
-
-        echo "Remove all " . COUNT($empObjs) . " employee datas";
-    }
-
-    /**
-     *
-     */
-    public function clearClientDatabaseHistory()
-    {
-        //get Client history
-        $clientObjs = Client::all()->pluck('id');
-        if ($clientObjs) {
-            foreach ($clientObjs as $id) {
-                removeClientHistoryData($id);
-            }
-        }
-
-        echo "Remove all " . COUNT($clientObjs) . " client datas";
-    }
-
-    /**
-     *
-     */
     public function getLogos()
     {
         return getLogos();
-    }
-
-    /**
-     *
-     */
-    public function getQualifications($parent_id = 0)
-    {
-        return getQualifications($parent_id);
-    }
-
-    /**
-     *
-     */
-    public function getCommunicationType()
-    {
-        return getCommunicationType('API');
     }
 
     /**
@@ -593,20 +264,6 @@ class CronController extends Controller
         echo "<br>Remove total vies files in framework folder is: " . $count;
     }
 
-    /**
-     *
-     */
-    public function getEmployeeVisitingCardDetails( $companySlug, $employeeSlug ){
-
-        //get Company Details
-        $companyObj = Company::where( 'slug', $companySlug )->first();
-
-        //get Employee Details
-        $employeeObj = Portfolio::where( 'slug', $employeeSlug )->first();
-
-        $canonical = request()->url();
-        return view( $companySlug.'/index', compact( 'companyObj', 'employeeObj', 'canonical' ) );
-    }
 
     /**
      *
