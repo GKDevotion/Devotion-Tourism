@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\CategoriesController;
 use App\Http\Controllers\Admin\WebsitesController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\PasswordController;

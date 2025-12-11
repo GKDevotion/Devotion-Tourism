@@ -70,7 +70,7 @@ Currency Page - Admin Panel
 
                     <div class="data-tables">
                         @include('backend.layouts.partials.messages')
-                        <table id="role_index" class="">
+                        <table id="role_index" class="table table-bordered table-striped display responsive nowrap">
                             <thead id="role" class="bg-light text-capitalize">
                                 <tr>
                                     <th width="5%">Sl</th>
@@ -136,7 +136,18 @@ Currency Page - Admin Panel
         ==================================*/
         if ($('#role_index').length) {
             $('#role_index').DataTable({
-                responsive: true
+                responsive: true,
+                columnDefs: [
+        { responsivePriority: 1, targets: 0 }, // Sr
+        { responsivePriority: 2, targets: 1 }, // Unique ID
+        { responsivePriority: 3, targets: 2 }, // Invoice
+        { responsivePriority: 4, targets: 3 }, // Amount
+        { responsivePriority: 5, targets: 4 }, // Serial No
+        { responsivePriority: 6, targets: 5 }, // Purchase Order
+
+        // All others move to "+" expandable view
+        { responsivePriority: 10001, targets: [6, 7, 8, 9, 10, 11] }
+    ]
             });
         }
 
