@@ -56,8 +56,7 @@ class CustomersController extends Controller
             $where['admin_id'] = $this->admin_id;
         }
 
-        $dataArr = Person::where( $where )->get();
-        return view('backend.pages.customers.index', compact('dataArr'));
+        return view('backend.pages.customers.index');
     }
 
     /**

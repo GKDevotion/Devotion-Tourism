@@ -10,6 +10,7 @@
 use App\Models\BasePermission;
 
 /**
+ * Permission : add, edit, del, view, create
  * child segments handle permission
  * @param string $controller
  * @param string $permission

@@ -55,7 +55,7 @@
             "app/Helpers/functions.php",
             "app/Helpers/common.php",
             "app/Helpers/dg-solution.php",
-            "app/Helpers/chart.php",
+     
             "app/Helpers/permission.php"
         ]
     },

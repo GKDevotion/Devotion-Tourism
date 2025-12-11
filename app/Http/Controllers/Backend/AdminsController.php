@@ -3,14 +3,10 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
-use App\Models\Accounting;
-use App\Models\AccountManagememt;
 use App\Models\Admin;
 use App\Models\AdminUserGroup;
-use App\Models\BankInformation;
 use App\Models\City;
 use App\Models\Company;
-use App\Models\CompanyAdminMap;
 use App\Models\Continent;
 use App\Models\Country;
 use App\Models\Religion;
@@ -221,12 +217,11 @@ class AdminsController extends Controller
         $countryArr = Country::select('id', 'name')->where( [ 'status' => 1, 'continent_id' => $admin->continent_id ] )->get();
         $stateArr = State::select('id', 'name')->where( [ 'status' => 1, 'country_id' => $admin->country_id, 'continent_id' => $admin->continent_id ] )->get();
         $cityArr = City::select('id', 'name')->where( [ 'status' => 1, 'state_id' => $admin->state_id, 'continent_id' => $admin->continent_id ] )->get();
-        $companyMapArr = CompanyAdminMap::where( ['admin_id' => $id, 'status' => 1 ] )->pluck( 'company_id' )->toArray();
 
         $logArr['description'] = "Admin form loaded successfully";
         saveAdminLog( $logArr );// Save Access log history
 
-        return view('backend.pages.admins.edit', compact('admin', 'groups', 'religionArr', 'continentArr', 'countryArr', 'stateArr', 'cityArr', 'companyArr', 'companyMapArr'));
+        return view('backend.pages.admins.edit', compact('admin', 'groups', 'religionArr', 'continentArr', 'countryArr', 'stateArr', 'cityArr', 'companyArr'));
     }
 
     /**
@@ -327,38 +322,7 @@ class AdminsController extends Controller
         }
 
         $admin = Admin::find($id);
-        if (!is_null($admin)) {
-
-            //account_managements
-            $accountMGT = AccountManagememt::select('id')->where('admin_id', $id)->first();
-            if( $accountMGT ){
-                $logArr['description'] = "Client Company data (".$admin->username.") already exist.";
-                saveAdminLog( $logArr );// Save Access log history
-
-                return response()->json( ['data' => ['message' => $logArr['description'], 'status' => 201] ], 200);
-            }
-
-            //account_summeries
-            $accountMGT = Accounting::select('id')->where('admin_id', $id)->first();
-            if( $accountMGT ){
-                $logArr['description'] = "Company account summery data (".$admin->username.") already exist.";
-                saveAdminLog( $logArr );// Save Access log history
-
-                return response()->json( ['data' => ['message' => $logArr['description'], 'status' => 201] ], 200);
-            }
-
-            //bank_informations
-            $accountMGT = BankInformation::select('id')->where('admin_id', $id)->first();
-            if( $accountMGT ){
-                $logArr['description'] = "Company bank information data (".$admin->username.") already exist.";
-                saveAdminLog( $logArr );// Save Access log history
-
-                return response()->json( ['data' => ['message' => $logArr['description'], 'status' => 201] ], 200);
-            }
-
-            $admin->delete();
-        }
-
+      
         $logArr['description'] = $admin->username." has been deleted successfully ";
         saveAdminLog( $logArr );// Save Access log history
 
@@ -426,21 +390,5 @@ class AdminsController extends Controller
     /**
      *
      */
-    public function mapCompanyAdmin( $companyArr, $admin_id ){
-        //revert company admin map data
-        CompanyAdminMap::where( 'admin_id', $admin_id )->update( ['status' => 0] );
-        if( COUNT( $companyArr ) > 0 ){
-            foreach( $companyArr as $id ){
-                CompanyAdminMap::updateOrCreate(
-                    [
-                        'admin_id' => $admin_id,
-                        'company_id' => $id
-                    ], // Search condition
-                    [
-                        'status' => 1
-                    ] // Data to update or insert
-                );
-            }
-        }
-    }
+
 }

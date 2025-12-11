@@ -3,15 +3,8 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
-use App\Models\AccountField;
-use App\Models\Accounting;
-use App\Models\AccountManagememt;
 use App\Models\Admin;
-use App\Models\BankInformation;
 use App\Models\Company;
-use App\Models\CompanyAccountFieldIndexing;
-use App\Models\CompanyAccountFieldMapping;
-use App\Models\CompanyAdminMap;
 use App\Models\Currency;
 use App\Models\Industry;
 use Illuminate\Http\Request;
@@ -56,13 +49,8 @@ class CompanyController extends Controller
         }
 
         $auth = $this->user;
-        $companyIdArr = CompanyAdminMap::where( ['admin_id' => $this->user->id, 'status' => 1 ] )->pluck( 'company_id' )->toArray();
 
         $dataArr = Company::where( 'status', 1 );
-
-        if( $this->user->admin_user_group_id != 1 ){
-            $dataArr->whereIn( 'id', $companyIdArr );
-        }
 
         if( $request->cid ){
             $dataArr->where( 'company_id', _de( $request->cid ) );
@@ -109,15 +97,11 @@ class CompanyController extends Controller
         $delete = fetchSinglePermission( $this->user, 'admin.company', 'delete');
         $addAccount = fetchSinglePermission( $this->user, 'account-management', 'add');
         $addBank = fetchSinglePermission( $this->user, 'bank-information', 'add');
-        $companyIdArr = CompanyAdminMap::where( ['admin_id' => $this->user->id, 'status' => 1 ] )->pluck( 'company_id' )->toArray();
-
+       
         $query = Company::query();
         $query->where( 'status', 1 );
 
-        if( $this->user->admin_user_group_id != 1 ){
-            $query->whereIn( 'id', $companyIdArr );
-        }
-
+     
         if( $request->cid ){
             $query->where( 'company_id', _de( $request->cid ) );
         } else if( $request->iid ){
@@ -456,12 +440,11 @@ class CompanyController extends Controller
         $companies = Company::select( 'id', 'name' )->where( 'parent_id', 0 )->orderBy( 'name', 'ASC' )->get();
         $currency = Currency::select( 'id', 'name' )->where( 'status', 1 )->orderBy( 'name', 'ASC' )->get();
         $adminArr = Admin::select( 'id', 'acc_no', 'username' )->where( 'status', 1 )->orderBy( 'username', 'ASC' )->get();
-        $adminMapArr = CompanyAdminMap::where( ['company_id' => $id, 'status' => 1 ] )->pluck( 'admin_id' )->toArray();
-
+       
         $logArr['description'] = "Load company: ".$data->name." data";
         saveAdminLog( $logArr );// Save Access log history
 
-        return view('backend.pages.companies.edit', compact( 'data', 'industries', 'companies', 'currency', 'auth', 'adminArr', 'adminMapArr' ));
+        return view('backend.pages.companies.edit', compact( 'data', 'industries', 'companies', 'currency', 'auth', 'adminArr'));
     }
 
     /**
@@ -640,34 +623,6 @@ class CompanyController extends Controller
 
         $dataObj = Company::find($id);
         if ( $dataObj ) {
-
-            //account_managements
-            $accountMGT = AccountManagememt::select('id')->where('company_id', $dataObj->id)->first();
-            if( $accountMGT ){
-                $logArr['description'] = "Client Company data (".$dataObj->name.") already exist.";
-                saveAdminLog( $logArr );// Save Access log history
-
-                return response()->json( ['data' => ['message' => $logArr['description'], 'status' => 201] ], 200);
-            }
-
-            //account_summeries
-            $accountMGT = Accounting::select('id')->where('company_id', $dataObj->id)->first();
-            if( $accountMGT ){
-                $logArr['description'] = "Company account summery data (".$dataObj->name.") already exist.";
-                saveAdminLog( $logArr );// Save Access log history
-
-                return response()->json( ['data' => ['message' => $logArr['description'], 'status' => 201] ], 200);
-            }
-
-            //bank_informations
-            $accountMGT = BankInformation::select('id')->where('company_id', $dataObj->id)->first();
-            if( $accountMGT ){
-                $logArr['description'] = "Company bank information data (".$dataObj->name.") already exist.";
-                saveAdminLog( $logArr );// Save Access log history
-
-                return response()->json( ['data' => ['message' => $logArr['description'], 'status' => 201] ], 200);
-            }
-
             $dataObj->delete();
 
             $logArr['description'] = $dataObj->name.' record has been successfully deleted.';
@@ -683,211 +638,4 @@ class CompanyController extends Controller
         }
     }
 
-    /**
-     *
-     */
-    public function accountingMapping( Request $request, $id ){
-
-        if( is_null($this->user) ){
-            return redirect('admin/login');
-        }
-
-        $logArr['admin_id'] = $this->user->id ?? 0;;
-        $logArr['ip_address'] = $request->ip();
-        $logArr['action'] = "V";
-
-        if (!fetchSinglePermission( $this->user, 'account-field', 'view') ) {
-            $logArr['description'] = "Unauthorized try to create account field mapping";
-            saveAdminLog( $logArr );// Save Access log history
-
-            abort(403, 'Sorry !! You are Unauthorized to account field mapping !');
-        }
-
-        $accountFields = AccountField::where([
-            'status' => 1
-        ])
-        ->orderBy( 'name', 'ASC' )
-        ->get();
-
-        $accountMappingFields = CompanyAccountFieldMapping::where([
-            'status' => 1,
-            'company_id' => $id
-        ])
-        ->pluck('account_mgt_field_id')
-        ->toArray();
-
-        $auth = $this->user;
-        $company = Company::select( 'id', 'name' )->find( $id );
-
-        $logArr['description'] = "Try to create account field mapping";
-        saveAdminLog( $logArr );// Save Access log history
-
-        return view('backend.pages.companies.field-mapping', compact( 'accountFields', 'accountMappingFields', 'auth', 'company' ));
-
-    }
-
-    /**
-     *
-     */
-    public function accountingIndexing( Request $request, $id ){
-
-        if( is_null($this->user) ){
-            return redirect('admin/login');
-        }
-
-        $logArr['admin_id'] = $this->user->id ?? 0;;
-        $logArr['ip_address'] = $request->ip();
-        $logArr['action'] = "V";
-
-        if (!fetchSinglePermission( $this->user, 'account-field', 'view') ) {
-            $logArr['description'] = "Unauthorized try to create account field indexing";
-            saveAdminLog( $logArr );// Save Access log history
-
-            abort(403, 'Sorry !! You are Unauthorized to account field indexing !');
-        }
-
-        $accountFields = AccountField::where([
-            'status' => 1
-        ])
-        ->select( 'id', 'name', 'is_hidden_option' )
-        ->orderBy( 'sort_order', 'ASC' )
-        ->where( 'status', 1 )
-        ->get();
-
-        $accountMappingFieldIndexings = CompanyAccountFieldIndexing::where([
-            'status' => 1,
-            'company_id' => $id
-        ])
-        ->pluck( 'sort_order', 'account_mgt_field_id')
-        ->toArray();
-
-        $accountMappingFieldHidden = CompanyAccountFieldIndexing::where([
-            'status' => 1,
-            'company_id' => $id
-        ])
-        ->pluck( 'is_hidden', 'account_mgt_field_id')
-        ->toArray();
-
-        $companyAccountMappingFieldHidden = CompanyAccountFieldMapping::where( [
-            'status' => 1,
-            'company_id' => $id
-        ] )
-        ->pluck('account_mgt_field_id')
-        ->toArray();
-
-        $auth = $this->user;
-        $company = Company::select( 'id', 'name' )->find( $id );
-
-        $logArr['description'] = "Try to create account field indexing";
-        saveAdminLog( $logArr );// Save Access log history
-
-        return view('backend.pages.companies.field-indexing', compact( 'accountFields', 'accountMappingFieldIndexings', 'auth', 'company', 'accountMappingFieldHidden', 'companyAccountMappingFieldHidden' ));
-    }
-
-    /**
-     *
-     */
-    public function storeAccountingMapping( Request $request ){
-
-        if( is_null($this->user) ){
-            return redirect('admin/login');
-        }
-
-        $logArr['admin_id'] = $this->user->id ?? 0;;
-        $logArr['ip_address'] = $request->ip();
-        $logArr['action'] = "S";
-
-        if (!fetchSinglePermission( $this->user, 'account-field', 'add') ) {
-            $logArr['description'] = "Unauthorized try to create company account mapping";
-            saveAdminLog( $logArr );// Save Access log history
-
-            abort(403, 'Sorry !! You are Unauthorized to create Company Account Mapping !');
-        }
-
-        $cId = $request->company_id;
-        CompanyAccountFieldMapping::where( 'company_id', $cId )->update( ['status' => 0 ] );
-
-        foreach( $request->accountMappingField as $mapId ){
-            $dataObj = CompanyAccountFieldMapping::firstOrNew(['company_id' => $cId, 'account_mgt_field_id' => $mapId ]);
-            $dataObj->account_mgt_field_id = $mapId;
-            $dataObj->company_id = $cId;
-            $dataObj->status = 1;
-            $dataObj->save();
-        }
-
-        $companyObj = Company::select('name', 'sort_name')->find( $cId );
-        $logArr['description'] = "create or update ".$companyObj->name." (".$companyObj->sort_name.") company account mapping";
-        saveAdminLog( $logArr );// Save Access log history
-
-        session()->flash('success', $logArr['description'] );
-        return redirect()->route('admin.company.index');
-    }
-
-    /**
-     *
-     */
-    public function storeAccountingIndexing( Request $request ){
-
-        if( is_null($this->user) ){
-            return redirect('admin/login');
-        }
-
-        $logArr['admin_id'] = $this->user->id ?? 0;;
-        $logArr['ip_address'] = $request->ip();
-        $logArr['action'] = "S";
-
-        if (!fetchSinglePermission( $this->user, 'account-field', 'add') ) {
-            $logArr['description'] = "Unauthorized try to create company account indexing";
-            saveAdminLog( $logArr );// Save Access log history
-
-            abort(403, 'Sorry !! You are Unauthorized to create Company Account Indexing !');
-        }
-
-        $cId = $request->company_id;
-        CompanyAccountFieldIndexing::where( 'company_id', $cId )->update( ['status' => 0, 'is_hidden' => 0 ] );
-
-        foreach( $request->accountMappingIndexing as $id=>$data ){
-            $dataObj = CompanyAccountFieldIndexing::firstOrNew(['company_id' => $cId, 'account_mgt_field_id' => $id ]);
-            $dataObj->account_mgt_field_id = $id;
-            $dataObj->company_id = $cId;
-            $dataObj->sort_order = $data['sort_order'];
-
-            $is_hidden = 0;
-            if(isset( $data['is_hidden'] ) && $data['is_hidden'] == "on" ){
-                $is_hidden = 1;
-            }
-            $dataObj->is_hidden = $is_hidden;
-            $dataObj->status = 1;
-            $dataObj->save();
-        }
-
-        $companyObj = Company::select('name', 'sort_name')->find( $cId );
-        $logArr['description'] = "create or update ".$companyObj->name." (".$companyObj->sort_name.") company account indexing";
-        saveAdminLog( $logArr );// Save Access log history
-
-        session()->flash('success', $logArr['description'] );
-
-        return redirect()->route('admin.company-account-field-map.update', $cId );
-    }
-
-    /**
-     *
-     */
-    public function mapCompanyAdmin( $adminArr, $company_id ){
-        //revert company admin map data
-        CompanyAdminMap::where( 'company_id', $company_id )->update( ['status' => 0] );
-        if( COUNT( $adminArr ) > 0 ){
-            foreach( $adminArr as $id ){
-                CompanyAdminMap::updateOrCreate(
-                    [
-                        'company_id' => $company_id,
-                        'admin_id' => $id
-                    ], // Search condition
-                    [
-                        'status' => 1
-                    ] // Data to update or insert
-                );
-            }
-        }
-    }
 }

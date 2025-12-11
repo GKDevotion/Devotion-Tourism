@@ -59,7 +59,6 @@ class DashboardController extends Controller
             $totalCountBadge = [
                 'totalCompanies' => $companies->count(),
                 'totalUsers' => Admin::select('id')->count(),
-                'totalMGTFields' => AccountField::select('id')->where( 'status', 1 )->count(),
                 'totalCurrency' => Currency::select('id')->where('status', 1)->count(),
                 'totalActiveInquiry' => Inquiry::select('id')->where('status',1)->count(),
             ];
