@@ -2,6 +2,7 @@
 
 use App\Models\AdminMenu;
 use App\Models\Configuration;
+use App\Models\Website;
 use Illuminate\Support\Facades\DB;
 
 /**
@@ -132,8 +133,12 @@ function getMultiLevelAdminMenuDropdown( $parent = 0, $menuArr = [ '0' => '-- Se
 		return $menuArr;
     }
 }
-
-
+/**
+ *
+ */
+function getHeaderInformation(){
+    return Website::where( 'status', 1 )->first()->toArray();
+}
 
 /**
  *

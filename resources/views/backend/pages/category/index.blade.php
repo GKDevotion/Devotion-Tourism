@@ -1,7 +1,7 @@
 @extends('backend.layouts.master')
 
 @section('title')
-    Websites - Admin Panel
+    Category - Admin Panel
 @endsection
 
 @section('styles')
@@ -25,13 +25,13 @@
                     {{-- <h4 class="page-title pull-left d-none">Configuration</h4> --}}
                     <ul class="breadcrumbs pull-left m-2">
                         <li><a href="{{ route('admin.dashboard.index') }}">Dashboard</a></li>
-                        <li><span>All Website</span></li>
+                        <li><span>All Category</span></li>
                     </ul>
                 </div>
             </div>
             <div class="col-md-2 text-end">
-                <a class="btn btn-success text-white" href="{{ route('admin.website.create') }}">
-                    <i class="fa fa-plus" aria-hidden="true"></i> Add Website
+                <a class="btn btn-success text-white" href="{{ route('admin.category.create') }}">
+                    <i class="fa fa-plus" aria-hidden="true"></i> Add Category
                 </a>
             </div>
             <div class="col-md-1">
@@ -50,57 +50,40 @@
             <div class="col-md-12">
                 <div class="card">
 
+                    <!-- /.card-header -->
                     <div class="card-body table-responsive">
-                        <table id="website" class="table table-bordered table-striped" data-order='[[ 4, "desc" ]]'>
+                        <table id="category" class="table table-bordered table-striped display responsive nowrap">
                             <thead>
                                 <tr>
-                                    <th>#</th>
-                                    <th class="text-center">Name</th>
-                                    <th class="text-center">Favicon</th>
-                                    <th class="text-center">Header Logo</th>
-                                    <th class="text-center">Footer Logo</th>
-                                    <th class="text-center">Status</th>
-                                    <th class="text-center">Advertisement</th>
-                                    <th class="text-center">Updated At</th>
-                                    <th class="text-center">Action</th>
+                                    <th>Image</th>
+                                    <th>Name</th>
+                                    <th>Parent Name</th>
+                                    <th>Slug</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @forelse ($dataArr as $ar)
-                                    <tr id="row_{{ $ar->id }}" class="role_row">
-                                        <td class="text-center">{{ $ar->id }}</td>
-                                        <td class="text-center">{{ $ar->name }}</td>
+                                    <tr id="row_{{ $ar->id }}" class="category_row">
                                         <td>
-                                            <img src="{{ url('storage/app/' . $ar->favicon) }}" alt="{{ $ar->name }}"
-                                                height="55px">
+                                            <img class="img-flud" style="width:50px"
+                                                src="{{ url('/storage/app/' . $ar->image) }}">
                                         </td>
-                                        <td>
-                                            <img src="{{ url('storage/app/' . $ar->header_logo) }}"
-                                                alt="{{ $ar->name }}" height="55px">
-                                        </td>
-                                        <td>
-                                            <img src="{{ url('storage/app/' . $ar->header_logo) }}"
-                                                alt="{{ $ar->name }}" height="55px">
-                                        </td>
-                                            <td>
+                                        <td>{{ $ar->title }}</td>
+                                        <td>{{ $ar->SingleChildren ? $ar->SingleChildren->title : '-' }}</td>
+                                        <td>{{ $ar->slug }}</td>
+                                      <td>
                                             @if( true )
-                                                <i class="fa fa-{{ ( $ar->status == 0 ) ? 'times' : 'check' }} update-status" data-status="{{$ar->status}}" data-id="{{$ar->id}}" aria-hidden="true" data-table="websites"></i>
+                                                <i class="fa fa-{{ ( $ar->status == 0 ) ? 'times' : 'check' }} update-status" data-status="{{$ar->status}}" data-id="{{$ar->id}}" aria-hidden="true" data-table="categories"></i>
                                             @else
-                                                <select class="form-control update-status badge {{ ( $data->status == 0 ) ? 'bg-warning' : 'bg-success' }} text-white" name="status" data-id="{{$ar->id}}" data-table="websites">
+                                                <select class="form-control update-status badge {{ ( $data->status == 0 ) ? 'bg-warning' : 'bg-success' }} text-white" name="status" data-id="{{$ar->id}}" data-table="categories">
                                                     <option value="1" {{($ar->status == 1) ? 'selected' : ''}}>Active</option>
                                                     <option value="0" {{($ar->status == 0) ? 'selected' : ''}}>De-Active</option>
                                                 </select>
                                             @endif
                                         </td>
-                                        <td class="text-center">
-                                            @if ($ar->is_run_advertisement == 0)
-                                                <span class="badge badge-pill badge-warning"> Disabled </span>
-                                            @else
-                                                <span class="badge badge-pill badge-success"> Enabled </span>
-                                            @endif
-                                        </td>
-                                        <td class="text-center"> {{ formatDate('d-m-Y h:i', $ar->updated_at) }} </td>
-                                        <td>
+                                       <td>
                                             <button class="btn btn-secondary btn-sm dropdown-toggle" type="button"
                                                 id="action_menu_{{ $ar->id }}" data-toggle="dropdown"
                                                 aria-haspopup="true" aria-expanded="false">
@@ -109,12 +92,12 @@
                                             <div class="dropdown-menu" aria-labelledby="action_menu_{{ $ar->id }}">
 
                                                 <a class="btn btn-edit text-white dropdown-item"
-                                                    href="{{ route('admin.website.edit', $ar->id) }}">
+                                                    href="{{ route('admin.category.edit', $ar->id) }}">
                                                     <i class="fa fa-pencil"></i> Edit
                                                 </a>
                                                 <button class="btn btn-edit text-white delete-record dropdown-item"
                                                     data-id="{{ $ar->id }}" data-title="{{ $ar->name }}"
-                                                    data-segment="website">
+                                                    data-segment="category">
                                                     <i class="fa fa-trash fa-sm" aria-hidden="true"></i> Delete
                                                 </button>
                                             </div>
@@ -122,14 +105,27 @@
                                     </tr>
                                 @empty
                                     <tr class="text-center">
-                                        <td colspan="9">There is no role available.</td>
+                                        <td colspan="5">There is no category available.</td>
                                     </tr>
                                 @endforelse
                             </tbody>
+                            <tfoot class="d-none">
+                                <tr>
+                                    <th>Image</th>
+                                    <th>Name</th>
+                                    <th>Parent Name</th>
+                                    <th>Slug</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </tfoot>
                         </table>
                     </div>
+                    <!-- /.card-body -->
                 </div>
+                <!-- /.card -->
             </div>
+            <!-- /.col -->
         </div>
     </div>
 @endsection
@@ -145,11 +141,23 @@
 
     <script>
         /*================================
-            datatable active
-            ==================================*/
+                datatable active
+                ==================================*/
         if ($('#dataTable').length) {
             $('#dataTable').DataTable({
-                responsive: true
+                responsive: true,
+
+columnDefs: [
+        { responsivePriority: 1, targets: 0 }, // Sr
+        { responsivePriority: 2, targets: 1 }, // Unique ID
+        { responsivePriority: 3, targets: 2 }, // Invoice
+        { responsivePriority: 4, targets: 3 }, // Amount
+        { responsivePriority: 5, targets: 4 }, // Serial No
+        { responsivePriority: 6, targets: 5 }, // Purchase Order
+
+        // All others move to "+" expandable view
+        { responsivePriority: 10001, targets: [6, 7, 8, 9, 10, 11] }
+    ]
             });
         }
     </script>

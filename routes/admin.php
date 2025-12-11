@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\CategoriesController;
+use App\Http\Controllers\Admin\PackageController;
 use App\Http\Controllers\Admin\WebsitesController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\PasswordController;
@@ -85,6 +86,29 @@ Route::prefix('admin')->group(function () {
     //     Route::post('/update/{id}', [WebsitesController::class, 'update'])->name('admin.website.update');
     //     Route::delete('/delete/{id}', [WebsitesController::class, 'destroy'])->name('admin.website.delete');
     // });
+
+            Route::resource('category', 'Admin\CategoriesController', ['names' => 'admin.category']);
+    Route::get('/category-ajax-data', [CategoriesController::class, 'ajaxIndex'])->name('category.ajaxIndex');
+
+
+    // Route::group(['prefix' => 'category'], function () {
+    //     Route::get('/', [CategoriesController::class, 'index'])->name('admin.category.index');
+    //     Route::get('/create', [CategoriesController::class, 'create'])->name('admin.category.create');
+    //     Route::post('/store', [CategoriesController::class, 'store'])->name('admin.category.store');
+    //     Route::get('/edit/{id}', [CategoriesController::class, 'edit'])->name('admin.category.edit');
+    //     Route::post('/update/{id}', [CategoriesController::class, 'update'])->name('admin.category.update');
+    //     Route::delete('/delete/{id}', [CategoriesController::class, 'destroy'])->name('admin.category.delete');
+    // });
+
+    Route::group(['prefix' => 'package'], function () {
+        Route::get('/', [PackageController::class, 'index'])->name('admin.package.index');
+        Route::get('/create', [PackageController::class, 'create'])->name('admin.package.create');
+        Route::post('/store', [PackageController::class, 'store'])->name('admin.package.store');
+        Route::get('/edit/{id}', [PackageController::class, 'edit'])->name('admin.package.edit');
+        Route::post('/update/{id}', [PackageController::class, 'update'])->name('admin.package.update');
+        Route::delete('/delete/{id}', [PackageController::class, 'destroy'])->name('admin.package.delete');
+    });
+
 
     /**
      * Common Function Routes

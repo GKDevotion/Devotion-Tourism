@@ -1,7 +1,7 @@
 @extends('backend.layouts.master')
 
 @section('title')
-    Websites - Admin Panel
+    Package - Admin Panel
 @endsection
 
 @section('styles')
@@ -25,13 +25,13 @@
                     {{-- <h4 class="page-title pull-left d-none">Configuration</h4> --}}
                     <ul class="breadcrumbs pull-left m-2">
                         <li><a href="{{ route('admin.dashboard.index') }}">Dashboard</a></li>
-                        <li><span>All Website</span></li>
+                        <li><span>All Package</span></li>
                     </ul>
                 </div>
             </div>
             <div class="col-md-2 text-end">
-                <a class="btn btn-success text-white" href="{{ route('admin.website.create') }}">
-                    <i class="fa fa-plus" aria-hidden="true"></i> Add Website
+                <a class="btn btn-success text-white" href="{{ route('admin.package.create') }}">
+                    <i class="fa fa-plus" aria-hidden="true"></i> Add Package
                 </a>
             </div>
             <div class="col-md-1">
@@ -50,56 +50,61 @@
             <div class="col-md-12">
                 <div class="card">
 
+                    <!-- /.card-header -->
                     <div class="card-body table-responsive">
-                        <table id="website" class="table table-bordered table-striped" data-order='[[ 4, "desc" ]]'>
+                        <table id="packages" class="table table-bordered table-striped display responsive nowrap"
+                            data-order='[[ 0, "desc" ]]'>
                             <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th class="text-center">Name</th>
-                                    <th class="text-center">Favicon</th>
-                                    <th class="text-center">Header Logo</th>
-                                    <th class="text-center">Footer Logo</th>
+                                    <th class="">Image</th>
+                                    <th class="">Package</th>
+                                    <th class="">Category</th>
+                                    <th class="">Sub Category</th>
                                     <th class="text-center">Status</th>
-                                    <th class="text-center">Advertisement</th>
-                                    <th class="text-center">Updated At</th>
+                                    <th class="text-center">Views</th>
+                                    <th class="text-center">Start Date</th>
+                                    <th class="text-center">End Date</th>
+                                    <th class="">Updated At</th>
                                     <th class="text-center">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @forelse ($dataArr as $ar)
                                     <tr id="row_{{ $ar->id }}" class="role_row">
-                                        <td class="text-center">{{ $ar->id }}</td>
-                                        <td class="text-center">{{ $ar->name }}</td>
+                                        <td class="">{{ $ar->id }}</td>
                                         <td>
-                                            <img src="{{ url('storage/app/' . $ar->favicon) }}" alt="{{ $ar->name }}"
+                                            <img src="{{ url('storage/app/' . $ar->image) }}" alt="{{ $ar->title }}"
                                                 height="55px">
                                         </td>
                                         <td>
-                                            <img src="{{ url('storage/app/' . $ar->header_logo) }}"
-                                                alt="{{ $ar->name }}" height="55px">
+                                            <a href="{{ url($ar->category->slug . '/' . $ar->sub_category->slug . '/' . $ar->slug . '?advt=0') }}"
+                                                target="_blank" title="{{ $ar->title }}">
+                                                {{ $ar->title }}
+                                            </a>
                                         </td>
+                                        <td class="">{{ $ar->category->title }}</td>
+                                        <td class="">{{ $ar->sub_category->title }}</td>
                                         <td>
-                                            <img src="{{ url('storage/app/' . $ar->header_logo) }}"
-                                                alt="{{ $ar->name }}" height="55px">
-                                        </td>
-                                            <td>
-                                            @if( true )
-                                                <i class="fa fa-{{ ( $ar->status == 0 ) ? 'times' : 'check' }} update-status" data-status="{{$ar->status}}" data-id="{{$ar->id}}" aria-hidden="true" data-table="websites"></i>
+                                            @if (true)
+                                                <i class="fa fa-{{ $ar->status == 0 ? 'times' : 'check' }} update-status"
+                                                    data-status="{{ $ar->status }}" data-id="{{ $ar->id }}"
+                                                    aria-hidden="true" data-table="packages"></i>
                                             @else
-                                                <select class="form-control update-status badge {{ ( $data->status == 0 ) ? 'bg-warning' : 'bg-success' }} text-white" name="status" data-id="{{$ar->id}}" data-table="websites">
-                                                    <option value="1" {{($ar->status == 1) ? 'selected' : ''}}>Active</option>
-                                                    <option value="0" {{($ar->status == 0) ? 'selected' : ''}}>De-Active</option>
+                                                <select
+                                                    class="form-control update-status badge {{ $data->status == 0 ? 'bg-warning' : 'bg-success' }} text-white"
+                                                    name="status" data-id="{{ $ar->id }}" data-table="packages">
+                                                    <option value="1" {{ $ar->status == 1 ? 'selected' : '' }}>
+                                                        Active</option>
+                                                    <option value="0" {{ $ar->status == 0 ? 'selected' : '' }}>
+                                                        De-Active</option>
                                                 </select>
                                             @endif
                                         </td>
-                                        <td class="text-center">
-                                            @if ($ar->is_run_advertisement == 0)
-                                                <span class="badge badge-pill badge-warning"> Disabled </span>
-                                            @else
-                                                <span class="badge badge-pill badge-success"> Enabled </span>
-                                            @endif
-                                        </td>
-                                        <td class="text-center"> {{ formatDate('d-m-Y h:i', $ar->updated_at) }} </td>
+                                        <td class="text-center">{{ format_number_in_k_notation($ar->view) }}</td>
+                                        <td class="">{{ formatDate('d-m-Y h:i', $ar->start_date) }}</td>
+                                        <td class="">{{ formatDate('d-m-Y h:i', $ar->end_date) }}</td>
+                                        <td class="">{{ formatDate('d-m-Y h:i', $ar->updated_at) }}</td>
                                         <td>
                                             <button class="btn btn-secondary btn-sm dropdown-toggle" type="button"
                                                 id="action_menu_{{ $ar->id }}" data-toggle="dropdown"
@@ -109,12 +114,12 @@
                                             <div class="dropdown-menu" aria-labelledby="action_menu_{{ $ar->id }}">
 
                                                 <a class="btn btn-edit text-white dropdown-item"
-                                                    href="{{ route('admin.website.edit', $ar->id) }}">
+                                                    href="{{ route('admin.package.edit', $ar->id) }}">
                                                     <i class="fa fa-pencil"></i> Edit
                                                 </a>
                                                 <button class="btn btn-edit text-white delete-record dropdown-item"
                                                     data-id="{{ $ar->id }}" data-title="{{ $ar->name }}"
-                                                    data-segment="website">
+                                                    data-segment="package">
                                                     <i class="fa fa-trash fa-sm" aria-hidden="true"></i> Delete
                                                 </button>
                                             </div>
@@ -122,14 +127,17 @@
                                     </tr>
                                 @empty
                                     <tr class="text-center">
-                                        <td colspan="9">There is no role available.</td>
+                                        <td colspan="8">There is no role available.</td>
                                     </tr>
                                 @endforelse
                             </tbody>
                         </table>
                     </div>
+                    <!-- /.card-body -->
                 </div>
+                <!-- /.card -->
             </div>
+            <!-- /.col -->
         </div>
     </div>
 @endsection
@@ -145,11 +153,43 @@
 
     <script>
         /*================================
-            datatable active
-            ==================================*/
+                    datatable active
+                    ==================================*/
         if ($('#dataTable').length) {
             $('#dataTable').DataTable({
-                responsive: true
+                responsive: true,
+
+                columnDefs: [{
+                        responsivePriority: 1,
+                        targets: 0
+                    }, // Sr
+                    {
+                        responsivePriority: 2,
+                        targets: 1
+                    }, // Unique ID
+                    {
+                        responsivePriority: 3,
+                        targets: 2
+                    }, // Invoice
+                    {
+                        responsivePriority: 4,
+                        targets: 3
+                    }, // Amount
+                    {
+                        responsivePriority: 5,
+                        targets: 4
+                    }, // Serial No
+                    {
+                        responsivePriority: 6,
+                        targets: 5
+                    }, // Purchase Order
+
+                    // All others move to "+" expandable view
+                    {
+                        responsivePriority: 10001,
+                        targets: [6, 7, 8, 9, 10, 11]
+                    }
+                ]
             });
         }
     </script>

@@ -23,6 +23,11 @@ class Categories extends Model
         return $this->hasMany(Categories::class, 'parent_id')->where( 'status', 1 );
     }
 
+    public function SingleChildren()
+    {
+        return $this->hasOne(Categories::class, 'id', 'parent_id');
+    }
+
     public function parent()
     {
         return $this->belongsTo(Categories::class, 'parent_id', 'id')->where( 'status', 1 );
