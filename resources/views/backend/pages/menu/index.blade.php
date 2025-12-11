@@ -11,9 +11,7 @@ Menu Page - Admin Panel
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.jqueryui.min.css">
     <style>
-        td{
-            text-align: left;
-        }
+
     </style>
 @endsection
 
@@ -63,7 +61,7 @@ Menu Page - Admin Panel
 
                     <div class="data-tables">
                         @include('backend.layouts.partials.messages')
-                        <table id="dataTable" class="text-center" style="width: 100%">
+                        <table id="dataTable" class="table table-bordered table-striped display responsive nowrap">
                             <thead id="menu" class="bg-light text-capitalize">
                                 <tr>
                                     <th>Sr</th>
@@ -155,6 +153,17 @@ Menu Page - Admin Panel
                 buttons: ['excel', 'pdf'],
                 lengthMenu: [[5, 10, 25, 50, -1], [5, 10, 25, 50, "All"]],
                 pageLength: 10,
+                columnDefs: [
+        { responsivePriority: 1, targets: 0 }, // Sr
+        { responsivePriority: 2, targets: 1 }, // Unique ID
+        { responsivePriority: 3, targets: 2 }, // Invoice
+        { responsivePriority: 4, targets: 3 }, // Amount
+        { responsivePriority: 5, targets: 4 }, // Serial No
+        { responsivePriority: 6, targets: 5 }, // Purchase Order
+
+        // All others move to "+" expandable view
+        { responsivePriority: 10001, targets: [6, 7, 8, 9, 10, 11] }
+    ]
             });
         }
 
