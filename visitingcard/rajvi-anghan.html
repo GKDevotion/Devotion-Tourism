@@ -1,0 +1,325 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rajvi Anghan - Travel Consultant</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <style>
+        /* Basic Styling */
+        body {
+            background-color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #000000;
+        }
+
+        .logo {
+            max-width: 200px;
+            margin-bottom: 20px;
+        }
+
+        .profile-img {
+            width: 130px;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #ffffff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            background-color: #ffffff;
+            margin-top: -50px;
+        }
+
+        .section-heading {
+            color: #aa8038;
+        }
+
+        .card-custom {
+            border: 1px solid #dee2e6;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            background-color: #ffffff;
+        }
+
+        .social-link {
+            background: #ffffff;
+            border: 1px solid #dee2e6;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+            border-radius: 10px;
+            margin-bottom: 10px;
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #000000;
+            transition: background 0.3s;
+        }
+
+            .social-link:hover {
+                background: #f8f9fa;
+            }
+
+        .social-icon {
+            width: 30px;
+            height: 30px;
+            margin-right: 15px;
+        }
+
+        /* Floating Buttons */
+        .floating-btn {
+            position: fixed;
+            bottom: 20px;
+            z-index: 999;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            background-color: #aa8038;
+            color: white;
+            font-size: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .floating-btn-left {
+            left: 20px;
+        }
+
+        .floating-btn-right {
+            right: 20px;
+            width: auto;
+            border-radius: 25px;
+            padding: 0 15px;
+            font-size: 16px;
+            height: 50px;
+        }
+
+        /* Fullscreen Modal */
+        .modal-fullscreen-custom {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .modal-content {
+            background-color: #ffffff;
+            height: 100%;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .text-decoration-none {
+            text-decoration: none !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- QR Code Modal -->
+    <div class="modal fade" id="qrModal" tabindex="-1" aria-labelledby="qrModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen-custom">
+            <div class="modal-content">
+
+                <!-- Modal Close Button -->
+                <button type="button" class="top-0 m-3 btn btn-danger rounded-circle position-absolute start-0"
+                        data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+
+                <!-- Modal Logo and Profile Info -->
+                <img src="Devotion-Travel-Tourism.png" class="logo" alt="Devotion Travel & Tourism LLC - Dubai (UAE) Rajvi Anghan">
+                <img src="https://devotiongroup.net/storage/app/visiting-card/1/1-favicon.png" class="mt-2 mb-2 profile-img" alt="Rajvi Anghan">
+
+                <!-- Name and Title -->
+                <h4 class="mt-3 fw-bold">Rajvi Anghan</h4>
+                <p class="mb-0 text-muted"><em>Travel Consultant</em></p>
+                <p class="text-muted small">Devotion Travel & Tourism LLC - Dubai (UAE)</p>
+
+                <!-- QR Code -->
+                <div id="qrcode" class="my-4" style="width:150px; height:150px;"></div>
+
+                <!-- Wallet Buttons -->
+
+                <!-- Modal Extra Options -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="container py-5 text-center">
+
+        <!-- Main Logo -->
+        <img src="Devotion-Travel-Tourism.png" class="logo" alt="Devotion Travel & Tourism LLC - Dubai (UAE) Rajvi Anghan">
+
+        <!-- Profile Image -->
+        <div class="d-flex justify-content-center">
+            <img src="https://devotiongroup.net/storage/app/visiting-card/1/1-favicon.png" class="mt-1 profile-img">
+        </div>
+
+        <!-- Profile Info -->
+        <h4 class="mt-3 fw-bold section-heading">Rajvi Anghan</h4>
+        <p class="mb-1 text-muted">Travel Consultant</p>
+        <p class="text-muted small">Devotion Travel & Tourism LLC - Dubai (UAE)</p>
+
+        <!-- Call and Email Buttons -->
+        <div class="gap-3 mt-2 d-flex justify-content-center">
+            <a href="tel:&#x2B;971 585775469" class="btn btn-outline-dark rounded-circle"><i class="fas fa-phone"></i></a>
+            <a href="mailto:prashant@devotiontourism.com" class="btn btn-outline-dark rounded-circle"><i class="fas fa-envelope"></i></a>
+        </div>
+
+    </div>
+
+    <!-- About Section -->
+    <div class="container mb-4">
+        <div class="p-4 card-custom">
+            <h5 class="mb-3 text-center fw-bold section-heading">About Company</h5>
+            <p class="text-center small">
+                At <b>Devotion Tourism</b>, we understand that travel is not just about reaching a destination but also about creating lasting memories. With our extensive expertise in the travel industry, we are dedicated to providing you with exceptional services that cater to all your travel needs. At Devotion Tourism, we are passionate about making your travel dreams come true. With our unwavering commitment to excellence, personalized service, and comprehensive solutions, we strive to provide you with an exceptional travel experience. Let us be your trusted travel partner and embark on a journey of unforgettable memories with Devotion Tourism. Contact us today to start planning your next adventure!
+            </p>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="container mb-4">
+        <div class="p-4 card-custom">
+            <h5 class="mb-3 text-center fw-bold section-heading">Contact Us</h5>
+            <p>
+                <i class="fa fa-mobile me-2"></i>
+                <a href="tel:&#x2B;971 56 179 1080" class="text-decoration-none text-dark">&#x2B;971 561791080</a>
+            </p>
+
+            <p>
+                <i class="fa fa-phone me-2"></i>
+                <a href="tel:&#x2B;971 44488538" class="text-decoration-none text-dark">&#x2B;971 44488538</a>
+            </p>
+
+            <p>
+                <i class="fas fa-envelope me-2"></i>
+                <a href="mailto:support@devotiontourism.com" class="text-decoration-none text-dark">support@devotiontourism.com</a>
+            </p>
+
+                <p>
+                    <i class="fas fa-map-marker-alt me-2"></i>
+                    Aspect Tower, Bay Avenue - 2801, A Zone, Business Bay, Dubai, UAE
+                </p>
+
+                <p>
+                    <i class="fas fa-map-marker-alt me-2"></i>
+                    Aspect Tower, Bay Avenue - 2801, A Zone, Business Bay, Dubai, UAE
+                </p>
+        </div>
+    </div>
+
+    <!-- Social Links Section -->
+    <div class="container mb-5">
+        <div class="p-4 card-custom">
+            <h5 class="mb-3 text-center fw-bold section-heading">Social Links</h5>
+
+            <!-- Facebook -->
+                <a href="https://www.facebook.com/profile.php?id=100091695764298" target="_blank" class="social-link">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" class="social-icon"> Facebook
+                </a>
+
+            <!-- Instagram -->
+                <a href="https://www.instagram.com/devotiontourism/" target="_blank" class="social-link">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" class="social-icon"> Instagram
+                </a>
+
+            <!-- tiktok -->
+
+            <!-- Pinterest -->
+                <a href="https://pin.it/1O6HPbY" target="_blank" class="social-link">
+                    <img src="https://cdn-icons-png.flaticon.com/128/145/145808.png" class="social-icon"> Pinterest
+                </a>
+
+            <!-- Snapchat -->
+
+            <!-- quora -->
+
+            <!-- LinkedIn -->
+
+            <!-- Twitter -->
+                <!-- <a href="https://x.com/devotionestate" target="_blank" class="social-link">
+                    <img src="https://cdn.simpleicons.org/x/000000" class="social-icon"> Twitter
+                </a> -->
+
+            <!-- youtube -->
+
+            <!-- Whats App -->
+            <!-- Website -->
+            <a href="https://devotiontourism.com" target="_blank" class="social-link">
+                <img src="https://icon-library.com/images/globe-icon-free/globe-icon-free-0.jpg" class="social-icon"> Our Website
+            </a>
+
+        </div>
+    </div>
+
+    <!-- Floating Buttons -->
+    <button class="floating-btn floating-btn-left" data-bs-toggle="modal" data-bs-target="#qrModal">
+        <i class="fas fa-qrcode"></i>
+    </button>
+
+    <a class="floating-btn floating-btn-right text-decoration-none" href="" onclick="DownloadCard(); return false;">
+        <i class="fas fa-user-plus"></i> Add to Contact
+    </a>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            const currentUrl = window.location.href;
+            new QRCode(document.getElementById("qrcode"), {
+                text: currentUrl,
+                width: 150,
+                height: 150,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
+            });
+        })
+    </script>
+    <script>
+        function DownloadCard() {
+            const vCard = `
+                            BEGIN:VCARD
+                            VERSION:3.0
+                            FN:"Rajvi Anghan"
+                            TEL:"&#x2B;971 561791080"
+                            ORG:"Devotion Travel & Tourism LLC - Dubai (UAE)"
+                            TITLE:"Travel Consultant"
+                            EMAIL:"support@devotiontourism.com"
+                            ADR:"Aspect Tower, Bay Avenue - 2801, A Zone, Business Bay, Dubai, UAE"
+                            URL:https://devotiontourism.com
+                            END:VCARD
+                      `.trim();
+
+            const blob = new Blob([vCard], { type: 'text/vcard' });
+            const url = URL.createObjectURL(blob);
+
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = "Rajvi Anghan" + ".vcf";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        };
+    </script>
+</body>
+
+</html>
