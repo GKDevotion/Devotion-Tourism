@@ -2,7 +2,7 @@
 @extends('backend.layouts.master')
 
 @section('title')
-Role Create - Admin Panel
+Roles Create - Admin Panel
 @endsection
 
 @section('styles')
@@ -19,43 +19,48 @@ Role Create - Admin Panel
 <!-- page title area start -->
 <div class="page-title-area">
     <div class="row align-items-center">
+        <div class="col-sm-2">
+            @include('backend.layouts.partials.side-bar-logo')
+        </div>
         <div class="col-sm-7">
             <div class="breadcrumbs-area clearfix">
-                <h4 class="page-title pull-left d-none">Role Create</h4>
+                {{-- <h4 class="page-title pull-left d-none">Configuration Create</h4> --}}
                 <ul class="breadcrumbs pull-left m-2">
                     <li><a href="{{ route('admin.dashboard.index') }}">Dashboard</a></li>
-                    <li><a href="{{ route('admin.role.index') }}">All Roles</a></li>
+                    <li><a href="{{ route('admin.roles.index') }}">All Roles</a></li>
                     <li><span>Create Role</span></li>
                 </ul>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-2">
             <p class="float-end">
-                @if ( fetchSinglePermission( Auth::guard('admin')->user(), 'admin.role', 'add'))
-                    <button type="button" class="btn btn-success pr-4 pl-4" onclick="$('#submitForm').click();">
-                        <i class="fa fa-save"></i> Save
-                    </button>
-                @endif
-                <a href="{{ route('admin.role.index') }}" class="btn btn-danger">
+                <button type="button" class="btn btn-success pr-4 pl-4" onclick="$('#submitForm').click();">
+                    <i class="fa fa-save"></i> Save
+                </button>
+                <a href="{{ route('admin.roles.index') }}" class="btn btn-danger">
                     <i class="fa fa-arrow-left"></i> Back
                 </a>
             </p>
         </div>
-        <div class="col-md-2 clearfix">
-            @include('backend.layouts.partials.logout')
+        <div class="col-md-1">
+            <span class="text-theme">
+                <i class="fa fa-user"></i>
+                {{auth()->guard('admin')->user()->username}}
+            </span>
         </div>
+        @include('backend.layouts.partials.header-menu')
     </div>
 </div>
 <!-- page title area end -->
 
 <div class="main-content-inner">
-    <div class="row">
+       <div class="row">
         <!-- data table start -->
         <div class="col-12 mt-5">
             <div class="card">
                 <div class="card-body">
 
-                    <form action="{{ route('admin.role.store') }}" method="POST" autocomplete="off">
+                    <form action="{{ route('admin.roles.store') }}" method="POST" autocomplete="off">
                         @csrf
                         <div class="row">
                             <div class="col-md-6">
@@ -68,8 +73,21 @@ Role Create - Admin Panel
                                 </div>
                             </div>
 
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="name" class="mb-0">Guard Name</label>
+                                    <select name="guard_name" id="guard_name" class="form-control">
+                                    @foreach( $role_guardObj as $guard )
+                                        <option value="{{$guard->slug}}">{{$guard->name}}</option>
+                                    @endforeach
+                                    </select>
+                                    @error('guard_name')
+                                        <div class="error text-error">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                            </div>
                         </div>
-
+                        
                         <div class="form-group mt-2">
                             <label for="name" class="mb-0">Permissions</label>
 
@@ -118,7 +136,7 @@ Role Create - Admin Panel
                                 <button type="submit" class="btn btn-success pr-4 pl-4" id="submitForm">
                                     <i class="fa fa-save"></i> Save
                                 </button>
-                                <a href="{{ route('admin.role.index') }}" class="btn btn-danger pr-4 pl-4">
+                                <a href="{{ route('admin.roles.index') }}" class="btn btn-danger pr-4 pl-4">
                                     <i class="fa fa-arrow-left"></i> Back
                                 </a>
                             </div>
@@ -132,7 +150,6 @@ Role Create - Admin Panel
     </div>
 </div>
 @endsection
-
 @section('scripts')
      @include('backend.pages.roles.partials.scripts')
 @endsection

@@ -69,13 +69,13 @@ Route::prefix('admin')->group(function () {
     Route::resource('menu', 'Backend\MenuController', ['names' => 'admin.menu']);
     Route::resource('logs', 'Backend\AdminLogController', ['names' => 'admin.admin-log']);
     Route::get('/admin-log-ajax-data', [AdminLogController::class, 'ajaxIndex'])->name('admin-log.ajaxIndex');
-    Route::resource('roles', 'Backend\RolesController', ['names' => 'admin.role']);
+    // Route::resource('roles', 'Backend\RolesController', ['names' => 'admin.role']);
     Route::resource('permission', 'Backend\PermissionController', ['names' => 'admin.permission']);
     Route::post('changePermission', [PermissionController::class, 'changePermission']);
     Route::get('change-password', [AdminsController::class, 'changePassword'])->name('admin.change-password');
     Route::resource('configurations', 'Backend\ConfigurationController', ['names' => 'admin.configurations']);
 
-        Route::resource('website', 'Admin\WebsitesController', ['names' => 'admin.website']);
+    Route::resource('website', 'Admin\WebsitesController', ['names' => 'admin.website']);
     Route::get('/website-ajax-data', [WebsitesController::class, 'ajaxIndex'])->name('website.ajaxIndex');
 
     // Route::group(['prefix' => 'website'], function () {
@@ -87,7 +87,7 @@ Route::prefix('admin')->group(function () {
     //     Route::delete('/delete/{id}', [WebsitesController::class, 'destroy'])->name('admin.website.delete');
     // });
 
-            Route::resource('category', 'Admin\CategoriesController', ['names' => 'admin.category']);
+    Route::resource('category', 'Admin\CategoriesController', ['names' => 'admin.category']);
     Route::get('/category-ajax-data', [CategoriesController::class, 'ajaxIndex'])->name('category.ajaxIndex');
 
 
@@ -100,14 +100,22 @@ Route::prefix('admin')->group(function () {
     //     Route::delete('/delete/{id}', [CategoriesController::class, 'destroy'])->name('admin.category.delete');
     // });
 
-    Route::group(['prefix' => 'package'], function () {
-        Route::get('/', [PackageController::class, 'index'])->name('admin.package.index');
-        Route::get('/create', [PackageController::class, 'create'])->name('admin.package.create');
-        Route::post('/store', [PackageController::class, 'store'])->name('admin.package.store');
-        Route::get('/edit/{id}', [PackageController::class, 'edit'])->name('admin.package.edit');
-        Route::post('/update/{id}', [PackageController::class, 'update'])->name('admin.package.update');
-        Route::delete('/delete/{id}', [PackageController::class, 'destroy'])->name('admin.package.delete');
-    });
+    
+    Route::resource('package', 'Admin\PackageController', ['names' => 'admin.package']);
+    Route::get('/package-ajax-data', [PackageController::class, 'ajaxIndex'])->name('package.ajaxIndex');
+
+        Route::resource('roles', 'Backend\RolesController', ['names' => 'admin.roles']);
+    // Route::group([
+    //     'prefix' => 'package',
+    //     'middleware' => ['auth:admin']
+    // ], function () {
+    //     Route::get('/', [PackageController::class, 'index'])->name('admin.package.index');
+    //     Route::get('/create', [PackageController::class, 'create'])->name('admin.package.create');
+    //     Route::post('/store', [PackageController::class, 'store'])->name('admin.package.store');
+    //     Route::get('/edit/{id}', [PackageController::class, 'edit'])->name('admin.package.edit');
+    //     Route::post('/update/{id}', [PackageController::class, 'update'])->name('admin.package.update');
+    //     Route::delete('/delete/{id}', [PackageController::class, 'destroy'])->name('admin.package.delete');
+    // });
 
 
     /**

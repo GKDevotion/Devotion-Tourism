@@ -4,8 +4,13 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Role;
+// use App\Models\Role;
+use App\Models\RoleGuard;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Spatie\Permission\Models\Permission;
+
 class RolesController extends Controller
 {
     public $user;
@@ -29,7 +34,7 @@ class RolesController extends Controller
             return redirect('admin/login');
         }
 
-        if (!fetchSinglePermission( $this->user, 'admin.role', 'view') ) {
+        if (!fetchSinglePermission( $this->user, 'admin.roles', 'view') ) {
             abort(403, 'Sorry !! You are Unauthorized to view Role !');
         }
 
@@ -49,12 +54,15 @@ class RolesController extends Controller
             return redirect('admin/login');
         }
 
-        if ( !fetchSinglePermission( $this->user, 'admin.role', 'add') ) {
+        if ( !fetchSinglePermission( $this->user, 'admin.roles', 'add') ) {
             abort(403, 'Sorry !! You are Unauthorized to create Role !');
         }
 
         $auth = $this->user;
-        return view('backend.pages.roles.create', compact('auth'));
+        $permission_groups = User::getpermissionGroups();
+        $all_permissions  = Permission::all();
+        $role_guardObj = RoleGuard::where( 'status', 1 )->get();
+        return view('backend.pages.roles.create', compact('auth', 'role_guardObj','permission_groups', 'all_permissions'));
     }
 
     /**
@@ -69,7 +77,7 @@ class RolesController extends Controller
             return redirect('admin/login');
         }
 
-        if (!fetchSinglePermission( $this->user, 'admin.role', 'add') ) {
+        if (!fetchSinglePermission( $this->user, 'admin.roles', 'add') ) {
             abort(403, 'Sorry !! You are Unauthorized to create Role !');
         }
 
@@ -84,7 +92,7 @@ class RolesController extends Controller
         Role::create( ['name' => $request->name, 'slug' => $slug, 'guard_name' => $request->guard_name] );
 
         session()->flash('success', $request->name.' role has been created !!');
-        return redirect()->route('admin.role.index');
+        return redirect()->route('admin.roles.index');
     }
 
     /**
@@ -110,13 +118,16 @@ class RolesController extends Controller
             return redirect('admin/login');
         }
 
-        if (!fetchSinglePermission( $this->user, 'admin.role', 'edit') ) {
+        if (!fetchSinglePermission( $this->user, 'admin.roles', 'edit') ) {
             abort(403, 'Sorry !! You are Unauthorized to edit Role !');
         }
 
         $role = Role::find($id);
         $auth = $this->user;
-        return view('backend.pages.roles.edit', compact('role', 'auth'));
+        $all_permissions  = Permission::all();
+        $permission_groups = User::getpermissionGroups();
+        $role_guardObj = RoleGuard::where( 'status', 1 )->get();
+        return view('backend.pages.roles.edit', compact('role', 'auth', 'role_guardObj', 'permission_groups', 'all_permissions'));
     }
 
     /**
@@ -132,9 +143,9 @@ class RolesController extends Controller
             return redirect('admin/login');
         }
 
-        if (!$this->user->can('role.edit')) {
-            abort(403, 'Sorry !! You are Unauthorized to edit Role !');
-        }
+        // if (!$this->user->can('role.edit')) {
+        //     abort(403, 'Sorry !! You are Unauthorized to edit Role !');
+        // }
 
         // Validation Data
         $request->validate([
@@ -146,10 +157,11 @@ class RolesController extends Controller
         $role = Role::find( $id );
         $role->name = $request->name;
         $role->slug = convertStringToSlug( $request->name );
+        
         $role->save();
 
         session()->flash('success', $request->name.' role has been updated !!');
-        return redirect()->route('admin.role.index');
+        return redirect()->route('admin.roles.index');
     }
 
     /**
@@ -160,7 +172,7 @@ class RolesController extends Controller
      */
     public function destroy(int $id)
     {
-        if (is_null($this->user) || !fetchSinglePermission( $this->user, 'admin.role', 'delete') ) {
+        if (is_null($this->user) || !fetchSinglePermission( $this->user, 'admin.roles', 'delete') ) {
             abort(403, 'Sorry !! You are Unauthorized to delete Role !');
         }
 

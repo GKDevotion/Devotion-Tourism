@@ -57,6 +57,7 @@
                             <thead>
                                 <tr>
                                     <th>#</th>
+                                    <th class="">Tour Id</th>
                                     <th class="">Image</th>
                                     <th class="">Package</th>
                                     <th class="">Category</th>
@@ -73,18 +74,20 @@
                                 @forelse ($dataArr as $ar)
                                     <tr id="row_{{ $ar->id }}" class="role_row">
                                         <td class="">{{ $ar->id }}</td>
+                                        <td class="">{{ $ar->tour_id }}</td>
                                         <td>
                                             <img src="{{ url('storage/app/' . $ar->image) }}" alt="{{ $ar->title }}"
                                                 height="55px">
                                         </td>
                                         <td>
-                                            <a href="{{ url($ar->category->slug . '/' . $ar->sub_category->slug . '/' . $ar->slug . '?advt=0') }}"
+                                            <a href="{{ url(optional($ar->category)->slug . '/' . optional($ar->sub_category)->slug . '/' . $ar->slug . '?advt=0') }}"
                                                 target="_blank" title="{{ $ar->title }}">
                                                 {{ $ar->title }}
                                             </a>
                                         </td>
-                                        <td class="">{{ $ar->category->title }}</td>
-                                        <td class="">{{ $ar->sub_category->title }}</td>
+                                        <td class="">{{ $ar->category?->title ?? '—' }}</td>
+
+                                        <td class="">{{ $ar->sub_category->title ?? '—' }}</td>
                                         <td>
                                             @if (true)
                                                 <i class="fa fa-{{ $ar->status == 0 ? 'times' : 'check' }} update-status"
@@ -111,19 +114,27 @@
                                                 aria-haspopup="true" aria-expanded="false">
                                                 &#x22EE;
                                             </button>
-                                            <div class="dropdown-menu" aria-labelledby="action_menu_{{ $ar->id }}">
 
+                                            <div class="dropdown-menu" aria-labelledby="action_menu_{{ $ar->id }}">
                                                 <a class="btn btn-edit text-white dropdown-item"
                                                     href="{{ route('admin.package.edit', $ar->id) }}">
                                                     <i class="fa fa-pencil"></i> Edit
                                                 </a>
-                                                <button class="btn btn-edit text-white delete-record dropdown-item"
-                                                    data-id="{{ $ar->id }}" data-title="{{ $ar->name }}"
-                                                    data-segment="package">
-                                                    <i class="fa fa-trash fa-sm" aria-hidden="true"></i> Delete
-                                                </button>
+
+                                                <!-- Delete form -->
+                                                <form action="{{ route('admin.package.destroy', $ar->id) }}" method="POST"
+                                                    onsubmit="return confirm('Are you sure you want to delete this package?');"
+                                                    class="d-inline">
+                                                    @csrf
+                                                    @method('DELETE')
+
+                                                    <button type="submit" class="btn dropdown-item">
+                                                        <i class="fa fa-trash fa-sm" aria-hidden="true"></i> Delete
+                                                    </button>
+                                                </form>
                                             </div>
                                         </td>
+
                                     </tr>
                                 @empty
                                     <tr class="text-center">
@@ -153,8 +164,8 @@
 
     <script>
         /*================================
-                    datatable active
-                    ==================================*/
+                            datatable active
+                            ==================================*/
         if ($('#dataTable').length) {
             $('#dataTable').DataTable({
                 responsive: true,

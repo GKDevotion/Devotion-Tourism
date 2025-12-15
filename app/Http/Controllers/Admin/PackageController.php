@@ -103,6 +103,9 @@ class PackageController extends Controller
 
         $package = new Package();
 
+        // Do NOT set tour_id yet
+
+        // Handle images...
         if ($request->hasFile('image')) {
             $filename = $request->image->getClientOriginalName();
 
@@ -111,19 +114,18 @@ class PackageController extends Controller
             $img = Image::make($originalImage->path());
             $img->resize(1519, 417, function ($constraint) {
                 $constraint->aspectRatio();
-            })
-                ->save($destinationImagePath . '/' . $filename);
+            })->save($destinationImagePath . '/' . $filename);
             $package->image = "public/package/banner/" . $filename;
 
             $destinationCardImagePath = storage_path('/app/public/package/card');
             $img = Image::make($originalImage->path());
             $img->resize(364, 243, function ($constraint) {
                 $constraint->aspectRatio();
-            })
-                ->save($destinationCardImagePath . '/' . $filename);
+            })->save($destinationCardImagePath . '/' . $filename);
             $package->card_image = "public/package/card/" . $filename;
         }
 
+        // Additional images
         for ($i = 0; $i < 4; $i++) {
             if ($request->hasFile('lot_file_' . $i)) {
                 $objFile = 'lot_file_' . $i;
@@ -134,14 +136,14 @@ class PackageController extends Controller
                 $img = Image::make($originalImage->path());
                 $img->resize(1519, 417, function ($constraint) {
                     $constraint->aspectRatio();
-                })
-                    ->save($destinationImagePath . '/' . $filename);
+                })->save($destinationImagePath . '/' . $filename);
 
                 $detail_image = 'detail_image_' . ($i + 1);
                 $package->$detail_image = "public/package/card/" . $filename;
             }
         }
 
+        // Fill other fields
         $user_id = auth()->guard('admin')->user()->id;
         $package->user_id = $user_id;
         $package->website_id = $this->websiteDetails['id'];
@@ -151,7 +153,6 @@ class PackageController extends Controller
         $package->slug = rtrim(convertStringToSlug($request->title), "-");
         $package->short_description = $request->short_description;
         $package->description = $request->description;
-        // $package->bullet_points = json_encode( $request->bullet_points );
         $package->keyword = $request->keyword;
         $package->status = $request->status;
         $package->location = $request->location;
@@ -162,14 +163,54 @@ class PackageController extends Controller
         $package->start_date = $request->start_date;
         $package->end_date = $request->end_date;
         $package->discount = $request->discount;
-        $package->save();
+        $package->term_condition = $request->term_condition;
+        // ------------------------------
+        // ⭐️ STORE INCLUSIVE AS ARRAY
+        // ------------------------------
+        if ($request->has('inclusive')) {
+            $package->inclusive = json_encode($request->inclusive);
+        }
+        // ------------------------------
+        // ⭐️ STORE EXCLUSIVE AS ARRAY
+        // ------------------------------
+        if ($request->has('exclusive')) {
+            $package->exclusive = json_encode($request->exclusive);
+        }
+        // Store Itinerary as comma-separated JSON
+        if ($request->has('itenery')) {
+            $package->itenery = implode(',', $request->itenery);
+        }
 
-        $package->short_url = _en($package->id);
-        $package->save();
+        if ($request->has('faq')) {
+            $package->faq = implode(',', $request->faq); // stores each FAQ JSON separated by comma
+        }
+        $package->save(); // first save to get auto-increment ID
+
+        // Now generate unique tour_id and short_url
+        $package->update([
+            'tour_id' => 'TID' . str_pad($package->id, 4, '0', STR_PAD_LEFT),
+            'short_url' => _en($package->id),
+        ]);
 
         $request->session()->flash('message', 'Package successfully created');
         return redirect()->route('admin.package.index');
     }
+
+
+    /**
+     * Generate a unique tour_id
+     */
+    private function generateUniqueTourId()
+    {
+        // Use DB to get the max numeric part of tour_id
+        $lastNumber = Package::selectRaw("MAX(CAST(SUBSTRING(tour_id, 4) AS UNSIGNED)) as max_id")->value('max_id');
+
+        $newNumber = $lastNumber ? $lastNumber + 1 : 1;
+
+        return 'TID' . str_pad($newNumber, 4, '0', STR_PAD_LEFT);
+    }
+
+
 
     /**
      * @Function:        <show>
@@ -280,6 +321,7 @@ class PackageController extends Controller
         $package->duration = $request->duration;
         $package->price = $request->price;
         $package->discount = $request->discount;
+        $package->term_condition = $request->term_condition;
         $package->start_date = $request->start_date;
         $package->end_date = $request->end_date;
         $package->save();
@@ -306,7 +348,7 @@ class PackageController extends Controller
             $del->delete();
         }
 
-        return response()->json(['data' => ['message' => 'Blog successfully deleted.']], 200);
+        return response()->json(['data' => ['message' => 'Package successfully deleted.']], 200);
         // return redirect()->route('admin.role');
     }
 }
