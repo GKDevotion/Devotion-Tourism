@@ -353,26 +353,6 @@
 
                                                 <div class="p-2" id="itenery-list"></div>
                                             </div>
-                                            {{-- 
-                                            <!-- Itinerary Section -->
-                                            <div class="form-group mb-0">
-                                                <label>Itinerary</label>
-                                                <div class="row mb-2">
-                                                    <div class="col-md-10">
-                                                        <input type="text" class="form-control"
-                                                            placeholder="Enter Day Description" id="itineraryInput">
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <a href="javascript:void(0)" class="btn" id="addItinerary"
-                                                            style="background-color:#ab8134">
-                                                            <i class="fa fa-plus" style="color:white"></i>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div id="itinerary-list"></div>
-                                            </div>
- --}}
-
 
                                             <div class="form-group">
                                                 <label for="title">Recommended Package</label>
@@ -413,6 +393,7 @@
                                                         @endif
                                                     </div>
                                                 </div>
+                                                
                                             </div>
 
                                             <div class="row">
@@ -438,6 +419,7 @@
                                                         </select>
                                                     </div>
                                                 </div>
+
                                             </div>
 
                                         </div>
@@ -739,33 +721,5 @@
             document.getElementById('iteneryDataInput').value = '';
         });
 
-
-        // // ---------- Itinerary ----------
-        // document.getElementById('addItinerary').addEventListener('click', function() {
-        //     let value = document.getElementById('itineraryInput').value.trim();
-        //     if (!value) return;
-
-        //     let itineraryObj = [{
-        //         "day": value
-        //     }];
-        //     let input = document.createElement('input');
-        //     input.type = "hidden";
-        //     input.name = "itenery[]";
-        //     input.value = JSON.stringify(itineraryObj);
-
-        //     let box = document.createElement('div');
-        //     box.className = "text-dark p-2 m-1 d-flex justify-content-between rounded";
-        //     box.innerHTML = `<span>${value}</span><span style="cursor:pointer;font-weight:bold;">&times;</span>`;
-
-        //     box.querySelector("span:last-child").addEventListener("click", function() {
-        //         box.remove();
-        //         input.remove();
-        //     });
-
-        //     document.getElementById('itinerary-list').appendChild(box);
-        //     document.getElementById('itinerary-list').appendChild(input);
-
-        //     document.getElementById('itineraryInput').value = '';
-        // });
     </script>
 @endsection

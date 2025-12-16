@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\PasswordController;
 use App\Http\Controllers\Backend\AdminLogController;
 use App\Http\Controllers\Backend\AdminsController;
+use App\Http\Controllers\Backend\BannerController;
 use App\Http\Controllers\Backend\CompanyController;
 use App\Http\Controllers\Backend\LocationController;
 use App\Http\Controllers\Backend\PermissionController;
@@ -104,7 +105,10 @@ Route::prefix('admin')->group(function () {
     Route::resource('package', 'Admin\PackageController', ['names' => 'admin.package']);
     Route::get('/package-ajax-data', [PackageController::class, 'ajaxIndex'])->name('package.ajaxIndex');
 
-        Route::resource('roles', 'Backend\RolesController', ['names' => 'admin.roles']);
+    Route::resource('banner', 'Backend\BannerController', ['names' => 'admin.banner']);
+    Route::get('/banner-ajax-data', [BannerController::class, 'ajaxIndex'])->name('banner.ajaxIndex');
+
+    Route::resource('roles', 'Backend\RolesController', ['names' => 'admin.roles']);
     // Route::group([
     //     'prefix' => 'package',
     //     'middleware' => ['auth:admin']
