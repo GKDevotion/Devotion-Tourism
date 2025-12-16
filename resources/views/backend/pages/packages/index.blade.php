@@ -58,7 +58,7 @@
                                 <tr>
                                     <th>#</th>
                                     <th class="">Tour Id</th>
-                                    <th class="">Image</th>
+                                    <th class="" width="10%">Image</th>
                                     <th class="">Package</th>
                                     <th class="">Category</th>
                                     <th class="">Sub Category</th>
@@ -76,9 +76,10 @@
                                         <td class="">{{ $ar->id }}</td>
                                         <td class="">{{ $ar->tour_id }}</td>
                                         <td>
-                                            <img src="{{ url('storage/app/' . $ar->image) }}" alt="{{ $ar->title }}"
-                                                height="55px">
+                                            <img src="{{ asset('storage/app/public/' . $ar->image) }}"
+                                                alt="{{ $ar->title }}" style="width: 100%;height: 100px;">
                                         </td>
+
                                         <td>
                                             <a href="{{ url(optional($ar->category)->slug . '/' . optional($ar->sub_category)->slug . '/' . $ar->slug . '?advt=0') }}"
                                                 target="_blank" title="{{ $ar->title }}">
@@ -164,8 +165,8 @@
 
     <script>
         /*================================
-                            datatable active
-                            ==================================*/
+                                datatable active
+                                ==================================*/
         if ($('#dataTable').length) {
             $('#dataTable').DataTable({
                 responsive: true,

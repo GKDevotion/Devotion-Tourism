@@ -6,7 +6,10 @@ use App\Http\Controllers\Controller;
 use App\Models\Website;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 use Image;
+use Intervention\Image\ImageManager;
+use Intervention\Image\Drivers\Gd\Driver;
 
 class WebsitesController extends Controller
 {
@@ -68,116 +71,100 @@ class WebsitesController extends Controller
      */
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'name' => 'required|min:1|max:30',
-            'favicon' => 'required',
-            'header_logo' => 'required',
+        $request->validate([
+            'name'        => 'required|min:1|max:30',
+            'favicon'     => 'required|image|mimes:png,jpg,jpeg,ico,webp|max:1024',
+            'header_logo' => 'required|image|mimes:png,jpg,jpeg,webp|max:2048',
+            'footer_logo' => 'nullable|image|mimes:png,jpg,jpeg,webp|max:2048',
         ]);
 
         $website = new Website();
+        $manager = new ImageManager(new Driver());
 
+        /* -----------------------------
+        FOLDERS
+        ------------------------------*/
+        Storage::disk('public')->makeDirectory('website/favicon');
+        Storage::disk('public')->makeDirectory('website/logo');
 
-        // default values
-        $favicon = $header_logo = $footer_logo = "";
-
-        // ensure folder exists
-        if (!Storage::disk('public')->exists('website')) {
-            Storage::disk('public')->makeDirectory('website', 0777, true);
-        }
-
-        /*-----------------------------------
-        | FAVICON
-        -----------------------------------*/
+        /* -----------------------------
+        FAVICON (64x64)
+        ------------------------------*/
         if ($request->hasFile('favicon')) {
 
-            $file = $request->file('favicon');
+            $faviconFile = $request->file('favicon');
+            $faviconName = Str::uuid() . '.' . $faviconFile->getClientOriginalExtension();
+            $faviconPath = storage_path('app/public/website/favicon/' . $faviconName);
 
-            if ($file->isValid()) {
+            $manager->read($faviconFile)
+                ->resize(64, 64)
+                ->save($faviconPath);
 
-                $filename = time() . '_' . preg_replace('/\s+/', '_', $file->getClientOriginalName());
-
-                // store file directly in storage/app/public/website
-                Storage::disk('public')->putFileAs('website', $file, $filename);
-
-                // correct URL for public access
-                $favicon = "storage/website/" . $filename;
-            }
+            $website->favicon = 'website/favicon/' . $faviconName;
         }
 
-
-        /*-----------------------------------
-        | HEADER LOGO (resize)
-        -----------------------------------*/
+        /* -----------------------------
+        HEADER LOGO (300x100)
+        ------------------------------*/
         if ($request->hasFile('header_logo')) {
 
-            $file = $request->file('header_logo');
+            $headerFile = $request->file('header_logo');
+            $headerName = Str::uuid() . '.' . $headerFile->getClientOriginalExtension();
+            $headerPath = storage_path('app/public/website/logo/' . $headerName);
 
-            if ($file->isValid()) {
+            $manager->read($headerFile)
+                ->resize(300, 100, function ($constraint) {
+                    $constraint->aspectRatio();
+                    $constraint->upsize();
+                })
+                ->save($headerPath);
 
-                $filename = time() . '_' . preg_replace('/\s+/', '_', $file->getClientOriginalName());
-
-                $destination = storage_path('app/public/website/' . $filename);
-
-                // resize & save
-                $img = Image::make($file->path());
-                $img->resize(478, 147)->save($destination);
-
-                $header_logo = "storage/website/" . $filename;
-            }
+            $website->header_logo = 'website/logo/' . $headerName;
         }
 
-
-        /*-----------------------------------
-| FOOTER LOGO (resize)  
-| if not uploaded → use header_logo
------------------------------------*/
+        /* -----------------------------
+        FOOTER LOGO (300x100)
+        ------------------------------*/
         if ($request->hasFile('footer_logo')) {
 
-            $file = $request->file('footer_logo');
+            $footerFile = $request->file('footer_logo');
+            $footerName = Str::uuid() . '.' . $footerFile->getClientOriginalExtension();
+            $footerPath = storage_path('app/public/website/logo/' . $footerName);
 
-            if ($file->isValid()) {
+            $manager->read($footerFile)
+                ->resize(300, 100, function ($constraint) {
+                    $constraint->aspectRatio();
+                    $constraint->upsize();
+                })
+                ->save($footerPath);
 
-                $filename = time() . '_' . preg_replace('/\s+/', '_', $file->getClientOriginalName());
-
-                $destination = storage_path('app/public/website/' . $filename);
-
-                $img = Image::make($file->path());
-                $img->resize(478, 147)->save($destination);
-
-                $footer_logo = "storage/website/" . $filename;
-            }
-        } else {
-            // fallback
-            $footer_logo = $header_logo;
+            $website->footer_logo = 'website/logo/' . $footerName;
         }
 
-
-        /*-----------------------------------
-| Save Website Model
------------------------------------*/
-        $slug = rtrim(convertStringToSlug($request->name), "-");
-
+        /* -----------------------------
+        SAVE DATA
+        ------------------------------*/
         $website->name = $request->name;
-        $website->slug = $slug;
-        $website->favicon = $favicon;
-        $website->header_logo = $header_logo;
-        $website->footer_logo = $footer_logo;
-        $website->is_run_advertisement = $request->is_run_advertisement;
+        $website->slug = rtrim(convertStringToSlug($request->name), '-');
+        $website->is_run_advertisement = $request->is_run_advertisement ?? 0;
         $website->google_analytics_code = $request->google_analytics_code;
         $website->google_client_ca_pub_code = $request->google_client_ca_pub_code;
         $website->google_tag_manager_code = $request->google_tag_manager_code;
-        $website->status = $request->status;
+        $website->status = $request->status ?? 0;
 
         $website->save();
 
-        if ($request->status == 1) {
+        /* -----------------------------
+        ONLY ONE ACTIVE WEBSITE
+        ------------------------------*/
+        if ($website->status == 1) {
             Website::where('id', '!=', $website->id)->update(['status' => 0]);
         }
 
-        $request->session()->flash('message', 'Website successfully created');
-        return redirect()->route('admin.website.index');
+        return redirect()
+            ->route('admin.website.index')
+            ->with('message', 'Website successfully created');
     }
-
     /**
      * @Function:        <show>
      * @Author:          Gautam Kakadiya( ShreeGurave Dev Team )
@@ -232,41 +219,81 @@ class WebsitesController extends Controller
 
         $website = Website::find($id);
 
-        // $favicon = $header_logo = $footer_logo = "";
-        // if ( $request->hasFile('favicon') ) {
-        //     $filename = $request->favicon->getClientOriginalName();
-        //     $request->favicon->storeAs('website', $filename, 'public' );
-        // 	$favicon = "public/website/".$filename;
-        //     $website->favicon = $favicon;
-        // }
+    $manager = new ImageManager(new Driver());
 
-        // if ( $request->hasFile('header_logo') ) {
-        //     $filename = $request->header_logo->getClientOriginalName();
-        //     $image = $request->file('header_logo');
-        //     $destinationPath = storage_path('/app/public/website');
-        //     $img = Image::make($image->path());
-        //     $img->resize(478, 147, function ($constraint) {
-        //         //$constraint->aspectRatio();
-        //     })->save($destinationPath.'/'.$filename);
+    /* -----------------------------
+       CREATE DIRECTORIES
+    ------------------------------*/
+    Storage::disk('public')->makeDirectory('website/favicon');
+    Storage::disk('public')->makeDirectory('website/logo');
 
-        // 	$header_logo = "public/website/".$filename;
-        //     $website->header_logo = $header_logo;
-        // }
+    /* -----------------------------
+       UPDATE FAVICON
+    ------------------------------*/
+    if ($request->hasFile('favicon')) {
 
-        // if ( $request->hasFile('footer_logo') ) {
-        //     $filename = $request->footer_logo->getClientOriginalName();
-        //     $image = $request->file('footer_logo');
-        //     $destinationPath = storage_path('/app/public/website');
-        //     $img = Image::make($image->path());
-        //     $img->resize(478, 147, function ($constraint) {
-        //         //$constraint->aspectRatio();
-        //     })->save($destinationPath.'/'.$filename);
+        // delete old
+        if ($website->favicon && Storage::disk('public')->exists($website->favicon)) {
+            Storage::disk('public')->delete($website->favicon);
+        }
 
-        // 	$footer_logo = "public/website/".$filename;
-        // } else if( $header_logo != "" ){
-        //     $header_logo = $footer_logo;
-        //     $website->footer_logo = $footer_logo;
-        // }
+        $file = $request->file('favicon');
+        $name = Str::uuid() . '.' . $file->getClientOriginalExtension();
+        $path = storage_path('app/public/website/favicon/' . $name);
+
+        $manager->read($file)
+            ->resize(64, 64)
+            ->save($path);
+
+        $website->favicon = 'website/favicon/' . $name;
+    }
+
+    /* -----------------------------
+       UPDATE HEADER LOGO
+    ------------------------------*/
+    if ($request->hasFile('header_logo')) {
+
+        if ($website->header_logo && Storage::disk('public')->exists($website->header_logo)) {
+            Storage::disk('public')->delete($website->header_logo);
+        }
+
+        $file = $request->file('header_logo');
+        $name = Str::uuid() . '.' . $file->getClientOriginalExtension();
+        $path = storage_path('app/public/website/logo/' . $name);
+
+        $manager->read($file)
+            ->resize(300, 100, function ($constraint) {
+                $constraint->aspectRatio();
+                $constraint->upsize();
+            })
+            ->save($path);
+
+        $website->header_logo = 'website/logo/' . $name;
+    }
+
+    /* -----------------------------
+       UPDATE FOOTER LOGO
+    ------------------------------*/
+    if ($request->hasFile('footer_logo')) {
+
+        if ($website->footer_logo && Storage::disk('public')->exists($website->footer_logo)) {
+            Storage::disk('public')->delete($website->footer_logo);
+        }
+
+        $file = $request->file('footer_logo');
+        $name = Str::uuid() . '.' . $file->getClientOriginalExtension();
+        $path = storage_path('app/public/website/logo/' . $name);
+
+        $manager->read($file)
+            ->resize(300, 100, function ($constraint) {
+                $constraint->aspectRatio();
+                $constraint->upsize();
+            })
+            ->save($path);
+
+        $website->footer_logo = 'website/logo/' . $name;
+    }
+
 
         $slug = rtrim(convertStringToSlug($request->name), "-");
         $website->name = $request->name;

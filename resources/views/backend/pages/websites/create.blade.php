@@ -61,7 +61,7 @@
                 <div class="card">
                     <div class="card-body">
                         <form action="{{ route('admin.website.store') }}" onsubmit="return onSubmitValidateForm();"
-                            method="POST" autocomplete="off">
+                            method="POST" autocomplete="off" enctype="multipart/form-data">
                             @csrf
                             <div class="row">
                                 <div class="col-md-6">

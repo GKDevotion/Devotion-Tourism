@@ -6,7 +6,12 @@ use App\Http\Controllers\Controller;
 use App\Models\Admin\Categories;
 use App\Models\Admin\Package;
 use App\Models\Admin\Visa;
+use App\Models\PackageImageMap;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
+use Intervention\Image\ImageManager;
+use Intervention\Image\Drivers\Gd\Driver;
 use Image;
 
 class PackageController extends Controller
@@ -101,51 +106,69 @@ class PackageController extends Controller
             'end_date' => 'required|date|after_or_equal:start_date',
         ]);
 
+        
+        // $posterName = null;
+
+        // // ✅ Handle upload
+        // if ($request->hasFile('poster')) {
+        //     $poster = $request->file('poster');
+
+        //     if ($poster->isValid()) { // extra check
+        //         $posterName = time() . '_' . preg_replace('/\s+/', '_', $poster->getClientOriginalName());
+        //         $poster->storeAs('public/poster', $posterName);
+        //     } else {
+        //         return back()->withErrors(['poster' => 'The file failed to upload properly.']);
+        //     }
+        // }
+
+
         $package = new Package();
+        $manager = new ImageManager(new Driver());
+// ------------------------------
+// POSTER UPLOAD (PDF ONLY)
+// ------------------------------
+$posterName = null;
 
-        // Do NOT set tour_id yet
+if ($request->hasFile('poster')) {
+    $poster = $request->file('poster');
 
-        // Handle images...
+    // Validate file type (PDF)
+    if ($poster->isValid() && $poster->getClientOriginalExtension() === 'pdf') {
+
+        // Ensure the directory exists
+        if (!Storage::disk('public')->exists('poster')) {
+            Storage::disk('public')->makeDirectory('poster');
+        }
+
+        // Clean file name and prepend timestamp
+        $posterName = time() . '_' . preg_replace('/\s+/', '_', $poster->getClientOriginalName());
+
+        // Store the file in 'storage/app/public/poster'
+        $poster->storeAs('poster', $posterName, 'public');
+
+    } else {
+        return back()->withErrors(['poster' => 'Please upload a valid PDF file.']);
+    }
+}
+
+        // ------------------------------
+        // IMAGE UPLOAD (BANNER)
+        // ------------------------------
         if ($request->hasFile('image')) {
-            $filename = $request->image->getClientOriginalName();
+            Storage::makeDirectory('public/package/banner');
 
-            $originalImage = $request->file('image');
-            $destinationImagePath = storage_path('/app/public/package/banner');
-            $img = Image::make($originalImage->path());
-            $img->resize(1519, 417, function ($constraint) {
-                $constraint->aspectRatio();
-            })->save($destinationImagePath . '/' . $filename);
-            $package->image = "public/package/banner/" . $filename;
+            $image = $request->file('image');
+            $filename = Str::uuid() . '.' . $image->getClientOriginalExtension();
+            $bannerPath = storage_path('app/public/package/banner/' . $filename);
 
-            $destinationCardImagePath = storage_path('/app/public/package/card');
-            $img = Image::make($originalImage->path());
-            $img->resize(364, 243, function ($constraint) {
-                $constraint->aspectRatio();
-            })->save($destinationCardImagePath . '/' . $filename);
-            $package->card_image = "public/package/card/" . $filename;
+            $manager->read($image)->resize(1519, 417)->save($bannerPath);
+            $package->image = 'package/banner/' . $filename;
         }
 
-        // Additional images
-        for ($i = 0; $i < 4; $i++) {
-            if ($request->hasFile('lot_file_' . $i)) {
-                $objFile = 'lot_file_' . $i;
-                $filename = $request->$objFile->getClientOriginalName();
-
-                $originalImage = $request->file('lot_file_' . $i);
-                $destinationImagePath = storage_path('/app/public/package/card');
-                $img = Image::make($originalImage->path());
-                $img->resize(1519, 417, function ($constraint) {
-                    $constraint->aspectRatio();
-                })->save($destinationImagePath . '/' . $filename);
-
-                $detail_image = 'detail_image_' . ($i + 1);
-                $package->$detail_image = "public/package/card/" . $filename;
-            }
-        }
-
-        // Fill other fields
-        $user_id = auth()->guard('admin')->user()->id;
-        $package->user_id = $user_id;
+        // ------------------------------
+        // FILL OTHER FIELDS
+        // ------------------------------
+        $package->user_id = auth()->guard('admin')->user()->id;
         $package->website_id = $this->websiteDetails['id'];
         $package->category_id = $request->category_id;
         $package->sub_category_id = $request->sub_category_id;
@@ -156,45 +179,56 @@ class PackageController extends Controller
         $package->keyword = $request->keyword;
         $package->status = $request->status;
         $package->location = $request->location;
+        $package->poster = $posterName;
         $package->adult_size = $request->adult_size;
         $package->tour_type = $request->tour_type;
         $package->duration = $request->duration;
         $package->price = $request->price;
+        $package->adult_price = $request->adult_price;
+        $package->child_price = $request->child_price;
+        $package->group_price = $request->group_price;
         $package->start_date = $request->start_date;
         $package->end_date = $request->end_date;
         $package->discount = $request->discount;
         $package->term_condition = $request->term_condition;
-        // ------------------------------
-        // ⭐️ STORE INCLUSIVE AS ARRAY
-        // ------------------------------
-        if ($request->has('inclusive')) {
-            $package->inclusive = json_encode($request->inclusive);
-        }
-        // ------------------------------
-        // ⭐️ STORE EXCLUSIVE AS ARRAY
-        // ------------------------------
-        if ($request->has('exclusive')) {
-            $package->exclusive = json_encode($request->exclusive);
-        }
-        // Store Itinerary as comma-separated JSON
-        if ($request->has('itenery')) {
-            $package->itenery = implode(',', $request->itenery);
-        }
 
-        if ($request->has('faq')) {
-            $package->faq = implode(',', $request->faq); // stores each FAQ JSON separated by comma
-        }
-        $package->save(); // first save to get auto-increment ID
+        if ($request->has('inclusive')) $package->inclusive = json_encode($request->inclusive);
+        if ($request->has('exclusive')) $package->exclusive = json_encode($request->exclusive);
+        if ($request->has('itenery')) $package->itenery = implode(',', $request->itenery);
+        if ($request->has('faq')) $package->faq = implode(',', $request->faq);
 
-        // Now generate unique tour_id and short_url
-        $package->update([
-            'tour_id' => 'TID' . str_pad($package->id, 4, '0', STR_PAD_LEFT),
-            'short_url' => _en($package->id),
-        ]);
+        $package->save();
+
+
+        // Step 2: Generate tour_id
+        $package->tour_id = 'TID' . str_pad($package->id, 4, '0', STR_PAD_LEFT);
+        $package->short_url = _en($package->id);
+        $package->save(); // save the tour_id and short_url
+
+        // Step 3: Upload card images to package_image_map
+        Storage::makeDirectory('public/package/card');
+
+        for ($i = 0; $i <= 3; $i++) {
+            $inputName = 'lot_file_' . $i;
+            if ($request->hasFile($inputName)) {
+                $file = $request->file($inputName);
+                $filename = time() . '_' . uniqid() . '.' . $file->getClientOriginalExtension();
+                $path = storage_path('app/public/package/card/' . $filename);
+                $manager->read($file)->resize(1519, 417)->save($path);
+
+                PackageImageMap::create([
+                    'tour_id' => $package->tour_id, // use updated package tour_id
+                    'image' => 'package/card/' . $filename,
+                    'filename' => $filename,
+                    'status' => 1
+                ]);
+            }
+        }
 
         $request->session()->flash('message', 'Package successfully created');
         return redirect()->route('admin.package.index');
     }
+
 
 
     /**
@@ -245,14 +279,17 @@ class PackageController extends Controller
         $headerInfo = $this->websiteDetails;
         $dataArr = Package::find($id);
         $categories = Categories::with('childrenRecursive')->where(['status' => 1, 'parent_id' => 0])->get();
-
+        // fetch card images using tour_id
+        $cardImages = PackageImageMap::where('tour_id', $dataArr->tour_id)
+            ->orderBy('id', 'ASC')
+            ->get();
         $packageArr = Package::select('id', 'title')->where([
             'status' => 1,
             'website_id' => $headerInfo['id'],
         ])
             ->get();
 
-        return view('backend.pages.packages.edit', compact('dataArr', 'categories', 'headerInfo', 'packageArr'));
+        return view('backend.pages.packages.edit', compact('dataArr', 'categories','cardImages', 'headerInfo', 'packageArr'));
     }
 
     /**
@@ -283,25 +320,44 @@ class PackageController extends Controller
 
         $package = Package::find($id);
 
+
+        $manager = new ImageManager(new Driver());
+
+        /* -----------------------------
+            IMAGE UPDATE (BANNER + CARD)
+            ------------------------------*/
         if ($request->hasFile('image')) {
-            $filename = $request->image->getClientOriginalName();
 
-            $originalImage = $request->file('image');
-            $destinationImagePath = storage_path('/app/public/package/banner');
-            $img = Image::make($originalImage->path());
-            $img->resize(1519, 417, function ($constraint) {
-                $constraint->aspectRatio();
-            })
-                ->save($destinationImagePath . '/' . $filename);
-            $package->image = "public/package/banner/" . $filename;
+            // 🔥 DELETE OLD IMAGES
+            if ($package->image && Storage::exists('public/' . $package->image)) {
+                Storage::delete('public/' . $package->image);
+            }
 
-            $destinationCardImagePath = storage_path('/app/public/package/card');
-            $img = Image::make($originalImage->path());
-            $img->resize(364, 243, function ($constraint) {
-                $constraint->aspectRatio();
-            })
-                ->save($destinationCardImagePath . '/' . $filename);
-            $package->card_image = "public/package/card/" . $filename;
+            // if ($package->card_image && Storage::exists('public/' . $package->card_image)) {
+            //     Storage::delete('public/' . $package->card_image);
+            // }
+
+            // Ensure directories exist
+            Storage::makeDirectory('public/package/banner');
+            // Storage::makeDirectory('public/package/card');
+
+            $image = $request->file('image');
+            $filename = Str::uuid() . '.' . $image->getClientOriginalExtension();
+
+            // Banner Image
+            $bannerPath = storage_path('app/public/package/banner/' . $filename);
+            $manager->read($image)
+                ->resize(1519, 417)
+                ->save($bannerPath);
+
+            // // Card Image
+            // $cardPath = storage_path('app/public/package/card/' . $filename);
+            // $manager->read($image)
+            //     ->resize(364, 243)
+            //     ->save($cardPath);
+
+            $package->image = 'package/banner/' . $filename;
+            // $package->card_image = 'package/card/' . $filename;
         }
 
         // $package->user_id = auth()->guard('admin')->user()->id;
@@ -320,6 +376,9 @@ class PackageController extends Controller
         $package->tour_type = $request->tour_type;
         $package->duration = $request->duration;
         $package->price = $request->price;
+        $package->adult_price = $request->adult_price;
+        $package->child_price = $request->child_price;
+        $package->group_price = $request->group_price;
         $package->discount = $request->discount;
         $package->term_condition = $request->term_condition;
         $package->start_date = $request->start_date;

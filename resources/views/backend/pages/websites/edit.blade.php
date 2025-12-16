@@ -64,7 +64,7 @@ Website Edit - Admin Panel
 
                     <!-- @include('backend.layouts.partials.messages') -->
 
-                    <form action="{{ route('admin.website.update', $dataArr->id) }}" onsubmit="return onSubmitValidateForm();" method="POST">
+                    <form action="{{ route('admin.website.update', $dataArr->id) }}" onsubmit="return onSubmitValidateForm();" method="POST" enctype="multipart/form-data">
                         @method('PUT')
                         @csrf
 
@@ -87,7 +87,7 @@ Website Edit - Admin Panel
 
                                         <div class="form-group">
                                             <label for="favicon">Favicon</label>
-                                            <input type="file" class="dropify" id="favicon" name="favicon" data-default-file="{{url('../storage/app/'.$dataArr->favicon)}}">
+                                            <input type="file" class="dropify" id="favicon" name="favicon" data-default-file="{{url('storage/app/public/'.$dataArr->favicon)}}">
                                             @if($errors->has('favicon'))
                                                 <div class="error">{{ $errors->first('favicon') }}</div>
                                             @endif
@@ -95,7 +95,7 @@ Website Edit - Admin Panel
 
                                         <div class="form-group">
                                             <label for="header_logo">Header Logo</label>
-                                            <input type="file" class="dropify" id="header_logo" name="header_logo" data-default-file="{{url('../storage/app/'.$dataArr->header_logo)}}">
+                                            <input type="file" class="dropify" id="header_logo" name="header_logo" data-default-file="{{url('storage/app/public/'.$dataArr->header_logo)}}">
                                             @if($errors->has('header_logo'))
                                                 <div class="error">{{ $errors->first('header_logo') }}</div>
                                             @endif
@@ -155,7 +155,7 @@ Website Edit - Admin Panel
 
                                         <div class="form-group">
                                             <label for="footer_logo">Footer Logo</label>
-                                            <input type="file" class="dropify" id="footer_logo" name="footer_logo" data-default-file="{{url('../storage/app/'.$dataArr->footer_logo)}}">
+                                            <input type="file" class="dropify" id="footer_logo" name="footer_logo" data-default-file="{{url('storage/app/public/'.$dataArr->footer_logo)}}">
                                             @if($errors->has('footer_logo'))
                                                 <div class="error">{{ $errors->first('footer_logo') }}</div>
                                             @endif

@@ -56,9 +56,9 @@
                                 <tr>
                                     <th>#</th>
                                     <th class="text-center">Name</th>
-                                    <th class="text-center">Favicon</th>
-                                    <th class="text-center">Header Logo</th>
-                                    <th class="text-center">Footer Logo</th>
+                                    <th class="text-center" width="10%">Favicon</th>
+                                    <th class="text-center" width="10%">Header Logo</th>
+                                    <th class="text-center" width="10%">Footer Logo</th>
                                     <th class="text-center">Status</th>
                                     <th class="text-center">Advertisement</th>
                                     <th class="text-center">Updated At</th>
@@ -71,16 +71,16 @@
                                         <td class="text-center">{{ $ar->id }}</td>
                                         <td class="text-center">{{ $ar->name }}</td>
                                         <td>
-                                            <img src="{{ url('storage/app/' . $ar->favicon) }}" alt="{{ $ar->name }}"
-                                                height="55px">
+                                            <img src="{{ url('storage/app/public/' . $ar->favicon) }}" alt="{{ $ar->name }}"  style="width: 100%;height: 100px; object-fit: contain;">
                                         </td>
                                         <td>
-                                            <img src="{{ url('storage/app/' . $ar->header_logo) }}"
-                                                alt="{{ $ar->name }}" height="55px">
+                                            <img src="{{ url('storage/app/public/' . $ar->header_logo) }}"
+                                                alt="{{ $ar->name }}"  style="width: 100%;height: 100px; object-fit: contain;">
                                         </td>
+                            
                                         <td>
-                                            <img src="{{ url('storage/app/' . $ar->header_logo) }}"
-                                                alt="{{ $ar->name }}" height="55px">
+                                            <img src="{{ url('storage/app/public/' . $ar->footer_logo) }}"
+                                                alt="{{ $ar->name }}"  style="width: 100%;height: 100px; object-fit: contain;">
                                         </td>
                                             <td>
                                             @if( true )
@@ -114,7 +114,7 @@
                                                 </a>
                                                 <button class="btn btn-edit text-white delete-record dropdown-item"
                                                     data-id="{{ $ar->id }}" data-title="{{ $ar->name }}"
-                                                    data-segment="website">
+                                                    data-segment="websites">
                                                     <i class="fa fa-trash fa-sm" aria-hidden="true"></i> Delete
                                                 </button>
                                             </div>

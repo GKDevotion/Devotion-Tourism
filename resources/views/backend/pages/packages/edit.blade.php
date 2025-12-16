@@ -10,6 +10,14 @@
         .form-check-label {
             text-transform: capitalize;
         }
+
+        /* Fix Dropify image fit */
+        .dropify-wrapper .dropify-preview .dropify-render img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover;
+            /* OR contain */
+        }
     </style>
 @endsection
 
@@ -63,7 +71,7 @@
                         <!-- @include('backend.layouts.partials.messages') -->
 
                         <form action="{{ route('admin.package.update', $dataArr->id) }}"
-                            onsubmit="return onSubmitValidateForm();" method="POST">
+                            onsubmit="return onSubmitValidateForm();" method="POST" enctype="multipart/form-data">
                             @method('PUT')
                             @csrf
                             <div class="row">
@@ -140,7 +148,7 @@
                                             <div class="form-group">
                                                 <label for="image">Banner Pic</label>
                                                 <input type="file" class="dropify" id="image" name="image"
-                                                    data-default-file="{{ url('storage/app/' . $dataArr->image) }}">
+                                                    data-default-file="{{ url('storage/app/public/' . $dataArr->image) }}">
                                                 @if ($errors->has('image'))
                                                     <div class="error">{{ $errors->first('image') }}</div>
                                                 @endif
@@ -268,40 +276,83 @@
                                                     </div>
                                                 </div>
                                             </div>
-
-
+                                            
                                             <div class="form-group mb-0">
                                                 <label>Inclusive</label>
-
                                                 <div class="row">
                                                     <div class="col-md-10">
                                                         <input type="text" class="form-control"
                                                             placeholder="Enter Inclusive" id="inclusiveInput">
                                                     </div>
-
                                                     <div class="col-md-2">
-                                                        <a href="javascript:void(0)" class="btn" id="addInclusive"
+                                                        <a href="javascript:void(0)" class="btn " id="addInclusive"
                                                             style="background-color: #ab8134">
                                                             <i class="fa fa-plus" style="color: white"></i>
                                                         </a>
                                                     </div>
                                                 </div>
 
-                                                <div class="p-2" id="inclusive-list">
-                                                    {{-- Show existing inclusives --}}
-                                                    @if (!empty($menu->inclusive))
-                                                        @foreach ($menu->inclusive as $key => $inclusive)
-                                                            <div class="badge badge-secondary mr-1 mb-1 inclusive-item">
-                                                                {{ $inclusive }}
-                                                                <input type="hidden" name="inclusive[]"
-                                                                    value="{{ $inclusive }}">
-                                                                <a href="javascript:void(0)"
-                                                                    class="text-white ml-1 removeInclusive">×</a>
-                                                            </div>
-                                                        @endforeach
-                                                    @endif
-                                                </div>
+                                                <div class="p-2" id="inclusive-list"></div>
                                             </div>
+                                            <div class="form-group mb-0 ">
+                                                <label>Exclusive</label>
+                                                <div class="row">
+                                                    <div class="col-md-10">
+                                                        <input type="text" class="form-control"
+                                                            placeholder="Enter Exclusive" id="exclusiveInput">
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <a href="javascript:void(0)" class="btn" id="addExclusive"
+                                                            style="background-color: #ab8134">
+                                                            <i class="fa fa-plus" style="color: white"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="p-2" id="exclusive-list"></div>
+                                            </div>
+
+
+                                            <div class="form-group mb-0">
+                                                <label>FAQs</label>
+                                                <div class="row mb-2">
+                                                    <div class="col-md-5">
+                                                        <input type="text" class="form-control"
+                                                            placeholder="Enter Question" id="faqQuestionInput">
+                                                    </div>
+                                                    <div class="col-md-5">
+                                                        <input type="text" class="form-control"
+                                                            placeholder="Enter Answer" id="faqAnswerInput">
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <a href="javascript:void(0)" class="btn" id="addFaq"
+                                                            style="background-color: #ab8134">
+                                                            <i class="fa fa-plus" style="color: white"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="p-2" id="faq-list"></div>
+                                            </div>
+
+                                            <!-- Itinerary Section -->
+                                            <div class="form-group mb-0">
+                                                <label>Itinerary</label>
+                                                <div class="row mb-2">
+                                                    <div class="col-md-10">
+                                                        <input type="text" class="form-control"
+                                                            placeholder="Enter Day Description" id="itineraryInput">
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <a href="javascript:void(0)" class="btn" id="addItinerary"
+                                                            style="background-color:#ab8134">
+                                                            <i class="fa fa-plus" style="color:white"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div id="itinerary-list"></div>
+                                            </div>
+
 
 
                                             <div class="form-group">
@@ -437,109 +488,36 @@
                                             <div class="form-group row">
 
                                                 <div class="column_image_size_0 imageRow_0 image col-md-3" id="tr_lot_0">
-                                                    <div align="center" class="image w-100">
-                                                        @php
-                                                            $lot_file_0 =
-                                                                $dataArr->detail_image_1 != null
-                                                                    ? 'storage/app/' . $dataArr->detail_image_1
-                                                                    : 'public/img/no-image.png';
-                                                        @endphp
-                                                        <img src="{{ url($lot_file_0) }}" width="100%" height="200"
-                                                            id="imageRemoveBtnLotImg_0">
-                                                        <input type="file" name="lot_file_0" id="lot_file_0"
-                                                            onchange="readURLCommon(this, 'imageRemoveBtnLotImg_0', 'lot_hidden_0');"
-                                                            style="display: none;">
-                                                        <input type="hidden" value="" name="lot_hidden_0"
-                                                            id="lot_hidden_0">
-                                                        <div align="center">
-                                                            <small>
-                                                                <a
-                                                                    onclick="$('#lot_file_0').trigger('click');">Browse</a>&nbsp;|&nbsp;
-                                                                <a style="clear:both;"
-                                                                    onclick="clear_image('imageRemoveBtnLotImg_0');">Clear</a>
-                                                            </small>
-                                                        </div>
-                                                    </div>
+                                                    <input type="file" name="lot_file_0" id="lot_file_0"
+                                                        class="dropify" data-height="200" data-max-file-size="2M"
+                                                        data-allowed-file-extensions="jpg jpeg png webp"
+                                                        data-default-file="{{ isset($cardImages[0]) ? asset('storage/app/public/package/card/' . $cardImages[0]->filename) : '' }}">
                                                 </div>
 
                                                 <div class="column_image_size_1 imageRow_1 image col-md-3" id="tr_lot_1">
-                                                    <div align="center" class="image w-100">
-                                                        @php
-                                                            $lot_file_1 =
-                                                                $dataArr->detail_image_2 != null
-                                                                    ? 'storage/app/' . $dataArr->detail_image_2
-                                                                    : 'public/img/no-image.png';
-                                                        @endphp
-                                                        <img src="{{ url($lot_file_1) }}" width="100%" height="200"
-                                                            id="imageRemoveBtnLotImg_1">
-
-                                                        <input type="file" name="lot_file_1" id="lot_file_1"
-                                                            onchange="readURLCommon(this, 'imageRemoveBtnLotImg_1', 'lot_hidden_1');"
-                                                            style="display: none;">
-                                                        <input type="hidden" value="" name="lot_hidden_1"
-                                                            id="lot_hidden_1">
-                                                        <div align="center">
-                                                            <small>
-                                                                <a
-                                                                    onclick="$('#lot_file_1').trigger('click');">Browse</a>&nbsp;|&nbsp;<a
-                                                                    style="clear:both;"
-                                                                    onclick="clear_image('imageRemoveBtnLotImg_1');">Clear</a>
-                                                            </small>
-                                                        </div>
-                                                    </div>
+                                                    <input type="file" name="lot_file_1" id="lot_file_1"
+                                                        class="dropify" data-height="200" data-max-file-size="2M"
+                                                        data-allowed-file-extensions="jpg jpeg png webp"
+                                                        data-default-file="{{ isset($cardImages[1]) ? asset('storage/app/public/package/card/' . $cardImages[1]->filename) : '' }}">
                                                 </div>
+
 
                                                 <div class="column_image_size_2 imageRow_2 image col-md-3" id="tr_lot_2">
-                                                    <div align="center" class="image w-100">
-                                                        @php
-                                                            $lot_file_2 =
-                                                                $dataArr->detail_image_3 != null
-                                                                    ? 'storage/app/' . $dataArr->detail_image_3
-                                                                    : 'public/img/no-image.png';
-                                                        @endphp
-                                                        <img src="{{ url($lot_file_2) }}" width="100%" height="200"
-                                                            id="imageRemoveBtnLotImg_2"><br>
-                                                        <input type="file" name="lot_file_2" id="lot_file_2"
-                                                            onchange="readURLCommon(this, 'imageRemoveBtnLotImg_2', 'lot_hidden_2');"
-                                                            style="display: none;">
-                                                        <input type="hidden" value="" name="lot_hidden_2"
-                                                            id="lot_hidden_2">
-                                                        <div align="center">
-                                                            <small>
-                                                                <a
-                                                                    onclick="$('#lot_file_2').trigger('click');">Browse</a>&nbsp;|&nbsp;<a
-                                                                    style="clear:both;"
-                                                                    onclick="clear_image('imageRemoveBtnLotImg_2');">Clear</a>
-                                                            </small>
-                                                        </div>
-                                                    </div>
+                                                    <input type="file" name="lot_file_2" id="lot_file_2"
+                                                        class="dropify" data-height="200" data-max-file-size="2M"
+                                                        data-allowed-file-extensions="jpg jpeg png webp"
+                                                        data-default-file="{{ isset($cardImages[2]) ? asset('storage/app/public/package/card/' . $cardImages[2]->filename) : '' }}">
                                                 </div>
 
+
                                                 <div class="column_image_size_3 imageRow_3 image col-md-3" id="tr_lot_3">
-                                                    <div align="center" class="image w-100">
-                                                        @php
-                                                            $lot_file_3 =
-                                                                $dataArr->detail_image_4 != null
-                                                                    ? 'storage/app/' . $dataArr->detail_image_4
-                                                                    : 'public/img/no-image.png';
-                                                        @endphp
-                                                        <img src="{{ url($lot_file_3) }}" width="100%" height="200"
-                                                            id="imageRemoveBtnLotImg_3"><br>
-                                                        <input type="file" name="lot_file_3" id="lot_file_3"
-                                                            onchange="readURLCommon(this, 'imageRemoveBtnLotImg_3', 'lot_hidden_3');"
-                                                            style="display: none;">
-                                                        <input type="hidden" value="" name="lot_hidden_3"
-                                                            id="lot_hidden_3">
-                                                        <div align="center">
-                                                            <small>
-                                                                <a
-                                                                    onclick="$('#lot_file_3').trigger('click');">Browse</a>&nbsp;|&nbsp;<a
-                                                                    style="clear:both;"
-                                                                    onclick="clear_image('imageRemoveBtnLotImg_3');">Clear</a>
-                                                            </small>
-                                                        </div>
-                                                    </div>
+                                                    <input type="file" name="lot_file_3" id="lot_file_3"
+                                                        class="dropify" data-height="200" data-max-file-size="2M"
+                                                        data-allowed-file-extensions="jpg jpeg png webp"
+                                                        data-default-file="{{ isset($cardImages[3]) ? asset('storage/app/public/package/card/' . $cardImages[3]->filename) : '' }}">
                                                 </div>
+
+
                                             </div>
                                         </div>
                                         <!-- /.card-body -->

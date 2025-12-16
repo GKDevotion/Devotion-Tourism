@@ -13,8 +13,6 @@
     </style>
 @endsection
 
-
-
 @section('admin-content')
     <!-- page title area start -->
     <div class="page-title-area">
@@ -61,7 +59,7 @@
                 <div class="card">
                     <div class="card-body">
                         <form action="{{ route('admin.package.store') }}" onsubmit="return onSubmitValidateForm();"
-                            method="POST" autocomplete="off">
+                            method="POST" autocomplete="off" enctype="multipart/form-data">
                             @csrf
                             <div class="row">
                                 <!-- left column -->
@@ -211,6 +209,18 @@
                                                         @endif
                                                     </div>
                                                 </div>
+
+                                                <div class="col-md-12 mb-2">
+                                                    <div class="form-group">
+                                                        <label class="mb-0" for="poster">Poster</label>
+                                                        <input type="file" class="dropify" id="poster"
+                                                            name="poster">
+                                                    </div>
+                                                    @error('poster')
+                                                        <div class="error text-error">{{ $message }}</div>
+                                                    @enderror
+                                                </div>
+
                                             </div>
                                         </div>
                                         <!-- /.card-body -->
@@ -262,6 +272,7 @@
                                                 </div>
 
                                             </div>
+
                                             <div class="form-group mb-0">
                                                 <label>Inclusive</label>
                                                 <div class="row">
@@ -279,6 +290,7 @@
 
                                                 <div class="p-2" id="inclusive-list"></div>
                                             </div>
+
                                             <div class="form-group mb-0 ">
                                                 <label>Exclusive</label>
                                                 <div class="row">
@@ -320,6 +332,28 @@
                                                 <div class="p-2" id="faq-list"></div>
                                             </div>
 
+                                            <div class="form-group mb-0">
+                                                <label>Itinerary</label>
+                                                <div class="row mb-2">
+                                                    <div class="col-md-10 mb-2">
+                                                        <input type="text" class="form-control"
+                                                            placeholder="Enter Title" id="iteneryTitleInput">
+                                                    </div>
+                                                    <div class="col-md-10">
+                                                        <input type="text" class="form-control"
+                                                            placeholder="Enter Data" id="iteneryDataInput">
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <a href="javascript:void(0)" class="btn" id="addItinerary"
+                                                            style="background-color: #ab8134">
+                                                            <i class="fa fa-plus" style="color: white"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="p-2" id="itenery-list"></div>
+                                            </div>
+                                            {{-- 
                                             <!-- Itinerary Section -->
                                             <div class="form-group mb-0">
                                                 <label>Itinerary</label>
@@ -337,7 +371,7 @@
                                                 </div>
                                                 <div id="itinerary-list"></div>
                                             </div>
-
+ --}}
 
 
                                             <div class="form-group">
@@ -471,86 +505,33 @@
                                             <div class="form-group row">
 
                                                 <div class="column_image_size_0 imageRow_0 image col-md-3" id="tr_lot_0">
-                                                    <div align="center" class="image w-100">
-                                                        <img src="{{ url('public/img/no-image.png') }}" width="100%"
-                                                            height="200" id="imageRemoveBtnLotImg_0"><br>
-                                                        <input type="file" name="lot_file_0" id="lot_file_0"
-                                                            onchange="readURLCommon(this, 'imageRemoveBtnLotImg_0', 'lot_hidden_0');"
-                                                            style="display: none;">
-                                                        <input type="hidden" value="" name="lot_hidden_0"
-                                                            id="lot_hidden_0">
-                                                        <div align="center">
-                                                            <small>
-                                                                <a
-                                                                    onclick="$('#lot_file_0').trigger('click');">Browse</a>&nbsp;|&nbsp;
-                                                                <a style="clear:both;"
-                                                                    onclick="clear_image('imageRemoveBtnLotImg_0');">Clear</a>
-                                                            </small>
-                                                        </div>
-                                                    </div>
+                                                    <input type="file" name="lot_file_0" id="lot_file_0"
+                                                        class="dropify" data-height="200" data-max-file-size="2M"
+                                                        data-allowed-file-extensions="jpg jpeg png webp"
+                                                        data-default-file="">
                                                 </div>
 
                                                 <div class="column_image_size_1 imageRow_1 image col-md-3" id="tr_lot_1">
-                                                    <div align="center" class="image w-100">
-                                                        <img src="{{ url('public/img/no-image.png') }}" width="100%"
-                                                            height="200" id="imageRemoveBtnLotImg_1">
-                                                        <br>
-
-                                                        <input type="file" name="lot_file_1" id="lot_file_1"
-                                                            onchange="readURLCommon(this, 'imageRemoveBtnLotImg_1', 'lot_hidden_1');"
-                                                            style="display: none;">
-                                                        <input type="hidden" value="" name="lot_hidden_1"
-                                                            id="lot_hidden_1">
-                                                        <div align="center">
-                                                            <small>
-                                                                <a
-                                                                    onclick="$('#lot_file_1').trigger('click');">Browse</a>&nbsp;|&nbsp;<a
-                                                                    style="clear:both;"
-                                                                    onclick="clear_image('imageRemoveBtnLotImg_1');">Clear</a>
-                                                            </small>
-                                                        </div>
-                                                    </div>
+                                                    <input type="file" name="lot_file_1" id="lot_file_1"
+                                                        class="dropify" data-height="200" data-max-file-size="2M"
+                                                        data-allowed-file-extensions="jpg jpeg png webp"
+                                                        data-default-file="">
                                                 </div>
 
                                                 <div class="column_image_size_2 imageRow_2 image col-md-3" id="tr_lot_2">
-                                                    <div align="center" class="image w-100">
-                                                        <img src="{{ url('public/img/no-image.png') }}" width="100%"
-                                                            height="200" id="imageRemoveBtnLotImg_2"><br>
-                                                        <input type="file" name="lot_file_2" id="lot_file_2"
-                                                            onchange="readURLCommon(this, 'imageRemoveBtnLotImg_2', 'lot_hidden_2');"
-                                                            style="display: none;">
-                                                        <input type="hidden" value="" name="lot_hidden_2"
-                                                            id="lot_hidden_2">
-                                                        <div align="center">
-                                                            <small>
-                                                                <a
-                                                                    onclick="$('#lot_file_2').trigger('click');">Browse</a>&nbsp;|&nbsp;<a
-                                                                    style="clear:both;"
-                                                                    onclick="clear_image('imageRemoveBtnLotImg_2');">Clear</a>
-                                                            </small>
-                                                        </div>
-                                                    </div>
+                                                    <input type="file" name="lot_file_2" id="lot_file_2"
+                                                        class="dropify" data-height="200" data-max-file-size="2M"
+                                                        data-allowed-file-extensions="jpg jpeg png webp"
+                                                        data-default-file="">
                                                 </div>
 
                                                 <div class="column_image_size_3 imageRow_3 image col-md-3" id="tr_lot_3">
-                                                    <div align="center" class="image w-100">
-                                                        <img src="{{ url('public/img/no-image.png') }}" width="100%"
-                                                            height="200" id="imageRemoveBtnLotImg_3"><br>
-                                                        <input type="file" name="lot_file_3" id="lot_file_3"
-                                                            onchange="readURLCommon(this, 'imageRemoveBtnLotImg_3', 'lot_hidden_3');"
-                                                            style="display: none;">
-                                                        <input type="hidden" value="" name="lot_hidden_3"
-                                                            id="lot_hidden_3">
-                                                        <div align="center">
-                                                            <small>
-                                                                <a
-                                                                    onclick="$('#lot_file_3').trigger('click');">Browse</a>&nbsp;|&nbsp;<a
-                                                                    style="clear:both;"
-                                                                    onclick="clear_image('imageRemoveBtnLotImg_3');">Clear</a>
-                                                            </small>
-                                                        </div>
-                                                    </div>
+                                                    <input type="file" name="lot_file_3" id="lot_file_3"
+                                                        class="dropify" data-height="200" data-max-file-size="2M"
+                                                        data-allowed-file-extensions="jpg jpeg png webp"
+                                                        data-default-file="">
                                                 </div>
+
                                             </div>
                                         </div>
                                         <!-- /.card-body -->
@@ -657,19 +638,22 @@
         document.getElementById('addFaq').addEventListener('click', function() {
             let question = document.getElementById('faqQuestionInput').value.trim();
             let answer = document.getElementById('faqAnswerInput').value.trim();
-            if (!question || !answer) return;
 
-            // create individual JSON for this FAQ
-            let faqObj = [{
-                    "question": question
-                },
-                {
-                    "answer": answer
-                }
-            ];
+            if (!question || !answer) {
+                alert('Please enter both Question and Answer');
+                return;
+            }
+
+            // Create single JSON object for this FAQ
+            let faqObj = {
+                question: question,
+                answer: answer
+            };
+
+            // Convert to string to store in hidden input
             let faqJsonString = JSON.stringify(faqObj);
 
-            // create hidden input for this FAQ
+            // Create hidden input for backend
             let input = document.createElement('input');
             input.type = 'hidden';
             input.name = 'faq[]';
@@ -677,57 +661,111 @@
 
             document.getElementById('faq-list').appendChild(input);
 
-            // create badge
+            // Create badge/div to display added FAQ
             let box = document.createElement('div');
-            box.className =
-                "text-dark p-2 m-1 d-flex align-items-center justify-content-between rounded ";
+            box.className = "text-dark p-2 m-1 d-flex align-items-center justify-content-between rounded border";
             box.innerHTML = `
             <div>
-            <strong>Question:</strong> ${question} <br>
-            <strong>Answer:</strong> ${answer}
-             </div>
-             <span class="text-dark" style="cursor:pointer;font-weight:bold;">&times;</span>
+                <strong>Question:</strong> ${question} <br>
+                <strong>Answer:</strong> ${answer}
+            </div>
+            <button type="button" class="btn btn-sm btn-danger delete-btn">
+                <i class="fa fa-trash"></i> Delete
+            </button>
             `;
 
-            // remove badge and hidden input
-            box.querySelector("span").addEventListener("click", function() {
+            // Remove badge and hidden input on delete
+            box.querySelector(".delete-btn").addEventListener("click", function() {
                 box.remove();
                 input.remove();
             });
 
             document.getElementById('faq-list').appendChild(box);
 
-            // clear inputs
+            // Clear inputs
             document.getElementById('faqQuestionInput').value = '';
             document.getElementById('faqAnswerInput').value = '';
         });
 
-        // ---------- Itinerary ----------
         document.getElementById('addItinerary').addEventListener('click', function() {
-            let value = document.getElementById('itineraryInput').value.trim();
-            if (!value) return;
+            let title = document.getElementById('iteneryTitleInput').value.trim();
+            let data = document.getElementById('iteneryDataInput').value.trim();
 
-            let itineraryObj = [{
-                "day": value
-            }];
+            if (!title || !data) {
+                alert('Please enter both Title and Data');
+                return;
+            }
+
+            // Create single JSON object for this itinerary
+            let itenaryObj = {
+                title: title,
+                description: data
+            };
+
+            // Convert to string to store in hidden input
+            let itenaryJsonString = JSON.stringify(itenaryObj);
+
+            // Create hidden input for form submission
             let input = document.createElement('input');
-            input.type = "hidden";
-            input.name = "itenery[]";
-            input.value = JSON.stringify(itineraryObj);
+            input.type = 'hidden';
+            input.name = 'itenery[]';
+            input.value = itenaryJsonString;
 
+            document.getElementById('itenery-list').appendChild(input);
+
+            // Create badge/div to display added itinerary
             let box = document.createElement('div');
-            box.className = "text-dark p-2 m-1 d-flex justify-content-between rounded";
-            box.innerHTML = `<span>${value}</span><span style="cursor:pointer;font-weight:bold;">&times;</span>`;
+            box.className = "text-dark p-2 m-1 d-flex align-items-center justify-content-between rounded border";
+            box.innerHTML = `
+            <div>
+                <strong>Title:</strong> ${title} <br>
+                <strong>Description:</strong> ${data}
+            </div>
+            <button type="button" class="btn btn-sm btn-danger delete-btn">
+                <i class="fa fa-trash"></i> Delete
+            </button>
+            `;
 
-            box.querySelector("span:last-child").addEventListener("click", function() {
+            // Remove badge and hidden input on delete
+            box.querySelector(".delete-btn").addEventListener("click", function() {
                 box.remove();
                 input.remove();
             });
 
-            document.getElementById('itinerary-list').appendChild(box);
-            document.getElementById('itinerary-list').appendChild(input);
+            document.getElementById('itenery-list').appendChild(box);
 
-            document.getElementById('itineraryInput').value = '';
+            // Clear inputs
+            document.getElementById('iteneryTitleInput').value = '';
+            document.getElementById('iteneryDataInput').value = '';
         });
+
+
+        // // ---------- Itinerary ----------
+        // document.getElementById('addItinerary').addEventListener('click', function() {
+        //     let value = document.getElementById('itineraryInput').value.trim();
+        //     if (!value) return;
+
+        //     let itineraryObj = [{
+        //         "day": value
+        //     }];
+        //     let input = document.createElement('input');
+        //     input.type = "hidden";
+        //     input.name = "itenery[]";
+        //     input.value = JSON.stringify(itineraryObj);
+
+        //     let box = document.createElement('div');
+        //     box.className = "text-dark p-2 m-1 d-flex justify-content-between rounded";
+        //     box.innerHTML = `<span>${value}</span><span style="cursor:pointer;font-weight:bold;">&times;</span>`;
+
+        //     box.querySelector("span:last-child").addEventListener("click", function() {
+        //         box.remove();
+        //         input.remove();
+        //     });
+
+        //     document.getElementById('itinerary-list').appendChild(box);
+        //     document.getElementById('itinerary-list').appendChild(input);
+
+        //     document.getElementById('itineraryInput').value = '';
+        // });
     </script>
 @endsection

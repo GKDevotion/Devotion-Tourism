@@ -5,12 +5,12 @@
 @endsection
 
 @section('styles')
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropify/0.2.2/css/dropify.min.css" />
-<style>
-    .form-check-label {
-        text-transform: capitalize;
-    }
-</style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropify/0.2.2/css/dropify.min.css" />
+    <style>
+        .form-check-label {
+            text-transform: capitalize;
+        }
+    </style>
 @endsection
 
 
@@ -27,7 +27,7 @@
                     {{-- <h4 class="page-title pull-left d-none">Configuration Create</h4> --}}
                     <ul class="breadcrumbs pull-left m-2">
                         <li><a href="{{ route('admin.dashboard.index') }}">Dashboard</a></li>
-                        <li><a href="{{route('admin.category.index')}}">All Category</a></li>
+                        <li><a href="{{ route('admin.category.index') }}">All Category</a></li>
                         <li><span>Create Category</span></li>
                     </ul>
                 </div>
@@ -61,96 +61,99 @@
                 <div class="card">
                     <div class="card-body">
                         <form action="{{ route('admin.category.store') }}" onsubmit="return onSubmitValidateForm();"
-                            method="POST" autocomplete="off">
+                            method="POST" autocomplete="off"  enctype="multipart/form-data">
                             @csrf
 
                             <div class="row">
-                              <!-- left column -->
-                              <div class="col-md-6">
+                                <!-- left column -->
+                                <div class="col-md-6">
                                     <!-- general form elements -->
                                     <div class="card card-primary">
-                                          <div class="card-header">
-                                                <h3 class="card-title">New Category</h3>
-                                          </div>
-                                          <!-- /.card-header -->
+                                        <div class="card-header">
+                                            <h3 class="card-title">New Category</h3>
+                                        </div>
+                                        <!-- /.card-header -->
 
-                                          <div class="card-body">
-                                                <div class="form-group">
-                                                      <label for="parent_id">Parent Category</label>
-                                                      <select class="form-control" name="parent_id" id="parent_id">
-                                                            <option value="0" selected>None</option>
-                                                            @foreach ( $parentArr as $id=>$title )
-                                                                  <option value="{{$id}}">{{$title}}</option>
-                                                            @endforeach
-                                                      </select>
-                                                </div>
-                                                <div class="form-group">
-                                                      <label for="title">Name</label>
-                                                      <input type="text" class="form-control" id="title" name="title" placeholder="{{ __('Category Name') }}" value="" autofocus onkeyup="getUrlName(this.value)">
-                                                      @if($errors->has('title'))
-                                                            <div class="error">{{ $errors->first('title') }}</div>
-                                                      @endif
-                                                </div>
-                                                <div class="form-group d-none">
-                                                      <label for="alias_slug">Url</label>
-                                                      <input type="text" class="form-control" id="alias_slug" name="slug" placeholder="{{ __('Slug') }}" value="">
-                                                      @if($errors->has('slug'))
-                                                            <div class="error">{{ $errors->first('slug') }}</div>
-                                                      @endif
-                                                </div>
-                                                <div class="form-group">
-                                                      <label for="status">Status</label>
-                                                      <select class="form-control" name="status" id="status">
-                                                            <option value="1">Active</option>
-                                                            <option value="0">De-Active</option>
-                                                      </select>
-                                                </div>
-                                          </div>
-                                          <!-- /.card-body -->
+                                        <div class="card-body">
+                                            <div class="form-group">
+                                                <label for="parent_id">Parent Category</label>
+                                                <select class="form-control" name="parent_id" id="parent_id">
+                                                    <option value="0" selected>None</option>
+                                                    @foreach ($parentArr as $id => $title)
+                                                        <option value="{{ $id }}">{{ $title }}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="title">Name</label>
+                                                <input type="text" class="form-control" id="title" name="title"
+                                                    placeholder="{{ __('Category Name') }}" value="" autofocus
+                                                    onkeyup="getUrlName(this.value)">
+                                                @if ($errors->has('title'))
+                                                    <div class="error">{{ $errors->first('title') }}</div>
+                                                @endif
+                                            </div>
+                                            <div class="form-group d-none">
+                                                <label for="alias_slug">Url</label>
+                                                <input type="text" class="form-control" id="alias_slug" name="slug"
+                                                    placeholder="{{ __('Slug') }}" value="">
+                                                @if ($errors->has('slug'))
+                                                    <div class="error">{{ $errors->first('slug') }}</div>
+                                                @endif
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="status">Status</label>
+                                                <select class="form-control" name="status" id="status">
+                                                    <option value="1">Active</option>
+                                                    <option value="0">De-Active</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <!-- /.card-body -->
 
-                                          <div class="card-footer text-center">
-                                                <a href="{{route('admin.category.index')}}" class="btn btn-danger"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</a>
-                                                <button type="submit" class="btn btn-success"><i class="far fa-save" aria-hidden="true"></i> Submit</button>
-                                          </div>
+                                        <div class="card-footer text-center">
+                                            <a href="{{ route('admin.category.index') }}" class="btn btn-danger"><i
+                                                    class="fa fa-arrow-left" aria-hidden="true"></i> Back</a>
+                                            <button type="submit" class="btn btn-success"><i class="far fa-save"
+                                                    aria-hidden="true"></i> Submit</button>
+                                        </div>
                                     </div>
-                              </div>
-                              <!-- /.card -->
+                                </div>
+                                <!-- /.card -->
 
-                              <div class="col-md-6">
+                                <div class="col-md-6">
                                     <!-- general form elements -->
                                     <div class="card card-primary">
-                                          <div class="card-header">
-                                                <h3 class="card-title">Image</h3>
-                                          </div>
-                                          <!-- /.card-header -->
+                                        <div class="card-header">
+                                            <h3 class="card-title">Image</h3>
+                                        </div>
+                                        <!-- /.card-header -->
 
-                                          <div class="card-body">
-                                                <div class="form-group">
-                                                      <div class="image text-center" style="padding:5px;">
-                                                            <img src="{{url('public/img/no-image.png')}}" width="180" height="180" id="catPrevImage_00"  class="image" style="margin-bottom:0px;padding:3px;"><br />
-                                                            <input type="file" name="image" id="catImg_00" onchange="readURL(this,'00');" style="display: none;">
-                                                            <input type="hidden" value="<?php echo (@$image) ? $image : @$_POST['image'];?>" name="image" id="hiddenCatImg">
-                                                            <div class="text-center">
-                                                                  <small><a onclick="$('#catImg_00').trigger('click');">Browse</a>&nbsp;|&nbsp;<a style="clear:both;" onclick="javascript:clear_image('catPrevImage_00')"; >Clear</a></small>
-                                                            </div>
-                                                       </div>
-                                                </div>
-                                          </div>
+                                        <div class="card-body">
+
+                                            <div class="form-group">
+                                                <input type="file" name="image" class="dropify" data-height="180"
+                                                    data-max-file-size="2M" data-allowed-file-extensions="jpg jpeg png webp"
+                                                    data-default-file="{{ !empty($image) ? asset('public/img/' . $image) : '' }}">
+                                            </div>
+
+
+                                        </div>
                                     </div>
-                              </div>
-                        </div>
+                                </div>
+                            </div>
                         </form>
                     </div>
                 </div>
             </div>
-           
+
         </div>
     </div>
 @endsection
 
 @section('scripts')
-<script src="https://cdnjs.cloudflare.com/ajax/libs/dropify/0.2.2/js/dropify.min.js"></script>
-<script>
-    $('.dropify').dropify();
-</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropify/0.2.2/js/dropify.min.js"></script>
+    <script>
+        $('.dropify').dropify();
+    </script>
 @endsection

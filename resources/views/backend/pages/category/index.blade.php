@@ -55,7 +55,7 @@
                         <table id="category" class="table table-bordered table-striped display responsive nowrap">
                             <thead>
                                 <tr>
-                                    <th>Image</th>
+                                    <th width="10%" >Image</th>
                                     <th>Name</th>
                                     <th>Parent Name</th>
                                     <th>Slug</th>
@@ -67,8 +67,8 @@
                                 @forelse ($dataArr as $ar)
                                     <tr id="row_{{ $ar->id }}" class="category_row">
                                         <td>
-                                            <img class="img-flud" style="width:50px"
-                                                src="{{ url('/storage/app/' . $ar->image) }}">
+                                            <img class="img-flud"
+                                                src="{{ url('/storage/app/public/' . $ar->image) }}" style="width: 100%;height: 100px;">
                                         </td>
                                         <td>{{ $ar->title }}</td>
                                         <td>{{ $ar->SingleChildren ? $ar->SingleChildren->title : '-' }}</td>

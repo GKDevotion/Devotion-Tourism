@@ -7,7 +7,10 @@ use App\Models\Admin\Categories;
 use App\Models\Admin\CompanyCategories;
 use App\Models\Admin\FaqCategories;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
+use Intervention\Image\ImageManager;
+use Intervention\Image\Drivers\Gd\Driver;
 class CategoriesController extends Controller
 {
     public $websiteDetails = "";
@@ -106,20 +109,36 @@ public function store(Request $request)
             $slug = convertStringToSlug($parent->title) . '-' . $slug;
         }
     }
-  $path = "";
-        if( $request->hasFile('image') ){
-            $path = $request->file('image')->storeAs(
-                'public/category',
-                $slug.'.png',
-            );
-        }
 
     $category = new Categories();
+    $manager = new ImageManager(new Driver());
+
+        /* -----------------------------
+        IMAGE UPLOAD (BANNER + CARD)
+        ------------------------------*/
+        if ($request->hasFile('image')) {
+
+            Storage::makeDirectory('public/category');
+  
+
+            $image = $request->file('image');
+            $filename = Str::uuid() . '.' . $image->getClientOriginalExtension();
+
+            // Banner (1519x417)
+            $Path = storage_path('app/public/category/' . $filename);
+
+            $manager->read($image)
+                ->resize(1519, 417)
+                ->save($Path);
+
+    
+            $category->image = 'category/' . $filename;
+
+        }
     $category->title = $request->title;
     $category->slug = $slug;
     $category->parent_id = $request->parent_id ?? 0;
     $category->website_id = $this->websiteDetails['id'];
-    $category->image = $path;
     $category->status = $request->status;
 
     $category->save();
@@ -202,12 +221,43 @@ public function store(Request $request)
         }
         
         $category = Categories::find($id);
-        if( $request->hasFile('image') ){
-            $path = $request->file('image')->storeAs(
-                'public/category',
-                $slug.'.png',
-            );
-            $category->image = $path;
+         $manager = new ImageManager(new Driver());
+
+        /* -----------------------------
+            IMAGE UPDATE (BANNER + CARD)
+            ------------------------------*/
+        if ($request->hasFile('image')) {
+
+            // 🔥 DELETE OLD IMAGES
+            if ($category->image && Storage::exists('public/' . $category->image)) {
+                Storage::delete('public/' . $category->image);
+            }
+
+            // if ($package->card_image && Storage::exists('public/' . $package->card_image)) {
+            //     Storage::delete('public/' . $package->card_image);
+            // }
+
+            // Ensure directories exist
+            Storage::makeDirectory('public/category');
+            // Storage::makeDirectory('public/package/card');
+
+            $image = $request->file('image');
+            $filename = Str::uuid() . '.' . $image->getClientOriginalExtension();
+
+            // Banner Image
+            $Path = storage_path('app/public/category/' . $filename);
+            $manager->read($image)
+                ->resize(1519, 417)
+                ->save($Path);
+
+            // // Card Image
+            // $cardPath = storage_path('app/public/package/card/' . $filename);
+            // $manager->read($image)
+            //     ->resize(364, 243)
+            //     ->save($cardPath);
+
+            $category->image = 'category/' . $filename;
+            // $package->card_image = 'package/card/' . $filename;
         }
 
         $category->title = $request->title;
