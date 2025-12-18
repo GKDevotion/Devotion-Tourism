@@ -9,31 +9,21 @@
       "title": "About Us",
       "url": "aboutus.html"
     },
+   {
+  "title": "Packages",
+  "children": [
     {
-      "title": "Packages",
-      "children": [
-        {
-          "title": "Domestic",
-          "children": [
-            { "title": "Adventure", "url": "#" },
-            { "title": "Leisure", "url": "#" },
-            { "title": "Desert Safari", "url": "#" },
-            { "title": "Theme Park", "url": "#" },
-            { "title": "Day Tour", "url": "#" }
-          ]
-        },
-        {
-          "title": "International",
-          "children": [
-            { "title": "Europe", "url": "#" },
-            { "title": "Asian", "url": "#" },
-            { "title": "Middle East", "url": "#" },
-            { "title": "Africa", "url": "#" },
-            { "title": "USA & Canada", "url": "#" }
-          ]
-        }
-      ]
+      "title": "Domestic",
+      "categoryId": "domestic-tours",
+      "url": "packages.html?category=domestic-tours"
     },
+    {
+      "title": "International",
+      "categoryId": "international",
+      "url": "packages.html?category=international"
+    }
+  ]
+},
     {
       "title": "Visa",
       "children": [

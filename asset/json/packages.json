@@ -1,0 +1,167 @@
+{
+  "categories": [
+    {
+      "id": "international",
+      "name": "International Tours",
+      "children": [
+        {
+          "id": "vietnam",
+          "name": "Vietnam",
+          "packages": [
+            {
+              "id": "vietnam-grand",
+              "title": "Explore Grand Vietnam",
+              "duration": "10 Days / 9 Nights",
+              "startingPrice": 139990,
+              "currency": "INR",
+              "bannerImage": "asset\\image\\packages\\tour-wide-1.jpg",
+              "highlights": ["Phu Quoc", "Sapa", "Golden Bridge", "Halong Bay Cruise"]
+            },
+            {
+              "id": "vietnam-honeymoon",
+              "title": "Vietnam Honeymoon Special",
+              "duration": "7 Days / 6 Nights",
+              "startingPrice": 125000,
+              "currency": "INR",
+              "bannerImage": "asset\\image\\packages\\SightSeeingnIIT1w.png",
+              "highlights": ["Da Nang", "Hoi An", "Beach Resorts", "Couple Spa"]
+            }
+          ]
+        },
+        {
+          "id": "dubai",
+          "name": "Dubai",
+          "packages": [
+            {
+              "id": "dubai-3nights",
+              "title": "Dubai – City Tour & Desert Safari",
+              "duration": "3 Nights / 4 Days",
+              "startingPrice": 25750,
+              "currency": "INR",
+              "bannerImage": "asset\\image\\packages\\tour-wide-2.jpg"
+            },
+            {
+              "id": "dubai-luxury",
+              "title": "Dubai Luxury Experience",
+              "duration": "5 Nights / 6 Days",
+              "startingPrice": 75000,
+              "currency": "INR",
+              "bannerImage": "asset\\image\\packages\\SightSeeinguGmRLZ.jpg",
+              "highlights": ["Burj Khalifa Suite", "Palm Jumeirah", "Private Yacht Tour"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "religious-tours",
+      "name": "Religious Tours",
+      "children": [
+        {
+          "id": "umrah",
+          "name": "Umrah Packages",
+          "packages": [
+            {
+              "id": "ramadan-umrah",
+              "title": "Ramadan Umrah Package",
+              "duration": "20 Days / 19 Nights",
+              "startingPrice": 150000,
+              "currency": "INR",
+              "bannerImage": "asset\\image\\packages\\SightSeeinguAzBmB.jpg",
+              "highlights": ["Taraweeh Prayers", "Ziyarat Tours", "5-Star Accommodation"]
+            }
+          ]
+        },
+        {
+          "id": "jyotirlinga",
+          "name": "Jyotirlinga Darshan",
+          "packages": [
+            {
+              "id": "maha-jyotirlinga",
+              "title": "12 Jyotirlinga Complete Darshan",
+              "duration": "21 Days / 20 Nights",
+              "startingPrice": 185000,
+              "currency": "INR",
+              "bannerImage": "asset\\image\\packages\\SightSeeingTBnhzM.png",
+              "highlights": ["All 12 Jyotirlingas", "VIP Darshan", "AC Transport"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "domestic-tours",
+      "name": "Domestic Tours",
+      "children": [
+        {
+          "id": "northeast-india",
+          "name": "North East India",
+          "packages": [
+            {
+              "id": "arunachal-tawang",
+              "title": "Arunachal – Tawang Spring Trail",
+              "duration": "8 Days / 7 Nights",
+              "startingPrice": 72000,
+              "currency": "INR",
+              "bannerImage": "asset\\image\\packages\\SightSeeingTBnhzM.png"
+            },
+            {
+              "id": "seven-sisters",
+              "title": "Seven Sisters Complete Tour",
+              "duration": "15 Days / 14 Nights",
+              "startingPrice": 165000,
+              "currency": "INR",
+              "bannerImage": "asset\\image\\packages\\SightSeeingSRkxGA.png",
+              "highlights": ["All 7 States", "Tribal Culture", "Adventure Activities"]
+            }
+          ]
+        },
+        {
+          "id": "himachal-pradesh",
+          "name": "Himachal Pradesh",
+          "packages": [
+            {
+              "id": "himachal-adventure",
+              "title": "Himachal Adventure Trail",
+              "duration": "8 Days / 7 Nights",
+              "startingPrice": 45000,
+              "currency": "INR",
+              "bannerImage": "asset\\image\\packages\\SightSeeingQEOw8B.png",
+              "highlights": ["Paragliding", "Trekking", "River Rafting"]
+            }
+          ]
+        },
+        {
+          "id": "kerala",
+          "name": "Kerala",
+          "packages": [
+            {
+              "id": "kerala-backwaters",
+              "title": "Kerala Backwaters & Ayurveda",
+              "duration": "7 Days / 6 Nights",
+              "startingPrice": 38500,
+              "currency": "INR",
+              "bannerImage": "asset\\image\\packages\\SightSeeingfivXT9.png",
+              "highlights": ["Houseboat Stay", "Ayurvedic Spa", "Kathakali Show"]
+            }
+          ]
+        },
+        {
+          "id": "ladakh",
+          "name": "Ladakh",
+          "packages": [
+            {
+              "id": "ladakh-bike-tour",
+              "title": "Ladakh Bike Expedition",
+              "duration": "12 Days / 11 Nights",
+              "startingPrice": 68000,
+              "currency": "INR",
+              "bannerImage": "asset\\image\\packages\\dubaitour13-960x430.webp",
+              "highlights": ["Royal Enfield", "High Altitude Passes", "Camping"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
