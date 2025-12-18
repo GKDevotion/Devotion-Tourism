@@ -1,0 +1,85 @@
+{
+  "logo": "asset/image/Logo.png",
+  "menus": [
+    {
+      "title": "Home",
+      "url": "index.html"
+    },
+    {
+      "title": "About Us",
+      "url": "aboutus.html"
+    },
+    {
+      "title": "Packages",
+      "children": [
+        {
+          "title": "Domestic",
+          "children": [
+            { "title": "Adventure", "url": "#" },
+            { "title": "Leisure", "url": "#" },
+            { "title": "Desert Safari", "url": "#" },
+            { "title": "Theme Park", "url": "#" },
+            { "title": "Day Tour", "url": "#" }
+          ]
+        },
+        {
+          "title": "International",
+          "children": [
+            { "title": "Europe", "url": "#" },
+            { "title": "Asian", "url": "#" },
+            { "title": "Middle East", "url": "#" },
+            { "title": "Africa", "url": "#" },
+            { "title": "USA & Canada", "url": "#" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Visa",
+      "children": [
+        { "title": "Country Visa", "url": "country_visa.html" }
+      ]
+    },
+    {
+      "title": "Corporate Tour",
+      "children": [
+        { "title": "Corporate", "url": "#" },
+        { "title": "Delegation & Trade", "url": "#" },
+        { "title": "Trade Fair & Exhibition", "url": "#" },
+        { "title": "MICE", "url": "#" }
+      ]
+    },
+    {
+      "title": "Exclusive",
+      "children": [
+        { "title": "Senior", "url": "#" },
+        { "title": "Destination Wedding", "url": "#" },
+        { "title": "Student Tour", "url": "#" },
+        {
+          "title": "Gift",
+          "children": [
+            { "title": "Anniversary", "url": "#" },
+            { "title": "Birthday", "url": "#" },
+            { "title": "Retirement", "url": "#" },
+            { "title": "Honeymoon", "url": "#" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Travel Guide",
+      "children": [
+        { "title": "Flight Booking", "url": "#" },
+        { "title": "Passport", "url": "#" },
+        { "title": "Hotel Booking", "url": "#" },
+        { "title": "Insurance", "url": "#" },
+        { "title": "Forex", "url": "#" },
+        { "title": "Rent a car", "url": "#" }
+      ]
+    },
+    {
+      "title": "Contact Us",
+      "url": "contactus.html"
+    }
+  ]
+}
