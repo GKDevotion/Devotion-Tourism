@@ -1,9 +1,7 @@
 /node_modules
 /public/hot
 /public/storage
-/storage/*.key
-storage/app
-storage/log
+/storage/*
 docker
 vendor
 .env
@@ -27,3 +25,4 @@ doc
 step-form
 composer.lock
 /public/backend/assets/css/custom.css
+*-bkp.php
