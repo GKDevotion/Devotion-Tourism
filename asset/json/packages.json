@@ -11,11 +11,145 @@
             {
               "id": "vietnam-grand",
               "title": "Explore Grand Vietnam",
+              "slug": "explore-grand-vietnam",
+              "subtitle": "With Phu Quoc & Sapa",
+              "tourType": "Group Tour",
+              "departureDate": "25 March 2026",
               "duration": "10 Days / 9 Nights",
               "startingPrice": 139990,
               "currency": "INR",
               "bannerImage": "asset\\image\\packages\\tour-wide-1.jpg",
-              "highlights": ["Phu Quoc", "Sapa", "Golden Bridge", "Halong Bay Cruise"]
+              "highlights": [
+                "Phu Quoc Island",
+                "Sapa Mountains",
+                "Golden Bridge",
+                "Ba Na Hills",
+                "Halong Bay Cruise",
+                "Fansipan Cable Car",
+                "VinWonders Theme Park"
+              ],
+              "inclusions": [
+                "Return Economy Class Air Fare – Ex Ahmedabad",
+                "All Domestic & International Flights Included",
+                "09 Nights Accommodation in Mentioned Hotels",
+                "09 Continental Breakfast at Hotel",
+                "09 Dinner at Indian Restaurant",
+                "Cam Thanh Coconut Village – Hoi An",
+                "Full Day Trip to Ba Na Hills & Golden Bridge",
+                "Grand World + VinWonders Theme Park + VinSafari",
+                "4 Island Tour with Cable Car",
+                "Fansipan Legend Visit + Cat Cat Village",
+                "Glass Bridge Visit",
+                "Hanoi Train Street Visit",
+                "1 Night on Halong Bay Cruise with Activities",
+                "Vietnam Tourist Visa Included",
+                "Tour Guide Tips Included",
+                "Entry Tickets of All Mentioned Sightseeing",
+                "Mineral Water During Tour (1 Bottle per Pax per Day)"
+              ],
+              "hotelAccommodation": [
+                {
+                  "city": "Da Nang",
+                  "nights": 2,
+                  "hotel": "Eden Ocean",
+                  "rating": 4
+                },
+                {
+                  "city": "Phu Quoc",
+                  "nights": 3,
+                  "hotel": "Ocean Pearl Resort",
+                  "rating": 4
+                },
+                {
+                  "city": "Sapa",
+                  "nights": 2,
+                  "hotel": "Sapa Charm",
+                  "rating": 4
+                },
+                {
+                  "city": "Ha Noi",
+                  "nights": 1,
+                  "hotel": "A25 Luxury",
+                  "rating": 4
+                },
+                {
+                  "city": "Halong Bay",
+                  "nights": 1,
+                  "hotel": "4 Star Cruise",
+                  "rating": 4
+                }
+              ],
+
+              "itinerary": [
+                {
+                  "day": 1,
+                  "title": "Arrival in Da Nang",
+                  "activities": [
+                    "Airport Transfer",
+                    "Hotel Check-in",
+                    "Leisure Time"
+                  ]
+                },
+                {
+                  "day": 2,
+                  "title": "Ba Na Hills & Golden Bridge",
+                  "activities": [
+                    "Cable Car Ride",
+                    "Golden Bridge Visit",
+                    "Theme Park"
+                  ]
+                },
+                {
+                  "day": 3,
+                  "title": "Da Nang to Phu Quoc",
+                  "activities": ["Flight Transfer", "Beach Leisure"]
+                },
+                {
+                  "day": 4,
+                  "title": "Phu Quoc 4 Island Tour",
+                  "activities": ["Island Hopping", "Cable Car", "Snorkeling"]
+                },
+                {
+                  "day": 5,
+                  "title": "VinWonders & VinSafari",
+                  "activities": ["Theme Park", "Safari Experience"]
+                },
+                {
+                  "day": 6,
+                  "title": "Phu Quoc to Sapa",
+                  "activities": ["Flight", "Mountain Views"]
+                },
+                {
+                  "day": 7,
+                  "title": "Fansipan & Cat Cat Village",
+                  "activities": ["Fansipan Cable Car", "Village Walk"]
+                },
+                {
+                  "day": 8,
+                  "title": "Sapa to Hanoi",
+                  "activities": ["Glass Bridge", "Train Street"]
+                },
+                {
+                  "day": 9,
+                  "title": "Halong Bay Cruise",
+                  "activities": [
+                    "Cruise Stay",
+                    "Kayaking",
+                    "Onboard Activities"
+                  ]
+                },
+                {
+                  "day": 10,
+                  "title": "Departure",
+                  "activities": ["Cruise Checkout", "Return Flight"]
+                }
+              ],
+              "gallery": [
+                "asset/image/packages/vietnam/halong-bay.jpg",
+                "asset/image/packages/vietnam/golden-bridge.jpg",
+                "asset/image/packages/vietnam/phu-quoc.jpg",
+                "asset/image/packages/vietnam/sapa.jpg"
+              ]
             },
             {
               "id": "vietnam-honeymoon",
@@ -47,7 +181,11 @@
               "startingPrice": 75000,
               "currency": "INR",
               "bannerImage": "asset\\image\\packages\\SightSeeinguGmRLZ.jpg",
-              "highlights": ["Burj Khalifa Suite", "Palm Jumeirah", "Private Yacht Tour"]
+              "highlights": [
+                "Burj Khalifa Suite",
+                "Palm Jumeirah",
+                "Private Yacht Tour"
+              ]
             }
           ]
         }
@@ -68,7 +206,11 @@
               "startingPrice": 150000,
               "currency": "INR",
               "bannerImage": "asset\\image\\packages\\SightSeeinguAzBmB.jpg",
-              "highlights": ["Taraweeh Prayers", "Ziyarat Tours", "5-Star Accommodation"]
+              "highlights": [
+                "Taraweeh Prayers",
+                "Ziyarat Tours",
+                "5-Star Accommodation"
+              ]
             }
           ]
         },
@@ -83,7 +225,11 @@
               "startingPrice": 185000,
               "currency": "INR",
               "bannerImage": "asset\\image\\packages\\SightSeeingTBnhzM.png",
-              "highlights": ["All 12 Jyotirlingas", "VIP Darshan", "AC Transport"]
+              "highlights": [
+                "All 12 Jyotirlingas",
+                "VIP Darshan",
+                "AC Transport"
+              ]
             }
           ]
         }
@@ -112,7 +258,11 @@
               "startingPrice": 165000,
               "currency": "INR",
               "bannerImage": "asset\\image\\packages\\SightSeeingSRkxGA.png",
-              "highlights": ["All 7 States", "Tribal Culture", "Adventure Activities"]
+              "highlights": [
+                "All 7 States",
+                "Tribal Culture",
+                "Adventure Activities"
+              ]
             }
           ]
         },
@@ -142,7 +292,11 @@
               "startingPrice": 38500,
               "currency": "INR",
               "bannerImage": "asset\\image\\packages\\SightSeeingfivXT9.png",
-              "highlights": ["Houseboat Stay", "Ayurvedic Spa", "Kathakali Show"]
+              "highlights": [
+                "Houseboat Stay",
+                "Ayurvedic Spa",
+                "Kathakali Show"
+              ]
             }
           ]
         },

@@ -2000,43 +2000,10 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="asset/js/index.js"></script>
     <!-- menu script -->
     <script src="asset/js/menu.js"></script>
-    <script>
-        var swiper = new Swiper(".myVisaSwiper", {
-            loop: true,
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-            },
-            slidesPerView: 3,
-            spaceBetween: 24,
-
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-
-            breakpoints: {
-                0: { slidesPerView: 1 },
-                768: { slidesPerView: 2 },
-                992: { slidesPerView: 3 }
-            }
-        });
-
-        document.addEventListener("scroll", function () {
-            const sticky = document.querySelector(".sticky-social");
-
-            if (window.scrollY > 1000) { // 50px scroll
-                sticky.classList.add("active");
-            } else {
-                sticky.classList.remove("active");
-            }
-        });
-
-
-    </script>
-
+  
 </body>
 
 </html>

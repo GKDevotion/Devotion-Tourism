@@ -187,6 +187,65 @@
       height: 100%;
 
     }
+
+    /* Card */
+    .tour-card {
+      transition: all 0.3s ease;
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .tour-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    /* Image */
+    .tour-img-wrapper {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tour-img-wrapper img {
+      height: 220px;
+      object-fit: cover;
+    }
+
+    /* Duration badge */
+    .tour-duration {
+      position: absolute;
+      bottom: 12px;
+      left: 12px;
+      background: rgba(0, 0, 0, 0.75);
+      color: #fff;
+      padding: 4px 10px;
+      font-size: 12px;
+      border-radius: 20px;
+    }
+
+    /* Info list */
+    .tour-info li {
+      margin-bottom: 6px;
+      color: #555;
+    }
+
+    /* Price */
+    .price-box {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+    }
+
+    .price {
+      font-size: 20px;
+      font-weight: 700;
+      color: #0d6efd;
+    }
+
+    .price-note {
+      font-size: 13px;
+      color: #777;
+    }
   </style>
 </head>
 
@@ -349,9 +408,9 @@
   </nav>
 
   <div class="custom-container">
- 
+
     <div class="row" id="package-container" style="margin-top: 100px;">
-        <h1 style="padding-bottom: 15px;  font-family: 'Merienda', cursive;">Explore Our Travel Packages</h1>
+      <h1 style="padding-bottom: 15px;  font-family: 'Merienda', cursive;">Explore Our Travel Packages</h1>
     </div>
   </div>
 
@@ -632,47 +691,56 @@
               const priceNote = pkg.priceNote || "per person";
 
               container.innerHTML += `
-            <div class="col-lg-4 col-md-6 mb-4">
-              
-              <div class="card h-100 shadow-sm">
-                
+           <div class="col-lg-4 col-md-6 mb-4">
+      
+            <div class="card tour-card h-100 border-0 shadow-sm">
+
+              <!-- Image -->
+              <a href="package-details.html?id=${pkg.id}">
+              <div class="tour-img-wrapper">
                 <img src="${pkg.bannerImage}" class="card-img-top" alt="${pkg.title}">
-                
-                <div class="card-body">
-                  <h5 class="card-title">${pkg.title}</h5>
+                <span class="tour-duration">${pkg.duration}</span>
+              </div>
+              </a>
 
-                  <p class="small text-muted mb-1">
-                    <strong>Region:</strong> ${region.name}
-                  </p>
+              <!-- Body -->
+              <div class="card-body d-flex flex-column">
 
-                  <p class="small mb-1">
-                    <strong>Duration:</strong> ${pkg.duration}
-                  </p>
+                <h5 class="card-title fw-semibold mb-2">
+                  ${pkg.title}
+                </h5>
 
-                  <p class="small mb-1">
+                <p class="text-muted small mb-2">
+                  <i class="bi bi-geo-alt me-1"></i> ${region.name}
+                </p>
+
+                <ul class="list-unstyled small mb-3 tour-info">
+                  <li>
+                    <i class="bi bi-airplane me-1"></i>
                     <strong>Departure:</strong> ${departureFrom}
-                  </p>
+                  </li>
+                  <li>
+                    <i class="bi bi-calendar-event me-1"></i>
+                    <strong>Dates:</strong> ${startDate} – ${endDate}
+                  </li>
+                </ul>
 
-                  <p class="small mb-2">
-                    <strong>Dates:</strong>
-                    ${startDate} – ${endDate}
-                  </p>
+                <!-- Price -->
+                <div class="mt-auto">
+                  <div class="price-box mb-3">
+                    <span class="price">
+                      ${pkg.currency} ${pkg.startingPrice.toLocaleString()}
+                    </span>
+                    <span class="price-note">${priceNote}</span>
+                  </div>
 
-                  <h6 class="text-primary">
-                    ${pkg.currency} ${pkg.startingPrice.toLocaleString()}
-                    <small class="text-muted">${priceNote}</small>
-                  </h6>
+              
                 </div>
-
-                <div class="card-footer bg-white border-0">
-                  <a href="package-details.html?id=${pkg.id}"
-                     class="btn btn-primary w-100">
-                    View Details
-                  </a>
-                </div>
-
+              
               </div>
             </div>
+          </div>
+
           `;
             });
           }
