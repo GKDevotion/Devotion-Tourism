@@ -2009,3 +2009,72 @@ footer a {
   left: 100%;
   margin-left: 0.1rem;
 }
+
+@media (max-width: 991px) {
+  .contact-section {
+    padding-top: 65vh;
+  }
+}
+
+@media (max-width: 991px) {
+  .contact-section .container {
+    padding-bottom: 30vh;
+  }
+}
+
+.contact-section {
+  background-size: cover;
+  color: white;
+  /* Set text color to white for better contrast on a dark image */
+  padding: 150px 0;
+  /* Adjust padding as needed */
+  text-align: center;
+  position: relative;
+}
+
+/* Text styling (optional) */
+.hero-bg h2,
+.hero-bg p {
+  color: #fff;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+}
+
+.contact-section {
+  background: url("../image/corporatePackageBanner.webp") no-repeat center
+    center;
+  background-size: cover;
+  color: white;
+  /* Set text color to white for better contrast on a dark image */
+  padding: 150px 0;
+  justify-content: center;
+  /* Adjust padding as needed */
+  text-align: center;
+  position: relative;
+}
+
+/* Optional: Add an overlay to make the text more readable */
+.contact-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.contact-section .container {
+  position: relative;
+  /* Ensure container content is above the overlay */
+  z-index: 1;
+}
+
+.contact-section h3 {
+  font-family: "Merienda", cursive;
+  font-size: 3rem;
+}
+
+@media (max-width: 991px) {
+  .contact-section {
+    padding-top: 30vh;
+  }
+}
