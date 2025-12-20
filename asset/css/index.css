@@ -1,0 +1,919 @@
+body {
+  padding-top: 45px;
+  /* Adjust if needed */
+}
+
+.py-2 {
+  padding-top: 0.5rem !important;
+  padding-bottom: 1.5rem !important;
+}
+
+/* Custom CSS for the Hero Section */
+
+.hero-section {
+  /* Define a fixed height for the hero area */
+  height: 73vh;
+  /* Full viewport height, adjust as needed */
+  position: relative;
+  /* Essential for positioning the overlay */
+}
+
+/* Carousel Image Styling */
+.hero-img {
+  height: 68vh;
+  width: 100%;
+  object-fit: fill;
+  transition: transform 7s ease-in-out;
+}
+
+/* Zoom Only active image */
+.carousel-item.active .hero-img {
+  transform: scale(1.15);
+}
+
+/* Fade transition fix */
+.carousel-item {
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.carousel-item.active {
+  opacity: 1;
+}
+
+/* Overlay Content */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 30px;
+  z-index: 10;
+  text-align: center;
+}
+
+/* Style for the clocks */
+.clock-img {
+  width: 100px;
+  /* Adjust size as needed */
+  height: 100px;
+  margin-bottom: 5px;
+  opacity: 0.9;
+  /* Slightly transparent */
+}
+
+.clock-label {
+  color: #fff;
+  /* White text for contrast */
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  /* Shadow for better readability */
+}
+
+/* Style for the main tagline */
+.hero-tagline {
+  color: #fff;
+  font-family: "Merienda", cursive;
+  font-size: 2.5rem;
+  font-style: italic;
+  font-weight: 400;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  margin-top: auto;
+  /* Pushes the tagline towards the bottom */
+}
+
+/* Make the clock section slightly spaced out */
+.world-clock-item {
+  padding: 0 55px;
+  /* Add horizontal spacing between clocks */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .clock-img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .hero-tagline {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .clock-img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .hero-tagline {
+    font-size: 1.3rem;
+  }
+}
+
+/* Custom CSS to perfectly match the image's aesthetic */
+.travel-section {
+  background-image: url("../image/CoverBg.webp");
+  background-size: cover;
+  background-position: center;
+  padding-top: 60px;
+  /* Add some padding above the content */
+  padding-bottom: 60px;
+  /* Add some padding below the content */
+}
+
+/* Golden-brown color for headings and statistic numbers */
+.golden-text {
+  color: #a48557 !important;
+  /* Adjusted color to closely match the image's gold/tan */
+}
+
+/* Darker color for body text and statistic labels */
+.dark-text {
+  color: #4a4a4a;
+  /* Darker gray for better contrast and match to the image */
+  font-size: medium;
+}
+
+.statistic-number {
+  font-weight: 500;
+  /* Adjust weight if needed */
+  line-height: 1.2;
+  /* Tighter line height for the number */
+  margin-bottom: 0.25rem;
+  /* Reduce space below the number */
+}
+
+/* Remove the separator on small screens if desired, or let it flow */
+@media (max-width: 767.98px) {
+  .statistic-item:not(:last-child)::after {
+    content: none;
+    /* Remove line for mobile stacked layout */
+  }
+}
+
+/* Custom Colors & Backgrounds */
+.bg-light-brown {
+  /* Using a light beige color similar to the image background */
+  background-color: #eee9e3;
+}
+
+.golden-text {
+  /* The primary statistic number color */
+  color: #ab823e;
+  font-weight: 700;
+  /* Bolder font for the numbers */
+}
+
+.statistic-label {
+  /* Style for the text underneath the numbers */
+  color: #8c8c8c;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+/* Vertical Divider Styling */
+.statistics-row .statistic-item {
+  /* Ensure the item is positioned relatively for the absolute divider */
+  position: relative;
+  /* Center the text within the column */
+  text-align: center;
+}
+
+.statistics-row .statistic-item:not(:last-child):after {
+  content: "";
+  /* Position the divider on the right side of the item */
+  position: absolute;
+  top: 50%;
+  /* Start vertical positioning */
+  right: 0;
+  transform: translateY(-50%);
+  /* Center vertically */
+
+  /* Divider dimensions and color */
+  height: 80%;
+  /* Height relative to the item */
+  width: 1px;
+  background-color: #d1c9bd;
+  /* A subtle, light line color */
+
+  /* On small screens, hide the divider to prevent clutter */
+  display: none;
+}
+
+/* Show the divider only on medium screens and up (md) */
+@media (min-width: 768px) {
+  .statistics-row .statistic-item:not(:last-child):after {
+    display: block;
+  }
+}
+
+.faq-header {
+  font-family: "Merienda", cursive;
+  color: #ab823e;
+  /* Gold/Brown color from the image */
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.1rem;
+}
+
+/* Custom Styles for the Container 
+        - Apply a rounded white background with a large, soft shadow 
+        */
+.nav-container-wrapper {
+  background: white;
+  border-radius: 2.5rem;
+  /* Highly rounded corners */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15), 0 0 10px rgba(0, 0, 0, 0.05);
+  padding: 0.5rem;
+  max-width: 900px;
+  /* Limit the width to mimic the original image */
+  margin: 0 auto;
+}
+
+/* Styling the Nav Pills (The Unselected Links) 
+        - Use Tailwind's text color utilities, but override in CSS for exact color
+        */
+.nav-pills .nav-link {
+  color: #594d40;
+  /* Darker text for unselected links */
+  font-weight: 500;
+  border-radius: 2rem;
+  /* Ensure pills are rounded */
+  padding: 0.75rem 1.5rem;
+  transition: all 0.3s ease;
+  text-align: center;
+  /* Disable Bootstrap's default active background color */
+  background-color: transparent;
+}
+
+.nav-pills .nav-link:hover:not(.active) {
+  color: #b58d55;
+  /* Subtle hover effect */
+}
+
+/* Styling the Active Pill (The "Visa" Button) 
+        - This is the crucial part that gives it the button look
+        */
+.nav-pills .nav-link.active {
+  background-color: #b58d55;
+  /* The signature gold/brown color */
+  color: white;
+  /* White text on the active pill */
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(181, 141, 85, 0.6);
+  /* Gold shadow for lift */
+}
+
+/* Ensure nav items fill the width equally */
+.nav-pills.nav-justified .nav-item {
+  flex-grow: 1;
+  margin: 0 5px;
+  /* Add slight spacing between items */
+}
+
+/* Responsive adjustments for very small screens */
+@media (max-width: 576px) {
+  .faq-header {
+    font-size: 3rem;
+  }
+
+  .nav-pills.nav-justified {
+    flex-direction: row;
+    font-size: smaller;
+  }
+
+  .nav-pills.nav-justified .nav-item {
+    margin-bottom: 0.5rem;
+  }
+
+  .nav-pills .nav-link {
+    font-size: 10px !important;
+    padding: 6px 5px !important;
+    margin: 2px 0;
+  }
+}
+
+/* Beige icon circle (large icons for Call/Email/Location) */
+.icon-circle {
+  width: 50px;
+  height: 50px;
+  background: #f7ecd7;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  color: #b8903b;
+  /* golden brown icon color */
+  margin: auto;
+}
+
+/* Small beige circle for social icons */
+.icon-circle-small {
+  width: 50px;
+  height: 50px;
+  background: #f7ecd7;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #b8903b;
+  font-size: 26px;
+  text-decoration: none;
+}
+
+.icon-circle-small:hover {
+  opacity: 0.8;
+}
+
+/* Optional: cleaner fonts */
+.footer-section {
+  font-family: "Poppins", sans-serif;
+}
+
+@media (max-width: 767px) {
+  .footer-logo {
+    display: none !important;
+  }
+}
+
+/* ------- MOBILE RESPONSIVE ------- */
+@media (max-width: 576px) {
+  .contact-links {
+    gap: 1rem !important;
+    flex-direction: column;
+  }
+
+  .contact-item {
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .icon-img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .label {
+    font-size: 14px;
+  }
+
+  .social-links {
+    gap: 0.7rem;
+  }
+
+  .social-img {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+.clock-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-image: url("../image/watch/analog-watch.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: inline-block;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  /* default vars (deg) */
+  --hour-deg: 0deg;
+  --min-deg: 0deg;
+  --sec-deg: 0deg;
+}
+
+.hand {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: bottom center;
+  transform: translate(-50%, -100%) rotate(0deg);
+  border-radius: 2px;
+}
+
+.hand.hour {
+  width: 5px;
+  height: 25%;
+  background: #333;
+  z-index: 4;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+  transform: translate(-50%, -100%) rotate(var(--hour-deg));
+  border-radius: 2px;
+}
+
+.hand.minute {
+  width: 4px;
+  height: 40%;
+  background: #333;
+  z-index: 5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+  transform: translate(-50%, -100%) rotate(var(--min-deg));
+  border-radius: 2px;
+}
+
+.hand.second {
+  width: 2px;
+  height: 45%;
+  background: #a47c3f;
+  z-index: 5;
+  transform: translate(-50%, -100%) rotate(var(--sec-deg));
+}
+
+/* small center dot */
+.clock-img::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  background: #222;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 6;
+}
+
+/* smooth movement (optional) */
+.hand.hour,
+.hand.minute {
+  transition: transform 0.3s ease-in-out;
+}
+
+.hand.second {
+  transition: transform 0.07s linear;
+}
+
+.extra-gap {
+  gap: 9rem !important;
+  /* You can increase more */
+}
+
+/* 📱 Extra Small Devices (Max-width: 480px) */
+@media (max-width: 480px) {
+  .clock-img {
+    width: 85px;
+    height: 85px;
+    box-shadow: none;
+  }
+
+  .hand.hour {
+    width: 4px;
+    height: 30%;
+  }
+
+  .hand.minute {
+    width: 3px;
+    height: 42%;
+  }
+
+  .hand.second {
+    width: 1.5px;
+    height: 45%;
+  }
+
+  .extra-gap {
+    gap: 2rem !important;
+  }
+}
+
+/* 📱 Small Devices (481px – 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .clock-img {
+    width: 95px;
+    height: 95px;
+  }
+
+  .hand.hour {
+    width: 4px;
+    height: 32%;
+  }
+
+  .hand.minute {
+    width: 3.2px;
+    height: 45%;
+  }
+
+  .hand.second {
+    width: 2px;
+    height: 50%;
+  }
+
+  .extra-gap {
+    gap: 1rem !important;
+  }
+}
+
+/* 💻 Medium Devices/Tablets (769px – 991px) */
+@media (min-width: 769px) and (max-width: 991px) {
+  .clock-img {
+    width: 110px;
+    height: 110px;
+  }
+
+  .hand.hour {
+    width: 4.5px;
+    height: 34%;
+  }
+
+  .hand.minute {
+    width: 3.5px;
+    height: 47%;
+  }
+
+  .hand.second {
+    width: 2px;
+    height: 52%;
+  }
+
+  .extra-gap {
+    gap: 4rem !important;
+  }
+}
+
+/* 🖥 Large Devices (992px and up) */
+@media (min-width: 992px) {
+  .clock-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .extra-gap {
+    gap: 6rem !important;
+  }
+}
+
+/* ===========================
+            📱 RESPONSIVE (Mobile)
+        =========================== */
+@media (max-width: 768px) {
+  .hero-section,
+  .hero-img {
+    height: 70vh;
+  }
+
+  .clock-item {
+    width: 70px;
+  }
+
+  .clock-img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .clock-label {
+    font-size: 11px;
+  }
+
+  .hero-tagline {
+    font-size: 22px;
+    padding: 3px 15px;
+    line-height: 1.3;
+  }
+}
+
+/* ===========================
+            📱 Small Phones (≤ 480px)
+            =========================== */
+@media (max-width: 480px) {
+  /* Hero Section */
+  .hero-section {
+    height: auto !important;
+    padding-bottom: 20px;
+  }
+
+  .hero-img {
+    height: 75vh !important;
+    object-fit: cover;
+  }
+
+  /* Clocks row */
+  .clock-item {
+    width: 66px;
+    margin: 0 4px;
+    /* space between clocks */
+    text-align: center;
+  }
+
+  .clock-img {
+    width: 70px;
+    height: 70px;
+    background-size: contain;
+  }
+
+  .clock-label {
+    font-size: 9px;
+    white-space: nowrap;
+    /* Prevent text breaking */
+  }
+
+  .clock-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 5px;
+  }
+
+  /* Tagline */
+  .hero-tagline {
+    font-size: 16px;
+    width: 100%;
+    margin-top: 15px;
+    text-align: center;
+    padding: 0 10px;
+    line-height: 1.3;
+  }
+}
+
+/* Pagination dots */
+.myVisaSwiper .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: #7a7a7a;
+  /* default gray color */
+  opacity: 0.6;
+  margin: 0 6px !important;
+  transition: all 0.3s ease;
+}
+
+/* Active dot */
+.myVisaSwiper .swiper-pagination-bullet-active {
+  background: #ab823e;
+  /* golden color */
+  width: 32px;
+  /* longer active indicator */
+  border-radius: 8px;
+  opacity: 1;
+}
+
+/* Hover animation */
+.myVisaSwiper .swiper-pagination-bullet:hover {
+  background: #d1a464;
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.swiper-pagination {
+  position: unset;
+}
+
+.visa-card {
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #2c2f3a;
+  transition: 0.3s;
+  margin-top: 15px;
+}
+
+.visa-card:hover {
+  transform: translateY(-8px);
+  border-color: #ab823e;
+}
+
+.flag-wrap {
+  width: 70px;
+  height: 70px;
+}
+
+.flag-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.visa-service-label {
+  color: #ab823e;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.country-name {
+  color: black;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.visa-list {
+  list-style: none;
+  padding-left: 010px;
+}
+
+.visa-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+  color: black;
+  /* optional if your card is dark */
+}
+
+.visa-list i {
+  font-size: 14px;
+  color: black;
+  /* soft icon color */
+}
+
+.read-btn {
+  background: #ab823e;
+  color: #fff;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  padding: 10px;
+}
+
+.read-btn:hover {
+  background: #ab823e;
+  color: #fff;
+}
+
+.flag-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+/* ========================= */
+/* Mobile Layout Fixes Below */
+/* ========================= */
+
+@media (max-width: 767px) {
+  /* Reduce padding inside card */
+  .visa-card {
+    height: 389px;
+    padding: 2rem 1.2rem;
+  }
+
+  /* Flex row adjustments */
+  .visa-card .d-flex.align-items-center {
+    flex-direction: row;
+  }
+
+  .read-btn {
+    font-size: 12px;
+    padding: 10px 6px;
+  }
+
+  /* Make the flag slightly smaller */
+  .flag-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  /* Visa list spacing */
+  .visa-list li {
+    font-size: 13px;
+    gap: 4px;
+  }
+}
+
+@media (max-width: 576px) {
+  .swiper-slide {
+    width: 100% !important;
+  }
+
+  /* Stack header elements for readability */
+  .visa-card .d-flex.justify-content-between.align-items-center.mb-3 {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+
+  .visa-card .read-btn {
+    width: 100%;
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+
+  /* Force list to single column */
+  .visa-list.row.row-cols-1.row-cols-md-2 {
+    --bs-columns: 1;
+  }
+
+  .visa-list li {
+    font-size: 0.95rem;
+  }
+}
+
+/* ===========================
+        Tablet / Medium Screens
+        =========================== */
+@media (max-width: 992px) {
+  .contact-row {
+    gap: 2rem;
+  }
+
+  .contact-item p {
+    font-size: 15px;
+  }
+}
+
+/* ===========================
+        Mobile Responsive
+        =========================== */
+@media (max-width: 768px) {
+  .contact-row {
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-item p {
+    margin-top: 4px;
+    font-size: 14px;
+  }
+
+  .icon-circle img {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* ===========================
+        📱 Very Small Phones
+        =========================== */
+@media (max-width: 480px) {
+  .contact-row {
+    gap: 1.2rem;
+  }
+
+  .icon-circle img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .contact-item p {
+    font-size: 13px;
+  }
+}
+
+.flag-item {
+  text-align: center;
+}
+
+.flag-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 2px solid #6c757d !important;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.flag-item img:hover {
+  transform: scale(1.07);
+}
+
+/* Text style */
+.flag-item p {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* 📱 Mobile Responsive Fix */
+@media (max-width: 576px) {
+  .row.row-cols-2.row-cols-sm-4.row-cols-md-5 {
+    justify-content: center !important;
+    gap: 20px 0;
+  }
+
+  .flag-item img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .flag-item p {
+    font-size: 12px;
+  }
+}
+
+.swiper {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+    display: block;
+    padding-bottom: 50px;
+}
