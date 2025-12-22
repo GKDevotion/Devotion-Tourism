@@ -10,6 +10,7 @@
           "packages": [
             {
               "id": "vietnam-grand",
+              "tourid": "TID0001",
               "title": "Explore Grand Vietnam",
               "slug": "explore-grand-vietnam",
               "subtitle": "With Phu Quoc & Sapa",
@@ -18,7 +19,8 @@
               "duration": "10 Days / 9 Nights",
               "startingPrice": 139990,
               "currency": "INR",
-              "bannerImage": "asset\\image\\packages\\tour-wide-1.jpg",
+              "bannerImage": "asset/image/packages/tour-wide-1.jpg",
+              "description": "<h2>Overview</h2><p>Experience the complete Vietnam journey on this comprehensive 14-day grand tour from Hanoi to Ho Chi Minh City. Discover Vietnam’s incredible diversity: trek Sapa’s mountain villages, cruise Halong Bay’s emerald waters, explore Hue’s imperial citadel, wander Hoi An’s lantern-lit streets, and experience Saigon’s vibrant energy.</p><p>This Vietnam grand tour visits four UNESCO World Heritage Sites while immersing you deeply in authentic Vietnamese culture through daily signature experiences. Trek with ethnic minorities, learn traditional crafts, share meals with local families, and discover hidden gems beyond typical tourist routes. Small groups (max 16), expert local guides, and thoughtfully crafted experiences reveal the real Vietnam.</p><p><strong>Duration:</strong>14 days, 13 nights</p><p><strong>Departure:</strong> Daily from Hanoi</p><p><strong>Language:</strong> Professional English-speaking guides</p><p><strong>Style:</strong> Complete cultural immersion</p><h2>VIETNAM GRAND TOUR DESCRIPTION</h2><h5>Complete Vietnam experience</h5><p>Journey Vietnam’s full length experiencing extraordinary diversity: Sapa’s mountain tribes, Halong Bay’s limestone karsts, Hue’s royal heritage, Hoi An’s ancient charm, and Saigon’s modern energy. Each destination reveals unique cultural treasures.</p><h5>Four UNESCO World Heritage sites</h5>Explore Vietnam’s most celebrated places with expert guidance: Halong Bay, Hue Imperial City, Hoi An Ancient Town, and My Son Sanctuary. Deep historical insights bring centuries of heritage to life.<h5>Daily signature experiences</h5><p>Beyond sightseeing, participate in exclusive cultural encounters: Tai Chi with Hanoi locals, fishing with Halong families, Sapa homestay with H’mong tribe, royal tea ceremony in Hue, lantern crafting in Hoi An, meeting war veterans in Saigon. Authentic interactions create unforgettable memories.</p><h5>Small group advantage</h5><p>Maximum 16 travelers ensure personalized attention, meaningful local interactions, and flexibility to adjust activities. Unlike large tour buses, our intimate groups connect authentically with Vietnamese communities.</p><h2>VIETNAM GRAND TOUR IMPORTANT NOTES</h2><p><strong>Accommodation:</strong>13 nights (11 nights 4-star hotels, 1 night premium Halong cruise, 1 night overnight train to Sapa)</p><p><strong>Pace:</strong>Balanced itinerary with guided cultural activities and 3 free days for independent exploration</p><p><strong>What to bring:</strong>Comfortable walking/trekking shoes, modest temple attire, layers for Sapa mountains, sun protection, rain jacket, swimwear, camera</p><p><strong>Best time:</strong>Spring (Mar-May) perfect nationwide; Summer (Jun-Aug) beach season; Autumn (Sep-Nov) harvest festivals; Winter (Dec-Feb) warm south, cool north</p><p><strong>Cultural sites:</strong>Modest dress required (covered shoulders/knees); shoes removed at temples and homes</p><p><strong>Fitness level:</strong>Moderate (comfortable walking 4-6 hours; Sapa trekking moderate difficulty)</p>",
               "highlights": [
                 "Phu Quoc Island",
                 "Sapa Mountains",
@@ -29,23 +31,22 @@
                 "VinWonders Theme Park"
               ],
               "inclusions": [
-                "Return Economy Class Air Fare – Ex Ahmedabad",
-                "All Domestic & International Flights Included",
-                "09 Nights Accommodation in Mentioned Hotels",
-                "09 Continental Breakfast at Hotel",
-                "09 Dinner at Indian Restaurant",
-                "Cam Thanh Coconut Village – Hoi An",
-                "Full Day Trip to Ba Na Hills & Golden Bridge",
-                "Grand World + VinWonders Theme Park + VinSafari",
-                "4 Island Tour with Cable Car",
-                "Fansipan Legend Visit + Cat Cat Village",
-                "Glass Bridge Visit",
-                "Hanoi Train Street Visit",
-                "1 Night on Halong Bay Cruise with Activities",
-                "Vietnam Tourist Visa Included",
-                "Tour Guide Tips Included",
-                "Entry Tickets of All Mentioned Sightseeing",
-                "Mineral Water During Tour (1 Bottle per Pax per Day)"
+                "<p><strong>Professional local guides:</strong>Expert English-speaking guides throughout with deep cultural knowledge and passion</p>",
+                "<p><strong>Complete transportation:</strong> Private air-conditioned vehicles, domestic flights (Hanoi-Hue, Hoi An-Saigon), premium Halong Bay cruise, overnight train to Sapa</p>",
+                "<p><strong>Accommodation:</strong> 13 nights (11 nights 4-star centrally located hotels, 1 night premium Halong cruise cabin, 1 night comfortable train sleeper berth)</p>",
+                "<p><strong>Comprehensive meals:</strong>13 breakfasts, 11 lunches, 8 dinners (including meals you prepare in cooking classes and homestay meals)</p>",
+                "<p><strong>All entrance fees: </strong>4 UNESCO sites, temples, museums, cultural attractions, national parks</p>",
+                "<p><strong>Cultural activities: </strong> Cooking classes with market tours, traditional craft workshops, water puppet show, temple ceremonies, local family visits</p>",
+                "<p><strong>Unique adventures:</strong>Halong kayaking/swimming, Sapa valley trekking, dragon boat cruise, lantern floating ceremony</p>"
+              ],
+              "exclusions": [
+                "<p><strong>International flights:</strong>Flights to/from Vietnam (we can assist with recommendations)</p>",
+                "<p><strong>Vietnam visa fees:</strong>Entry visa costs (e-visa available online for most nationalities)</p>",
+                "<p><strong>Personal expenses:</strong>Shopping, additional snacks, souvenirs, optional activities during free days</p>",
+                "<p><strong>Travel insurance:</strong>Comprehensive travel insurance (highly recommended, available through partners)</p>",
+                "<p><strong>Tips for guides/drivers:</strong>Tipping kitty $180-220 per person recommended but voluntary</p>",
+                "<p><strong>Beverages:</strong>Soft drinks, alcohol, specialty beverages beyond included meals</p>",
+                "<p><strong>Optional activities:</strong> Activities chosen during 3 free days, additional excursions</p>"
               ],
               "hotelAccommodation": [
                 {
@@ -83,7 +84,8 @@
               "itinerary": [
                 {
                   "day": 1,
-                  "title": "Arrival in Da Nang",
+                  "title": "Arrival in Hanoi",
+                  "description": "<h5>'Welcome to the Heart of Vietnam'</h5><h6>Today's Highlight: Authentic Old Quarter Walking Food Safari</h6><p>Once landed within Hanoi's airport, convenient transportation is provided, escorting travelers toward their lodging in the Old Quarter. A Vietnam vacation gets underway with engaging walking excursions along Hanoi's ancient pathways, including a tour of the celebrated Ngoc Son Temple. Savor truly genuine Vietnamese food while discovering regional culinary customs, characterizing authentic Vietnamese journey experiences.</p><p><strong>Accommodation:</strong>Four-star hotels provide lodging in Hanoi's vibrant Old Quarter.</p><p><strong>Meals:</strong>Enjoy delightful Vietnamese cuisine in authentic dining experiences.</p><p><strong>Signature Experience:</strong>Unforgettable food safaris, revealing hidden gems, are expertly led.<p><p><strong>Notes:</strong> Comfortable footwear is recommended. Furthermore, respectful attire is required when visiting sacred temples during package explorations.</p>",
                   "activities": [
                     "Airport Transfer",
                     "Hotel Check-in",
@@ -92,7 +94,8 @@
                 },
                 {
                   "day": 2,
-                  "title": "Ba Na Hills & Golden Bridge",
+                  "title": "Hanoi Cultural Discovery",
+                  "description": "<h5>'Discovering Vietnam's Cultural Essence'</h5><p>Vietnam's deep cultural heritage is best experienced. Mornings begin with Tai Chi, led by experts from Hanoi, at Hoan Kiem Lake. Incredible Vietnam tours include visits to the Ho Chi Minh Mausoleum, the unique One Pillar Pagoda, a UNESCO site, and the historic Temple of Literature. Vietnamese cuisine is savored through Old Quarter food tours, which include pho and egg coffee. Traditional water puppet shows are enjoyed in the evening, accompanied by meet-ups with puppet masters.</p><p><strong>Accommodation:</strong> Four-star hotels provide lodging in Hanoi's vibrant Old Quarter.</p><p><strong>Meals:</strong>Genuine Vietnamese cuisine is included in lunches, traditional dinners, and breakfasts.</p><p><strong>Signature Experience:</strong>Unique Tai Chi sessions within the community are featured, and puppet workshops will also be given.<p><p><strong>Notes:</strong> The Mausoleum is closed on Mondays and Fridays.</p>",
                   "activities": [
                     "Cable Car Ride",
                     "Golden Bridge Visit",
@@ -101,47 +104,21 @@
                 },
                 {
                   "day": 3,
-                  "title": "Da Nang to Phu Quoc",
+                  "title": "Hanoi to Halong Bay",
+                  "description": "<h5>'Halong Bay Beckons: An Unforgettable Sunset Fishing Adventure'</h5><p>A luxurious cruise through the breathtaking, UNESCO-recognized Halong Bay is featured within your Vietnam getaway. Magnificent limestone formations are navigated aboard a top-tier boat while the amazing Sung Sot Cave is discovered. Traditional net-casting methods, passed down across generations, are taught at dusk alongside local fishing communities. Enjoyable swimming and kayaking are experienced before a delectable, freshly-caught seafood dinner is savored as a stunning sunset colors the bay.</p><p><strong>Accommodation:</strong> Premium cabins with scenic windows are available on the luxury vessel as accommodation options.</p><p><strong>Meals:</strong>Breakfast, seafood lunch, and fresh-catch dinner are included.</p><p><strong>Signature Experience:</strong>A traditional fishing lesson from local families is a signature experience.<p><p><strong>Notes:</strong> Swimwear is recommended for aquatic activities. Weather-contingent experiences and access to the UNESCO site are noted.</p>",
                   "activities": ["Flight Transfer", "Beach Leisure"]
                 },
                 {
                   "day": 4,
-                  "title": "Phu Quoc 4 Island Tour",
+                  "title": "Halong Bay to Hanoi",
+                  "description": "<h5>'Discover Halong Bay: An Unforgettable Dawn-to-Dusk Adventure'</h5><p>Featured Today: Immerse Yourself in Floating Village Culture A serene Tai Chi session at sunrise on deck is experienced as limestone karsts emerge from the horizon. Your Vietnam vacation encompasses exploration of genuine aquatic communities inhabited by generations. Pearl cultivation and eco-friendly fishing techniques are learned from local inhabitants. Subsequently, a comfortable overnight train transit facilitates entry to Sapa's majestic highlands.</p><p><strong>Accommodation:</strong> Overnight travel via plush sleeping berths to Lao Cai.</p><p><strong>Meals:</strong>Breakfast is served at a floating village, and a customary midday meal is provided.</p><p><strong>Unique Activity:</strong>A tea ritual is enjoyed alongside fishing families in their aquatic residences.<p><p><strong>Notes:</strong>A mountainous climate preparedness kit is furnished; relaxed attire is advised for railway travel.</p>",
                   "activities": ["Island Hopping", "Cable Car", "Snorkeling"]
                 },
                 {
                   "day": 5,
-                  "title": "VinWonders & VinSafari",
+                  "title": "Sapa Mountain Adventure",
+                  "description": "<h5>'Sapa Adventures: Trek into Scenic Splendor'</h5><p>Sapa's incredible discovery is now available. Generally, arrival check-in commences at 2:00 PM. A distinctive Vietnam adventure is presented, allowing access ahead of time to impressive rice paddies. Professional photography guidance is delivered, promising magnificent pictures. A fascinating mountain heritage is experienced through an educational tour of Cat Cat settlement. Guests are greeted by native H'mong clans. An age-old weaving showcase is appreciated. A cultural exchange is fostered through an unforgettable homestay experience, complete with a memorable meal.</p><p><strong>Accommodation:</strong> A mountain hotel exhibiting terrace outlooks.</p><p><strong>Meals:</strong>Village fare for lunch is provided, along with a hosted meal.</p><p><strong>Unique Activity:</strong>Photographic mentoring and a weaving class are provided.<p><p><strong>Notes:</strong> Moderate-intensity trekking is required. Rain protection is crucial. Local traditions must be respected.</p>",
                   "activities": ["Theme Park", "Safari Experience"]
-                },
-                {
-                  "day": 6,
-                  "title": "Phu Quoc to Sapa",
-                  "activities": ["Flight", "Mountain Views"]
-                },
-                {
-                  "day": 7,
-                  "title": "Fansipan & Cat Cat Village",
-                  "activities": ["Fansipan Cable Car", "Village Walk"]
-                },
-                {
-                  "day": 8,
-                  "title": "Sapa to Hanoi",
-                  "activities": ["Glass Bridge", "Train Street"]
-                },
-                {
-                  "day": 9,
-                  "title": "Halong Bay Cruise",
-                  "activities": [
-                    "Cruise Stay",
-                    "Kayaking",
-                    "Onboard Activities"
-                  ]
-                },
-                {
-                  "day": 10,
-                  "title": "Departure",
-                  "activities": ["Cruise Checkout", "Return Flight"]
                 }
               ],
               "gallery": [
@@ -152,14 +129,125 @@
               ]
             },
             {
-              "id": "vietnam-honeymoon",
-              "title": "Vietnam Honeymoon Special",
-              "duration": "7 Days / 6 Nights",
-              "startingPrice": 125000,
-              "currency": "INR",
-              "bannerImage": "asset\\image\\packages\\SightSeeingnIIT1w.png",
-              "highlights": ["Da Nang", "Hoi An", "Beach Resorts", "Couple Spa"]
-            }
+  "id": "vietnam-honeymoon-special",
+  "tourid": "TID0002",
+  "title": "Vietnam Honeymoon Special",
+  "slug": "vietnam-honeymoon-special",
+  "subtitle": "Romance in Halong Bay, Da Nang & Phu Quoc",
+  "tourType": "Honeymoon Tour",
+  "departureDate": "20 April 2026",
+  "duration": "8 Days / 7 Nights",
+  "startingPrice": 159990,
+  "currency": "INR",
+  "bannerImage": "asset/image/packages/SightSeeingnIIT1w.png",
+  "description": "<h2>Overview</h2><p>Celebrate love on a beautifully curated Vietnam Honeymoon Special designed exclusively for couples seeking romance, relaxation, and unforgettable moments. This journey blends breathtaking natural beauty with luxury stays, private experiences, and intimate cultural encounters.</p><p>From cruising the emerald waters of Halong Bay to romantic candlelight dinners in Da Nang and tranquil beach escapes in Phu Quoc, every detail is crafted to create lifelong memories. Enjoy privacy, personalized services, and dreamy experiences ideal for newlyweds.</p><p><strong>Duration:</strong> 8 days, 7 nights</p><p><strong>Departure:</strong> Daily from Hanoi</p><p><strong>Style:</strong> Romantic luxury & leisure</p>",
+  "highlights": [
+    "Romantic Halong Bay Cruise",
+    "Private Candlelight Dinner",
+    "Golden Bridge at Ba Na Hills",
+    "Phu Quoc Beach Resort Stay",
+    "Couple Spa Experience",
+    "Sunset Cruise Experience"
+  ],
+  "inclusions": [
+    "<p><strong>Private transfers:</strong> Airport pickups, intercity transfers in private air-conditioned vehicles</p>",
+    "<p><strong>Luxury accommodation:</strong> 7 nights in handpicked 4 & 5-star romantic resorts and hotels</p>",
+    "<p><strong>Meals:</strong> Daily breakfast, selected romantic dinners, honeymoon cake & wine</p>",
+    "<p><strong>Experiences:</strong> Private Halong Bay cruise, sunset cruise, couple spa session</p>",
+    "<p><strong>Sightseeing:</strong> All major attractions with private guide</p>",
+    "<p><strong>Special touches:</strong> Room decoration, flower arrangements, honeymoon surprises</p>"
+  ],
+  "exclusions": [
+    "<p><strong>International flights:</strong> Flights to and from Vietnam</p>",
+    "<p><strong>Visa fees:</strong> Vietnam e-visa charges</p>",
+    "<p><strong>Personal expenses:</strong> Shopping, minibar, laundry</p>",
+    "<p><strong>Travel insurance:</strong> Strongly recommended</p>",
+    "<p><strong>Tips:</strong> Optional tipping for guides and drivers</p>"
+  ],
+  "hotelAccommodation": [
+    {
+      "city": "Hanoi",
+      "nights": 1,
+      "hotel": "La Siesta Premium",
+      "rating": 4
+    },
+    {
+      "city": "Halong Bay",
+      "nights": 1,
+      "hotel": "Luxury Romantic Cruise",
+      "rating": 5
+    },
+    {
+      "city": "Da Nang",
+      "nights": 2,
+      "hotel": "Rosamia Da Nang",
+      "rating": 5
+    },
+    {
+      "city": "Phu Quoc",
+      "nights": 3,
+      "hotel": "Ocean Pearl Resort & Spa",
+      "rating": 5
+    }
+  ],
+  "itinerary": [
+    {
+      "day": 1,
+      "title": "Arrival in Hanoi – Romantic Welcome",
+      "description": "<h5>'Love Begins in Vietnam'</h5><p>Upon arrival in Hanoi, enjoy a private transfer to your romantic hotel. The evening is free for a leisurely stroll around Hoan Kiem Lake followed by a cozy candlelight dinner.</p><p><strong>Accommodation:</strong> Luxury hotel in Hanoi</p><p><strong>Meals:</strong> Dinner</p>",
+      "activities": ["Airport Transfer", "Hotel Check-in", "Romantic Dinner"]
+    },
+    {
+      "day": 2,
+      "title": "Hanoi to Halong Bay Cruise",
+      "description": "<h5>'Sail into Romance'</h5><p>Embark on a luxury Halong Bay cruise. Enjoy kayaking, limestone views, sunset moments on deck, and a private candlelight dinner under the stars.</p><p><strong>Accommodation:</strong> Luxury cruise cabin</p><p><strong>Meals:</strong> Breakfast, Lunch, Dinner</p>",
+      "activities": ["Cruise", "Kayaking", "Sunset Viewing"]
+    },
+    {
+      "day": 3,
+      "title": "Halong Bay to Da Nang",
+      "description": "<h5>'From Seas to Sands'</h5><p>After sunrise Tai Chi and brunch onboard, transfer to the airport for Da Nang. Evening at leisure by the beach.</p><p><strong>Accommodation:</strong> Beachfront resort</p><p><strong>Meals:</strong> Breakfast</p>",
+      "activities": ["Tai Chi Session", "Flight Transfer"]
+    },
+    {
+      "day": 4,
+      "title": "Ba Na Hills & Golden Bridge",
+      "description": "<h5>'Iconic Love Moments'</h5><p>Ride the world-famous cable car to Ba Na Hills, walk hand-in-hand across the Golden Bridge, and explore the charming French Village.</p><p><strong>Meals:</strong> Breakfast</p>",
+      "activities": ["Cable Car Ride", "Golden Bridge Visit"]
+    },
+    {
+      "day": 5,
+      "title": "Da Nang to Phu Quoc",
+      "description": "<h5>'Island Escape'</h5><p>Fly to Phu Quoc and check into your romantic beach resort. Enjoy sunset views and beachside relaxation.</p><p><strong>Meals:</strong> Breakfast</p>",
+      "activities": ["Flight Transfer", "Beach Leisure"]
+    },
+    {
+      "day": 6,
+      "title": "Phu Quoc Leisure & Spa",
+      "description": "<h5>'Relax & Reconnect'</h5><p>A leisurely day with a complimentary couple spa session and free time on the beach.</p><p><strong>Meals:</strong> Breakfast</p>",
+      "activities": ["Couple Spa", "Beach Time"]
+    },
+    {
+      "day": 7,
+      "title": "Phu Quoc Sunset Cruise",
+      "description": "<h5>'Love at Sunset'</h5><p>Enjoy a private sunset cruise with drinks and romantic music, creating picture-perfect honeymoon memories.</p><p><strong>Meals:</strong> Breakfast</p>",
+      "activities": ["Sunset Cruise", "Photography"]
+    },
+    {
+      "day": 8,
+      "title": "Departure",
+      "description": "<h5>'Until Next Time'</h5><p>After breakfast, transfer to the airport with unforgettable honeymoon memories.</p><p><strong>Meals:</strong> Breakfast</p>",
+      "activities": ["Airport Transfer"]
+    }
+  ],
+  "gallery": [
+    "asset/image/packages/vietnam/honeymoon/halong-cruise.jpg",
+    "asset/image/packages/vietnam/honeymoon/golden-bridge.jpg",
+    "asset/image/packages/vietnam/honeymoon/phu-quoc-beach.jpg",
+    "asset/image/packages/vietnam/honeymoon/couple-dinner.jpg"
+  ]
+}
+
           ]
         },
         {
@@ -172,7 +260,7 @@
               "duration": "3 Nights / 4 Days",
               "startingPrice": 25750,
               "currency": "INR",
-              "bannerImage": "asset\\image\\packages\\tour-wide-2.jpg"
+              "bannerImage": "asset/image/packages/tour-wide-2.jpg"
             },
             {
               "id": "dubai-luxury",
@@ -180,7 +268,7 @@
               "duration": "5 Nights / 6 Days",
               "startingPrice": 75000,
               "currency": "INR",
-              "bannerImage": "asset\\image\\packages\\SightSeeinguGmRLZ.jpg",
+              "bannerImage": "asset/image/packages/SightSeeinguGmRLZ.jpg",
               "highlights": [
                 "Burj Khalifa Suite",
                 "Palm Jumeirah",
@@ -205,7 +293,7 @@
               "duration": "20 Days / 19 Nights",
               "startingPrice": 150000,
               "currency": "INR",
-              "bannerImage": "asset\\image\\packages\\SightSeeinguAzBmB.jpg",
+              "bannerImage": "asset/image/packages/SightSeeinguAzBmB.jpg",
               "highlights": [
                 "Taraweeh Prayers",
                 "Ziyarat Tours",
@@ -224,7 +312,7 @@
               "duration": "21 Days / 20 Nights",
               "startingPrice": 185000,
               "currency": "INR",
-              "bannerImage": "asset\\image\\packages\\SightSeeingTBnhzM.png",
+              "bannerImage": "asset/image/packages/SightSeeingTBnhzM.png",
               "highlights": [
                 "All 12 Jyotirlingas",
                 "VIP Darshan",
@@ -249,7 +337,7 @@
               "duration": "8 Days / 7 Nights",
               "startingPrice": 72000,
               "currency": "INR",
-              "bannerImage": "asset\\image\\packages\\SightSeeingTBnhzM.png"
+              "bannerImage": "asset/image/packages/SightSeeingTBnhzM.png"
             },
             {
               "id": "seven-sisters",
@@ -257,7 +345,7 @@
               "duration": "15 Days / 14 Nights",
               "startingPrice": 165000,
               "currency": "INR",
-              "bannerImage": "asset\\image\\packages\\SightSeeingSRkxGA.png",
+              "bannerImage": "asset/image/packages/SightSeeingSRkxGA.png",
               "highlights": [
                 "All 7 States",
                 "Tribal Culture",
@@ -276,7 +364,7 @@
               "duration": "8 Days / 7 Nights",
               "startingPrice": 45000,
               "currency": "INR",
-              "bannerImage": "asset\\image\\packages\\SightSeeingQEOw8B.png",
+              "bannerImage": "asset/image/packages/SightSeeingQEOw8B.png",
               "highlights": ["Paragliding", "Trekking", "River Rafting"]
             }
           ]
@@ -291,7 +379,7 @@
               "duration": "7 Days / 6 Nights",
               "startingPrice": 38500,
               "currency": "INR",
-              "bannerImage": "asset\\image\\packages\\SightSeeingfivXT9.png",
+              "bannerImage": "asset/image/packages/SightSeeingfivXT9.png",
               "highlights": [
                 "Houseboat Stay",
                 "Ayurvedic Spa",
@@ -310,7 +398,7 @@
               "duration": "12 Days / 11 Nights",
               "startingPrice": 68000,
               "currency": "INR",
-              "bannerImage": "asset\\image\\packages\\dubaitour13-960x430.webp",
+              "bannerImage": "asset/image/packages/dubaitour13-960x430.webp",
               "highlights": ["Royal Enfield", "High Altitude Passes", "Camping"]
             }
           ]

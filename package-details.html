@@ -440,37 +440,90 @@
 
             <div class="card-body">
 
-            <h4 class="text-primary">
-              ₹${foundPackage.startingPrice?.toLocaleString()} ${
-            foundPackage.currency || ""
-          }
-            </h4>
-
             ${
-            foundPackage.highlights
-                ? `
+  foundPackage
+    ? `
+    <div class="border-bottom py-3 mb-4">
+      <div class="row g-4">
+
+        <!-- Tour Code -->
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="d-flex align-items-start gap-3">
+            <i class="bi bi-clock fs-4 " style="color:#ab823e;"></i>
+            <div>
+              <small class="text-muted d-block">Tour code:</small>
+              <strong>${foundPackage.tourid}</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Length -->
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="d-flex align-items-start gap-3">
+            <i class="bi bi-people fs-4" style="color:#ab823e;"></i>
+            <div>
+              <small class="text-muted d-block">Duration:</small>
+              <strong>${foundPackage.duration}</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Start From -->
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="d-flex align-items-start gap-3">
+            <i class="bi bi-geo-alt fs-4" style="color:#ab823e;"></i>
+            <div>
+              <small class="text-muted d-block">Start From</small>
+              <strong>₹${foundPackage.startingPrice?.toLocaleString()} </strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tour Type -->
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="d-flex align-items-start gap-3">
+            <i class="bi bi-slash-circle fs-4" style="color:#ab823e;"></i>
+            <div>
+              <small class="text-muted d-block">Tour type</small>
+              <strong>${foundPackage.tourType}</strong>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    `
+    : ""
+}
+
+
+
+              ${
+                foundPackage.highlights
+                  ? `
                 <h5 class="mt-4">Highlights</h5>
-                <ul class="list-unstyled">
-                ${foundPackage.highlights
+                <ul class="row list-unstyled">
+                  ${foundPackage.highlights
                     .map(
-                    (h) => `
-                    <li class="d-flex align-items-start mb-2">
+                      (h) => `
+                      <li class="col-lg-3 col-md-4 col-sm-6 d-flex align-items-start mb-3">
                         <img 
-                        src="asset/image/star.gif"
-                        alt="highlight" 
-                        width="18" 
-                        height="18" 
-                        class="me-2 mt-1"
+                          src="asset/image/star.gif"
+                          alt="highlight" 
+                          width="18" 
+                          height="18" 
+                          class="me-2 mt-1"
                         />
                         <span>${h}</span>
-                    </li>
+                      </li>
                     `
                     )
                     .join("")}
                 </ul>
-            `
-                : ""
-            }
+              `
+                          : ""
+                      }
+
 
             ${
               foundPackage.description
@@ -479,6 +532,109 @@
             `
                 : ""
             }
+
+            ${
+  foundPackage.itinerary && foundPackage.itinerary.length
+    ? `
+    <h5 class="mt-4">Itinerary</h5>
+
+    <div class="accordion" id="itineraryAccordion">
+      ${foundPackage.itinerary
+        .map(
+          (item, index) => `
+          <div class="accordion-item mb-2 border rounded-3">
+            <h2 class="accordion-header" id="heading${index}">
+              <button 
+                class="fs-5 accordion-button ${index !== 0 ? "collapsed" : ""}" 
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse${index}"
+                aria-expanded="${index === 0}"
+                aria-controls="collapse${index}"
+              >
+                <strong class="me-2">${item.day}</strong>${item.title}
+              </button>
+            </h2>
+
+            <div 
+              id="collapse${index}" 
+              class="accordion-collapse collapse ${index === 0 ? "show" : ""}"
+              aria-labelledby="heading${index}"
+              data-bs-parent="#itineraryAccordion"
+            >
+              <div class="accordion-body">
+                ${item.description}
+              </div>
+            </div>
+          </div>
+        `
+        )
+        .join("")}
+    </div>
+    `
+    : ""
+}
+    ${
+  (foundPackage.inclusions?.length || foundPackage.exclusions?.length)
+    ? `
+    <h5 class="mt-4">Inclusions & Exclusions</h5>
+
+    <div class="row mt-3">
+      
+      <!-- Inclusions -->
+      <div class="col-lg-6 col-md-6 col-sm-12 mb-3">
+        <div class="border rounded-4 p-3 h-100">
+          <h6 class="text-success mb-3">✔ Inclusions</h6>
+          <ul class="list-unstyled mb-0">
+            ${
+              foundPackage.inclusions
+                ? foundPackage.inclusions
+                    .map(
+                      (item) => `
+                      <li class="d-flex align-items-start mb-2">
+                        <img src="asset/image/star.gif" width="16" class="me-2 mt-1">
+                        <span>${item}</span>
+                      </li>
+                    `
+                    )
+                    .join("")
+                : "<li>No inclusions available</li>"
+            }
+          </ul>
+        </div>
+      </div>
+
+      <!-- Exclusions -->
+      <div class="col-lg-6 col-md-6 col-sm-12 mb-3">
+        <div class="border rounded-4 p-3 h-100">
+          <h6 class="text-danger mb-3">✖ Exclusions</h6>
+          <ul class="list-unstyled mb-0">
+            ${
+              foundPackage.exclusions
+                ? foundPackage.exclusions
+                    .map(
+                      (item) => `
+                      <li class="d-flex align-items-start mb-2">
+                        <img src="asset/image/star.gif" width="16" class="me-2 mt-1">
+                        <span>${item}</span>
+                      </li>
+                    `
+                    )
+                    .join("")
+                     : "<li>No exclusions available</li>"
+          }
+          </ul>
+        </div>
+      </div>
+
+    </div>
+    `
+    : ""
+}
+
+
+
+
 
             </div>
         </div>
