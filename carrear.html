@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" href="asset/image/D-logo.png">
     <link rel="stylesheet" href="asset/css/custom.css">
+    <link rel="stylesheet" href="asset/css/style.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
@@ -26,11 +27,7 @@
         rel="stylesheet">
 
     <style>
-        body {
-            padding-top: 45px;
-            /* Adjust if needed */
-        }
-
+   
         .navbar {
             position: fixed;
 
@@ -54,249 +51,14 @@
                 max-width: 1838px;
             }
         }
-
-        .py-2 {
-            padding-top: .5rem !important;
-            padding-bottom: 1.5rem !important;
-        }
-
-
-        /* Beige icon circle (large icons for Call/Email/Location) */
-        .icon-circle {
-            width: 50px;
-            height: 50px;
-            background: #f7ecd7;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 26px;
-            color: #b8903b;
-            /* golden brown icon color */
-            margin: auto;
-        }
-
-        /* Small beige circle for social icons */
-        .icon-circle-small {
-            width: 50px;
-            height: 50px;
-            background: #f7ecd7;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #b8903b;
-            font-size: 26px;
-            text-decoration: none;
-        }
-
-        .icon-circle-small:hover {
-            opacity: 0.8;
-        }
-
-        /* Optional: cleaner fonts */
-        .footer-section {
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .contact-section {
-            background: url('../devotion-tourism/asset/image/contact-us/contactsPage.webp') no-repeat center center;
-            background-size: cover;
-            color: white;
-            /* Set text color to white for better contrast on a dark image */
-            padding: 150px 0;
-            /* Adjust padding as needed */
-            text-align: center;
-            position: relative;
-        }
-
-        /* Optional: Add an overlay to make the text more readable */
-        .contact-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-
-        }
-
-        .contact-section .container {
-            position: relative;
-            /* Ensure container content is above the overlay */
-            z-index: 1;
-        }
-
-        .contact-section h2 {
-            font-family: "Merienda", cursive;
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-        }
-
-        .contact-section p {
-            font-size: 1rem;
-            max-width: 1000px;
-            font-weight: 500;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-
-        footer ul,
-        footer h5,
-        footer li,
-        footer a {
-            text-align: left !important;
-        }
-
-
-
-        .career-form .form-control {
-            border-radius: 10px;
-            padding: 12px;
-        }
-
-        .input-group-text {
-            background-color: #ffffff;
-            border-radius: 10px 0 0 10px;
-        }
-
-        .submit-btn {
-            background-color: #a88a6d;
-            border: none;
-            padding: 12px;
-            font-weight: 600;
-            border-radius: 10px;
-            transition: 0.3s ease-in-out;
-        }
-
-        .submit-btn:hover {
-            background-color: #8f7459;
-        }
-
-        @media (min-width: 1400px) {
-            .custom-container {
-                max-width: 1320px;
-                margin: 0 auto;
-            }
-        }
-
-        .form-control {
-            background-color: #fafafa;
-            border: 1px solid #e1e8ed;
-            font-size: 12px;
-            font-family: mona-sans-Medium;
-            color: #000;
-            position: relative;
-            width: 100%;
-            height: 40px;
-            padding-left: 20px;
-        }
-
-        .career-section {
-            margin-top: 12%;
-
-        }
     </style>
 </head>
 
 <body>
 
-
     <nav class="navbar navbar-expand-lg bg-white shadow-sm main-navbar">
         <div class="container">
-            <style>
-                /* Top Bar */
-                .top-bar {
-                    background-color: #ab823e;
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    z-index: 1050;
-                }
-
-
-                /* Remove top padding only on mobile */
-                @media (max-width: 991px) {
-                    body {
-                        padding-top: -96 !important;
-                    }
-                }
-
-                @media (max-width: 991px) {
-                    .hero-overlay {
-                        padding-top: 20vh;
-                    }
-                }
-
-                /* Navbar should stick directly to top on mobile */
-                @media (max-width: 991px) {
-                    body {
-                        padding-top: 0 !important;
-                        /* Remove space above content */
-                        margin-top: 0 !important;
-                    }
-
-                    .main-navbar {
-                        margin-top: 0 !important;
-                        /* Remove navbar margin */
-                        top: 0;
-                    }
-
-                    .top-bar {
-                        display: none !important;
-                        /* Hide top bar on mobile */
-                    }
-                }
-
-
-                /* Mobile Dropdown Improvements */
-                @media (max-width: 991px) {
-                    .navbar-nav .nav-link {
-                        padding: 12px 10px;
-                        font-size: 16px;
-                        border-bottom: 1px solid #eee;
-                    }
-
-                    .dropdown-menu {
-                        width: 100% !important;
-                        border: none;
-                        background: #fff;
-                        padding-left: 25px;
-                    }
-
-                    .dropdown-item {
-                        padding: 10px 0;
-                        font-size: 15px;
-                        text-align: center;
-                        border-bottom: 1px solid #f1f1f1;
-                    }
-                }
-
-                @media (max-width: 991px) {
-                    .contact-section {
-                        padding-top: 65vh;
-                    }
-                }
-
-                @media (max-width: 991px) {
-                    .contact-section .container {
-                        padding-bottom: 30vh;
-                    }
-                }
-                
-                /* Nested submenu positioning */
-                .dropdown-submenu {
-                    position: relative;
-                }
-
-                .dropdown-submenu .dropdown-menu {
-                    top: 0;
-                    left: 100%;
-                    margin-left: 0.1rem;
-                }
-
-            </style>
+        
             <!-- Top Contact Bar -->
             <div class="top-bar text-white d-none d-md-block">
                 <div class="container py-1">
@@ -516,63 +278,7 @@
 
                     </div>
 
-                    <style>
-                        /* ===========================
-   📱 Tablet / Medium Screens
-=========================== */
-                        @media (max-width: 992px) {
-                            .contact-row {
-                                gap: 2rem;
-                            }
-
-                            .contact-item p {
-                                font-size: 15px;
-                            }
-                        }
-
-                        /* ===========================
-   📱 Mobile Responsive
-=========================== */
-                        @media (max-width: 768px) {
-                            .contact-row {
-                                gap: 1.5rem;
-                                flex-wrap: wrap;
-                            }
-
-                            .contact-item {
-                                flex-direction: column;
-                                text-align: center;
-                            }
-
-                            .contact-item p {
-                                margin-top: 4px;
-                                font-size: 14px;
-                            }
-
-                            .icon-circle img {
-                                width: 45px;
-                                height: 45px;
-                            }
-                        }
-
-                        /* ===========================
-   📱 Very Small Phones
-=========================== */
-                        @media (max-width: 480px) {
-                            .contact-row {
-                                gap: 1.2rem;
-                            }
-
-                            .icon-circle img {
-                                width: 40px;
-                                height: 40px;
-                            }
-
-                            .contact-item p {
-                                font-size: 13px;
-                            }
-                        }
-                    </style>
+             
 
                     <div class="d-flex justify-content-center" style="gap: 1rem; margin-top: 1rem;">
                         <a class="icon-circle-small d-flex align-items-center justify-content-center"

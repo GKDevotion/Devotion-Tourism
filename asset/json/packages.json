@@ -48,6 +48,38 @@
                 "<p><strong>Beverages:</strong>Soft drinks, alcohol, specialty beverages beyond included meals</p>",
                 "<p><strong>Optional activities:</strong> Activities chosen during 3 free days, additional excursions</p>"
               ],
+              "terms": [
+                {
+                  "title": "Travel Validity",
+                  "points": [
+                    "The deal is valid for travel till Monday, 30 March 2026."
+                  ]
+                },
+                {
+                  "title": "Guaranteed Dates",
+                  "points": ["Travel is valid on Fixed Dates."]
+                },
+                {
+                  "title": "Visa Easy",
+                  "points": ["Visa can be availed on arrival."]
+                },
+                {
+                  "title": "Booking Policy",
+                  "points": [
+                    "At the time of booking: 50% of the total package cost per person or cancellation charges whichever is higher (non-refundable and non-transferable)",
+                    "Within 30 Days from Date of Departure: 75% of Full Tour Cost or cancellation charges whichever is higher (non-refundable and non-transferable)",
+                    "15 Days from Date of Departure: 100% of Full Tour Cost"
+                  ]
+                },
+                {
+                  "title": "Cancellation Policy",
+                  "points": [
+                    "31 and More Days prior to the Departure Date: Booking Amount is Non-Refundable",
+                    "30 to 16 Days prior to the Departure Date: 75% of the full Tour cost",
+                    "15 Days prior to the Departure Date: 100% of the full Tour cost"
+                  ]
+                }
+              ],
               "hotelAccommodation": [
                 {
                   "city": "Da Nang",
@@ -129,150 +161,637 @@
               ]
             },
             {
-  "id": "vietnam-honeymoon-special",
-  "tourid": "TID0002",
-  "title": "Vietnam Honeymoon Special",
-  "slug": "vietnam-honeymoon-special",
-  "subtitle": "Romance in Halong Bay, Da Nang & Phu Quoc",
-  "tourType": "Honeymoon Tour",
-  "departureDate": "20 April 2026",
-  "duration": "8 Days / 7 Nights",
-  "startingPrice": 159990,
-  "currency": "INR",
-  "bannerImage": "asset/image/packages/SightSeeingnIIT1w.png",
-  "description": "<h2>Overview</h2><p>Celebrate love on a beautifully curated Vietnam Honeymoon Special designed exclusively for couples seeking romance, relaxation, and unforgettable moments. This journey blends breathtaking natural beauty with luxury stays, private experiences, and intimate cultural encounters.</p><p>From cruising the emerald waters of Halong Bay to romantic candlelight dinners in Da Nang and tranquil beach escapes in Phu Quoc, every detail is crafted to create lifelong memories. Enjoy privacy, personalized services, and dreamy experiences ideal for newlyweds.</p><p><strong>Duration:</strong> 8 days, 7 nights</p><p><strong>Departure:</strong> Daily from Hanoi</p><p><strong>Style:</strong> Romantic luxury & leisure</p>",
-  "highlights": [
-    "Romantic Halong Bay Cruise",
-    "Private Candlelight Dinner",
-    "Golden Bridge at Ba Na Hills",
-    "Phu Quoc Beach Resort Stay",
-    "Couple Spa Experience",
-    "Sunset Cruise Experience"
-  ],
-  "inclusions": [
-    "<p><strong>Private transfers:</strong> Airport pickups, intercity transfers in private air-conditioned vehicles</p>",
-    "<p><strong>Luxury accommodation:</strong> 7 nights in handpicked 4 & 5-star romantic resorts and hotels</p>",
-    "<p><strong>Meals:</strong> Daily breakfast, selected romantic dinners, honeymoon cake & wine</p>",
-    "<p><strong>Experiences:</strong> Private Halong Bay cruise, sunset cruise, couple spa session</p>",
-    "<p><strong>Sightseeing:</strong> All major attractions with private guide</p>",
-    "<p><strong>Special touches:</strong> Room decoration, flower arrangements, honeymoon surprises</p>"
-  ],
-  "exclusions": [
-    "<p><strong>International flights:</strong> Flights to and from Vietnam</p>",
-    "<p><strong>Visa fees:</strong> Vietnam e-visa charges</p>",
-    "<p><strong>Personal expenses:</strong> Shopping, minibar, laundry</p>",
-    "<p><strong>Travel insurance:</strong> Strongly recommended</p>",
-    "<p><strong>Tips:</strong> Optional tipping for guides and drivers</p>"
-  ],
-  "hotelAccommodation": [
-    {
-      "city": "Hanoi",
-      "nights": 1,
-      "hotel": "La Siesta Premium",
-      "rating": 4
-    },
-    {
-      "city": "Halong Bay",
-      "nights": 1,
-      "hotel": "Luxury Romantic Cruise",
-      "rating": 5
-    },
-    {
-      "city": "Da Nang",
-      "nights": 2,
-      "hotel": "Rosamia Da Nang",
-      "rating": 5
-    },
-    {
-      "city": "Phu Quoc",
-      "nights": 3,
-      "hotel": "Ocean Pearl Resort & Spa",
-      "rating": 5
-    }
-  ],
-  "itinerary": [
-    {
-      "day": 1,
-      "title": "Arrival in Hanoi – Romantic Welcome",
-      "description": "<h5>'Love Begins in Vietnam'</h5><p>Upon arrival in Hanoi, enjoy a private transfer to your romantic hotel. The evening is free for a leisurely stroll around Hoan Kiem Lake followed by a cozy candlelight dinner.</p><p><strong>Accommodation:</strong> Luxury hotel in Hanoi</p><p><strong>Meals:</strong> Dinner</p>",
-      "activities": ["Airport Transfer", "Hotel Check-in", "Romantic Dinner"]
-    },
-    {
-      "day": 2,
-      "title": "Hanoi to Halong Bay Cruise",
-      "description": "<h5>'Sail into Romance'</h5><p>Embark on a luxury Halong Bay cruise. Enjoy kayaking, limestone views, sunset moments on deck, and a private candlelight dinner under the stars.</p><p><strong>Accommodation:</strong> Luxury cruise cabin</p><p><strong>Meals:</strong> Breakfast, Lunch, Dinner</p>",
-      "activities": ["Cruise", "Kayaking", "Sunset Viewing"]
-    },
-    {
-      "day": 3,
-      "title": "Halong Bay to Da Nang",
-      "description": "<h5>'From Seas to Sands'</h5><p>After sunrise Tai Chi and brunch onboard, transfer to the airport for Da Nang. Evening at leisure by the beach.</p><p><strong>Accommodation:</strong> Beachfront resort</p><p><strong>Meals:</strong> Breakfast</p>",
-      "activities": ["Tai Chi Session", "Flight Transfer"]
-    },
-    {
-      "day": 4,
-      "title": "Ba Na Hills & Golden Bridge",
-      "description": "<h5>'Iconic Love Moments'</h5><p>Ride the world-famous cable car to Ba Na Hills, walk hand-in-hand across the Golden Bridge, and explore the charming French Village.</p><p><strong>Meals:</strong> Breakfast</p>",
-      "activities": ["Cable Car Ride", "Golden Bridge Visit"]
-    },
-    {
-      "day": 5,
-      "title": "Da Nang to Phu Quoc",
-      "description": "<h5>'Island Escape'</h5><p>Fly to Phu Quoc and check into your romantic beach resort. Enjoy sunset views and beachside relaxation.</p><p><strong>Meals:</strong> Breakfast</p>",
-      "activities": ["Flight Transfer", "Beach Leisure"]
-    },
-    {
-      "day": 6,
-      "title": "Phu Quoc Leisure & Spa",
-      "description": "<h5>'Relax & Reconnect'</h5><p>A leisurely day with a complimentary couple spa session and free time on the beach.</p><p><strong>Meals:</strong> Breakfast</p>",
-      "activities": ["Couple Spa", "Beach Time"]
-    },
-    {
-      "day": 7,
-      "title": "Phu Quoc Sunset Cruise",
-      "description": "<h5>'Love at Sunset'</h5><p>Enjoy a private sunset cruise with drinks and romantic music, creating picture-perfect honeymoon memories.</p><p><strong>Meals:</strong> Breakfast</p>",
-      "activities": ["Sunset Cruise", "Photography"]
-    },
-    {
-      "day": 8,
-      "title": "Departure",
-      "description": "<h5>'Until Next Time'</h5><p>After breakfast, transfer to the airport with unforgettable honeymoon memories.</p><p><strong>Meals:</strong> Breakfast</p>",
-      "activities": ["Airport Transfer"]
-    }
-  ],
-  "gallery": [
-    "asset/image/packages/vietnam/honeymoon/halong-cruise.jpg",
-    "asset/image/packages/vietnam/honeymoon/golden-bridge.jpg",
-    "asset/image/packages/vietnam/honeymoon/phu-quoc-beach.jpg",
-    "asset/image/packages/vietnam/honeymoon/couple-dinner.jpg"
-  ]
-}
-
+              "id": "vietnam-honeymoon-special",
+              "tourid": "TID0002",
+              "title": "Vietnam Honeymoon Special",
+              "slug": "vietnam-honeymoon-special",
+              "subtitle": "Romance in Halong Bay, Da Nang & Phu Quoc",
+              "tourType": "Honeymoon Tour",
+              "departureDate": "20 April 2026",
+              "duration": "8 Days / 7 Nights",
+              "startingPrice": 159990,
+              "currency": "INR",
+              "bannerImage": "asset/image/packages/SightSeeingnIIT1w.png",
+              "description": "<h2>Overview</h2><p>Celebrate love on a beautifully curated Vietnam Honeymoon Special designed exclusively for couples seeking romance, relaxation, and unforgettable moments. This journey blends breathtaking natural beauty with luxury stays, private experiences, and intimate cultural encounters.</p><p>From cruising the emerald waters of Halong Bay to romantic candlelight dinners in Da Nang and tranquil beach escapes in Phu Quoc, every detail is crafted to create lifelong memories. Enjoy privacy, personalized services, and dreamy experiences ideal for newlyweds.</p><p><strong>Duration:</strong> 8 days, 7 nights</p><p><strong>Departure:</strong> Daily from Hanoi</p><p><strong>Style:</strong> Romantic luxury & leisure</p>",
+              "highlights": [
+                "Romantic Halong Bay Cruise",
+                "Private Candlelight Dinner",
+                "Golden Bridge at Ba Na Hills",
+                "Phu Quoc Beach Resort Stay",
+                "Couple Spa Experience",
+                "Sunset Cruise Experience"
+              ],
+              "inclusions": [
+                "<p><strong>Private transfers:</strong> Airport pickups, intercity transfers in private air-conditioned vehicles</p>",
+                "<p><strong>Luxury accommodation:</strong> 7 nights in handpicked 4 & 5-star romantic resorts and hotels</p>",
+                "<p><strong>Meals:</strong> Daily breakfast, selected romantic dinners, honeymoon cake & wine</p>",
+                "<p><strong>Experiences:</strong> Private Halong Bay cruise, sunset cruise, couple spa session</p>",
+                "<p><strong>Sightseeing:</strong> All major attractions with private guide</p>",
+                "<p><strong>Special touches:</strong> Room decoration, flower arrangements, honeymoon surprises</p>"
+              ],
+              "exclusions": [
+                "<p><strong>International flights:</strong> Flights to and from Vietnam</p>",
+                "<p><strong>Visa fees:</strong> Vietnam e-visa charges</p>",
+                "<p><strong>Personal expenses:</strong> Shopping, minibar, laundry</p>",
+                "<p><strong>Travel insurance:</strong> Strongly recommended</p>",
+                "<p><strong>Tips:</strong> Optional tipping for guides and drivers</p>"
+              ],
+              "hotelAccommodation": [
+                {
+                  "city": "Hanoi",
+                  "nights": 1,
+                  "hotel": "La Siesta Premium",
+                  "rating": 4
+                },
+                {
+                  "city": "Halong Bay",
+                  "nights": 1,
+                  "hotel": "Luxury Romantic Cruise",
+                  "rating": 5
+                },
+                {
+                  "city": "Da Nang",
+                  "nights": 2,
+                  "hotel": "Rosamia Da Nang",
+                  "rating": 5
+                },
+                {
+                  "city": "Phu Quoc",
+                  "nights": 3,
+                  "hotel": "Ocean Pearl Resort & Spa",
+                  "rating": 5
+                }
+              ],
+              "itinerary": [
+                {
+                  "day": 1,
+                  "title": "Arrival in Hanoi – Romantic Welcome",
+                  "description": "<h5>'Love Begins in Vietnam'</h5><p>Upon arrival in Hanoi, enjoy a private transfer to your romantic hotel. The evening is free for a leisurely stroll around Hoan Kiem Lake followed by a cozy candlelight dinner.</p><p><strong>Accommodation:</strong> Luxury hotel in Hanoi</p><p><strong>Meals:</strong> Dinner</p>",
+                  "activities": [
+                    "Airport Transfer",
+                    "Hotel Check-in",
+                    "Romantic Dinner"
+                  ]
+                },
+                {
+                  "day": 2,
+                  "title": "Hanoi to Halong Bay Cruise",
+                  "description": "<h5>'Sail into Romance'</h5><p>Embark on a luxury Halong Bay cruise. Enjoy kayaking, limestone views, sunset moments on deck, and a private candlelight dinner under the stars.</p><p><strong>Accommodation:</strong> Luxury cruise cabin</p><p><strong>Meals:</strong> Breakfast, Lunch, Dinner</p>",
+                  "activities": ["Cruise", "Kayaking", "Sunset Viewing"]
+                },
+                {
+                  "day": 3,
+                  "title": "Halong Bay to Da Nang",
+                  "description": "<h5>'From Seas to Sands'</h5><p>After sunrise Tai Chi and brunch onboard, transfer to the airport for Da Nang. Evening at leisure by the beach.</p><p><strong>Accommodation:</strong> Beachfront resort</p><p><strong>Meals:</strong> Breakfast</p>",
+                  "activities": ["Tai Chi Session", "Flight Transfer"]
+                },
+                {
+                  "day": 4,
+                  "title": "Ba Na Hills & Golden Bridge",
+                  "description": "<h5>'Iconic Love Moments'</h5><p>Ride the world-famous cable car to Ba Na Hills, walk hand-in-hand across the Golden Bridge, and explore the charming French Village.</p><p><strong>Meals:</strong> Breakfast</p>",
+                  "activities": ["Cable Car Ride", "Golden Bridge Visit"]
+                },
+                {
+                  "day": 5,
+                  "title": "Da Nang to Phu Quoc",
+                  "description": "<h5>'Island Escape'</h5><p>Fly to Phu Quoc and check into your romantic beach resort. Enjoy sunset views and beachside relaxation.</p><p><strong>Meals:</strong> Breakfast</p>",
+                  "activities": ["Flight Transfer", "Beach Leisure"]
+                },
+                {
+                  "day": 6,
+                  "title": "Phu Quoc Leisure & Spa",
+                  "description": "<h5>'Relax & Reconnect'</h5><p>A leisurely day with a complimentary couple spa session and free time on the beach.</p><p><strong>Meals:</strong> Breakfast</p>",
+                  "activities": ["Couple Spa", "Beach Time"]
+                },
+                {
+                  "day": 7,
+                  "title": "Phu Quoc Sunset Cruise",
+                  "description": "<h5>'Love at Sunset'</h5><p>Enjoy a private sunset cruise with drinks and romantic music, creating picture-perfect honeymoon memories.</p><p><strong>Meals:</strong> Breakfast</p>",
+                  "activities": ["Sunset Cruise", "Photography"]
+                },
+                {
+                  "day": 8,
+                  "title": "Departure",
+                  "description": "<h5>'Until Next Time'</h5><p>After breakfast, transfer to the airport with unforgettable honeymoon memories.</p><p><strong>Meals:</strong> Breakfast</p>",
+                  "activities": ["Airport Transfer"]
+                }
+              ],
+              "gallery": [
+                "asset/image/packages/vietnam/honeymoon/halong-cruise.jpg",
+                "asset/image/packages/vietnam/honeymoon/golden-bridge.jpg",
+                "asset/image/packages/vietnam/honeymoon/phu-quoc-beach.jpg",
+                "asset/image/packages/vietnam/honeymoon/couple-dinner.jpg"
+              ]
+            }
           ]
         },
         {
-          "id": "dubai",
+          "id": "bali-tour",
+          "name": "Bali",
+          "packages": [
+            {
+              "id": "epic-bali-trails",
+              "tourid": "TID0005",
+              "title": "Epic Bali Trails - Ex Ahemdabad",
+              "slug": "epic-bali-trails-ex-ahemdabad",
+              "subtitle": "7N Bali",
+              "tourType": "Couple Tour",
+              "departureDate": "22 February 2026",
+              "duration": "7 Nights / 8 Days",
+              "startingPrice": 64001,
+              "currency": "INR",
+              "bannerImage": "asset/image/packages/tour-wide-1.jpg",
+              "description": "<h2>Overview</h2><p>Embark on an exciting Bali group journey filled with adventure, culture, and scenic highlights. Enjoy thrilling water sports at Benoa Beach, witness the stunning Uluwatu Sunset, and explore the artistic charm of Ubud with the famous Bali Swing experience. Discover the grandeur of GWK Cultural Park and spend a fun-filled day at Trans Studio Theme Park. This group departure is designed to offer seamless travel, memorable experiences, and the perfect blend of relaxation and exploration in Bali.</p>",
+              "highlights": [
+                "Direct International Departure from Ahmedabad",
+                "Ubud Cultural & Nature Experience",
+                "Traditional Balinese Dance Show",
+                "Bali Swing Experience (Optional)",
+                "Indian Meals & Local Cuisine Options",
+                "Tanah Lot Sunset Temple Experience",
+                "Crystal Bay & Broken Beach"
+              ],
+              "inclusions": [
+                "<p>4N Accommodation at Golden Tulip Kuta or similar Hotel</p>",
+                "<p>3N Accommodation at Four points by sheraton ungasan or similar Hotel</p>",
+                "<p>Daily Breakfast at your Hotel</p>",
+                "<p>Water Sport at Tanjung Benoa Beach: Jet skiing, Parasailing & Banana Boat ride</p>",
+                "<p>Uluwatu Temple sunset tour</p>",
+                "<p>Trans studio Bali - Fly Over Indonesia</p>",
+                "<p>Garuda wisnu cultural park</p>",
+                "<p>Full day Ubud tour - Bali swing, Yeh hoo Waterfall , Ubud palace, Ubud village tour, coffee plantation</p>",
+                "<p>All Tours & Transfers on Seat-in-Coach (SIC) Basis.</p>"
+              ],
+              "exclusions": [
+                "<p>Visa Charges</p>",
+                "<p>Travel Insurance</p>",
+                "<p>GST and TCS (Applicable for offline bookings)</p>",
+                "<p>Anything not mentioned in the Inclusions</p>"
+              ],
+              "hotelAccommodation": [
+                {
+                  "city": "Ubud",
+                  "nights": 3,
+                  "hotel": "The Artini Dijiwa Ubud / Ubud Village Resort",
+                  "rating": 4
+                },
+                {
+                  "city": "Kuta / Seminyak",
+                  "nights": 3,
+                  "hotel": "The ONE Legian / Courtyard by Marriott Seminyak",
+                  "rating": 4
+                },
+                {
+                  "city": "Nusa Penida",
+                  "nights": 1,
+                  "hotel": "Semabu Hills Hotel / Adiwana Warnakali",
+                  "rating": 4
+                }
+              ],
+
+              "itinerary": [
+                {
+                  "day": 1,
+                  "title": " Arrival In Bali",
+                  "description": "<ul><li>Meet & Greet at Denpasar Airport</li><li>Transfer to your hotel and Check in. Your Evening is at Leisure to explore on your own.</li><li>Overnight stay at your Hotel.</li></ul>",
+                  "activities": [
+                    "Airport Transfer",
+                    "Hotel Check-in",
+                    "Leisure Time"
+                  ]
+                },
+                {
+                  "day": 2,
+                  "title": " Water Sports at Benoa Beach - Uluwatu Sunset Tour",
+                  "description": "<ul><li>Breakfast at the Hotel</li><li>Way to Tanjung Benoa Beach for an exciting water sports experience including Parasailing, Jet Skiing, and a fun Banana Boat Ride.</li><li>Later, visit the majestic Uluwatu Temple, perched dramatically on a cliff overlooking the Indian Ocean.</li><li>Overnight stay at your Hotel.</li></ul>",
+                  "activities": [
+                    "Cable Car Ride",
+                    "Golden Bridge Visit",
+                    "Theme Park"
+                  ]
+                },
+                {
+                  "day": 3,
+                  "title": "Fun Day at Trans Studio Bali",
+                  "description": "<ul><li>Breakfast at the Hotel</li><li>start your Fun day at Trans Studio Bali - Fly over Indonesia.</li><li>Later,Go on a shopping tour in the markets of kuta.</li><li>Overnight stay at your Hotel.</li></ul>",
+                  "activities": ["Flight Transfer", "Beach Leisure"]
+                },
+                {
+                  "day": 4,
+                  "title": " Day At Leisure",
+                  "description": "<ul><li>Breakfast at the Hotel</li><li>Your day is at leisure to explore on your own.</li><li>Overnight stay at your Hotel.</li></ul>",
+                  "activities": ["Island Hopping", "Cable Car", "Snorkeling"]
+                },
+                {
+                  "day": 5,
+                  "title": "Inter Hotel Transfer - Garuda Wisnu Kencana Park",
+                  "description": "<ul><li>Breakfast at the Hotel</li><li>After breakfast, check out from your kuta hotel and head to ungasan Hotel.</li><li>After check in: Use the complimentary GWK shuttle to explore Garuda Wisnu Kencana Park.</li><li>Overnight stay at your Hotel.</li></ul>",
+                  "activities": ["Theme Park", "Safari Experience"]
+                },
+                {
+                  "day": 6,
+                  "title": " Full day Ubud Tour",
+                  "description": "<ul><li>Breakfast at the Hotel</li><li>Conclude your day at the scenic Yeh Hoo Waterfall, one of Bali’s most photogenic spots.</li><li>explore Ubud Village, visit the playful residents of the Monkey Forest, and experience the thrill of the Bali Swing overlooking the jungle.</li><li>Overnight stay at your Hotel.</li></ul>",
+                  "activities": ["Theme Park", "Safari Experience"]
+                },
+                {
+                  "day": 7,
+                  "title": "  Day at Leisure",
+                  "description": "<ul><li>Breakfast at the Hotel</li><li>Your day is at leisure to explore on your own.</li><li>Overnight stay at your Hotel.</li></ul>",
+                  "activities": ["Theme Park", "Safari Experience"]
+                },
+                {
+                  "day": 8,
+                  "title": "Departure from Bali",
+                  "description": "<ul><li>After breakfast, it’s time to bid farewell to this island paradise.</li><li>Depending on your flight schedule, enjoy some last-minute shopping in Kuta’s vibrant markets before your private transfer to the airport for your onward journey.</li></ul>",
+                  "activities": ["Theme Park", "Safari Experience"]
+                }
+              ],
+              "gallery": [
+                "asset/image/packages/vietnam/halong-bay.jpg",
+                "asset/image/packages/vietnam/golden-bridge.jpg",
+                "asset/image/packages/vietnam/phu-quoc.jpg",
+                "asset/image/packages/vietnam/sapa.jpg"
+              ]
+            },
+            {
+              "id": "bali-exotic-getaway",
+              "tourid": "TID0031",
+              "title": "Exotic Bali Getaway",
+              "slug": "exotic-bali-getaway",
+              "subtitle": "Ubud, Kuta & Tanah Lot",
+              "tourType": "International Leisure Tour",
+              "departureDate": "15 July 2026",
+              "duration": "6 Days / 5 Nights",
+              "startingPrice": 74990,
+              "currency": "INR",
+              "bannerImage": "asset/image/packages/bali.jfif",
+              "description": "<h2>Overview</h2><p>The Exotic Bali Getaway is a perfect introduction to Indonesia’s island paradise. Explore cultural Ubud, beach vibes of Kuta, and iconic Balinese temples.</p><p>This tour blends relaxation, culture, and scenic beauty—ideal for couples and families.</p>",
+              "highlights": [
+                "Ubud Monkey Forest & Rice Terraces",
+                "Tanah Lot Sunset Temple",
+                "Kuta Beach leisure time",
+                "Traditional Balinese cultural show",
+                "Comfortable beachside stays"
+              ],
+              "inclusions": [
+                "<p><strong>Transfers:</strong> Airport & intercity transfers</p>",
+                "<p><strong>Accommodation:</strong> 5 nights in premium 4★ hotels</p>",
+                "<p><strong>Meals:</strong> Daily breakfast</p>",
+                "<p><strong>Sightseeing:</strong> Guided tours as per itinerary</p>"
+              ],
+              "exclusions": [
+                "<p>Airfare</p>",
+                "<p>Personal expenses</p>",
+                "<p>Travel insurance</p>",
+                "<p>Visa fees</p>"
+              ],
+              "hotelAccommodation": [
+                {
+                  "city": "Ubud",
+                  "nights": 2,
+                  "hotel": "Alaya Resort Ubud",
+                  "rating": 4
+                },
+                {
+                  "city": "Kuta",
+                  "nights": 3,
+                  "hotel": "Bintang Bali Resort",
+                  "rating": 4
+                }
+              ],
+              "itinerary": [
+                {
+                  "day": 1,
+                  "title": "Arrival in Bali",
+                  "description": "<p>Arrival at Ngurah Rai International Airport and transfer to hotel.</p>",
+                  "activities": ["Airport Transfer"]
+                },
+                {
+                  "day": 2,
+                  "title": "Ubud Sightseeing",
+                  "description": "<p>Visit Monkey Forest, Tegalalang Rice Terrace, and local markets.</p>",
+                  "activities": ["Temple Visit", "Cultural Tour"]
+                },
+                {
+                  "day": 3,
+                  "title": "Tanah Lot & Kuta",
+                  "description": "<p>Visit Tanah Lot Temple followed by leisure at Kuta Beach.</p>",
+                  "activities": ["Sunset Temple", "Beach Leisure"]
+                },
+                {
+                  "day": 4,
+                  "title": "Leisure Day",
+                  "description": "<p>Free day to explore or relax.</p>",
+                  "activities": ["Leisure"]
+                },
+                {
+                  "day": 5,
+                  "title": "Optional Water Sports",
+                  "description": "<p>Optional water sports at Tanjung Benoa.</p>",
+                  "activities": ["Water Sports"]
+                },
+                {
+                  "day": 6,
+                  "title": "Departure",
+                  "description": "<p>Transfer to airport for return journey.</p>",
+                  "activities": ["Return Transfer"]
+                }
+              ],
+              "gallery": [
+                "asset/image/packages/bali/exotic-getaway/ubud.jpg",
+                "asset/image/packages/bali/exotic-getaway/kuta.jpg",
+                "asset/image/packages/bali/exotic-getaway/tanah-lot.jpg"
+              ]
+            },
+            {
+              "id": "bali-honeymoon-bliss",
+              "tourid": "TID0032",
+              "title": "Romantic Bali Honeymoon",
+              "slug": "bali-honeymoon-bliss",
+              "subtitle": "Ubud, Nusa Dua & Jimbaran",
+              "tourType": "International Honeymoon Tour",
+              "departureDate": "01 August 2026",
+              "duration": "5 Days / 4 Nights",
+              "startingPrice": 89990,
+              "currency": "INR",
+              "bannerImage": "asset/image/packages/bali3.jfif",
+              "description": "<h2>Overview</h2><p>The Romantic Bali Honeymoon is designed for couples seeking luxury, privacy, and unforgettable moments.</p><p>From private pool villas to beachside candlelight dinners, this tour offers pure romance.</p>",
+              "highlights": [
+                "Private pool villa stay in Ubud",
+                "Candlelight dinner at Jimbaran Beach",
+                "Uluwatu Temple sunset visit",
+                "Relaxing spa experience",
+                "Luxury honeymoon inclusions"
+              ],
+              "inclusions": [
+                "<p><strong>Transfers:</strong> Private airport & sightseeing transfers</p>",
+                "<p><strong>Accommodation:</strong> 4 nights in luxury villas & resorts</p>",
+                "<p><strong>Meals:</strong> Daily breakfast</p>",
+                "<p><strong>Special:</strong> Honeymoon decorations & cake</p>"
+              ],
+              "exclusions": [
+                "<p>Airfare</p>",
+                "<p>Visa fees</p>",
+                "<p>Personal expenses</p>"
+              ],
+              "hotelAccommodation": [
+                {
+                  "city": "Ubud",
+                  "nights": 2,
+                  "hotel": "Kamandalu Ubud",
+                  "rating": 5
+                },
+                {
+                  "city": "Nusa Dua",
+                  "nights": 2,
+                  "hotel": "The Laguna Resort & Spa",
+                  "rating": 5
+                }
+              ],
+              "itinerary": [
+                {
+                  "day": 1,
+                  "title": "Arrival in Bali",
+                  "description": "<p>Private transfer to villa with honeymoon welcome.</p>",
+                  "activities": ["Private Transfer"]
+                },
+                {
+                  "day": 2,
+                  "title": "Ubud & Spa",
+                  "description": "<p>Leisure morning followed by spa session.</p>",
+                  "activities": ["Spa", "Leisure"]
+                },
+                {
+                  "day": 3,
+                  "title": "Uluwatu & Jimbaran",
+                  "description": "<p>Visit Uluwatu Temple and candlelight dinner at Jimbaran Beach.</p>",
+                  "activities": ["Sunset Temple", "Romantic Dinner"]
+                },
+                {
+                  "day": 4,
+                  "title": "Nusa Dua Leisure",
+                  "description": "<p>Free day to relax on the beach.</p>",
+                  "activities": ["Beach Leisure"]
+                },
+                {
+                  "day": 5,
+                  "title": "Departure",
+                  "description": "<p>Transfer to airport.</p>",
+                  "activities": ["Return Transfer"]
+                }
+              ],
+              "gallery": [
+                "asset/image/packages/bali/honeymoon-bliss/ubud-villa.jpg",
+                "asset/image/packages/bali/honeymoon-bliss/jimbaran.jpg",
+                "asset/image/packages/bali/honeymoon-bliss/nusa-dua.jpg"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "dubai-tour",
           "name": "Dubai",
           "packages": [
             {
-              "id": "dubai-3nights",
-              "title": "Dubai – City Tour & Desert Safari",
-              "duration": "3 Nights / 4 Days",
-              "startingPrice": 25750,
+              "id": "dubai-city-desert-safari",
+              "tourid": "TID0003",
+              "title": "Dubai City Tour & Desert Safari",
+              "slug": "dubai-city-tour-desert-safari",
+              "subtitle": "Modern Marvels, Arabian Culture & Golden Dunes",
+              "tourType": "Leisure Tour",
+              "departureDate": "Daily Departures",
+              "duration": "5 Days / 4 Nights",
+              "startingPrice": 89990,
               "currency": "INR",
-              "bannerImage": "asset/image/packages/tour-wide-2.jpg"
+              "bannerImage": "asset/image/packages/tour-wide-2.jpg",
+              "description": "<h2>Overview</h2><p>Experience the best of Dubai with an exciting blend of ultra-modern attractions, rich cultural heritage, and thrilling desert adventures. This Dubai City Tour & Desert Safari package is perfect for travelers seeking iconic sightseeing, luxury experiences, and unforgettable moments in the Arabian desert.</p><p>From towering skyscrapers and luxury malls to dune bashing, camel rides, and traditional Arabian entertainment, this journey showcases Dubai’s unique contrasts.</p><p><strong>Duration:</strong> 5 days, 4 nights</p><p><strong>Departure:</strong> Daily from Dubai</p><p><strong>Style:</strong> City sightseeing & desert adventure</p>",
+              "highlights": [
+                "Half Day Dubai City Tour",
+                "Burj Khalifa Photo Stop",
+                "Palm Jumeirah & Atlantis View",
+                "Dubai Marina Walk",
+                "Desert Safari with Dune Bashing",
+                "BBQ Dinner with Live Entertainment"
+              ],
+              "inclusions": [
+                "<p><strong>Airport transfers:</strong> Return airport transfers on private or shared basis</p>",
+                "<p><strong>Accommodation:</strong> 4 nights in well-appointed 4-star hotel in Dubai</p>",
+                "<p><strong>Meals:</strong> Daily breakfast & BBQ dinner during desert safari</p>",
+                "<p><strong>Sightseeing:</strong> Guided Dubai city tour & desert safari experience</p>",
+                "<p><strong>Experiences:</strong> Dune bashing, camel ride, belly dance, Tanoura & fire show</p>",
+                "<p><strong>Taxes:</strong> All applicable hotel taxes & tourism fees</p>"
+              ],
+              "exclusions": [
+                "<p><strong>International flights:</strong> Flights to and from Dubai</p>",
+                "<p><strong>Visa fees:</strong> UAE tourist visa charges</p>",
+                "<p><strong>Personal expenses:</strong> Shopping, tips, optional activities</p>",
+                "<p><strong>Travel insurance:</strong> Strongly recommended</p>",
+                "<p><strong>Optional tours:</strong> Burj Khalifa entry, Dhow cruise, theme parks</p>"
+              ],
+              "hotelAccommodation": [
+                {
+                  "city": "Dubai",
+                  "nights": 4,
+                  "hotel": "Citymax Hotel / Similar",
+                  "rating": 4
+                }
+              ],
+              "itinerary": [
+                {
+                  "day": 1,
+                  "title": "Arrival in Dubai",
+                  "description": "<h5>'Welcome to the City of Gold'</h5><p>Arrive at Dubai International Airport and transfer to your hotel. The rest of the day is free for leisure or exploring nearby areas.</p><p><strong>Accommodation:</strong> Hotel in Dubai</p><p><strong>Meals:</strong> None</p>",
+                  "activities": [
+                    "Airport Transfer",
+                    "Hotel Check-in",
+                    "Leisure Time"
+                  ]
+                },
+                {
+                  "day": 2,
+                  "title": "Dubai City Tour",
+                  "description": "<h5>'Icons of Modern Dubai'</h5><p>Enjoy a guided half-day Dubai city tour covering Jumeirah Mosque, Burj Al Arab photo stop, Palm Jumeirah, Atlantis The Palm, Dubai Marina, and Burj Khalifa (outside view).</p><p><strong>Meals:</strong> Breakfast</p>",
+                  "activities": [
+                    "City Sightseeing",
+                    "Photo Stops",
+                    "Dubai Marina Walk"
+                  ]
+                },
+                {
+                  "day": 3,
+                  "title": "Desert Safari with BBQ Dinner",
+                  "description": "<h5>'Adventure in the Arabian Desert'</h5><p>Head into the desert for an unforgettable safari experience. Enjoy dune bashing, sandboarding, camel rides, followed by a BBQ dinner with live entertainment at a desert camp.</p><p><strong>Meals:</strong> Breakfast, BBQ Dinner</p>",
+                  "activities": [
+                    "Dune Bashing",
+                    "Camel Ride",
+                    "BBQ Dinner",
+                    "Live Shows"
+                  ]
+                },
+                {
+                  "day": 4,
+                  "title": "Day at Leisure",
+                  "description": "<h5>'Explore at Your Own Pace'</h5><p>A free day to explore Dubai on your own or opt for additional tours such as Burj Khalifa At The Top, Dhow Cruise, or theme parks.</p><p><strong>Meals:</strong> Breakfast</p>",
+                  "activities": ["Leisure Time", "Optional Tours"]
+                },
+                {
+                  "day": 5,
+                  "title": "Departure",
+                  "description": "<h5>'Goodbye Dubai'</h5><p>After breakfast, transfer to the airport for your onward journey with unforgettable memories.</p><p><strong>Meals:</strong> Breakfast</p>",
+                  "activities": ["Hotel Check-out", "Airport Transfer"]
+                }
+              ],
+              "gallery": [
+                "asset/image/packages/dubai/city/burj-khalifa.jpg",
+                "asset/image/packages/dubai/city/palm-jumeirah.jpg",
+                "asset/image/packages/dubai/desert/dune-bashing.jpg",
+                "asset/image/packages/dubai/desert/bbq-dinner.jpg"
+              ]
             },
             {
-              "id": "dubai-luxury",
+              "id": "dubai-luxury-experience",
+              "tourid": "TID0004",
               "title": "Dubai Luxury Experience",
-              "duration": "5 Nights / 6 Days",
-              "startingPrice": 75000,
+              "slug": "dubai-luxury-experience",
+              "subtitle": "Ultra-Luxury, Iconic Experiences & Desert Elegance",
+              "tourType": "Luxury Tour",
+              "departureDate": "Daily Departures",
+              "duration": "6 Days / 5 Nights",
+              "startingPrice": 189990,
               "currency": "INR",
               "bannerImage": "asset/image/packages/SightSeeinguGmRLZ.jpg",
+              "description": "<h2>Overview</h2><p>Indulge in the ultimate Dubai Luxury Experience crafted for travelers who seek exclusivity, comfort, and world-class hospitality. This premium journey combines iconic landmarks, VIP services, luxury accommodations, and bespoke experiences across the city and desert.</p><p>From staying in luxury hotels and enjoying private city tours to VIP Burj Khalifa access, yacht cruising, and a royal-style desert safari, every moment reflects Dubai’s signature opulence.</p><p><strong>Duration:</strong> 6 days, 5 nights</p><p><strong>Departure:</strong> Daily from Dubai</p><p><strong>Style:</strong> Ultra-luxury, private & premium experiences</p>",
               "highlights": [
-                "Burj Khalifa Suite",
-                "Palm Jumeirah",
-                "Private Yacht Tour"
+                "Luxury 5-Star Hotel Stay",
+                "VIP Burj Khalifa At The Top",
+                "Private Dubai City Tour",
+                "Luxury Yacht Cruise at Marina",
+                "Premium Desert Safari Experience",
+                "Fine Dining & Exclusive Experiences"
+              ],
+              "inclusions": [
+                "<p><strong>Private airport transfers:</strong> Luxury vehicle transfers with meet & greet service</p>",
+                "<p><strong>Luxury accommodation:</strong> 5 nights in handpicked 5-star luxury hotels</p>",
+                "<p><strong>Meals:</strong> Daily breakfast, gourmet dining experiences, desert safari dinner</p>",
+                "<p><strong>Sightseeing:</strong> Private guided city tour with VIP entry experiences</p>",
+                "<p><strong>Experiences:</strong> VIP Burj Khalifa, luxury yacht cruise, premium desert safari</p>",
+                "<p><strong>Services:</strong> Personalized assistance & luxury travel support</p>"
+              ],
+              "exclusions": [
+                "<p><strong>International flights:</strong> Flights to and from Dubai</p>",
+                "<p><strong>Visa fees:</strong> UAE tourist visa charges</p>",
+                "<p><strong>Personal expenses:</strong> Spa treatments, shopping, minibar</p>",
+                "<p><strong>Travel insurance:</strong> Strongly recommended</p>",
+                "<p><strong>Optional upgrades:</strong> Helicopter ride, Burj Al Arab dining</p>"
+              ],
+              "hotelAccommodation": [
+                {
+                  "city": "Dubai",
+                  "nights": 5,
+                  "hotel": "Atlantis The Palm / Address Downtown / Similar",
+                  "rating": 5
+                }
+              ],
+              "itinerary": [
+                {
+                  "day": 1,
+                  "title": "Arrival in Dubai – Luxury Welcome",
+                  "description": "<h5>'Welcome to Premium Dubai'</h5><p>Arrive at Dubai International Airport and enjoy a private luxury transfer to your 5-star hotel. Spend the evening relaxing or enjoying hotel amenities.</p><p><strong>Accommodation:</strong> 5-star luxury hotel</p><p><strong>Meals:</strong> None</p>",
+                  "activities": [
+                    "Private Airport Transfer",
+                    "Luxury Hotel Check-in",
+                    "Leisure Time"
+                  ]
+                },
+                {
+                  "day": 2,
+                  "title": "Private Dubai City Tour",
+                  "description": "<h5>'Icons of Elegance'</h5><p>Explore Dubai on a private guided city tour including Jumeirah Mosque, Burj Al Arab photo stop, Palm Jumeirah, Atlantis The Palm, Dubai Marina, and VIP Burj Khalifa At The Top experience.</p><p><strong>Meals:</strong> Breakfast</p>",
+                  "activities": [
+                    "Private City Tour",
+                    "Burj Khalifa VIP Access",
+                    "Photo Stops"
+                  ]
+                },
+                {
+                  "day": 3,
+                  "title": "Luxury Yacht Cruise – Dubai Marina",
+                  "description": "<h5>'Sail in Style'</h5><p>Enjoy a private luxury yacht cruise along Dubai Marina with refreshments, skyline views, and premium onboard service.</p><p><strong>Meals:</strong> Breakfast</p>",
+                  "activities": [
+                    "Private Yacht Cruise",
+                    "Marina Sightseeing",
+                    "Luxury Refreshments"
+                  ]
+                },
+                {
+                  "day": 4,
+                  "title": "Premium Desert Safari",
+                  "description": "<h5>'Royal Desert Experience'</h5><p>Experience a premium desert safari with luxury 4x4 vehicles, extended dune bashing, camel ride, sunset photography, and gourmet dinner at a luxury desert camp.</p><p><strong>Meals:</strong> Breakfast, Luxury Dinner</p>",
+                  "activities": [
+                    "Premium Dune Bashing",
+                    "Camel Ride",
+                    "Luxury Desert Camp Dinner"
+                  ]
+                },
+                {
+                  "day": 5,
+                  "title": "Day at Leisure or Optional Luxury Experiences",
+                  "description": "<h5>'Indulge Your Way'</h5><p>Enjoy a free day for shopping, spa treatments, or opt for exclusive add-ons like helicopter ride, Burj Al Arab dining, or private beach club access.</p><p><strong>Meals:</strong> Breakfast</p>",
+                  "activities": ["Leisure Time", "Optional Luxury Add-ons"]
+                },
+                {
+                  "day": 6,
+                  "title": "Departure",
+                  "description": "<h5>'Until Next Luxury Escape'</h5><p>After breakfast, enjoy a private transfer to the airport for your onward journey.</p><p><strong>Meals:</strong> Breakfast</p>",
+                  "activities": ["Hotel Check-out", "Private Airport Transfer"]
+                }
+              ],
+              "gallery": [
+                "asset/image/packages/dubai/luxury/burj-khalifa-vip.jpg",
+                "asset/image/packages/dubai/luxury/yacht-cruise.jpg",
+                "asset/image/packages/dubai/luxury/desert-camp.jpg",
+                "asset/image/packages/dubai/luxury/atlantis-hotel.jpg"
               ]
             }
           ]
@@ -288,16 +807,126 @@
           "name": "Umrah Packages",
           "packages": [
             {
-              "id": "ramadan-umrah",
+              "id": "ramadan-umrah-package",
+              "tourid": "TID0005",
               "title": "Ramadan Umrah Package",
-              "duration": "20 Days / 19 Nights",
-              "startingPrice": 150000,
+              "slug": "ramadan-umrah-package",
+              "subtitle": "Spiritual Journey During the Blessed Month of Ramadan",
+              "tourType": "Religious Tour",
+              "departureDate": "Ramadan 2026",
+              "duration": "10 Days / 9 Nights",
+              "startingPrice": 179990,
               "currency": "INR",
               "bannerImage": "asset/image/packages/SightSeeinguAzBmB.jpg",
+              "description": "<h2>Overview</h2><p>Perform Umrah during the sacred month of Ramadan and experience unmatched spiritual rewards in the holy cities of Makkah and Madinah. This Ramadan Umrah Package is thoughtfully designed to provide comfort, convenience, and guided religious support throughout your journey.</p><p>Experience the serenity of fasting in the Haram, breaking fast with Iftar near the Holy Mosque, and offering Taraweeh prayers in the most sacred places of Islam.</p><p><strong>Duration:</strong> 10 days, 9 nights</p><p><strong>Departure:</strong> Fixed departures during Ramadan</p><p><strong>Style:</strong> Spiritual, guided & comfortable pilgrimage</p>",
               "highlights": [
-                "Taraweeh Prayers",
-                "Ziyarat Tours",
-                "5-Star Accommodation"
+                "Umrah During Holy Month of Ramadan",
+                "Iftar & Suhoor Near Haram",
+                "Stay Close to Masjid Al Haram",
+                "Guided Umrah Rituals",
+                "Ziyarat in Makkah & Madinah",
+                "Taraweeh Prayers in Holy Mosques"
+              ],
+              "inclusions": [
+                "<p><strong>Visa assistance:</strong> Saudi Umrah visa processing</p>",
+                "<p><strong>Accommodation:</strong> 9 nights in well-located hotels near Haram</p>",
+                "<p><strong>Meals:</strong> Daily Suhoor & Iftar during Ramadan</p>",
+                "<p><strong>Transportation:</strong> Airport transfers & intercity travel by AC coach</p>",
+                "<p><strong>Guidance:</strong> Experienced religious guide for Umrah rituals</p>",
+                "<p><strong>Ziyarat:</strong> Makkah & Madinah guided visits</p>"
+              ],
+              "exclusions": [
+                "<p><strong>International flights:</strong> Airfare to and from Saudi Arabia</p>",
+                "<p><strong>Personal expenses:</strong> Laundry, shopping, room service</p>",
+                "<p><strong>Extra services:</strong> Wheelchair, porter services</p>",
+                "<p><strong>Travel insurance:</strong> Recommended</p>",
+                "<p><strong>Qurbani:</strong> Not included</p>"
+              ],
+              "hotelAccommodation": [
+                {
+                  "city": "Makkah",
+                  "nights": 5,
+                  "hotel": "Anjum Hotel / Similar",
+                  "rating": 4
+                },
+                {
+                  "city": "Madinah",
+                  "nights": 4,
+                  "hotel": "Oberoi Madinah / Similar",
+                  "rating": 5
+                }
+              ],
+              "itinerary": [
+                {
+                  "day": 1,
+                  "title": "Arrival in Jeddah – Transfer to Makkah",
+                  "description": "<h5>'Journey Begins'</h5><p>Arrive at Jeddah International Airport, complete immigration formalities, and transfer to Makkah. Check-in and rest before preparing for Umrah.</p><p><strong>Accommodation:</strong> Hotel in Makkah</p><p><strong>Meals:</strong> Suhoor & Iftar</p>",
+                  "activities": [
+                    "Airport Transfer",
+                    "Hotel Check-in",
+                    "Rest & Preparation"
+                  ]
+                },
+                {
+                  "day": 2,
+                  "title": "Perform Umrah",
+                  "description": "<h5>'Sacred Umrah Rituals'</h5><p>Perform Umrah with guidance including Tawaf, Sa’i, and Halq/Qasr. Spend the rest of the day in prayers at Masjid Al Haram.</p><p><strong>Meals:</strong> Suhoor & Iftar</p>",
+                  "activities": ["Umrah Rituals", "Tawaf", "Sa’i"]
+                },
+                {
+                  "day": 3,
+                  "title": "Makkah Ziyarat",
+                  "description": "<h5>'Historical Islamic Sites'</h5><p>Visit important Islamic landmarks including Jabal Al Noor, Jabal Al Thawr, Mina, Arafat, and Muzdalifah.</p><p><strong>Meals:</strong> Suhoor & Iftar</p>",
+                  "activities": ["Ziyarat Tour", "Religious Guidance"]
+                },
+                {
+                  "day": 4,
+                  "title": "Free Day for Ibadah",
+                  "description": "<h5>'Spiritual Reflection'</h5><p>Spend the day in personal prayers, Quran recitation, and Taraweeh at Masjid Al Haram.</p><p><strong>Meals:</strong> Suhoor & Iftar</p>",
+                  "activities": ["Personal Ibadah", "Taraweeh Prayers"]
+                },
+                {
+                  "day": 5,
+                  "title": "Makkah to Madinah",
+                  "description": "<h5>'Journey to the Prophet’s City'</h5><p>Travel to Madinah by AC coach or train. Check-in and visit Masjid An-Nabawi.</p><p><strong>Accommodation:</strong> Hotel in Madinah</p><p><strong>Meals:</strong> Suhoor & Iftar</p>",
+                  "activities": ["Intercity Transfer", "Masjid An-Nabawi Visit"]
+                },
+                {
+                  "day": 6,
+                  "title": "Madinah Ziyarat",
+                  "description": "<h5>'Sacred Landmarks of Madinah'</h5><p>Visit Jannatul Baqi, Masjid Quba, Masjid Qiblatain, and Uhud Mountain.</p><p><strong>Meals:</strong> Suhoor & Iftar</p>",
+                  "activities": ["Ziyarat Tour", "Religious Learning"]
+                },
+                {
+                  "day": 7,
+                  "title": "Free Day in Madinah",
+                  "description": "<h5>'Peace & Reflection'</h5><p>Spend the day in prayers, Quran recitation, and Taraweeh at Masjid An-Nabawi.</p><p><strong>Meals:</strong> Suhoor & Iftar</p>",
+                  "activities": ["Personal Ibadah", "Taraweeh Prayers"]
+                },
+                {
+                  "day": 8,
+                  "title": "Optional Additional Umrah",
+                  "description": "<h5>'Renewed Intentions'</h5><p>Optional travel for performing an additional Umrah (at own cost).</p><p><strong>Meals:</strong> Suhoor & Iftar</p>",
+                  "activities": ["Optional Umrah"]
+                },
+                {
+                  "day": 9,
+                  "title": "Farewell Tawaf Preparation",
+                  "description": "<h5>'Moments of Gratitude'</h5><p>Prepare spiritually for Farewell Tawaf and final prayers.</p><p><strong>Meals:</strong> Suhoor & Iftar</p>",
+                  "activities": ["Farewell Preparation", "Prayers"]
+                },
+                {
+                  "day": 10,
+                  "title": "Departure",
+                  "description": "<h5>'Return with Blessings'</h5><p>Transfer to Jeddah Airport for departure with cherished spiritual memories.</p><p><strong>Meals:</strong> Suhoor</p>",
+                  "activities": ["Hotel Check-out", "Airport Transfer"]
+                }
+              ],
+              "gallery": [
+                "asset/image/packages/umrah/ramadan/masjid-al-haram.jpg",
+                "asset/image/packages/umrah/ramadan/iftar-haram.jpg",
+                "asset/image/packages/umrah/ramadan/masjid-nabawi.jpg",
+                "asset/image/packages/umrah/ramadan/taraweeh.jpg"
               ]
             }
           ]
@@ -318,6 +947,177 @@
                 "VIP Darshan",
                 "AC Transport"
               ]
+            },
+            {
+              "id": "twelve-jyotirlinga-darshan",
+              "tourid": "TID0006",
+              "title": "12 Jyotirlinga Complete Darshan",
+              "slug": "12-jyotirlinga-complete-darshan",
+              "subtitle": "Sacred Journey to All 12 Abodes of Lord Shiva",
+              "tourType": "Religious Tour",
+              "departureDate": "Monthly Fixed Departures",
+              "duration": "14 Days / 13 Nights",
+              "startingPrice": 149990,
+              "currency": "INR",
+              "bannerImage": "asset/image/packages/SightSeeingTBnhzM.png",
+              "description": "<h2>Overview</h2><p>Embark on a spiritually enriching pilgrimage covering all the 12 sacred Jyotirlingas of Lord Shiva across India. This 12 Jyotirlinga Complete Darshan tour is thoughtfully planned to ensure smooth travel, comfortable stays, and guided temple visits.</p><p>Experience divine blessings at the most revered Shiva temples including Somnath, Kedarnath, Kashi Vishwanath, Mahakaleshwar, Rameshwaram, and more—each holding deep spiritual and mythological significance.</p><p><strong>Duration:</strong> 14 days, 13 nights</p><p><strong>Departure:</strong> Fixed departures from major Indian cities</p><p><strong>Style:</strong> Spiritual pilgrimage with guided darshan</p>",
+              "highlights": [
+                "Darshan of All 12 Jyotirlingas",
+                "Guided Temple Visits",
+                "Kedarnath & Rameshwaram Special Darshan",
+                "Holy Ganga Aarti at Varanasi",
+                "Comfortable Hotels & Transfers",
+                "Experienced Tour Escort"
+              ],
+              "inclusions": [
+                "<p><strong>Accommodation:</strong> 13 nights in comfortable hotels & dharamshalas</p>",
+                "<p><strong>Meals:</strong> Daily breakfast & dinner</p>",
+                "<p><strong>Transportation:</strong> All intercity transfers by AC coach / train / flight (as per itinerary)</p>",
+                "<p><strong>Darshan:</strong> Assisted darshan at all Jyotirlinga temples</p>",
+                "<p><strong>Guide:</strong> Experienced spiritual tour escort</p>",
+                "<p><strong>Sightseeing:</strong> All major pilgrimage sightseeing as per itinerary</p>"
+              ],
+              "exclusions": [
+                "<p><strong>Airfare:</strong> Flights unless specifically mentioned</p>",
+                "<p><strong>VIP Darshan tickets:</strong> Temple special entry charges</p>",
+                "<p><strong>Personal expenses:</strong> Laundry, shopping, tips</p>",
+                "<p><strong>Travel insurance:</strong> Recommended</p>",
+                "<p><strong>Pony/Doli charges:</strong> At Kedarnath (if required)</p>"
+              ],
+              "hotelAccommodation": [
+                {
+                  "city": "Somnath",
+                  "nights": 1,
+                  "hotel": "Hotel Somnath Atithigruh / Similar",
+                  "rating": 3
+                },
+                {
+                  "city": "Ujjain",
+                  "nights": 1,
+                  "hotel": "Hotel Rudraksh / Similar",
+                  "rating": 3
+                },
+                {
+                  "city": "Omkareshwar",
+                  "nights": 1,
+                  "hotel": "Narmada Retreat / Similar",
+                  "rating": 3
+                },
+                {
+                  "city": "Varanasi",
+                  "nights": 2,
+                  "hotel": "Hotel Temple On Ganges / Similar",
+                  "rating": 4
+                },
+                {
+                  "city": "Kedarnath",
+                  "nights": 1,
+                  "hotel": "Govt Guest House / Similar",
+                  "rating": 3
+                },
+                {
+                  "city": "Rameshwaram",
+                  "nights": 1,
+                  "hotel": "Hotel Daiwik / Similar",
+                  "rating": 4
+                }
+              ],
+              "itinerary": [
+                {
+                  "day": 1,
+                  "title": "Arrival – Somnath Jyotirlinga",
+                  "description": "<h5>'First Divine Darshan'</h5><p>Arrive at Somnath and visit Somnath Jyotirlinga. Attend evening Aarti at the temple.</p><p><strong>Accommodation:</strong> Hotel in Somnath</p><p><strong>Meals:</strong> Dinner</p>",
+                  "activities": [
+                    "Arrival",
+                    "Somnath Temple Darshan",
+                    "Evening Aarti"
+                  ]
+                },
+                {
+                  "day": 2,
+                  "title": "Somnath – Nageshwar – Dwarka",
+                  "description": "<h5>'Sacred Gujarat'</h5><p>Visit Nageshwar Jyotirlinga near Dwarka followed by Dwarkadhish Temple darshan.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Nageshwar Jyotirlinga", "Dwarkadhish Temple"]
+                },
+                {
+                  "day": 3,
+                  "title": "Ujjain – Mahakaleshwar",
+                  "description": "<h5>'Abode of Time'</h5><p>Visit Mahakaleshwar Jyotirlinga, one of the most powerful Shiva temples.</p><p><strong>Accommodation:</strong> Hotel in Ujjain</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Mahakaleshwar Darshan", "Temple Rituals"]
+                },
+                {
+                  "day": 4,
+                  "title": "Omkareshwar Jyotirlinga",
+                  "description": "<h5>'Island of Om'</h5><p>Visit Omkareshwar Jyotirlinga located on the sacred Narmada River.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Omkareshwar Temple", "Narmada Parikrama"]
+                },
+                {
+                  "day": 5,
+                  "title": "Varanasi – Kashi Vishwanath",
+                  "description": "<h5>'City of Moksha'</h5><p>Visit Kashi Vishwanath Jyotirlinga and attend the divine Ganga Aarti in the evening.</p><p><strong>Accommodation:</strong> Hotel in Varanasi</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Kashi Vishwanath Darshan", "Ganga Aarti"]
+                },
+                {
+                  "day": 6,
+                  "title": "Kedarnath Jyotirlinga",
+                  "description": "<h5>'Himalayan Abode of Shiva'</h5><p>Travel to Kedarnath and perform darshan at Kedarnath Jyotirlinga.</p><p><strong>Accommodation:</strong> Kedarnath</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Kedarnath Darshan", "Spiritual Prayers"]
+                },
+                {
+                  "day": 7,
+                  "title": "Bhimashankar Jyotirlinga",
+                  "description": "<h5>'Shiva in the Sahyadris'</h5><p>Visit Bhimashankar Jyotirlinga surrounded by lush forests.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Bhimashankar Darshan"]
+                },
+                {
+                  "day": 8,
+                  "title": "Trimbakeshwar Jyotirlinga",
+                  "description": "<h5>'Source of the Godavari'</h5><p>Visit Trimbakeshwar Jyotirlinga near Nashik.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Trimbakeshwar Temple"]
+                },
+                {
+                  "day": 9,
+                  "title": "Grishneshwar Jyotirlinga",
+                  "description": "<h5>'Ellora Sacred Site'</h5><p>Visit Grishneshwar Jyotirlinga near Ellora Caves.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Grishneshwar Darshan"]
+                },
+                {
+                  "day": 10,
+                  "title": "Baidyanath Dham",
+                  "description": "<h5>'Healing Abode'</h5><p>Visit Baidyanath Jyotirlinga in Deoghar.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Baidyanath Darshan"]
+                },
+                {
+                  "day": 11,
+                  "title": "Mallikarjuna Jyotirlinga",
+                  "description": "<h5>'Sacred Hill Temple'</h5><p>Visit Mallikarjuna Jyotirlinga at Srisailam.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Mallikarjuna Darshan"]
+                },
+                {
+                  "day": 12,
+                  "title": "Rameshwaram Jyotirlinga",
+                  "description": "<h5>'Southern Sacred Shrine'</h5><p>Visit Ramanathaswamy Jyotirlinga and perform holy bath rituals.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Rameshwaram Darshan", "Temple Rituals"]
+                },
+                {
+                  "day": 13,
+                  "title": "Return Journey",
+                  "description": "<h5>'Gratitude & Reflection'</h5><p>Begin return journey after completing all 12 Jyotirlinga darshans.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Return Travel"]
+                },
+                {
+                  "day": 14,
+                  "title": "Departure",
+                  "description": "<h5>'Journey Complete'</h5><p>Tour concludes with divine blessings and cherished spiritual memories.</p><p><strong>Meals:</strong> Breakfast</p>",
+                  "activities": ["Tour Completion"]
+                }
+              ],
+              "gallery": [
+                "asset/image/packages/jyotirlinga/somnath.jpg",
+                "asset/image/packages/jyotirlinga/kedarnath.jpg",
+                "asset/image/packages/jyotirlinga/kashi-vishwanath.jpg",
+                "asset/image/packages/jyotirlinga/rameshwaram.jpg"
+              ]
             }
           ]
         }
@@ -332,24 +1132,319 @@
           "name": "North East India",
           "packages": [
             {
-              "id": "arunachal-tawang",
+              "id": "arunachal-tawang-spring-trail",
+              "tourid": "TID0007",
               "title": "Arunachal – Tawang Spring Trail",
+              "slug": "arunachal-tawang-spring-trail",
+              "subtitle": "Snow-Capped Passes, Monasteries & Eastern Himalayas",
+              "tourType": "Adventure & Nature Tour",
+              "departureDate": "March to May",
               "duration": "8 Days / 7 Nights",
-              "startingPrice": 72000,
+              "startingPrice": 64990,
               "currency": "INR",
-              "bannerImage": "asset/image/packages/SightSeeingTBnhzM.png"
+              "bannerImage": "asset/image/packages/SightSeeingTBnhzM.png",
+              "description": "<h2>Overview</h2><p>Discover the untouched beauty of Northeast India with the Arunachal – Tawang Spring Trail. This scenic journey takes you through breathtaking mountain passes, serene monasteries, alpine valleys, and vibrant tribal culture.</p><p>Spring is the perfect season to experience blooming rhododendrons, snow-draped landscapes at Sela Pass, and crystal-clear views of the Eastern Himalayas. Ideal for nature lovers, adventure seekers, and cultural explorers.</p><p><strong>Duration:</strong> 8 days, 7 nights</p><p><strong>Departure:</strong> Fixed departures from Guwahati</p><p><strong>Style:</strong> Scenic, cultural & soft adventure</p>",
+              "highlights": [
+                "Sela Pass & Sela Lake",
+                "Tawang Monastery Visit",
+                "Snow Experience at High Altitude",
+                "Bomdila Monastery & Viewpoints",
+                "Madhuri Lake (Sangestar Tso)",
+                "Eastern Himalayan Landscapes"
+              ],
+              "inclusions": [
+                "<p><strong>Accommodation:</strong> 7 nights in comfortable hotels & homestays</p>",
+                "<p><strong>Meals:</strong> Daily breakfast & dinner</p>",
+                "<p><strong>Transportation:</strong> All transfers & sightseeing by private vehicle</p>",
+                "<p><strong>Permits:</strong> Inner Line Permit (ILP) for Arunachal Pradesh</p>",
+                "<p><strong>Sightseeing:</strong> All sightseeing as per itinerary</p>",
+                "<p><strong>Support:</strong> Experienced local driver & assistance</p>"
+              ],
+              "exclusions": [
+                "<p><strong>Airfare:</strong> Flights or trains to/from Guwahati</p>",
+                "<p><strong>Personal expenses:</strong> Tips, shopping, laundry</p>",
+                "<p><strong>Travel insurance:</strong> Recommended</p>",
+                "<p><strong>Optional activities:</strong> Additional local experiences</p>",
+                "<p><strong>Anything not mentioned:</strong> Under inclusions</p>"
+              ],
+              "hotelAccommodation": [
+                {
+                  "city": "Bomdila",
+                  "nights": 1,
+                  "hotel": "Hotel Tsepal Yangjom / Similar",
+                  "rating": 3
+                },
+                {
+                  "city": "Tawang",
+                  "nights": 3,
+                  "hotel": "Hotel Tawang Heights / Similar",
+                  "rating": 3
+                },
+                {
+                  "city": "Dirang",
+                  "nights": 1,
+                  "hotel": "Dirang Boutique Stay / Similar",
+                  "rating": 3
+                },
+                {
+                  "city": "Guwahati",
+                  "nights": 2,
+                  "hotel": "Hotel Dynasty / Similar",
+                  "rating": 4
+                }
+              ],
+              "itinerary": [
+                {
+                  "day": 1,
+                  "title": "Arrival in Guwahati",
+                  "description": "<h5>'Gateway to Northeast'</h5><p>Arrive in Guwahati and transfer to the hotel. Evening free to relax or explore local markets.</p><p><strong>Accommodation:</strong> Hotel in Guwahati</p><p><strong>Meals:</strong> Dinner</p>",
+                  "activities": ["Arrival", "Hotel Check-in", "Leisure Time"]
+                },
+                {
+                  "day": 2,
+                  "title": "Guwahati to Bomdila",
+                  "description": "<h5>'Journey into the Hills'</h5><p>Drive towards Bomdila via scenic mountain roads. Visit Bomdila Monastery and local viewpoints.</p><p><strong>Accommodation:</strong> Hotel in Bomdila</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": [
+                    "Scenic Drive",
+                    "Bomdila Monastery",
+                    "Mountain Views"
+                  ]
+                },
+                {
+                  "day": 3,
+                  "title": "Bomdila to Tawang via Sela Pass",
+                  "description": "<h5>'Snow & Serenity'</h5><p>Drive through the iconic Sela Pass (13,700 ft) and visit Sela Lake. Experience snow-covered landscapes before reaching Tawang.</p><p><strong>Accommodation:</strong> Hotel in Tawang</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Sela Pass", "Sela Lake", "Snow Experience"]
+                },
+                {
+                  "day": 4,
+                  "title": "Tawang Sightseeing",
+                  "description": "<h5>'Spiritual Heart of Arunachal'</h5><p>Visit Tawang Monastery, the largest in India, followed by local markets and cultural exploration.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": [
+                    "Tawang Monastery",
+                    "Local Sightseeing",
+                    "Cultural Walk"
+                  ]
+                },
+                {
+                  "day": 5,
+                  "title": "Madhuri Lake Excursion",
+                  "description": "<h5>'Hidden Himalayan Gem'</h5><p>Excursion to Madhuri Lake (Sangestar Tso), surrounded by dramatic mountain scenery and frozen landscapes.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": [
+                    "Madhuri Lake Visit",
+                    "Photography",
+                    "Scenic Drive"
+                  ]
+                },
+                {
+                  "day": 6,
+                  "title": "Tawang to Dirang",
+                  "description": "<h5>'Valleys & Rivers'</h5><p>Drive down to Dirang Valley. Visit Dirang Dzong and enjoy riverside views.</p><p><strong>Accommodation:</strong> Hotel in Dirang</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Dirang Dzong", "Valley Views"]
+                },
+                {
+                  "day": 7,
+                  "title": "Dirang to Guwahati",
+                  "description": "<h5>'Return to the Plains'</h5><p>Drive back to Guwahati through scenic landscapes.</p><p><strong>Accommodation:</strong> Hotel in Guwahati</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Scenic Drive", "Relaxation"]
+                },
+                {
+                  "day": 8,
+                  "title": "Departure",
+                  "description": "<h5>'Farewell to the Eastern Himalayas'</h5><p>After breakfast, depart from Guwahati with unforgettable memories.</p><p><strong>Meals:</strong> Breakfast</p>",
+                  "activities": ["Hotel Check-out", "Departure"]
+                }
+              ],
+              "gallery": [
+                "asset/image/packages/arunachal/tawang/sela-pass.jpg",
+                "asset/image/packages/arunachal/tawang/tawang-monastery.jpg",
+                "asset/image/packages/arunachal/tawang/madhuri-lake.jpg",
+                "asset/image/packages/arunachal/tawang/spring-flowers.jpg"
+              ]
             },
             {
-              "id": "seven-sisters",
+              "id": "seven-sisters-complete-tour",
+              "tourid": "TID0008",
               "title": "Seven Sisters Complete Tour",
-              "duration": "15 Days / 14 Nights",
-              "startingPrice": 165000,
+              "slug": "seven-sisters-complete-tour",
+              "subtitle": "Discover the Cultural & Natural Wonders of Northeast India",
+              "tourType": "Cultural & Nature Tour",
+              "departureDate": "October to April",
+              "duration": "14 Days / 13 Nights",
+              "startingPrice": 119990,
               "currency": "INR",
               "bannerImage": "asset/image/packages/SightSeeingSRkxGA.png",
+              "description": "<h2>Overview</h2><p>Explore the enchanting Northeast India with the Seven Sisters Complete Tour, covering all seven states—Assam, Meghalaya, Arunachal Pradesh, Nagaland, Manipur, Mizoram, and Tripura. This immersive journey blends breathtaking landscapes, vibrant tribal cultures, historic monasteries, lush valleys, and serene lakes.</p><p>From the living root bridges of Meghalaya and monasteries of Arunachal to the cultural heartlands of Manipur and Mizoram, this tour offers a comprehensive exploration of India’s most diverse and unexplored region.</p><p><strong>Duration:</strong> 14 days, 13 nights</p><p><strong>Departure:</strong> Fixed departures from Guwahati</p><p><strong>Style:</strong> Cultural immersion, scenic & exploratory</p>",
               "highlights": [
-                "All 7 States",
-                "Tribal Culture",
-                "Adventure Activities"
+                "All Seven Northeast States Covered",
+                "Kaziranga National Park Safari",
+                "Tawang & Bomdila Monasteries",
+                "Living Root Bridge of Meghalaya",
+                "Loktak Lake & Floating Phumdis",
+                "Tribal Culture & Local Experiences"
+              ],
+              "inclusions": [
+                "<p><strong>Accommodation:</strong> 13 nights in selected hotels & homestays</p>",
+                "<p><strong>Meals:</strong> Daily breakfast & dinner</p>",
+                "<p><strong>Transportation:</strong> All transfers & sightseeing by private vehicle</p>",
+                "<p><strong>Permits:</strong> Inner Line Permits for restricted states</p>",
+                "<p><strong>Sightseeing:</strong> All sightseeing as per itinerary</p>",
+                "<p><strong>Support:</strong> Experienced driver & local guides</p>"
+              ],
+              "exclusions": [
+                "<p><strong>Airfare:</strong> Flights or trains to/from Guwahati</p>",
+                "<p><strong>Personal expenses:</strong> Tips, shopping, laundry</p>",
+                "<p><strong>Travel insurance:</strong> Recommended</p>",
+                "<p><strong>Optional activities:</strong> Jeep safari, adventure sports</p>",
+                "<p><strong>Anything not mentioned:</strong> Under inclusions</p>"
+              ],
+              "hotelAccommodation": [
+                {
+                  "city": "Guwahati",
+                  "nights": 2,
+                  "hotel": "Hotel Dynasty / Similar",
+                  "rating": 4
+                },
+                {
+                  "city": "Kaziranga",
+                  "nights": 1,
+                  "hotel": "IORA Retreat / Similar",
+                  "rating": 4
+                },
+                {
+                  "city": "Shillong",
+                  "nights": 2,
+                  "hotel": "Hotel Polo Towers / Similar",
+                  "rating": 4
+                },
+                {
+                  "city": "Bomdila",
+                  "nights": 1,
+                  "hotel": "Hotel Tsepal Yangjom / Similar",
+                  "rating": 3
+                },
+                {
+                  "city": "Tawang",
+                  "nights": 2,
+                  "hotel": "Hotel Tawang Heights / Similar",
+                  "rating": 3
+                },
+                {
+                  "city": "Kohima",
+                  "nights": 1,
+                  "hotel": "Hotel Japfu / Similar",
+                  "rating": 3
+                },
+                {
+                  "city": "Imphal",
+                  "nights": 1,
+                  "hotel": "Hotel Classic / Similar",
+                  "rating": 3
+                },
+                {
+                  "city": "Aizawl",
+                  "nights": 1,
+                  "hotel": "Hotel Regency / Similar",
+                  "rating": 3
+                },
+                {
+                  "city": "Agartala",
+                  "nights": 2,
+                  "hotel": "Hotel Polo Towers / Similar",
+                  "rating": 4
+                }
+              ],
+              "itinerary": [
+                {
+                  "day": 1,
+                  "title": "Arrival in Guwahati",
+                  "description": "<h5>'Gateway to Northeast'</h5><p>Arrive in Guwahati and transfer to hotel. Evening free for leisure or Brahmaputra riverfront walk.</p><p><strong>Accommodation:</strong> Hotel in Guwahati</p><p><strong>Meals:</strong> Dinner</p>",
+                  "activities": ["Arrival", "Hotel Check-in", "Leisure Time"]
+                },
+                {
+                  "day": 2,
+                  "title": "Kaziranga National Park",
+                  "description": "<h5>'Wildlife Encounters'</h5><p>Drive to Kaziranga National Park. Enjoy an optional jeep safari in the park.</p><p><strong>Accommodation:</strong> Hotel in Kaziranga</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Scenic Drive", "Jeep Safari"]
+                },
+                {
+                  "day": 3,
+                  "title": "Kaziranga to Shillong",
+                  "description": "<h5>'Meghalaya Highlands'</h5><p>Travel to Shillong, the Scotland of the East. Visit Umiam Lake en route.</p><p><strong>Accommodation:</strong> Hotel in Shillong</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Umiam Lake", "Shillong Sightseeing"]
+                },
+                {
+                  "day": 4,
+                  "title": "Living Root Bridge & Cherrapunji",
+                  "description": "<h5>'Nature’s Architecture'</h5><p>Visit Cherrapunji, explore waterfalls and the famous living root bridge.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Living Root Bridge", "Waterfalls"]
+                },
+                {
+                  "day": 5,
+                  "title": "Shillong to Bomdila",
+                  "description": "<h5>'Towards Arunachal'</h5><p>Drive to Bomdila via scenic mountain routes.</p><p><strong>Accommodation:</strong> Hotel in Bomdila</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Scenic Drive"]
+                },
+                {
+                  "day": 6,
+                  "title": "Bomdila to Tawang",
+                  "description": "<h5>'High Passes & Monasteries'</h5><p>Drive through Sela Pass and reach Tawang.</p><p><strong>Accommodation:</strong> Hotel in Tawang</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Sela Pass", "Sela Lake"]
+                },
+                {
+                  "day": 7,
+                  "title": "Tawang Sightseeing",
+                  "description": "<h5>'Spiritual Arunachal'</h5><p>Visit Tawang Monastery and local markets.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Tawang Monastery", "Local Exploration"]
+                },
+                {
+                  "day": 8,
+                  "title": "Tawang to Kohima",
+                  "description": "<h5>'Into Nagaland'</h5><p>Travel towards Kohima, exploring tribal culture en route.</p><p><strong>Accommodation:</strong> Hotel in Kohima</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Interstate Travel", "Cultural Interaction"]
+                },
+                {
+                  "day": 9,
+                  "title": "Kohima Sightseeing",
+                  "description": "<h5>'Naga Heritage'</h5><p>Visit Kohima War Cemetery and local villages.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["War Cemetery", "Village Visit"]
+                },
+                {
+                  "day": 10,
+                  "title": "Kohima to Imphal",
+                  "description": "<h5>'Manipur Landscapes'</h5><p>Drive to Imphal.</p><p><strong>Accommodation:</strong> Hotel in Imphal</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Scenic Drive"]
+                },
+                {
+                  "day": 11,
+                  "title": "Imphal Sightseeing",
+                  "description": "<h5>'Floating Lake Wonders'</h5><p>Visit Loktak Lake and explore the floating phumdis.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Loktak Lake", "Local Sightseeing"]
+                },
+                {
+                  "day": 12,
+                  "title": "Imphal to Aizawl",
+                  "description": "<h5>'Mizoram Hills'</h5><p>Travel to Aizawl, capital of Mizoram.</p><p><strong>Accommodation:</strong> Hotel in Aizawl</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Interstate Travel"]
+                },
+                {
+                  "day": 13,
+                  "title": "Aizawl to Agartala",
+                  "description": "<h5>'Tripura Heritage'</h5><p>Proceed to Agartala and explore local culture.</p><p><strong>Accommodation:</strong> Hotel in Agartala</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Scenic Travel"]
+                },
+                {
+                  "day": 14,
+                  "title": "Departure from Agartala",
+                  "description": "<h5>'Journey Ends'</h5><p>After breakfast, depart with unforgettable memories of Northeast India.</p><p><strong>Meals:</strong> Breakfast</p>",
+                  "activities": ["Hotel Check-out", "Departure"]
+                }
+              ],
+              "gallery": [
+                "asset/image/packages/northeast/seven-sisters/meghalaya-root-bridge.jpg",
+                "asset/image/packages/northeast/seven-sisters/tawang-monastery.jpg",
+                "asset/image/packages/northeast/seven-sisters/loktak-lake.jpg",
+                "asset/image/packages/northeast/seven-sisters/kaziranga.jpg"
               ]
             }
           ]
@@ -359,47 +1454,918 @@
           "name": "Himachal Pradesh",
           "packages": [
             {
-              "id": "himachal-adventure",
+              "id": "himachal-adventure-trail",
+              "tourid": "TID0011",
               "title": "Himachal Adventure Trail",
-              "duration": "8 Days / 7 Nights",
-              "startingPrice": 45000,
+              "slug": "himachal-adventure-trail",
+              "subtitle": "Thrills in Manali, Solang, Kasol & Spiti Edge",
+              "tourType": "Adventure Tour",
+              "departureDate": "15 May 2026",
+              "duration": "9 Days / 8 Nights",
+              "startingPrice": 42990,
               "currency": "INR",
               "bannerImage": "asset/image/packages/SightSeeingQEOw8B.png",
-              "highlights": ["Paragliding", "Trekking", "River Rafting"]
-            }
-          ]
-        },
-        {
-          "id": "kerala",
-          "name": "Kerala",
-          "packages": [
-            {
-              "id": "kerala-backwaters",
-              "title": "Kerala Backwaters & Ayurveda",
-              "duration": "7 Days / 6 Nights",
-              "startingPrice": 38500,
-              "currency": "INR",
-              "bannerImage": "asset/image/packages/SightSeeingfivXT9.png",
+              "description": "<h2>Overview</h2><p>The Himachal Adventure Trail is crafted for thrill-seekers and nature lovers who crave mountains, adrenaline, and raw Himalayan beauty. This journey blends adventure sports, scenic drives, riverside camping, and high-altitude landscapes.</p><p>From paragliding in Solang Valley to trekking trails near Spiti’s edge, river rafting in Kullu, and peaceful escapes in Kasol, this tour offers a perfect balance of excitement and serenity.</p><p><strong>Duration:</strong> 9 days, 8 nights</p><p><strong>Departure:</strong> Ex-Delhi / Chandigarh</p><p><strong>Style:</strong> Adventure, mountains & outdoor experiences</p>",
               "highlights": [
-                "Houseboat Stay",
-                "Ayurvedic Spa",
-                "Kathakali Show"
+                "Paragliding in Solang Valley",
+                "River Rafting in Kullu",
+                "Atal Tunnel & Sissu Valley Visit",
+                "Kasol Riverside Camping",
+                "Chandrataal / Spiti Edge Excursion",
+                "Himalayan Trekking Experience"
+              ],
+              "inclusions": [
+                "<p><strong>Transfers:</strong> All transfers and sightseeing by private AC vehicle (non-AC in hills)</p>",
+                "<p><strong>Accommodation:</strong> 8 nights in adventure camps & premium hotels</p>",
+                "<p><strong>Meals:</strong> Daily breakfast & dinner</p>",
+                "<p><strong>Adventure activities:</strong> Paragliding, river rafting, guided trek</p>",
+                "<p><strong>Sightseeing:</strong> All major attractions as per itinerary</p>",
+                "<p><strong>Support:</strong> Professional driver & local assistance</p>"
+              ],
+              "exclusions": [
+                "<p><strong>Personal expenses:</strong> Shopping, tips, laundry</p>",
+                "<p><strong>Travel insurance:</strong> Not included</p>",
+                "<p><strong>Meals:</strong> Lunch & any meals not mentioned</p>",
+                "<p><strong>Optional activities:</strong> ATV rides, zipline, snow activities</p>",
+                "<p><strong>Entry fees:</strong> Camera & monument charges</p>"
+              ],
+              "hotelAccommodation": [
+                {
+                  "city": "Manali",
+                  "nights": 3,
+                  "hotel": "Snow Valley Resorts",
+                  "rating": 4
+                },
+                {
+                  "city": "Sissu / Keylong",
+                  "nights": 1,
+                  "hotel": "Mountain Camp",
+                  "rating": 3
+                },
+                {
+                  "city": "Kasol",
+                  "nights": 2,
+                  "hotel": "Riverside Camp & Cottages",
+                  "rating": 3
+                },
+                {
+                  "city": "Shimla",
+                  "nights": 2,
+                  "hotel": "The Zion Hotel",
+                  "rating": 4
+                }
+              ],
+              "itinerary": [
+                {
+                  "day": 1,
+                  "title": "Arrival – Delhi to Manali",
+                  "description": "<h5>'Journey to the Himalayas'</h5><p>Arrive in Delhi/Chandigarh and proceed on a scenic overnight journey to Manali through the Himalayan foothills.</p><p><strong>Meals:</strong> Dinner</p>",
+                  "activities": ["Overnight Drive", "Mountain Views"]
+                },
+                {
+                  "day": 2,
+                  "title": "Manali Local Sightseeing",
+                  "description": "<h5>'Gateway to Adventure'</h5><p>Explore Hadimba Temple, Old Manali, Vashisht Hot Springs, and Mall Road.</p><p><strong>Accommodation:</strong> Manali Hotel</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Temple Visit", "Local Market Walk"]
+                },
+                {
+                  "day": 3,
+                  "title": "Solang Valley Adventure",
+                  "description": "<h5>'Thrill in the Air'</h5><p>Enjoy paragliding, zorbing, and snow activities at Solang Valley.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Paragliding", "Snow Activities"]
+                },
+                {
+                  "day": 4,
+                  "title": "Atal Tunnel – Sissu – Keylong",
+                  "description": "<h5>'Into the High Himalayas'</h5><p>Drive through Atal Tunnel to Sissu Valley and experience raw Himalayan landscapes.</p><p><strong>Accommodation:</strong> Camp Stay</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Atal Tunnel", "Valley Exploration"]
+                },
+                {
+                  "day": 5,
+                  "title": "Keylong to Kasol via Kullu",
+                  "description": "<h5>'Rivers & Valleys'</h5><p>En route river rafting in Kullu before reaching Kasol.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["River Rafting", "Scenic Drive"]
+                },
+                {
+                  "day": 6,
+                  "title": "Kasol & Chalal Trek",
+                  "description": "<h5>'Trek into Serenity'</h5><p>Short trek to Chalal Village followed by riverside relaxation.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Village Trek", "Nature Walk"]
+                },
+                {
+                  "day": 7,
+                  "title": "Kasol to Shimla",
+                  "description": "<h5>'Colonial Hills'</h5><p>Drive to Shimla with scenic Himalayan views.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Mountain Drive"]
+                },
+                {
+                  "day": 8,
+                  "title": "Shimla Sightseeing",
+                  "description": "<h5>'Queen of Hills'</h5><p>Visit Kufri, Jakhoo Temple, Ridge & Mall Road.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Kufri Visit", "Mall Road"]
+                },
+                {
+                  "day": 9,
+                  "title": "Departure – Shimla to Delhi",
+                  "description": "<h5>'Adventure Ends, Memories Begin'</h5><p>Return journey with unforgettable adventure memories.</p><p><strong>Meals:</strong> Breakfast</p>",
+                  "activities": ["Return Transfer"]
+                }
+              ],
+              "gallery": [
+                "asset/image/packages/himachal/adventure/solang-paragliding.jpg",
+                "asset/image/packages/himachal/adventure/atal-tunnel.jpg",
+                "asset/image/packages/himachal/adventure/kasol-river.jpg",
+                "asset/image/packages/himachal/adventure/shimla-mall-road.jpg"
+              ]
+            },
+            {
+              "id": "himachal-scenic-escape",
+              "tourid": "TID0021",
+              "title": "Himachal Scenic Escape",
+              "slug": "himachal-scenic-escape",
+              "subtitle": "Manali, Solang Valley, Shimla & Kufri",
+              "tourType": "Domestic Leisure Tour",
+              "departureDate": "10 April 2026",
+              "duration": "7 Days / 6 Nights",
+              "startingPrice": 32990,
+              "currency": "INR",
+              "bannerImage": "asset/image/packages/himachal 1.jpg",
+              "description": "<h2>Overview</h2><p>The Himachal Scenic Escape is a perfect domestic holiday designed for families, couples, and first-time Himalayan travelers. This tour blends snow-capped mountains, pine forests, colonial hill towns, and peaceful valleys.</p><p>Experience the charm of Manali, the adventure-filled Solang Valley, and the colonial elegance of Shimla with comfortable stays and relaxed sightseeing.</p><p><strong>Duration:</strong> 7 days, 6 nights</p><p><strong>Departure:</strong> Ex-Delhi / Chandigarh</p><p><strong>Style:</strong> Leisure, mountains & scenic sightseeing</p>",
+              "highlights": [
+                "Solang Valley Snow & Adventure Activities",
+                "Hadimba Temple & Old Manali Visit",
+                "Scenic Drive through Kullu Valley",
+                "Kufri Snow Point Excursion",
+                "Mall Road Walks in Manali & Shimla",
+                "Beautiful Himalayan Mountain Views"
+              ],
+              "inclusions": [
+                "<p><strong>Transfers:</strong> All transfers & sightseeing by private AC vehicle (non-AC in hills)</p>",
+                "<p><strong>Accommodation:</strong> 6 nights in comfortable 3★ / 4★ hotels</p>",
+                "<p><strong>Meals:</strong> Daily breakfast & dinner</p>",
+                "<p><strong>Sightseeing:</strong> All sightseeing as per itinerary</p>",
+                "<p><strong>Support:</strong> Professional driver & on-trip assistance</p>"
+              ],
+              "exclusions": [
+                "<p><strong>Personal expenses:</strong> Shopping, tips, laundry</p>",
+                "<p><strong>Lunch:</strong> Any lunch not mentioned</p>",
+                "<p><strong>Adventure activities:</strong> Paragliding, snow sports (optional)</p>",
+                "<p><strong>Entry fees:</strong> Monument & camera charges</p>",
+                "<p><strong>Travel insurance:</strong> Not included</p>"
+              ],
+              "hotelAccommodation": [
+                {
+                  "city": "Manali",
+                  "nights": 3,
+                  "hotel": "Snow Valley Resorts",
+                  "rating": 4
+                },
+                {
+                  "city": "Shimla",
+                  "nights": 3,
+                  "hotel": "The Zion Hotel",
+                  "rating": 4
+                }
+              ],
+              "itinerary": [
+                {
+                  "day": 1,
+                  "title": "Arrival – Delhi to Manali",
+                  "description": "<h5>'Journey to the Mountains'</h5><p>Arrive in Delhi/Chandigarh and begin a scenic overnight drive to Manali through the Himalayan foothills.</p><p><strong>Meals:</strong> Dinner</p>",
+                  "activities": ["Overnight Drive", "Mountain Views"]
+                },
+                {
+                  "day": 2,
+                  "title": "Manali Local Sightseeing",
+                  "description": "<h5>'Discover Manali'</h5><p>Visit Hadimba Temple, Vashisht Hot Springs, Old Manali & Mall Road.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Temple Visit", "Local Market Walk"]
+                },
+                {
+                  "day": 3,
+                  "title": "Solang Valley Excursion",
+                  "description": "<h5>'Snow & Adventure'</h5><p>Enjoy snow activities and scenic views at Solang Valley.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Snow Activities", "Photography"]
+                },
+                {
+                  "day": 4,
+                  "title": "Manali to Shimla via Kullu",
+                  "description": "<h5>'Valleys & Rivers'</h5><p>Drive to Shimla via Kullu Valley with river views.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Scenic Drive"]
+                },
+                {
+                  "day": 5,
+                  "title": "Shimla & Kufri Sightseeing",
+                  "description": "<h5>'Queen of Hills'</h5><p>Visit Kufri Snow Point, Jakhoo Temple, Ridge & Mall Road.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Kufri Visit", "Mall Road Walk"]
+                },
+                {
+                  "day": 6,
+                  "title": "Free Day in Shimla",
+                  "description": "<h5>'Relax & Explore'</h5><p>Enjoy leisure time for shopping or optional local activities.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Leisure Day"]
+                },
+                {
+                  "day": 7,
+                  "title": "Departure – Shimla to Delhi",
+                  "description": "<h5>'Tour Ends'</h5><p>Return journey with unforgettable Himalayan memories.</p><p><strong>Meals:</strong> Breakfast</p>",
+                  "activities": ["Return Transfer"]
+                }
+              ],
+              "gallery": [
+                "asset/image/packages/himachal/scenic-escape/manali.jpg",
+                "asset/image/packages/himachal/scenic-escape/solang.jpg",
+                "asset/image/packages/himachal/scenic-escape/kufri.jpg",
+                "asset/image/packages/himachal/scenic-escape/shimla.jpg"
+              ]
+            },
+            {
+              "id": "himachal-family-delight",
+              "tourid": "TID0022",
+              "title": "Himachal Family Delight",
+              "slug": "himachal-family-delight",
+              "subtitle": "Manali, Kullu, Shimla & Kufri",
+              "tourType": "Domestic Family Tour",
+              "departureDate": "05 June 2026",
+              "duration": "6 Days / 5 Nights",
+              "startingPrice": 28990,
+              "currency": "INR",
+              "bannerImage": "asset/image/packages/himachal 3.jfif",
+              "description": "<h2>Overview</h2><p>The Himachal Family Delight tour is specially designed for families seeking a relaxed and comfortable holiday in the mountains. This tour covers popular hill destinations with easy travel pace and enjoyable sightseeing.</p><p>From temple visits in Manali to snow fun in Kufri and scenic drives through Kullu Valley, this package ensures a memorable family vacation.</p>",
+              "highlights": [
+                "Family-friendly sightseeing",
+                "Solang Valley snow activities",
+                "Kullu Valley scenic drive",
+                "Kufri Snow Point visit",
+                "Mall Road shopping experience"
+              ],
+              "inclusions": [
+                "<p><strong>Transfers:</strong> Private vehicle for sightseeing</p>",
+                "<p><strong>Accommodation:</strong> 5 nights in family-friendly hotels</p>",
+                "<p><strong>Meals:</strong> Breakfast & dinner</p>",
+                "<p><strong>Sightseeing:</strong> As per itinerary</p>"
+              ],
+              "exclusions": [
+                "<p>Personal expenses</p>",
+                "<p>Lunch</p>",
+                "<p>Optional adventure activities</p>"
+              ],
+              "hotelAccommodation": [
+                {
+                  "city": "Manali",
+                  "nights": 3,
+                  "hotel": "Snow Valley Resorts",
+                  "rating": 4
+                },
+                {
+                  "city": "Shimla",
+                  "nights": 2,
+                  "hotel": "Hotel Willow Banks",
+                  "rating": 4
+                }
+              ],
+              "itinerary": [
+                {
+                  "day": 1,
+                  "title": "Delhi to Manali",
+                  "description": "<p>Overnight journey to Manali.</p>",
+                  "activities": ["Overnight Drive"]
+                },
+                {
+                  "day": 2,
+                  "title": "Manali Sightseeing",
+                  "description": "<p>Hadimba Temple, Old Manali & Mall Road.</p>",
+                  "activities": ["Temple Visit", "Shopping"]
+                },
+                {
+                  "day": 3,
+                  "title": "Solang Valley",
+                  "description": "<p>Snow activities and sightseeing.</p>",
+                  "activities": ["Snow Fun"]
+                },
+                {
+                  "day": 4,
+                  "title": "Manali to Shimla",
+                  "description": "<p>Scenic drive via Kullu Valley.</p>",
+                  "activities": ["Scenic Drive"]
+                },
+                {
+                  "day": 5,
+                  "title": "Shimla & Kufri",
+                  "description": "<p>Visit Kufri, Jakhoo Temple & Mall Road.</p>",
+                  "activities": ["Kufri Visit"]
+                },
+                {
+                  "day": 6,
+                  "title": "Shimla to Delhi",
+                  "description": "<p>Departure.</p>",
+                  "activities": ["Return Transfer"]
+                }
+              ],
+              "gallery": [
+                "asset/image/packages/himachal/family-delight/manali.jpg",
+                "asset/image/packages/himachal/family-delight/solang.jpg",
+                "asset/image/packages/himachal/family-delight/shimla.jpg"
+              ]
+            },
+            {
+              "id": "himachal-honeymoon-retreat",
+              "tourid": "TID0023",
+              "title": "Romantic Himachal Honeymoon",
+              "slug": "himachal-honeymoon-retreat",
+              "subtitle": "Manali, Solang Valley & Shimla",
+              "tourType": "Domestic Honeymoon Tour",
+              "departureDate": "20 March 2026",
+              "duration": "5 Days / 4 Nights",
+              "startingPrice": 34990,
+              "currency": "INR",
+              "bannerImage": "asset/image/packages/himachal 4.jpg",
+              "description": "<h2>Overview</h2><p>The Romantic Himachal Honeymoon is a perfect escape for newlyweds seeking scenic beauty, cozy stays, and peaceful moments in the Himalayas.</p><p>Enjoy candlelight dinners, snow landscapes, and leisure time amidst breathtaking mountain views.</p>",
+              "highlights": [
+                "Candlelight dinner experience",
+                "Snow romance in Solang Valley",
+                "Private sightseeing tours",
+                "Scenic mountain stays",
+                "Mall Road evening walks"
+              ],
+              "inclusions": [
+                "<p><strong>Transfers:</strong> Private cab for the entire tour</p>",
+                "<p><strong>Accommodation:</strong> Romantic stays in premium hotels</p>",
+                "<p><strong>Meals:</strong> Daily breakfast & dinner</p>",
+                "<p><strong>Special:</strong> Honeymoon decoration & cake</p>"
+              ],
+              "exclusions": [
+                "<p>Personal expenses</p>",
+                "<p>Lunch</p>",
+                "<p>Adventure activities</p>"
+              ],
+              "hotelAccommodation": [
+                {
+                  "city": "Manali",
+                  "nights": 3,
+                  "hotel": "Apple Country Resort",
+                  "rating": 4
+                },
+                {
+                  "city": "Shimla",
+                  "nights": 1,
+                  "hotel": "The Oberoi Cecil",
+                  "rating": 5
+                }
+              ],
+              "itinerary": [
+                {
+                  "day": 1,
+                  "title": "Arrival – Delhi to Manali",
+                  "description": "<p>Overnight journey to Manali.</p>",
+                  "activities": ["Overnight Drive"]
+                },
+                {
+                  "day": 2,
+                  "title": "Manali Local Sightseeing",
+                  "description": "<p>Hadimba Temple, Old Manali & leisure time.</p>",
+                  "activities": ["Sightseeing"]
+                },
+                {
+                  "day": 3,
+                  "title": "Solang Valley Excursion",
+                  "description": "<p>Snow activities and photography.</p>",
+                  "activities": ["Snow Activities"]
+                },
+                {
+                  "day": 4,
+                  "title": "Manali to Shimla",
+                  "description": "<p>Scenic drive to Shimla.</p>",
+                  "activities": ["Scenic Drive"]
+                },
+                {
+                  "day": 5,
+                  "title": "Departure – Shimla to Delhi",
+                  "description": "<p>Tour concludes with beautiful memories.</p>",
+                  "activities": ["Return Transfer"]
+                }
+              ],
+              "gallery": [
+                "asset/image/packages/himachal/honeymoon-retreat/romantic-stay.jpg",
+                "asset/image/packages/himachal/honeymoon-retreat/solang.jpg",
+                "asset/image/packages/himachal/honeymoon-retreat/shimla.jpg"
               ]
             }
           ]
         },
         {
-          "id": "ladakh",
+          "id": "kerala-tour",
+          "name": "Kerala",
+          "packages": [
+            {
+              "id": "kerala-backwaters-ayurveda",
+              "tourid": "TID0012",
+              "title": "Kerala Backwaters & Ayurveda",
+              "slug": "kerala-backwaters-ayurveda",
+              "subtitle": "Houseboats, Hill Stations & Rejuvenation",
+              "tourType": "Wellness & Leisure Tour",
+              "departureDate": "10 June 2026",
+              "duration": "8 Days / 7 Nights",
+              "startingPrice": 58990,
+              "currency": "INR",
+              "bannerImage": "asset/image/packages/SightSeeingfivXT9.png",
+              "description": "<h2>Overview</h2><p>Kerala Backwaters & Ayurveda is a soul-soothing journey designed for travelers seeking relaxation, natural beauty, and holistic wellness. This experience blends misty hill stations, tranquil backwaters, serene beaches, and authentic Ayurvedic therapies.</p><p>Drift through palm-lined canals on a traditional houseboat, rejuvenate your body with time-tested Ayurvedic treatments, and explore Kerala’s rich culture and lush landscapes.</p><p><strong>Duration:</strong> 8 days, 7 nights</p><p><strong>Departure:</strong> Ex-Cochin</p><p><strong>Style:</strong> Wellness, nature & slow travel</p>",
+              "highlights": [
+                "Overnight Houseboat in Alleppey",
+                "Authentic Ayurvedic Therapy Sessions",
+                "Munnar Tea Gardens & Waterfalls",
+                "Kathakali Cultural Performance",
+                "Varkala Cliff Beach Experience",
+                "Spice Plantation Visit"
+              ],
+              "inclusions": [
+                "<p><strong>Transfers:</strong> All airport transfers & sightseeing by private AC vehicle</p>",
+                "<p><strong>Accommodation:</strong> 7 nights in premium resorts, houseboat & wellness retreat</p>",
+                "<p><strong>Meals:</strong> Daily breakfast, houseboat meals & Ayurvedic diet (where applicable)</p>",
+                "<p><strong>Wellness:</strong> Ayurveda consultation & therapy sessions</p>",
+                "<p><strong>Sightseeing:</strong> All major attractions as per itinerary</p>",
+                "<p><strong>Support:</strong> Experienced driver & local assistance</p>"
+              ],
+              "exclusions": [
+                "<p><strong>Airfare:</strong> Flights to/from Cochin</p>",
+                "<p><strong>Personal expenses:</strong> Laundry, tips, shopping</p>",
+                "<p><strong>Travel insurance:</strong> Not included</p>",
+                "<p><strong>Optional activities:</strong> Additional spa therapies, water sports</p>",
+                "<p><strong>Camera fees:</strong> Entry & photography charges</p>"
+              ],
+              "hotelAccommodation": [
+                {
+                  "city": "Munnar",
+                  "nights": 2,
+                  "hotel": "Tea County Resort",
+                  "rating": 4
+                },
+                {
+                  "city": "Thekkady",
+                  "nights": 1,
+                  "hotel": "Spice Village Resort",
+                  "rating": 4
+                },
+                {
+                  "city": "Alleppey",
+                  "nights": 1,
+                  "hotel": "Premium Houseboat",
+                  "rating": 5
+                },
+                {
+                  "city": "Varkala",
+                  "nights": 3,
+                  "hotel": "AyurSoul Wellness Retreat",
+                  "rating": 5
+                }
+              ],
+              "itinerary": [
+                {
+                  "day": 1,
+                  "title": "Arrival in Cochin – Transfer to Munnar",
+                  "description": "<h5>'Into the Western Ghats'</h5><p>Arrive at Cochin Airport and drive to Munnar, visiting waterfalls and spice gardens en route.</p><p><strong>Accommodation:</strong> Resort in Munnar</p><p><strong>Meals:</strong> Dinner</p>",
+                  "activities": ["Airport Transfer", "Scenic Drive"]
+                },
+                {
+                  "day": 2,
+                  "title": "Munnar Sightseeing",
+                  "description": "<h5>'Tea & Tranquility'</h5><p>Explore tea plantations, Mattupetty Dam, Echo Point, and Eravikulam National Park.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Tea Gardens", "National Park Visit"]
+                },
+                {
+                  "day": 3,
+                  "title": "Munnar to Thekkady",
+                  "description": "<h5>'Spice Trails'</h5><p>Drive to Thekkady and enjoy a guided spice plantation tour.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Spice Plantation", "Nature Walk"]
+                },
+                {
+                  "day": 4,
+                  "title": "Thekkady to Alleppey Houseboat",
+                  "description": "<h5>'Floating Serenity'</h5><p>Board your houseboat for a tranquil backwater cruise with freshly prepared Kerala meals.</p><p><strong>Accommodation:</strong> Houseboat</p><p><strong>Meals:</strong> Breakfast, Lunch, Dinner</p>",
+                  "activities": ["Backwater Cruise", "Village Life Views"]
+                },
+                {
+                  "day": 5,
+                  "title": "Alleppey to Varkala",
+                  "description": "<h5>'Cliffside Calm'</h5><p>Disembark the houseboat and transfer to Varkala beach.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Beach Leisure"]
+                },
+                {
+                  "day": 6,
+                  "title": "Varkala Ayurveda Therapy",
+                  "description": "<h5>'Heal & Rejuvenate'</h5><p>Personalized Ayurvedic consultation followed by therapy sessions.</p><p><strong>Meals:</strong> Breakfast, Ayurvedic Dinner</p>",
+                  "activities": ["Ayurveda Therapy", "Meditation"]
+                },
+                {
+                  "day": 7,
+                  "title": "Varkala Leisure & Culture",
+                  "description": "<h5>'Mindful Moments'</h5><p>Enjoy free time at the beach and attend a Kathakali cultural performance.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Cultural Show", "Cliff Walk"]
+                },
+                {
+                  "day": 8,
+                  "title": "Departure – Trivandrum / Cochin",
+                  "description": "<h5>'Relaxed & Renewed'</h5><p>Transfer to the airport with refreshed body and mind.</p><p><strong>Meals:</strong> Breakfast</p>",
+                  "activities": ["Airport Transfer"]
+                }
+              ],
+              "gallery": [
+                "asset/image/packages/kerala/wellness/backwaters.jpg",
+                "asset/image/packages/kerala/wellness/houseboat.jpg",
+                "asset/image/packages/kerala/wellness/ayurveda-spa.jpg",
+                "asset/image/packages/kerala/wellness/varkala-beach.jpg"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rajasthan-tour",
+          "name": "Rajasthan",
+          "packages": [
+            {
+              "id": "royal-rajasthan-heritage",
+              "tourid": "TID0041",
+              "title": "Royal Rajasthan Heritage Tour",
+              "slug": "royal-rajasthan-heritage",
+              "subtitle": "Jaipur, Jodhpur & Udaipur",
+              "tourType": "Domestic Heritage Tour",
+              "departureDate": "12 October 2026",
+              "duration": "7 Days / 6 Nights",
+              "startingPrice": 35990,
+              "currency": "INR",
+              "bannerImage": "asset/image/packages/rajasthan.jfif",
+              "description": "<h2>Overview</h2><p>Explore the royal legacy of Rajasthan with majestic forts, palaces, and colorful bazaars.</p>",
+              "highlights": [
+                "Amber Fort & City Palace",
+                "Mehrangarh Fort visit",
+                "Udaipur Lake Pichola boat ride",
+                "Cultural folk performances",
+                "Traditional Rajasthani markets"
+              ],
+              "inclusions": [
+                "<p>Private vehicle for sightseeing</p>",
+                "<p>6 nights hotel accommodation</p>",
+                "<p>Daily breakfast & dinner</p>"
+              ],
+              "exclusions": ["<p>Lunch</p>", "<p>Personal expenses</p>"],
+              "hotelAccommodation": [
+                {
+                  "city": "Jaipur",
+                  "nights": 2,
+                  "hotel": "Hotel Royal Orchid",
+                  "rating": 4
+                },
+                {
+                  "city": "Jodhpur",
+                  "nights": 2,
+                  "hotel": "Indana Palace",
+                  "rating": 4
+                },
+                {
+                  "city": "Udaipur",
+                  "nights": 2,
+                  "hotel": "Hotel Lakend",
+                  "rating": 4
+                }
+              ],
+              "itinerary": [
+                {
+                  "day": 1,
+                  "title": "Arrival in Jaipur",
+                  "description": "<p>Arrival and rest.</p>",
+                  "activities": ["Arrival"]
+                },
+                {
+                  "day": 2,
+                  "title": "Jaipur Sightseeing",
+                  "description": "<p>Amber Fort, City Palace.</p>",
+                  "activities": ["Fort Visit"]
+                },
+                {
+                  "day": 3,
+                  "title": "Jaipur to Jodhpur",
+                  "description": "<p>Drive to Jodhpur.</p>",
+                  "activities": ["Scenic Drive"]
+                },
+                {
+                  "day": 4,
+                  "title": "Jodhpur Sightseeing",
+                  "description": "<p>Mehrangarh Fort.</p>",
+                  "activities": ["Heritage Tour"]
+                },
+                {
+                  "day": 5,
+                  "title": "Jodhpur to Udaipur",
+                  "description": "<p>Drive to Udaipur.</p>",
+                  "activities": ["Drive"]
+                },
+                {
+                  "day": 6,
+                  "title": "Udaipur Sightseeing",
+                  "description": "<p>City Palace & Lake Pichola.</p>",
+                  "activities": ["Boat Ride"]
+                },
+                {
+                  "day": 7,
+                  "title": "Departure",
+                  "description": "<p>Tour ends.</p>",
+                  "activities": ["Departure"]
+                }
+              ],
+              "gallery": [
+                "asset/image/packages/rajasthan/heritage/jaipur.jpg",
+                "asset/image/packages/rajasthan/heritage/jodhpur.jpg",
+                "asset/image/packages/rajasthan/heritage/udaipur.jpg"
+              ]
+            },
+            {
+              "id": "rajasthan-honeymoon-romance",
+              "tourid": "TID0042",
+              "title": "Romantic Rajasthan Honeymoon",
+              "slug": "rajasthan-honeymoon-romance",
+              "subtitle": "Udaipur & Jaipur",
+              "tourType": "Domestic Honeymoon Tour",
+              "departureDate": "20 November 2026",
+              "duration": "5 Days / 4 Nights",
+              "startingPrice": 39990,
+              "currency": "INR",
+              "bannerImage": "asset/image/packages/rajasthan1.jpg",
+              "description": "<h2>Overview</h2><p>A romantic escape through Rajasthan’s most charming cities.</p>",
+              "highlights": [
+                "Lake Pichola sunset boat ride",
+                "Candlelight dinner",
+                "Heritage palace stay",
+                "Romantic city walks"
+              ],
+              "inclusions": [
+                "<p>Private cab</p>",
+                "<p>4 nights premium hotels</p>",
+                "<p>Breakfast & dinner</p>",
+                "<p>Honeymoon cake & décor</p>"
+              ],
+              "exclusions": ["<p>Lunch</p>", "<p>Personal expenses</p>"],
+              "hotelAccommodation": [
+                {
+                  "city": "Udaipur",
+                  "nights": 2,
+                  "hotel": "Trident Udaipur",
+                  "rating": 5
+                },
+                {
+                  "city": "Jaipur",
+                  "nights": 2,
+                  "hotel": "ITC Rajputana",
+                  "rating": 5
+                }
+              ],
+              "itinerary": [
+                {
+                  "day": 1,
+                  "title": "Arrival Udaipur",
+                  "description": "<p>Arrival & leisure.</p>",
+                  "activities": ["Arrival"]
+                },
+                {
+                  "day": 2,
+                  "title": "Udaipur Sightseeing",
+                  "description": "<p>City Palace & Lake.</p>",
+                  "activities": ["Romantic Boat Ride"]
+                },
+                {
+                  "day": 3,
+                  "title": "Udaipur to Jaipur",
+                  "description": "<p>Travel to Jaipur.</p>",
+                  "activities": ["Drive"]
+                },
+                {
+                  "day": 4,
+                  "title": "Jaipur Sightseeing",
+                  "description": "<p>Amber Fort & shopping.</p>",
+                  "activities": ["Sightseeing"]
+                },
+                {
+                  "day": 5,
+                  "title": "Departure",
+                  "description": "<p>Tour ends.</p>",
+                  "activities": ["Departure"]
+                }
+              ],
+              "gallery": [
+                "asset/image/packages/rajasthan/honeymoon/udaipur.jpg",
+                "asset/image/packages/rajasthan/honeymoon/jaipur.jpg"
+              ]
+            },
+            {
+              "id": "rajasthan-desert-safari",
+              "tourid": "TID0043",
+              "title": "Rajasthan Desert Safari Experience",
+              "slug": "rajasthan-desert-safari",
+              "subtitle": "Jaisalmer & Sam Sand Dunes",
+              "tourType": "Domestic Adventure Tour",
+              "departureDate": "05 December 2026",
+              "duration": "4 Days / 3 Nights",
+              "startingPrice": 24990,
+              "currency": "INR",
+              "bannerImage": "asset/image/packages/rajasthan4.jfif",
+              "description": "<h2>Overview</h2><p>Experience the golden desert with camel safaris and cultural nights.</p>",
+              "highlights": [
+                "Camel safari at Sam dunes",
+                "Desert camp stay",
+                "Folk dance & music",
+                "Jaisalmer Fort visit"
+              ],
+              "inclusions": [
+                "<p>3 nights stay</p>",
+                "<p>Breakfast & dinner</p>",
+                "<p>Desert safari</p>"
+              ],
+              "exclusions": ["<p>Lunch</p>", "<p>Personal expenses</p>"],
+              "hotelAccommodation": [
+                {
+                  "city": "Jaisalmer",
+                  "nights": 2,
+                  "hotel": "Hotel Golden Haveli",
+                  "rating": 4
+                },
+                {
+                  "city": "Sam Desert",
+                  "nights": 1,
+                  "hotel": "Desert Camp",
+                  "rating": 3
+                }
+              ],
+              "itinerary": [
+                {
+                  "day": 1,
+                  "title": "Arrival Jaisalmer",
+                  "description": "<p>Check-in.</p>",
+                  "activities": ["Arrival"]
+                },
+                {
+                  "day": 2,
+                  "title": "Fort & Desert Camp",
+                  "description": "<p>Fort visit & camp.</p>",
+                  "activities": ["Camel Safari"]
+                },
+                {
+                  "day": 3,
+                  "title": "Cultural Evening",
+                  "description": "<p>Folk dance night.</p>",
+                  "activities": ["Cultural Show"]
+                },
+                {
+                  "day": 4,
+                  "title": "Departure",
+                  "description": "<p>Tour ends.</p>",
+                  "activities": ["Departure"]
+                }
+              ],
+              "gallery": [
+                "asset/image/packages/rajasthan/desert/jaisalmer.jpg",
+                "asset/image/packages/rajasthan/desert/sam.jpg"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ladakh-tour",
           "name": "Ladakh",
           "packages": [
             {
-              "id": "ladakh-bike-tour",
+              "id": "ladakh-bike-expedition",
+              "tourid": "TID0013",
               "title": "Ladakh Bike Expedition",
-              "duration": "12 Days / 11 Nights",
-              "startingPrice": 68000,
+              "slug": "ladakh-bike-expedition",
+              "subtitle": "Ride Through the World’s Highest Motorable Roads",
+              "tourType": "Bike Expedition Tour",
+              "departureDate": "25 June 2026",
+              "duration": "10 Days / 9 Nights",
+              "startingPrice": 68990,
               "currency": "INR",
               "bannerImage": "asset/image/packages/dubaitour13-960x430.webp",
-              "highlights": ["Royal Enfield", "High Altitude Passes", "Camping"]
+              "description": "<h2>Overview</h2><p>The Ladakh Bike Expedition is a dream ride for adventure enthusiasts seeking extreme terrains, high-altitude passes, and breathtaking Himalayan landscapes. Designed for riders who crave thrill and endurance, this expedition takes you through some of the world’s highest motorable roads.</p><p>Experience the raw beauty of Nubra Valley, the serene Pangong Lake, mystical monasteries, and challenging mountain passes while riding through Leh–Ladakh’s iconic routes.</p><p><strong>Duration:</strong> 10 days, 9 nights</p><p><strong>Departure:</strong> Ex-Leh</p><p><strong>Style:</strong> Motorcycle expedition & high-altitude adventure</p>",
+              "highlights": [
+                "Ride through Khardung La Pass",
+                "Pangong Lake Sunrise Experience",
+                "Nubra Valley Sand Dunes",
+                "Magnetic Hill & Sangam Point",
+                "High-Altitude Riding Experience",
+                "Professional Road Captain & Backup"
+              ],
+              "inclusions": [
+                "<p><strong>Motorcycle:</strong> Royal Enfield 411cc with fuel for the entire route</p>",
+                "<p><strong>Accommodation:</strong> 9 nights in hotels, camps & guesthouses</p>",
+                "<p><strong>Meals:</strong> Daily breakfast & dinner</p>",
+                "<p><strong>Support:</strong> Road captain, mechanic & backup vehicle</p>",
+                "<p><strong>Permits:</strong> Inner Line Permits & environmental fees</p>",
+                "<p><strong>Medical:</strong> Oxygen cylinder & basic first-aid kit</p>"
+              ],
+              "exclusions": [
+                "<p><strong>Airfare:</strong> Flights to/from Leh</p>",
+                "<p><strong>Personal expenses:</strong> Tips, shopping, beverages</p>",
+                "<p><strong>Lunch:</strong> Mid-day meals during ride</p>",
+                "<p><strong>Security deposit:</strong> Refundable bike deposit</p>",
+                "<p><strong>Insurance:</strong> Travel & personal accident insurance</p>"
+              ],
+              "hotelAccommodation": [
+                {
+                  "city": "Leh",
+                  "nights": 3,
+                  "hotel": "Hotel Ladakh Palace",
+                  "rating": 4
+                },
+                {
+                  "city": "Nubra Valley",
+                  "nights": 2,
+                  "hotel": "Desert Camp / Guesthouse",
+                  "rating": 3
+                },
+                {
+                  "city": "Pangong Lake",
+                  "nights": 1,
+                  "hotel": "Lakeside Camp",
+                  "rating": 3
+                },
+                {
+                  "city": "Hanle",
+                  "nights": 1,
+                  "hotel": "Homestay",
+                  "rating": 3
+                },
+                {
+                  "city": "Leh",
+                  "nights": 2,
+                  "hotel": "Hotel Ladakh Palace",
+                  "rating": 4
+                }
+              ],
+              "itinerary": [
+                {
+                  "day": 1,
+                  "title": "Arrival in Leh – Acclimatization Day",
+                  "description": "<h5>'Welcome to the Land of High Passes'</h5><p>Arrive in Leh and rest for acclimatization. Short evening walk around Leh Market.</p><p><strong>Accommodation:</strong> Hotel in Leh</p><p><strong>Meals:</strong> Dinner</p>",
+                  "activities": ["Airport Transfer", "Acclimatization"]
+                },
+                {
+                  "day": 2,
+                  "title": "Leh Local Sightseeing",
+                  "description": "<h5>'Prepare & Explore'</h5><p>Visit Shanti Stupa, Leh Palace, Magnetic Hill, and Sangam Point.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Bike Check", "Monastery Visit"]
+                },
+                {
+                  "day": 3,
+                  "title": "Leh to Nubra Valley via Khardung La",
+                  "description": "<h5>'Conquer Khardung La'</h5><p>Ride through one of the highest motorable roads in the world to Nubra Valley.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["High Pass Ride", "Sand Dunes Visit"]
+                },
+                {
+                  "day": 4,
+                  "title": "Nubra Valley Exploration",
+                  "description": "<h5>'Desert in the Himalayas'</h5><p>Visit Diskit Monastery and enjoy camel rides at Hunder.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Monastery Visit", "Camel Safari"]
+                },
+                {
+                  "day": 5,
+                  "title": "Nubra to Pangong Lake",
+                  "description": "<h5>'Ride to the Blue Paradise'</h5><p>Ride through scenic routes to reach the mesmerizing Pangong Lake.</p><p><strong>Accommodation:</strong> Camp Stay</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Lakeside Ride", "Photography"]
+                },
+                {
+                  "day": 6,
+                  "title": "Pangong to Hanle",
+                  "description": "<h5>'Remote Trails'</h5><p>Ride towards Hanle via lesser-known routes, experiencing untouched landscapes.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Offbeat Riding"]
+                },
+                {
+                  "day": 7,
+                  "title": "Hanle to Leh",
+                  "description": "<h5>'Return to Civilization'</h5><p>Ride back to Leh with panoramic views.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Mountain Ride"]
+                },
+                {
+                  "day": 8,
+                  "title": "Leh – Free Day / Bike Maintenance",
+                  "description": "<h5>'Buffer Day'</h5><p>Free day for rest, shopping, or bike maintenance.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Bike Service", "Local Market"]
+                },
+                {
+                  "day": 9,
+                  "title": "Leh – Farewell Ride",
+                  "description": "<h5>'Celebration & Memories'</h5><p>Group celebration dinner and ride recap.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Group Celebration"]
+                },
+                {
+                  "day": 10,
+                  "title": "Departure from Leh",
+                  "description": "<h5>'Ride Ends, Legends Begin'</h5><p>Transfer to airport with unforgettable riding memories.</p><p><strong>Meals:</strong> Breakfast</p>",
+                  "activities": ["Airport Transfer"]
+                }
+              ],
+              "gallery": [
+                "asset/image/packages/ladakh/bike/khardung-la.jpg",
+                "asset/image/packages/ladakh/bike/pangong-lake.jpg",
+                "asset/image/packages/ladakh/bike/nubra-valley.jpg",
+                "asset/image/packages/ladakh/bike/leh-ride.jpg"
+              ]
             }
           ]
         }
