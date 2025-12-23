@@ -113,6 +113,7 @@
 
 
   const container = document.getElementById("package-container");
+  const categoryTitle = document.getElementById("category-name"); // ✅ NEW
 const params = new URLSearchParams(window.location.search);
 const categoryId = params.get("category");
 
@@ -122,6 +123,7 @@ fetch("asset/json/packages.json")
 
     let regionsToShow = [];
     let hasPackages = false; // ✅ track package availability
+    let categoryName = ""; // ✅ NEW
 
     // 🔹 Case 1: Parent category
     const parentCategory = data.categories.find(
@@ -130,18 +132,23 @@ fetch("asset/json/packages.json")
 
     if (parentCategory) {
       regionsToShow = parentCategory.children || [];
+      categoryName = parentCategory.name; // ✅ SET TITLE
     } else {
       // 🔹 Case 2: Child category
       data.categories.forEach(cat => {
         const child = cat.children?.find(
           c => c.id === categoryId
         );
-        if (child) regionsToShow.push(child);
+         if (child) {
+          regionsToShow.push(child);
+          categoryName = child.name; // ✅ SET TITLE
+        }
       });
     }
 
     // ❌ Category not found
     if (!regionsToShow.length) {
+       categoryTitle.textContent = "Tour"; // fallback title
       container.innerHTML = `
       
         <div class="col-12">
@@ -151,7 +158,8 @@ fetch("asset/json/packages.json")
         </div>`;
       return;
     }
-
+    // ✅ Update heading text
+    categoryTitle.textContent = categoryName;
     container.innerHTML = ""; // clear before rendering
 
     // 🔹 Render packages
