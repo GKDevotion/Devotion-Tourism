@@ -2326,12 +2326,6 @@ body {
   z-index: 1;
 }
 
-.contact-section h2 {
-  font-family: "Merienda", cursive;
-  font-size: 3.5rem;
-  margin-bottom: 20px;
-}
-
 .contact-section p {
   font-size: 1rem;
   max-width: 1000px;
@@ -2418,12 +2412,6 @@ footer a {
 @media (max-width: 991px) {
   .contact-section {
     padding-top: 65vh;
-  }
-}
-
-@media (max-width: 991px) {
-  .contact-section .container {
-    padding-bottom: 30vh;
   }
 }
 
@@ -2764,16 +2752,6 @@ footer a {
   transform: scale(1.1);
 }
 
-/* Nested submenu positioning */
-.dropdown-submenu {
-  position: relative;
-}
-
-.dropdown-submenu .dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-left: 0.1rem;
-}
 
 .clamp-text {
   display: -webkit-box;
@@ -2900,16 +2878,7 @@ footer a {
   color: #fff;
 }
 
-/* Nested submenu positioning */
-.dropdown-submenu {
-  position: relative;
-}
 
-.dropdown-submenu .dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-left: 0.1rem;
-}
 
 @media (max-width: 991px) {
   .contact-section {
@@ -2978,22 +2947,6 @@ footer a {
   }
 }
 
-@media (max-width: 991px) {
-  .contact-section .container {
-    padding-bottom: 30vh;
-  }
-}
-
-/* Nested submenu positioning */
-.dropdown-submenu {
-  position: relative;
-}
-
-.dropdown-submenu .dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-left: 0.1rem;
-}
 
 @media (max-width: 991px) {
   .contact-section {
@@ -3108,4 +3061,84 @@ footer a {
 
 .career-section {
   margin-top: 8%;
+}
+
+/* Make both sides match height */
+.hotel-box-view {
+  min-height: 300px;
+  height: 100%;
+}
+.terms-wrapper {
+  border-radius: 8px;
+}
+
+.term-card {
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.term-title {
+  background-color: #ab823e;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 15px;
+  font-size: 14px;
+}
+
+.term-body {
+  padding: 12px 18px;
+  font-size: 16px;
+}
+
+.term-body ul {
+  padding-left: 18px;
+  margin-bottom: 0;
+}
+
+.term-body li {
+  margin-bottom: 6px;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+  .hotel-box-view {
+    flex-direction: column;
+  }
+
+  .hotel-box-view .box-media,
+  .hotel-box-view .box-content {
+    flex: 1 1 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .hotel-box-view {
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+
+  .hotel-box-view .box-content {
+    padding: 15px;
+  }
+
+  .hotel-box-view .box-content .title {
+    font-size: 16px;
+  }
+
+  .hotel-box-view .box-content .details {
+    font-size: 13px;
+  }
+
+  .hotel-box-view .box-content .price .amount {
+    font-size: 18px;
+  }
+
+  .hotel-box-view .box-content .btn-plan {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
 }
