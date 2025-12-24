@@ -1123,6 +1123,7 @@
         }
       ]
     },
+
     {
       "id": "domestic-tours",
       "name": "Domestic Tours",
@@ -2367,6 +2368,330 @@
                 "asset/image/packages/ladakh/bike/leh-ride.jpg"
               ]
             }
+          ]
+        }
+      ]
+    },
+
+       {
+      "id": "corporate-tours",
+      "name": "Corporate Tours",
+      "children": [
+        {
+          "id": "corporate-thailand-tour",
+          "name": "Thailand",
+          "packages": [
+           {
+  "id": "thailand-corporate-retreat",
+  "tourid": "CTID1001",
+  "title": "Thailand Corporate Retreat",
+  "slug": "thailand-corporate-retreat",
+  "subtitle": "Bangkok • Pattaya • Team Bonding",
+  "tourType": "Corporate Tour",
+  "departureDate": "Flexible Dates",
+  "duration": "5 Days / 4 Nights",
+  "startingPrice": 69990,
+  "currency": "INR",
+  "bannerImage": "asset/image/packages/thailand1.jfif",
+  "description": "<h2>Overview</h2><p>An ideal corporate offsite combining business, relaxation, and team bonding. Experience luxury stays, beachside meetings, fun activities, and gala dinners designed to boost collaboration and morale.</p>",
+  "highlights": [
+    "Beachside Team Activities",
+    "Corporate Gala Dinner",
+    "Half-Day Conference Setup",
+    "Island Tour"
+  ],
+  "inclusions": [
+    "<p>4-star hotels with conference halls</p>",
+    "<p>Daily breakfast & 2 corporate dinners</p>",
+    "<p>Airport & internal transfers</p>",
+    "<p>Island tour & team-building games</p>"
+  ],
+  "exclusions": [
+    "<p>International airfare</p>",
+    "<p>Personal expenses</p>",
+    "<p>Travel insurance</p>"
+  ],
+  "hotelAccommodation": [
+    {
+      "city": "Bangkok",
+      "nights": 2,
+      "hotel": "Ramada Plaza",
+      "rating": 4
+    },
+    {
+      "city": "Pattaya",
+      "nights": 2,
+      "hotel": "Centara Pattaya",
+      "rating": 4
+    }
+  ],
+  "itinerary": [
+    {
+      "day": 1,
+      "title": "Arrival & Welcome Dinner",
+      "description": "<p>Arrival in Bangkok, hotel check-in followed by a corporate welcome dinner.</p>",
+      "activities": ["Airport Transfer", "Welcome Dinner"]
+    },
+    {
+      "day": 2,
+      "title": "Conference & Team Activities",
+      "description": "<p>Half-day conference followed by beach team-building activities.</p>",
+      "activities": ["Conference", "Team Building"]
+    }
+  ],
+  "gallery": [
+    "asset/image/packages/corporate/thailand1.jpg",
+    "asset/image/packages/corporate/thailand2.jpg"
+  ]
+}
+          ]
+        },
+        {
+          "id": "corporate-dubai-tour",
+          "name": "Dubai",
+          "packages":[
+            {
+  "id": "dubai-corporate-offsite",
+  "tourid": "CTID1002",
+  "title": "Dubai Luxury Corporate Offsite",
+  "slug": "dubai-corporate-offsite",
+  "subtitle": "Desert Safari • Yacht Party",
+  "tourType": "Corporate Tour",
+  "departureDate": "Flexible Dates",
+  "duration": "4 Days / 3 Nights",
+  "startingPrice": 89990,
+  "currency": "INR",
+  "bannerImage": "asset/image/packages/dubai.jfif",
+  "description": "<h2>Overview</h2><p>A premium corporate experience in Dubai with luxury hotels, desert safari, yacht networking party, and business-friendly venues.</p>",
+  "highlights": [
+    "Luxury Yacht Party",
+    "Desert Safari with BBQ",
+    "Business-Friendly Hotels",
+    "Skyline Networking"
+  ],
+  "inclusions": [
+    "<p>5-star hotel stay</p>",
+    "<p>Desert safari & yacht cruise</p>",
+    "<p>Conference room access</p>",
+    "<p>Airport transfers</p>"
+  ],
+  "exclusions": [
+    "<p>Airfare</p>",
+    "<p>Visa charges</p>",
+    "<p>Personal expenses</p>"
+  ],
+  "hotelAccommodation": [
+    {
+      "city": "Dubai",
+      "nights": 3,
+      "hotel": "Crowne Plaza Sheikh Zayed",
+      "rating": 5
+    }
+  ],
+  "itinerary": [
+    {
+      "day": 1,
+      "title": "Arrival & City Views",
+      "description": "<p>Arrival in Dubai, hotel check-in, evening skyline networking.</p>",
+      "activities": ["Airport Transfer", "Networking Dinner"]
+    }
+  ],
+  "gallery": [
+    "asset/image/packages/corporate/dubai1.jpg",
+    "asset/image/packages/corporate/dubai2.jpg"
+  ]
+}
+
+          ]
+        },
+        {
+          "id":"corporate-goa-tour",
+          "name":"Goa",
+          "packages":[
+            {
+  "id": "goa-corporate-team-building",
+  "tourid": "CTID1003",
+  "title": "Goa Corporate Team Building Escape",
+  "slug": "goa-corporate-team-building",
+  "subtitle": "Beach • Games • Celebration",
+  "tourType": "Corporate Tour",
+  "departureDate": "All Year",
+  "duration": "3 Days / 2 Nights",
+  "startingPrice": 29990,
+  "currency": "INR",
+  "bannerImage": "asset/image/packages/goa.jfif",
+  "description": "<h2>Overview</h2><p>A fun-filled corporate getaway focused on team bonding, leadership activities, and relaxation at Goa’s best beach resorts.</p>",
+  "highlights": [
+    "Beach Team Games",
+    "DJ Night & Gala Dinner",
+    "Leadership Workshops"
+  ],
+  "inclusions": [
+    "<p>Beach resort stay</p>",
+    "<p>All meals</p>",
+    "<p>Team building activities</p>",
+    "<p>Local transfers</p>"
+  ],
+  "exclusions": [
+    "<p>Airfare / Train tickets</p>",
+    "<p>Personal expenses</p>"
+  ],
+  "hotelAccommodation": [
+    {
+      "city": "Goa",
+      "nights": 2,
+      "hotel": "Resort Rio",
+      "rating": 4
+    }
+  ],
+  "itinerary": [
+    {
+      "day": 1,
+      "title": "Arrival & Ice Breaking",
+      "description": "<p>Arrival, resort check-in and ice-breaking activities.</p>",
+      "activities": ["Check-in", "Team Games"]
+    }
+  ],
+  "gallery": [
+    "asset/image/packages/corporate/goa1.jpg",
+    "asset/image/packages/corporate/goa2.jpg"
+  ]
+}
+
+          ]
+        },
+        {
+          "id":"corporate-singapore-tour",
+          "name":"Singapore",
+          "packages":[
+            {
+  "id": "singapore-corporate-incentive",
+  "tourid": "CTID1004",
+  "title": "Singapore Corporate Incentive Tour",
+  "slug": "singapore-corporate-incentive",
+  "subtitle": "Universal Studios • Sentosa",
+  "tourType": "Corporate Tour",
+  "departureDate": "Flexible",
+  "duration": "4 Days / 3 Nights",
+  "startingPrice": 109990,
+  "currency": "INR",
+  "bannerImage": "asset/image/packages/singapore.jfif",
+  "description": "<h2>Overview</h2><p>A high-energy corporate incentive tour featuring world-class attractions, luxury stays, and curated networking experiences.</p>",
+  "highlights": [
+    "Universal Studios",
+    "Sentosa Island",
+    "Luxury City Hotels"
+  ],
+  "inclusions": [
+    "<p>4-star city hotel</p>",
+    "<p>Universal Studios tickets</p>",
+    "<p>Daily breakfast</p>",
+    "<p>Airport transfers</p>"
+  ],
+  "exclusions": [
+    "<p>Airfare</p>",
+    "<p>Visa fees</p>",
+    "<p>Personal expenses</p>"
+  ],
+  "hotelAccommodation": [
+    {
+      "city": "Singapore",
+      "nights": 3,
+      "hotel": "Hotel Boss",
+      "rating": 4
+    }
+  ],
+  "itinerary": [
+    {
+      "day": 1,
+      "title": "Arrival & City Tour",
+      "description": "<p>Arrival in Singapore, evening city orientation tour.</p>",
+      "activities": ["Airport Transfer", "City Tour"]
+    }
+  ],
+  "gallery": [
+    "asset/image/packages/corporate/singapore1.jpg",
+    "asset/image/packages/corporate/singapore2.jpg"
+  ]
+}
+
+          ]
+        },
+        {
+          "id":"corporate-malaysia-tour",
+          "name":"Malaysia",
+          "packages":[
+            {
+  "id": "malaysia-corporate-leadership-retreat",
+  "tourid": "CTID1005",
+  "title": "Malaysia Corporate Leadership Retreat",
+  "slug": "malaysia-corporate-leadership-retreat",
+  "subtitle": "Kuala Lumpur • Genting Highlands",
+  "tourType": "Corporate Tour",
+  "departureDate": "Flexible Dates",
+  "duration": "5 Days / 4 Nights",
+  "startingPrice": 79990,
+  "currency": "INR",
+  "bannerImage": "asset/image/packages/malaysia.jfif",
+  "description": "<h2>Overview</h2><p>A perfect blend of leadership development and leisure, this corporate retreat in Malaysia is designed for executive teams and high-performing organizations. Engage in leadership workshops, strategy sessions, and team challenges while enjoying premium hospitality and scenic highlands.</p>",
+  "highlights": [
+    "Leadership & Strategy Workshops",
+    "Indoor Team Challenges",
+    "Genting Highlands Excursion",
+    "Corporate Networking Dinner"
+  ],
+  "inclusions": [
+    "<p>4-star business hotels with conference facilities</p>",
+    "<p>Daily breakfast & 2 corporate dinners</p>",
+    "<p>Conference hall usage & AV setup</p>",
+    "<p>Airport & internal transfers</p>"
+  ],
+  "exclusions": [
+    "<p>International airfare</p>",
+    "<p>Visa fees</p>",
+    "<p>Personal expenses</p>",
+    "<p>Travel insurance</p>"
+  ],
+  "hotelAccommodation": [
+    {
+      "city": "Kuala Lumpur",
+      "nights": 3,
+      "hotel": "Pullman Kuala Lumpur City Centre",
+      "rating": 4
+    },
+    {
+      "city": "Genting Highlands",
+      "nights": 1,
+      "hotel": "First World Hotel",
+      "rating": 4
+    }
+  ],
+  "itinerary": [
+    {
+      "day": 1,
+      "title": "Arrival & Corporate Welcome",
+      "description": "<p>Arrival at Kuala Lumpur International Airport followed by hotel check-in. Evening corporate welcome meet and networking dinner.</p>",
+      "activities": ["Airport Transfer", "Welcome Dinner"]
+    },
+    {
+      "day": 2,
+      "title": "Leadership Workshop & Team Challenges",
+      "description": "<p>Half-day leadership and strategy workshop followed by indoor team challenges and group discussions.</p>",
+      "activities": ["Leadership Workshop", "Team Building"]
+    },
+    {
+      "day": 3,
+      "title": "Genting Highlands Experience",
+      "description": "<p>Excursion to Genting Highlands with cable car ride, leisure time, and evening group activities.</p>",
+      "activities": ["Cable Car Ride", "Group Activities"]
+    }
+  ],
+  "gallery": [
+    "asset/image/packages/corporate/malaysia1.jpg",
+    "asset/image/packages/corporate/malaysia2.jpg"
+  ]
+}
+
           ]
         }
       ]

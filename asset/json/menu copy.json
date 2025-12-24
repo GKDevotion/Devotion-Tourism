@@ -1,0 +1,119 @@
+{
+  "logo": "asset/image/Logo.png",
+  "menus": [
+    {
+      "title": "Home",
+      "url": "index.html"
+    },
+    {
+      "title": "About Us",
+      "url": "aboutus.html"
+    },
+   {
+  "title": "Packages",
+  "children": [
+    {
+      "title": "Domestic",
+      "categoryId": "domestic-tours",
+      "url": "packages.html?category=domestic-tours",
+      "children": [
+        {
+          "title": "North East India",
+          "id": "northeast-india",
+          "url": "packages.html?category=northeast-india"
+        },
+        {
+          "title": "Himachal Pradesh",
+          "id": "himachal-pradesh",
+          "url": "packages.html?category=himachal-pradesh"
+        },
+        {
+          "title": "Kerala",
+          "id": "kerala-tour",
+          "url": "packages.html?category=kerala-tour"
+        },
+         {
+          "title": "Ladakh",
+          "id": "ladakh-tour",
+          "url": "packages.html?category=ladakh-tour"
+        },
+         {
+          "title": "Rajasthan",
+          "id": "rajasthan-tour",
+          "url": "packages.html?category=rajasthan-tour"
+        }
+      ]
+    },
+    {
+      "title": "International",
+      "categoryId": "international",
+      "url": "packages.html?category=international",
+      "children": [
+        {
+          "title": "Vietnam",
+          "id": "vietnam",
+          "url": "packages.html?category=vietnam"
+        },
+        {
+          "title": "Bali",
+          "id": "bali-tour",
+          "url": "packages.html?category=bali-tour"
+        },
+        {
+          "title": "Dubai",
+          "id": "dubai-tour",
+          "url": "packages.html?category=dubai-tour"
+        }
+      ]
+    }
+  ]
+},
+    {
+      "title": "Visa",
+      "children": [
+        { "title": "Country Visa", "url": "country_visa.html" }
+      ]
+    },
+    {
+      "title": "Corporate Tour",
+      "children": [
+        { "title": "Corporate", "url": "#" },
+        { "title": "Delegation & Trade", "url": "#" },
+        { "title": "Trade Fair & Exhibition", "url": "#" },
+        { "title": "MICE", "url": "#" }
+      ]
+    },
+    {
+      "title": "Exclusive",
+      "children": [
+        { "title": "Senior", "url": "#" },
+        { "title": "Destination Wedding", "url": "#" },
+        { "title": "Student Tour", "url": "#" },
+        {
+          "title": "Gift",
+          "children": [
+            { "title": "Anniversary", "url": "#" },
+            { "title": "Birthday", "url": "#" },
+            { "title": "Retirement", "url": "#" },
+            { "title": "Honeymoon", "url": "#" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Travel Guide",
+      "children": [
+        { "title": "Flight Booking", "url": "#" },
+        { "title": "Passport", "url": "#" },
+        { "title": "Hotel Booking", "url": "#" },
+        { "title": "Insurance", "url": "#" },
+        { "title": "Forex", "url": "#" },
+        { "title": "Rent a car", "url": "#" }
+      ]
+    },
+    {
+      "title": "Contact Us",
+      "url": "contactus.html"
+    }
+  ]
+}

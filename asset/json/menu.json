@@ -2,113 +2,50 @@
   "logo": "asset/image/Logo.png",
   "menus": [
     {
-      "title": "Home",
-      "url": "index.html"
+      "title": "Flight",
+      "url": "#"
     },
     {
-      "title": "About Us",
-      "url": "aboutus.html"
+      "title": "Hotels",
+      "url": "#"
     },
    {
-  "title": "Packages",
+  "title": "Holidays",
   "children": [
     {
       "title": "Domestic",
       "categoryId": "domestic-tours",
-      "url": "packages.html?category=domestic-tours",
-      "children": [
-        {
-          "title": "North East India",
-          "id": "northeast-india",
-          "url": "packages.html?category=northeast-india"
-        },
-        {
-          "title": "Himachal Pradesh",
-          "id": "himachal-pradesh",
-          "url": "packages.html?category=himachal-pradesh"
-        },
-        {
-          "title": "Kerala",
-          "id": "kerala-tour",
-          "url": "packages.html?category=kerala-tour"
-        },
-         {
-          "title": "Ladakh",
-          "id": "ladakh-tour",
-          "url": "packages.html?category=ladakh-tour"
-        },
-         {
-          "title": "Rajasthan",
-          "id": "rajasthan-tour",
-          "url": "packages.html?category=rajasthan-tour"
-        }
-      ]
+      "url": "packages.html?category=domestic-tours"
+    
     },
     {
       "title": "International",
       "categoryId": "international",
-      "url": "packages.html?category=international",
-      "children": [
-        {
-          "title": "Vietnam",
-          "id": "vietnam",
-          "url": "packages.html?category=vietnam"
-        },
-        {
-          "title": "Bali",
-          "id": "bali-tour",
-          "url": "packages.html?category=bali-tour"
-        },
-        {
-          "title": "Dubai",
-          "id": "dubai-tour",
-          "url": "packages.html?category=dubai-tour"
-        }
-      ]
+      "url": "packages.html?category=international"
     }
   ]
 },
     {
       "title": "Visa",
-      "children": [
-        { "title": "Country Visa", "url": "country_visa.html" }
-      ]
+      "url": "country_visa.html"
     },
     {
-      "title": "Corporate Tour",
+      "title": "Exclusives",
       "children": [
-        { "title": "Corporate", "url": "#" },
-        { "title": "Delegation & Trade", "url": "#" },
-        { "title": "Trade Fair & Exhibition", "url": "#" },
-        { "title": "MICE", "url": "#" }
-      ]
-    },
-    {
-      "title": "Exclusive",
-      "children": [
-        { "title": "Senior", "url": "#" },
-        { "title": "Destination Wedding", "url": "#" },
+        { "title": "Corporate Tour and Events", "url": "corporate_tour.html" },
         { "title": "Student Tour", "url": "#" },
-        {
-          "title": "Gift",
-          "children": [
-            { "title": "Anniversary", "url": "#" },
-            { "title": "Birthday", "url": "#" },
-            { "title": "Retirement", "url": "#" },
-            { "title": "Honeymoon", "url": "#" }
-          ]
-        }
+        { "title": "Trade Fair and Exhibitions", "url": "trade_fair.html" },
+        { "title": "MICE", "url": "mice.html" },
+         { "title": "Destination Weddings", "url": "wedding.html" }
       ]
     },
+
     {
-      "title": "Travel Guide",
+      "title": "More",
       "children": [
-        { "title": "Flight Booking", "url": "#" },
-        { "title": "Passport", "url": "#" },
-        { "title": "Hotel Booking", "url": "#" },
-        { "title": "Insurance", "url": "#" },
-        { "title": "Forex", "url": "#" },
-        { "title": "Rent a car", "url": "#" }
+        { "title": "Passport Assistance", "url": "#" },
+        { "title": "Travel Insurance", "url": "#" },
+        { "title": "Private Transfers", "url": "#" }
       ]
     },
     {
