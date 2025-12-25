@@ -33,7 +33,7 @@
       "title": "Exclusives",
       "children": [
         { "title": "Corporate Tour and Events", "url": "corporate_tour.html" },
-        { "title": "Student Tour", "url": "#" },
+        { "title": "Student Tour", "url": "student_tour.html" },
         { "title": "Trade Fair and Exhibitions", "url": "trade_fair.html" },
         { "title": "MICE", "url": "mice.html" },
          { "title": "Destination Weddings", "url": "wedding.html" }

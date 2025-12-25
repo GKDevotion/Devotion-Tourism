@@ -2695,6 +2695,317 @@
           ]
         }
       ]
+    },
+     {
+      "id": "student-tours",
+      "name": "Student Tours",
+      "children": [
+        {
+          "id": "vietnam-student",
+          "name": "Vietnam Student Tours",
+          "packages": [
+            {
+              "id": "vietnam-student-discovery",
+              "tourid": "STU0001",
+              "title": "Vietnam Student Discovery Tour",
+              "slug": "vietnam-student-discovery-tour",
+              "subtitle": "Culture, History & Fun Learning",
+              "tourType": "Student Group Tour",
+              "departureDate": "10 June 2026",
+              "duration": "7 Days / 6 Nights",
+              "startingPrice": 89990,
+              "currency": "INR",
+              "bannerImage": "asset/image/packages/vietname-student1.webp",
+              "description": "<h2>Overview</h2><p>This Vietnam Student Discovery Tour is designed to combine education, cultural exchange, and adventure. Ideal for school and college groups, the tour focuses on Vietnam’s history, traditions, and student-friendly experiences.</p><p>Students explore Hanoi, Halong Bay, and Da Nang while participating in interactive workshops, cultural activities, and heritage walks guided by local experts.</p><p><strong>Duration:</strong> 7 Days / 6 Nights</p><p><strong>Style:</strong> Educational & Cultural</p>",
+              "highlights": [
+                "Hanoi Old Quarter Walk",
+                "Halong Bay Cruise",
+                "Vietnam War Museum",
+                "Cultural Workshops",
+                "Ba Na Hills",
+                "Student Interaction Sessions"
+              ],
+              "inclusions": [
+                "<p><strong>Accommodation:</strong> 3-star student-friendly hotels</p>",
+                "<p><strong>Meals:</strong> Daily breakfast & selected group meals</p>",
+                "<p><strong>Transportation:</strong> Private AC coach & domestic transfers</p>",
+                "<p><strong>Guides:</strong> English-speaking educational tour guides</p>",
+                "<p><strong>Activities:</strong> Cultural classes & historical site visits</p>"
+              ],
+              "exclusions": [
+                "<p>International airfare</p>",
+                "<p>Visa charges</p>",
+                "<p>Personal expenses</p>",
+                "<p>Travel insurance</p>"
+              ],
+              "hotelAccommodation": [
+                {
+                  "city": "Hanoi",
+                  "nights": 3,
+                  "hotel": "Student Comfort Hotel",
+                  "rating": 3
+                },
+                {
+                  "city": "Da Nang",
+                  "nights": 3,
+                  "hotel": "City View Inn",
+                  "rating": 3
+                }
+              ],
+              "itinerary": [
+                {
+                  "day": 1,
+                  "title": "Arrival in Hanoi",
+                  "description": "<p>Arrival, hotel check-in, orientation session, and evening cultural walk.</p>",
+                  "activities": ["Airport Transfer", "Orientation", "City Walk"]
+                },
+                {
+                  "day": 2,
+                  "title": "Hanoi Educational Tour",
+                  "description": "<p>Visit Ho Chi Minh Mausoleum, War Museum, and attend history workshops.</p>",
+                  "activities": ["Museum Visit", "Workshop", "Group Discussion"]
+                },
+                {
+                  "day": 3,
+                  "title": "Halong Bay Experience",
+                  "description": "<p>Day cruise at Halong Bay with eco-awareness activities.</p>",
+                  "activities": ["Cruise", "Kayaking", "Environmental Session"]
+                }
+              ],
+              "gallery": [
+                "asset/image/packages/student/vietnam/hanoi.jpg",
+                "asset/image/packages/student/vietnam/halong.jpg",
+                "asset/image/packages/student/vietnam/banahills.jpg"
+              ]
+            },
+
+            {
+              "id": "vietnam-student-adventure",
+              "tourid": "STU0002",
+              "title": "Vietnam Student Adventure Camp",
+              "slug": "vietnam-student-adventure-camp",
+              "subtitle": "Learning Through Adventure",
+              "tourType": "Student Adventure Tour",
+              "departureDate": "5 July 2026",
+              "duration": "8 Days / 7 Nights",
+              "startingPrice": 99990,
+              "currency": "INR",
+              "bannerImage": "asset/image/packages/veitname-adventure.jpg",
+              "description": "<h2>Overview</h2><p>An adventure-focused student tour featuring trekking, cultural immersion, and teamwork activities. Perfect for youth groups seeking leadership, exposure, and fun.</p>",
+              "highlights": [
+                "Sapa Trekking",
+                "Halong Bay Cruise",
+                "Village Homestay",
+                "Team Building Activities",
+                "Cultural Exchange Program"
+              ],
+              "inclusions": [
+                "<p>Student hostel & homestay accommodation</p>",
+                "<p>All breakfasts & group meals</p>",
+                "<p>Adventure instructors & guides</p>",
+                "<p>Transportation & permits</p>"
+              ],
+              "exclusions": [
+                "<p>International flights</p>",
+                "<p>Visa & insurance</p>",
+                "<p>Personal expenses</p>"
+              ],
+              "hotelAccommodation": [
+                {
+                  "city": "Hanoi",
+                  "nights": 2,
+                  "hotel": "Youth Hostel Hanoi",
+                  "rating": 3
+                },
+                {
+                  "city": "Sapa",
+                  "nights": 3,
+                  "hotel": "Mountain Homestay",
+                  "rating": 3
+                }
+              ],
+              "itinerary": [
+                {
+                  "day": 1,
+                  "title": "Arrival & Orientation",
+                  "description": "<p>Arrival, safety briefing, and ice-breaker games.</p>",
+                  "activities": ["Orientation", "Team Games"]
+                },
+                {
+                  "day": 2,
+                  "title": "Sapa Trekking",
+                  "description": "<p>Guided trek through villages and rice terraces.</p>",
+                  "activities": ["Trekking", "Village Visit"]
+                }
+              ],
+              "gallery": [
+                "asset/image/packages/student/vietnam/sapa.jpg",
+                "asset/image/packages/student/vietnam/homestay.jpg"
+              ]
+            },
+
+            {
+              "id": "vietnam-student-industrial",
+              "tourid": "STU0003",
+              "title": "Vietnam Student Industrial & Tech Tour",
+              "slug": "vietnam-student-industrial-tech-tour",
+              "subtitle": "Industry Exposure & Innovation",
+              "tourType": "Educational Industrial Tour",
+              "departureDate": "15 August 2026",
+              "duration": "6 Days / 5 Nights",
+              "startingPrice": 84990,
+              "currency": "INR",
+              "bannerImage": "asset/image/packages/veitname-industrial.png",
+              "description": "<h2>Overview</h2><p>This tour introduces students to Vietnam’s growing tech and industrial ecosystem, blending academic visits with cultural sightseeing.</p>",
+              "highlights": [
+                "Tech Park Visit",
+                "University Campus Tour",
+                "Industrial Zone Visit",
+                "Startup Interaction",
+                "Cultural City Tour"
+              ],
+              "inclusions": [
+                "<p>Accommodation in student hotels</p>",
+                "<p>Breakfast & lunches</p>",
+                "<p>Industry visits & lectures</p>",
+                "<p>Local transport</p>"
+              ],
+              "exclusions": [
+                "<p>Flights & visa</p>",
+                "<p>Insurance</p>",
+                "<p>Personal expenses</p>"
+              ],
+              "hotelAccommodation": [
+                {
+                  "city": "Ho Chi Minh City",
+                  "nights": 5,
+                  "hotel": "Business Student Hotel",
+                  "rating": 3
+                }
+              ],
+              "itinerary": [
+                {
+                  "day": 1,
+                  "title": "Arrival & City Tour",
+                  "description": "<p>Arrival and introduction to Vietnam’s economic landscape.</p>",
+                  "activities": ["City Tour", "Orientation"]
+                },
+                {
+                  "day": 2,
+                  "title": "Industry Exposure",
+                  "description": "<p>Visits to industrial parks and tech startups.</p>",
+                  "activities": ["Industry Visit", "Q&A Session"]
+                }
+              ],
+              "gallery": [
+                "asset/image/packages/student/vietnam/industry.jpg",
+                "asset/image/packages/student/vietnam/university.jpg"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nasa-tour",
+          "name": "NASA Space Experience",
+          "packages": [
+            {
+              "id": "nasa-student-space-mission",
+              "tourid": "NASA001",
+              "title": "NASA Student Space Mission Tour",
+              "slug": "nasa-student-space-mission-tour",
+              "subtitle": "Explore NASA, Space Centers & Science",
+              "tourType": "Student Educational Tour",
+              "departureDate": "10 October 2026",
+              "duration": "9 Days / 8 Nights",
+              "startingPrice": 249990,
+              "currency": "INR",
+              "bannerImage": "asset/image/packages/nasa-tour.jpg",
+              "description": "<h2>Overview</h2><p>Discover the thrilling world of space exploration with the NASA Student Space Mission Tour. This exclusive educational tour takes students and space enthusiasts behind the scenes of NASA space centers, spacecraft facilities, simulators, and interactive learning labs.</p><p>Experience firsthand what it takes to be part of space missions, meet experts, and engage with state-of-the-art technology. From rocket assembly buildings and mission control centers to astronaut training simulators, this tour is a dream experience for aspiring scientists and engineers.</p>",
+              "highlights": [
+                "Kennedy Space Center Tour",
+                "Astronaut Training Simulator",
+                "Rocket Garden Visit",
+                "Space Shuttle Atlantis Exhibit",
+                "Mission Control Observation",
+                "Space Science Workshops"
+              ],
+              "inclusions": [
+                "<p><strong>Professional Guides:</strong> Local NASA specialist guides and educators</p>",
+                "<p><strong>Transportation:</strong> Airport transfers & private coach</p>",
+                "<p><strong>Accommodation:</strong> 8 nights in quality hotels</p>",
+                "<p><strong>Meals:</strong> Daily breakfast & selected meals</p>",
+                "<p><strong>Workshops & Entrance:</strong> All NASA tours, labs & simulators</p>"
+              ],
+              "exclusions": [
+                "<p>International flights</p>",
+                "<p>Travel insurance</p>",
+                "<p>Personal expenses, souvenirs, snacks</p>",
+                "<p>Visa fees</p>"
+              ],
+              "terms": [
+                {
+                  "title": "Travel Validity",
+                  "points": ["Valid for travel till 31 December 2026"]
+                },
+                {
+                  "title": "Booking Policy",
+                  "points": [
+                    "At booking: 30% of tour cost",
+                    "45 Days before departure: 70% tour cost"
+                  ]
+                },
+                {
+                  "title": "Cancellation Policy",
+                  "points": [
+                    "30+ days prior: 50% refund",
+                    "15-29 days prior: 25% refund",
+                    "Less than 15 days: no refund"
+                  ]
+                }
+              ],
+              "hotelAccommodation": [
+                {
+                  "city": "Orlando",
+                  "nights": 3,
+                  "hotel": "Space View Hotel",
+                  "rating": 4
+                },
+                {
+                  "city": "Houston",
+                  "nights": 5,
+                  "hotel": "Galactic Stay Inn",
+                  "rating": 4
+                }
+              ],
+              "itinerary": [
+                {
+                  "day": 1,
+                  "title": "Arrival in Orlando",
+                  "description": "<p>Arrive in Orlando, USA. Transfer to hotel and orientation meeting. Evening welcome dinner.</p>",
+                  "activities": ["Airport Transfer", "Orientation", "Dinner"]
+                },
+                {
+                  "day": 2,
+                  "title": "Kennedy Space Center",
+                  "description": "<p>Full-day visit to Kennedy Space Center: Rocket Garden, Apollo/Saturn V Center, Space Shuttle Atlantis.</p>",
+                  "activities": ["Space Center Tour", "Workshops"]
+                },
+                {
+                  "day": 3,
+                  "title": "Astronaut Training Simulator",
+                  "description": "<p>Hands-on session with astronaut simulators and mission briefings.</p>",
+                  "activities": ["Simulator", "Expert Talks"]
+                }
+              ],
+              "gallery": [
+                "asset/image/packages/nasa/kennedy-space-center.jpg",
+                "asset/image/packages/nasa/space-shuttle.jpg",
+                "asset/image/packages/nasa/astronaut-simulator.jpg"
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
