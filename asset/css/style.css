@@ -3166,43 +3166,4 @@ footer a {
   color: #fff;
 }
 
-     
-.wedding-section{
-  background: url("../image/contact-us/contactsPage.webp") no-repeat center
-    center;
-  background-size: cover;
-  color: white;
-  /* Set text color to white for better contrast on a dark image */
-  padding: 150px 0;
-  justify-content: center;
-  /* Adjust padding as needed */
-  text-align: center;
-  position: relative;
-}
-
-/* Optional: Add an overlay to make the text more readable */
-.wedding-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.wedding-section .container {
-  position: relative;
-  /* Ensure container content is above the overlay */
-  z-index: 1;
-}
-
-.wedding-section h3 {
-  font-family: "Merienda", cursive;
-  font-size: 3rem;
-}
-
-@media (max-width: 991px) {
-  .wedding-section {
-    padding-top: 30vh;
-  }
-}
+ 
