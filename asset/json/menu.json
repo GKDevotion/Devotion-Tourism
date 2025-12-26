@@ -2,7 +2,7 @@
   "logo": "asset/image/Logo.png",
   "menus": [
     {
-      "title": "Flight",
+      "title": "Flights",
       "url": "#"
     },
     {
@@ -13,13 +13,13 @@
   "title": "Holidays",
   "children": [
     {
-      "title": "Domestic",
+      "title": "Domestic Package",
       "categoryId": "domestic-tours",
       "url": "packages.html?category=domestic-tours"
     
     },
     {
-      "title": "International",
+      "title": "International Package",
       "categoryId": "international",
       "url": "packages.html?category=international"
     }
