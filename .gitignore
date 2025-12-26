@@ -2,8 +2,7 @@
 /public/hot
 /public/storage
 /storage/*.key
-storage/app
-storage/log
+storage/
 docker
 vendor
 .env
@@ -24,6 +23,8 @@ tests
 *.mp4
 doc
 *-bkp.pdf
+*-bkp.php
+*.log
 step-form
 composer.lock
 /public/backend/assets/css/custom.css
