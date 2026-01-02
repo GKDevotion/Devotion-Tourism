@@ -1,42 +1,3 @@
-// fetch("asset/json/menu.json")
-//   .then(res => res.json())
-//   .then(data => {
-//     const menuContainer = document.getElementById("main-menu");
-
-//     const renderMenu = (menu, isSub = false) => {
-//       return menu.map(item => {
-
-//         // SIMPLE LINK
-//         if (!item.children) {
-//           return `
-//             <li class="nav-item ${isSub ? '' : ''}">
-//               <a href="${item.url}" class="nav-link fw-bold">${item.title}</a>
-//             </li>
-//           `;
-//         }
-
-//         // DROPDOWN / SUBMENU
-//         return `
-//           <li class="nav-item dropdown ${isSub ? 'dropdown-submenu dropend' : ''}">
-//             <a class="${isSub ? 'dropdown-item dropdown-toggle' : 'nav-link dropdown-toggle fw-bold'}"
-//                href="#"
-//                data-bs-toggle="dropdown">
-//                ${item.title}
-//             </a>
-//             <ul class="dropdown-menu shadow border-0">
-//               ${renderMenu(item.children, true).join("")}
-//             </ul>
-//           </li>
-//         `;
-//       });
-//     };
-
-//     menuContainer.innerHTML = renderMenu(data.menus).join("");
-//   })
-//   .catch(err => {
-//     console.error("Menu load failed", err);
-//   });
-
 fetch("asset/json/menu.json")
   .then((res) => res.json())
   .then((data) => {
@@ -49,30 +10,36 @@ fetch("asset/json/menu.json")
             <li class="nav-item ${isSub ? "" : ""}">
               <a href="${item.url}" class="${
             isSub ? "dropdown-item" : "nav-link fw-bold"
-          }">${item.title}</a>
+          }">  ${item.icon ? `<i class="${item.icon} me-2"></i>` : ""}${
+            item.title
+          }</a>
             </li>
           `;
         }
 
         return `
       <li class="nav-item dropdown ${isSub ? "dropdown-submenu dropend" : ""}">
-  <a href="#"
-     class="${
-       isSub
-         ? "dropdown-item submenu-toggle d-flex justify-content-between align-items-center"
-         : "nav-link dropdown-toggle fw-bold"
-     }"
-     ${isSub ? "" : 'data-bs-toggle="dropdown"'}>
-     
-    <span>${item.title}</span>
+      <a href="#"
+        class="${
+          isSub
+            ? "dropdown-item submenu-toggle d-flex justify-content-between align-items-center"
+            : "nav-link  fw-bold"
+        }"
+        ${isSub ? "" : 'data-bs-toggle="dropdown"'}>
+        
+        <span>
+          ${item.icon ? `<i class="${item.icon} me-2"></i>` : ""}
+          ${item.title}
+        </span>
 
-    ${isSub ? '<span class="submenu-icon">▸</span>' : ""}
-  </a>
 
-  <ul class="dropdown-menu shadow border-0">
-    ${renderMenu(item.children, true).join("")}
-  </ul>
-</li>
+        ${isSub ? '<span class="submenu-icon">▸</span>' : ""}
+      </a>
+
+      <ul class="dropdown-menu shadow border-0">
+        ${renderMenu(item.children, true).join("")}
+      </ul>
+    </li>
 
         `;
       });

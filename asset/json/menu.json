@@ -3,14 +3,17 @@
   "menus": [
     {
       "title": "Flights",
+      "icon": "bi bi-airplane",
       "url": "https://wa.me/971585775469?text=Hi%20Devotion%20Tourism!%20I%20need%20more%20info%20about%20your%20services"
     },
     {
       "title": "Hotels",
+      "icon":"bi bi-buildings ",
       "url": "https://wa.me/971585775469?text=Hi%20Devotion%20Tourism!%20I%20need%20more%20info%20about%20your%20services"
     },
    {
   "title": "Holidays",
+  "icon":"bi bi-globe-americas",
   "children": [
     {
       "title": "Domestic Package",
@@ -27,10 +30,12 @@
 },
     {
       "title": "Visa",
-      "url": "country_visa.html"
+      "url": "country_visa.html",
+      "icon":"bi bi-passport"
     },
     {
       "title": "Exclusives",
+      "icon": "bi bi-bookmark",
       "children": [
         { "title": "Corporate Tour and Events", "url": "corporate_tour.html" },
         { "title": "Student Tour", "url": "student_tour.html" },
@@ -42,6 +47,7 @@
 
     {
       "title": "More",
+      "icon":"bi bi-three-dots",
       "children": [
         { "title": "Passport Assistance", "url": "#" },
         { "title": "Travel Insurance", "url": "#" },
@@ -50,7 +56,8 @@
     },
     {
       "title": "Contact Us",
-      "url": "contactus.html"
+      "url": "contactus.html",
+      "icon":"bi bi-person-lines-fill"
     }
   ]
 }

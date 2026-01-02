@@ -3166,4 +3166,23 @@ footer a {
   color: #fff;
 }
 
- 
+/* Desktop hover dropdown */
+@media (min-width: 992px) {
+  .navbar .dropdown:hover > .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+
+  .navbar .dropdown-submenu:hover > .dropdown-menu {
+    display: block;
+    top: 0;
+    left: 100%;
+  }
+}
+
+/* Remove bootstrap click arrow spacing */
+.dropdown-toggle::after {
+  display: none;
+}
+
+  
