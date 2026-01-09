@@ -96,3 +96,28 @@ fetch("asset/json/menu.json")
     });
   })
   .catch((err) => console.error("Menu load failed", err));
+
+
+  function adjustDropdowns() {
+  document.querySelectorAll(".dropdown").forEach(dropdown => {
+    const menu = dropdown.querySelector(".dropdown-menu");
+    if (!menu) return;
+
+    dropdown.addEventListener("shown.bs.dropdown", () => {
+      const rect = menu.getBoundingClientRect();
+
+      // If overflowing right side
+      if (rect.right > window.innerWidth) {
+        dropdown.classList.add("dropstart");
+        dropdown.classList.remove("dropdown");
+      }
+    });
+
+    dropdown.addEventListener("hidden.bs.dropdown", () => {
+      dropdown.classList.remove("dropstart");
+      dropdown.classList.add("dropdown");
+    });
+  });
+}
+
+adjustDropdowns();

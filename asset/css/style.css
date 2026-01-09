@@ -3186,3 +3186,11 @@ footer a {
 }
 
   
+.navbar-nav > li:last-child {
+  position: relative;
+}
+
+.navbar-nav > li:last-child > .dropdown-menu {
+  right: 0;
+  left: auto;
+}

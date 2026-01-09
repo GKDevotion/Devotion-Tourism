@@ -150,145 +150,78 @@
         </div>
     </nav>
 
-    <section class="hero-section  align-items-center d-flex mt-5"> 
+    <section class="hero-section position-relative">
 
-        <div class="custom-container">
-          <!-- MAIN SWIPER -->
-<div class="swiper placeSwiper">
-    <div class="swiper-controls">
-        <div class="swiper-button-prev custom-btn"></div>
-        <div class="swiper-button-next custom-btn"></div>
-    </div>
-
-    <div class="swiper-wrapper">
-        <div class="swiper-slide place-card" data-index="0">
-            <img src="asset/image/visa/1001.jpeg" alt="">
-        </div>
-        <div class="swiper-slide place-card" data-index="1">
-            <img src="asset/image/visa/1002.jpeg" alt="">
-        </div>
-        <div class="swiper-slide place-card" data-index="2">
-            <img src="asset/image/visa/1003.jpeg" alt="">
-        </div>
-        <div class="swiper-slide place-card" data-index="3">
-            <img src="asset/image/visa/1004.jpeg" alt="">
-        </div>
-    </div>
-</div>
-
-<!-- POPUP MODAL -->
-<div class="image-popup" id="imagePopup">
-    <span class="popup-close">&times;</span>
-
-    <div class="swiper popupSwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="asset/image/visa/1001.jpeg"></div>
-            <div class="swiper-slide"><img src="asset/image/visa/1002.jpeg"></div>
-            <div class="swiper-slide"><img src="asset/image/visa/1003.jpeg"></div>
-            <div class="swiper-slide"><img src="asset/image/visa/1004.jpeg"></div>
+        <!-- Carousel -->
+        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="asset/image/slide1.webp" class="d-block w-100 hero-img" alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="asset/image/slide2.webp" class="d-block w-100 hero-img" alt="Slide 2">
+                </div>
+            </div>
         </div>
 
-        <div class="swiper-button-next" style="color: #ab823e;"></div>
-        <div class="swiper-button-prev" style="color: #ab823e;"></div>
-    </div>
-</div>
+        <!-- Overlay -->
+        <div class="hero-overlay position-absolute top-50 start-50 translate-middle text-center w-100 px-3">
 
+            <!-- Clock Row -->
+            <div class="d-flex flex-wrap justify-content-center extra-gap mb-4">
 
-        </div> 
+                <div class="clock-item text-center">
+                    <div class="clock-img" id="clock-sg">
+                        <span class="hand hour"></span>
+                        <span class="hand minute"></span>
+                        <span class="hand second"></span>
+                    </div>
+                    <p class="clock-label mb-0">SINGAPORE</p>
+                </div>
+
+                <div class="clock-item text-center">
+                    <div class="clock-img" id="clock-nd">
+                        <span class="hand hour"></span>
+                        <span class="hand minute"></span>
+                        <span class="hand second"></span>
+                    </div>
+                    <p class="clock-label mb-0">NEW DELHI</p>
+                </div>
+
+                <div class="clock-item text-center">
+                    <div class="clock-img" id="clock-dubai">
+                        <span class="hand hour"></span>
+                        <span class="hand minute"></span>
+                        <span class="hand second"></span>
+                    </div>
+                    <p class="clock-label mb-0">DUBAI</p>
+                </div>
+
+                <div class="clock-item text-center">
+                    <div class="clock-img" id="clock-london">
+                        <span class="hand hour"></span>
+                        <span class="hand minute"></span>
+                        <span class="hand second"></span>
+                    </div>
+                    <p class="clock-label mb-0">LONDON</p>
+                </div>
+
+                <div class="clock-item text-center">
+                    <div class="clock-img" id="clock-ny">
+                        <span class="hand hour"></span>
+                        <span class="hand minute"></span>
+                        <span class="hand second"></span>
+                    </div>
+                    <p class="clock-label mb-0">NEW YORK</p>
+                </div>
+
+            </div>
+
+            <!-- Heading -->
+            <h1 class="hero-tagline fw-bold text-white">Your Premier Sightseeing Expert in Dubai</h1>
+        </div>
 
     </section>
-    <style>
-.placeSwiper {
-    position: relative;
-    padding-bottom: 60px; /* space for buttons */
-}
-
-/* Center buttons horizontally */
-.swiper-controls {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 14px;
-    z-index: 10;
-}
-
-/* Circular buttons */
-.custom-btn {
-    width: 42px;
-    height: 42px;
-    background: #ab823e;
-    border-radius: 50%;
-}
-
-/* Arrow styling */
-.custom-btn::after {
-    font-size: 14px;
-    color: #fff;
-    font-weight: bold;
-}
-
- 
-.place-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s ease;
-}
-
- 
-/* Hover effect */
-.place-card:hover img {
-    transform: scale(1.1);
-}
-
-/* CARD */
-.place-card {
-    border-radius: 16px;
-    overflow: hidden;
-    cursor: pointer;
-    height: 80%;
-}
-
- 
-/* POPUP */
-.image-popup {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,.85);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-}
-
-.image-popup.active {
-    display: flex;
-}
-
-.popupSwiper {
-    width: 80%;
-    max-width: 900px;
-}
-
-.popupSwiper img {
-    width: 100%;
-    height: 80vh;
-    object-fit: contain;
-}
-
-/* CLOSE BUTTON */
-.popup-close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 40px;
-    color: #fff;
-    cursor: pointer;
-}
-
-</style>
 
     <section class="text-center travel-section">
         <div class="container">
