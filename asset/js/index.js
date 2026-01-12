@@ -30,29 +30,28 @@ document.addEventListener("scroll", function () {
   }
 });
 
-new Swiper(".placeSwiper", {
-  slidesPerView: 3,
-  spaceBetween: 20,
-  loop: true,
+const placeSwiper = new Swiper('.placeSwiper', {
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    
+    // Core settings for mobile-first
+    slidesPerView: 1,       // Shows 1 full image on small screens
+    spaceBetween: 10,      // Small gap between slides
+    centeredSlides: true,  // Keeps the active image in the middle
+    loop: true,
 
-  navigation: {
- 
-    prevEl: ".swiper-button-prev",
-    nextEl: ".swiper-button-next",
-  },
-
-  breakpoints: {
-    0: {
-      slidesPerView: 1.2,
-    },
-    576: {
-      slidesPerView: 2,
-    },
-    768: {
-      slidesPerView: 3,
-    },
-  
-  },
+    // Responsive breakpoints
+    breakpoints: {
+        // When window width is >= 768px (Tablets/Desktop)
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            centeredSlides: false,
+        }
+    }
 });
 
  
