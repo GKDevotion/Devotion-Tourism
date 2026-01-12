@@ -169,9 +169,90 @@
         </div>
     </nav>
 
-    <section class="hero-section  align-items-center d-flex mt-5">
+      <section class="hero-section position-relative">
+
+        <!-- Carousel -->
+        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="asset/image/slide1.webp" class="d-block w-100 hero-img" alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="asset/image/slide2.webp" class="d-block w-100 hero-img" alt="Slide 2">
+                </div>
+            </div>
+        </div>
+
+        <!-- Overlay -->
+        <div class="hero-overlay position-absolute top-50 start-50 translate-middle text-center w-100 px-3">
+
+            <!-- Clock Row -->
+            <div class="d-flex flex-wrap justify-content-center extra-gap mb-4">
+
+                <div class="clock-item text-center">
+                    <div class="clock-img" id="clock-sg">
+                        <span class="hand hour"></span>
+                        <span class="hand minute"></span>
+                        <span class="hand second"></span>
+                    </div>
+                    <p class="clock-label mb-0">SINGAPORE</p>
+                </div>
+
+                <div class="clock-item text-center">
+                    <div class="clock-img" id="clock-nd">
+                        <span class="hand hour"></span>
+                        <span class="hand minute"></span>
+                        <span class="hand second"></span>
+                    </div>
+                    <p class="clock-label mb-0">NEW DELHI</p>
+                </div>
+
+                <div class="clock-item text-center">
+                    <div class="clock-img" id="clock-dubai">
+                        <span class="hand hour"></span>
+                        <span class="hand minute"></span>
+                        <span class="hand second"></span>
+                    </div>
+                    <p class="clock-label mb-0">DUBAI</p>
+                </div>
+
+                <div class="clock-item text-center">
+                    <div class="clock-img" id="clock-london">
+                        <span class="hand hour"></span>
+                        <span class="hand minute"></span>
+                        <span class="hand second"></span>
+                    </div>
+                    <p class="clock-label mb-0">LONDON</p>
+                </div>
+
+                <div class="clock-item text-center">
+                    <div class="clock-img" id="clock-ny">
+                        <span class="hand hour"></span>
+                        <span class="hand minute"></span>
+                        <span class="hand second"></span>
+                    </div>
+                    <p class="clock-label mb-0">NEW YORK</p>
+                </div>
+
+            </div>
+
+            <!-- Heading -->
+            <h1 class="hero-tagline fw-bold text-white">Your Premier Sightseeing Expert in Dubai</h1>
+        </div>
+
+    </section>
+
+    <section class=" pb-5 align-items-center d-flex ">
 
         <div class="custom-container">
+
+               <h1 class="text-center" style="font-family: 'Merienda',  cursive; color: #ab823e;">
+                Go beyond your imagination
+            </h1>
+
+               <p class="  text-center mx-auto" style=" font-size: 1.2rem;">
+                Discover your ideal experience with us
+            </p>
             <!-- MAIN SWIPER -->
             <div class="swiper placeSwiper">
                 <div class="swiper-controls">
@@ -787,20 +868,26 @@
 
                     <ul class="list-unstyled">
                         <li class="d-flex align-items-start mb-2">
-                            <i class="bi bi-geo-alt-fill me-3 mt-1" style="color: #ab823e; font-size: 1.2rem;"></i>
+                            <i class="bi bi-geo-alt-fill me-3  " style="color: #ab823e; font-size: 1.2rem;"></i>
                             <div>
                                 <p class="mb-0">Aspect Tower, Bay Avenue - 2801,</p>
                                 <p class="mb-0">A-Zone, Business Bay, Dubai UAE</p>
                             </div>
                         </li>
                         <li class="d-flex align-items-start mb-2">
-                            <i class="bi bi-telephone-fill me-3 mt-1" style="color: #ab823e; font-size: 1.2rem; "></i>
-                            <p class="mb-0">+971 585775469</p>
+                            <i class="bi bi-phone-fill me-3" style="color:#ab823e; font-size:1.2rem;"></i>
+                            <a href="tel:+971585775469" class="text-decoration-none text-dark">
+                                +971 585775469
+                            </a>
                         </li>
+
                         <li class="d-flex align-items-start">
-                            <i class="bi bi-envelope-fill me-3 mt-1" style="color: #ab823e; font-size: 1.2rem;"></i>
-                            <p class="mb-0">support@devotiontourism.com</p>
+                            <i class="bi bi-envelope-fill me-3" style="color:#ab823e; font-size:1.2rem;"></i>
+                            <a href="mailto:support@devotiontourism.com" class="text-decoration-none text-dark">
+                                support@devotiontourism.com
+                            </a>
                         </li>
+
                     </ul>
 
                 </div>
