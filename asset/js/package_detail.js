@@ -102,7 +102,7 @@
             <i class="bi bi-geo-alt fs-4" style="color:#ab823e;"></i>
             <div>
               <small class="text-muted d-block">Start From</small>
-              <strong>₹${foundPackage.startingPrice?.toLocaleString()} </strong>
+              <strong>AED ${foundPackage.startingPrice?.toLocaleString()} </strong>
             </div>
           </div>
         </div>

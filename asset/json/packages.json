@@ -17,8 +17,8 @@
               "tourType": "Group Tour",
               "departureDate": "25 March 2026",
               "duration": "10 Days / 9 Nights",
-              "startingPrice": 139990,
-              "currency": "INR",
+              "startingPrice": 5670,
+              "currency": "AED",
               "bannerImage": "asset/image/packages/tour-wide-1.jpg",
               "description": "<h2>Overview</h2><p>Experience the complete Vietnam journey on this comprehensive 14-day grand tour from Hanoi to Ho Chi Minh City. Discover Vietnam’s incredible diversity: trek Sapa’s mountain villages, cruise Halong Bay’s emerald waters, explore Hue’s imperial citadel, wander Hoi An’s lantern-lit streets, and experience Saigon’s vibrant energy.</p><p>This Vietnam grand tour visits four UNESCO World Heritage Sites while immersing you deeply in authentic Vietnamese culture through daily signature experiences. Trek with ethnic minorities, learn traditional crafts, share meals with local families, and discover hidden gems beyond typical tourist routes. Small groups (max 16), expert local guides, and thoughtfully crafted experiences reveal the real Vietnam.</p><p><strong>Duration:</strong>14 days, 13 nights</p><p><strong>Departure:</strong> Daily from Hanoi</p><p><strong>Language:</strong> Professional English-speaking guides</p><p><strong>Style:</strong> Complete cultural immersion</p><h2>VIETNAM GRAND TOUR DESCRIPTION</h2><h5>Complete Vietnam experience</h5><p>Journey Vietnam’s full length experiencing extraordinary diversity: Sapa’s mountain tribes, Halong Bay’s limestone karsts, Hue’s royal heritage, Hoi An’s ancient charm, and Saigon’s modern energy. Each destination reveals unique cultural treasures.</p><h5>Four UNESCO World Heritage sites</h5>Explore Vietnam’s most celebrated places with expert guidance: Halong Bay, Hue Imperial City, Hoi An Ancient Town, and My Son Sanctuary. Deep historical insights bring centuries of heritage to life.<h5>Daily signature experiences</h5><p>Beyond sightseeing, participate in exclusive cultural encounters: Tai Chi with Hanoi locals, fishing with Halong families, Sapa homestay with H’mong tribe, royal tea ceremony in Hue, lantern crafting in Hoi An, meeting war veterans in Saigon. Authentic interactions create unforgettable memories.</p><h5>Small group advantage</h5><p>Maximum 16 travelers ensure personalized attention, meaningful local interactions, and flexibility to adjust activities. Unlike large tour buses, our intimate groups connect authentically with Vietnamese communities.</p><h2>VIETNAM GRAND TOUR IMPORTANT NOTES</h2><p><strong>Accommodation:</strong>13 nights (11 nights 4-star hotels, 1 night premium Halong cruise, 1 night overnight train to Sapa)</p><p><strong>Pace:</strong>Balanced itinerary with guided cultural activities and 3 free days for independent exploration</p><p><strong>What to bring:</strong>Comfortable walking/trekking shoes, modest temple attire, layers for Sapa mountains, sun protection, rain jacket, swimwear, camera</p><p><strong>Best time:</strong>Spring (Mar-May) perfect nationwide; Summer (Jun-Aug) beach season; Autumn (Sep-Nov) harvest festivals; Winter (Dec-Feb) warm south, cool north</p><p><strong>Cultural sites:</strong>Modest dress required (covered shoulders/knees); shoes removed at temples and homes</p><p><strong>Fitness level:</strong>Moderate (comfortable walking 4-6 hours; Sapa trekking moderate difficulty)</p>",
               "highlights": [
@@ -169,8 +169,8 @@
               "tourType": "Honeymoon Tour",
               "departureDate": "20 April 2026",
               "duration": "8 Days / 7 Nights",
-              "startingPrice": 159990,
-              "currency": "INR",
+              "startingPrice": 6480,
+              "currency": "AED",
               "bannerImage": "asset/image/packages/SightSeeingnIIT1w.png",
               "description": "<h2>Overview</h2><p>Celebrate love on a beautifully curated Vietnam Honeymoon Special designed exclusively for couples seeking romance, relaxation, and unforgettable moments. This journey blends breathtaking natural beauty with luxury stays, private experiences, and intimate cultural encounters.</p><p>From cruising the emerald waters of Halong Bay to romantic candlelight dinners in Da Nang and tranquil beach escapes in Phu Quoc, every detail is crafted to create lifelong memories. Enjoy privacy, personalized services, and dreamy experiences ideal for newlyweds.</p><p><strong>Duration:</strong> 8 days, 7 nights</p><p><strong>Departure:</strong> Daily from Hanoi</p><p><strong>Style:</strong> Romantic luxury & leisure</p>",
               "highlights": [
@@ -298,8 +298,8 @@
               "tourType": "Couple Tour",
               "departureDate": "22 February 2026",
               "duration": "7 Nights / 8 Days",
-              "startingPrice": 64001,
-              "currency": "INR",
+              "startingPrice": 2590,
+              "currency": "AED",
               "bannerImage": "asset/image/packages/tour-wide-1.jpg",
               "description": "<h2>Overview</h2><p>Embark on an exciting Bali group journey filled with adventure, culture, and scenic highlights. Enjoy thrilling water sports at Benoa Beach, witness the stunning Uluwatu Sunset, and explore the artistic charm of Ubud with the famous Bali Swing experience. Discover the grandeur of GWK Cultural Park and spend a fun-filled day at Trans Studio Theme Park. This group departure is designed to offer seamless travel, memorable experiences, and the perfect blend of relaxation and exploration in Bali.</p>",
               "highlights": [
@@ -423,8 +423,8 @@
               "tourType": "International Leisure Tour",
               "departureDate": "15 July 2026",
               "duration": "6 Days / 5 Nights",
-              "startingPrice": 74990,
-              "currency": "INR",
+              "startingPrice": 3040,
+              "currency": "AED",
               "bannerImage": "asset/image/packages/bali.jfif",
               "description": "<h2>Overview</h2><p>The Exotic Bali Getaway is a perfect introduction to Indonesia’s island paradise. Explore cultural Ubud, beach vibes of Kuta, and iconic Balinese temples.</p><p>This tour blends relaxation, culture, and scenic beauty—ideal for couples and families.</p>",
               "highlights": [
@@ -513,8 +513,8 @@
               "tourType": "International Honeymoon Tour",
               "departureDate": "01 August 2026",
               "duration": "5 Days / 4 Nights",
-              "startingPrice": 89990,
-              "currency": "INR",
+              "startingPrice": 3640,
+              "currency": "AED",
               "bannerImage": "asset/image/packages/bali3.jfif",
               "description": "<h2>Overview</h2><p>The Romantic Bali Honeymoon is designed for couples seeking luxury, privacy, and unforgettable moments.</p><p>From private pool villas to beachside candlelight dinners, this tour offers pure romance.</p>",
               "highlights": [
@@ -589,546 +589,7 @@
             }
           ]
         },
-        {
-          "id": "dubai-tour",
-          "name": "Dubai",
-          "packages": [
-            {
-              "id": "dubai-city-desert-safari",
-              "tourid": "TID0003",
-              "title": "Dubai City Tour & Desert Safari",
-              "slug": "dubai-city-tour-desert-safari",
-              "subtitle": "Modern Marvels, Arabian Culture & Golden Dunes",
-              "tourType": "Leisure Tour",
-              "departureDate": "Daily Departures",
-              "duration": "5 Days / 4 Nights",
-              "startingPrice": 89990,
-              "currency": "INR",
-              "bannerImage": "asset/image/packages/tour-wide-2.jpg",
-              "description": "<h2>Overview</h2><p>Experience the best of Dubai with an exciting blend of ultra-modern attractions, rich cultural heritage, and thrilling desert adventures. This Dubai City Tour & Desert Safari package is perfect for travelers seeking iconic sightseeing, luxury experiences, and unforgettable moments in the Arabian desert.</p><p>From towering skyscrapers and luxury malls to dune bashing, camel rides, and traditional Arabian entertainment, this journey showcases Dubai’s unique contrasts.</p><p><strong>Duration:</strong> 5 days, 4 nights</p><p><strong>Departure:</strong> Daily from Dubai</p><p><strong>Style:</strong> City sightseeing & desert adventure</p>",
-              "highlights": [
-                "Half Day Dubai City Tour",
-                "Burj Khalifa Photo Stop",
-                "Palm Jumeirah & Atlantis View",
-                "Dubai Marina Walk",
-                "Desert Safari with Dune Bashing",
-                "BBQ Dinner with Live Entertainment"
-              ],
-              "inclusions": [
-                "<p><strong>Airport transfers:</strong> Return airport transfers on private or shared basis</p>",
-                "<p><strong>Accommodation:</strong> 4 nights in well-appointed 4-star hotel in Dubai</p>",
-                "<p><strong>Meals:</strong> Daily breakfast & BBQ dinner during desert safari</p>",
-                "<p><strong>Sightseeing:</strong> Guided Dubai city tour & desert safari experience</p>",
-                "<p><strong>Experiences:</strong> Dune bashing, camel ride, belly dance, Tanoura & fire show</p>",
-                "<p><strong>Taxes:</strong> All applicable hotel taxes & tourism fees</p>"
-              ],
-              "exclusions": [
-                "<p><strong>International flights:</strong> Flights to and from Dubai</p>",
-                "<p><strong>Visa fees:</strong> UAE tourist visa charges</p>",
-                "<p><strong>Personal expenses:</strong> Shopping, tips, optional activities</p>",
-                "<p><strong>Travel insurance:</strong> Strongly recommended</p>",
-                "<p><strong>Optional tours:</strong> Burj Khalifa entry, Dhow cruise, theme parks</p>"
-              ],
-              "hotelAccommodation": [
-                {
-                  "city": "Dubai",
-                  "nights": 4,
-                  "hotel": "Citymax Hotel / Similar",
-                  "rating": 4
-                }
-              ],
-              "itinerary": [
-                {
-                  "day": 1,
-                  "title": "Arrival in Dubai",
-                  "description": "<h5>'Welcome to the City of Gold'</h5><p>Arrive at Dubai International Airport and transfer to your hotel. The rest of the day is free for leisure or exploring nearby areas.</p><p><strong>Accommodation:</strong> Hotel in Dubai</p><p><strong>Meals:</strong> None</p>",
-                  "activities": [
-                    "Airport Transfer",
-                    "Hotel Check-in",
-                    "Leisure Time"
-                  ]
-                },
-                {
-                  "day": 2,
-                  "title": "Dubai City Tour",
-                  "description": "<h5>'Icons of Modern Dubai'</h5><p>Enjoy a guided half-day Dubai city tour covering Jumeirah Mosque, Burj Al Arab photo stop, Palm Jumeirah, Atlantis The Palm, Dubai Marina, and Burj Khalifa (outside view).</p><p><strong>Meals:</strong> Breakfast</p>",
-                  "activities": [
-                    "City Sightseeing",
-                    "Photo Stops",
-                    "Dubai Marina Walk"
-                  ]
-                },
-                {
-                  "day": 3,
-                  "title": "Desert Safari with BBQ Dinner",
-                  "description": "<h5>'Adventure in the Arabian Desert'</h5><p>Head into the desert for an unforgettable safari experience. Enjoy dune bashing, sandboarding, camel rides, followed by a BBQ dinner with live entertainment at a desert camp.</p><p><strong>Meals:</strong> Breakfast, BBQ Dinner</p>",
-                  "activities": [
-                    "Dune Bashing",
-                    "Camel Ride",
-                    "BBQ Dinner",
-                    "Live Shows"
-                  ]
-                },
-                {
-                  "day": 4,
-                  "title": "Day at Leisure",
-                  "description": "<h5>'Explore at Your Own Pace'</h5><p>A free day to explore Dubai on your own or opt for additional tours such as Burj Khalifa At The Top, Dhow Cruise, or theme parks.</p><p><strong>Meals:</strong> Breakfast</p>",
-                  "activities": ["Leisure Time", "Optional Tours"]
-                },
-                {
-                  "day": 5,
-                  "title": "Departure",
-                  "description": "<h5>'Goodbye Dubai'</h5><p>After breakfast, transfer to the airport for your onward journey with unforgettable memories.</p><p><strong>Meals:</strong> Breakfast</p>",
-                  "activities": ["Hotel Check-out", "Airport Transfer"]
-                }
-              ],
-              "gallery": [
-                "asset/image/packages/dubai/city/burj-khalifa.jpg",
-                "asset/image/packages/dubai/city/palm-jumeirah.jpg",
-                "asset/image/packages/dubai/desert/dune-bashing.jpg",
-                "asset/image/packages/dubai/desert/bbq-dinner.jpg"
-              ]
-            },
-            {
-              "id": "dubai-luxury-experience",
-              "tourid": "TID0004",
-              "title": "Dubai Luxury Experience",
-              "slug": "dubai-luxury-experience",
-              "subtitle": "Ultra-Luxury, Iconic Experiences & Desert Elegance",
-              "tourType": "Luxury Tour",
-              "departureDate": "Daily Departures",
-              "duration": "6 Days / 5 Nights",
-              "startingPrice": 189990,
-              "currency": "INR",
-              "bannerImage": "asset/image/packages/SightSeeinguGmRLZ.jpg",
-              "description": "<h2>Overview</h2><p>Indulge in the ultimate Dubai Luxury Experience crafted for travelers who seek exclusivity, comfort, and world-class hospitality. This premium journey combines iconic landmarks, VIP services, luxury accommodations, and bespoke experiences across the city and desert.</p><p>From staying in luxury hotels and enjoying private city tours to VIP Burj Khalifa access, yacht cruising, and a royal-style desert safari, every moment reflects Dubai’s signature opulence.</p><p><strong>Duration:</strong> 6 days, 5 nights</p><p><strong>Departure:</strong> Daily from Dubai</p><p><strong>Style:</strong> Ultra-luxury, private & premium experiences</p>",
-              "highlights": [
-                "Luxury 5-Star Hotel Stay",
-                "VIP Burj Khalifa At The Top",
-                "Private Dubai City Tour",
-                "Luxury Yacht Cruise at Marina",
-                "Premium Desert Safari Experience",
-                "Fine Dining & Exclusive Experiences"
-              ],
-              "inclusions": [
-                "<p><strong>Private airport transfers:</strong> Luxury vehicle transfers with meet & greet service</p>",
-                "<p><strong>Luxury accommodation:</strong> 5 nights in handpicked 5-star luxury hotels</p>",
-                "<p><strong>Meals:</strong> Daily breakfast, gourmet dining experiences, desert safari dinner</p>",
-                "<p><strong>Sightseeing:</strong> Private guided city tour with VIP entry experiences</p>",
-                "<p><strong>Experiences:</strong> VIP Burj Khalifa, luxury yacht cruise, premium desert safari</p>",
-                "<p><strong>Services:</strong> Personalized assistance & luxury travel support</p>"
-              ],
-              "exclusions": [
-                "<p><strong>International flights:</strong> Flights to and from Dubai</p>",
-                "<p><strong>Visa fees:</strong> UAE tourist visa charges</p>",
-                "<p><strong>Personal expenses:</strong> Spa treatments, shopping, minibar</p>",
-                "<p><strong>Travel insurance:</strong> Strongly recommended</p>",
-                "<p><strong>Optional upgrades:</strong> Helicopter ride, Burj Al Arab dining</p>"
-              ],
-              "hotelAccommodation": [
-                {
-                  "city": "Dubai",
-                  "nights": 5,
-                  "hotel": "Atlantis The Palm / Address Downtown / Similar",
-                  "rating": 5
-                }
-              ],
-              "itinerary": [
-                {
-                  "day": 1,
-                  "title": "Arrival in Dubai – Luxury Welcome",
-                  "description": "<h5>'Welcome to Premium Dubai'</h5><p>Arrive at Dubai International Airport and enjoy a private luxury transfer to your 5-star hotel. Spend the evening relaxing or enjoying hotel amenities.</p><p><strong>Accommodation:</strong> 5-star luxury hotel</p><p><strong>Meals:</strong> None</p>",
-                  "activities": [
-                    "Private Airport Transfer",
-                    "Luxury Hotel Check-in",
-                    "Leisure Time"
-                  ]
-                },
-                {
-                  "day": 2,
-                  "title": "Private Dubai City Tour",
-                  "description": "<h5>'Icons of Elegance'</h5><p>Explore Dubai on a private guided city tour including Jumeirah Mosque, Burj Al Arab photo stop, Palm Jumeirah, Atlantis The Palm, Dubai Marina, and VIP Burj Khalifa At The Top experience.</p><p><strong>Meals:</strong> Breakfast</p>",
-                  "activities": [
-                    "Private City Tour",
-                    "Burj Khalifa VIP Access",
-                    "Photo Stops"
-                  ]
-                },
-                {
-                  "day": 3,
-                  "title": "Luxury Yacht Cruise – Dubai Marina",
-                  "description": "<h5>'Sail in Style'</h5><p>Enjoy a private luxury yacht cruise along Dubai Marina with refreshments, skyline views, and premium onboard service.</p><p><strong>Meals:</strong> Breakfast</p>",
-                  "activities": [
-                    "Private Yacht Cruise",
-                    "Marina Sightseeing",
-                    "Luxury Refreshments"
-                  ]
-                },
-                {
-                  "day": 4,
-                  "title": "Premium Desert Safari",
-                  "description": "<h5>'Royal Desert Experience'</h5><p>Experience a premium desert safari with luxury 4x4 vehicles, extended dune bashing, camel ride, sunset photography, and gourmet dinner at a luxury desert camp.</p><p><strong>Meals:</strong> Breakfast, Luxury Dinner</p>",
-                  "activities": [
-                    "Premium Dune Bashing",
-                    "Camel Ride",
-                    "Luxury Desert Camp Dinner"
-                  ]
-                },
-                {
-                  "day": 5,
-                  "title": "Day at Leisure or Optional Luxury Experiences",
-                  "description": "<h5>'Indulge Your Way'</h5><p>Enjoy a free day for shopping, spa treatments, or opt for exclusive add-ons like helicopter ride, Burj Al Arab dining, or private beach club access.</p><p><strong>Meals:</strong> Breakfast</p>",
-                  "activities": ["Leisure Time", "Optional Luxury Add-ons"]
-                },
-                {
-                  "day": 6,
-                  "title": "Departure",
-                  "description": "<h5>'Until Next Luxury Escape'</h5><p>After breakfast, enjoy a private transfer to the airport for your onward journey.</p><p><strong>Meals:</strong> Breakfast</p>",
-                  "activities": ["Hotel Check-out", "Private Airport Transfer"]
-                }
-              ],
-              "gallery": [
-                "asset/image/packages/dubai/luxury/burj-khalifa-vip.jpg",
-                "asset/image/packages/dubai/luxury/yacht-cruise.jpg",
-                "asset/image/packages/dubai/luxury/desert-camp.jpg",
-                "asset/image/packages/dubai/luxury/atlantis-hotel.jpg"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "religious-tours",
-      "name": "Religious Tours",
-      "children": [
-        {
-          "id": "umrah",
-          "name": "Umrah Packages",
-          "packages": [
-            {
-              "id": "ramadan-umrah-package",
-              "tourid": "TID0005",
-              "title": "Ramadan Umrah Package",
-              "slug": "ramadan-umrah-package",
-              "subtitle": "Spiritual Journey During the Blessed Month of Ramadan",
-              "tourType": "Religious Tour",
-              "departureDate": "Ramadan 2026",
-              "duration": "10 Days / 9 Nights",
-              "startingPrice": 179990,
-              "currency": "INR",
-              "bannerImage": "asset/image/packages/SightSeeinguAzBmB.jpg",
-              "description": "<h2>Overview</h2><p>Perform Umrah during the sacred month of Ramadan and experience unmatched spiritual rewards in the holy cities of Makkah and Madinah. This Ramadan Umrah Package is thoughtfully designed to provide comfort, convenience, and guided religious support throughout your journey.</p><p>Experience the serenity of fasting in the Haram, breaking fast with Iftar near the Holy Mosque, and offering Taraweeh prayers in the most sacred places of Islam.</p><p><strong>Duration:</strong> 10 days, 9 nights</p><p><strong>Departure:</strong> Fixed departures during Ramadan</p><p><strong>Style:</strong> Spiritual, guided & comfortable pilgrimage</p>",
-              "highlights": [
-                "Umrah During Holy Month of Ramadan",
-                "Iftar & Suhoor Near Haram",
-                "Stay Close to Masjid Al Haram",
-                "Guided Umrah Rituals",
-                "Ziyarat in Makkah & Madinah",
-                "Taraweeh Prayers in Holy Mosques"
-              ],
-              "inclusions": [
-                "<p><strong>Visa assistance:</strong> Saudi Umrah visa processing</p>",
-                "<p><strong>Accommodation:</strong> 9 nights in well-located hotels near Haram</p>",
-                "<p><strong>Meals:</strong> Daily Suhoor & Iftar during Ramadan</p>",
-                "<p><strong>Transportation:</strong> Airport transfers & intercity travel by AC coach</p>",
-                "<p><strong>Guidance:</strong> Experienced religious guide for Umrah rituals</p>",
-                "<p><strong>Ziyarat:</strong> Makkah & Madinah guided visits</p>"
-              ],
-              "exclusions": [
-                "<p><strong>International flights:</strong> Airfare to and from Saudi Arabia</p>",
-                "<p><strong>Personal expenses:</strong> Laundry, shopping, room service</p>",
-                "<p><strong>Extra services:</strong> Wheelchair, porter services</p>",
-                "<p><strong>Travel insurance:</strong> Recommended</p>",
-                "<p><strong>Qurbani:</strong> Not included</p>"
-              ],
-              "hotelAccommodation": [
-                {
-                  "city": "Makkah",
-                  "nights": 5,
-                  "hotel": "Anjum Hotel / Similar",
-                  "rating": 4
-                },
-                {
-                  "city": "Madinah",
-                  "nights": 4,
-                  "hotel": "Oberoi Madinah / Similar",
-                  "rating": 5
-                }
-              ],
-              "itinerary": [
-                {
-                  "day": 1,
-                  "title": "Arrival in Jeddah – Transfer to Makkah",
-                  "description": "<h5>'Journey Begins'</h5><p>Arrive at Jeddah International Airport, complete immigration formalities, and transfer to Makkah. Check-in and rest before preparing for Umrah.</p><p><strong>Accommodation:</strong> Hotel in Makkah</p><p><strong>Meals:</strong> Suhoor & Iftar</p>",
-                  "activities": [
-                    "Airport Transfer",
-                    "Hotel Check-in",
-                    "Rest & Preparation"
-                  ]
-                },
-                {
-                  "day": 2,
-                  "title": "Perform Umrah",
-                  "description": "<h5>'Sacred Umrah Rituals'</h5><p>Perform Umrah with guidance including Tawaf, Sa’i, and Halq/Qasr. Spend the rest of the day in prayers at Masjid Al Haram.</p><p><strong>Meals:</strong> Suhoor & Iftar</p>",
-                  "activities": ["Umrah Rituals", "Tawaf", "Sa’i"]
-                },
-                {
-                  "day": 3,
-                  "title": "Makkah Ziyarat",
-                  "description": "<h5>'Historical Islamic Sites'</h5><p>Visit important Islamic landmarks including Jabal Al Noor, Jabal Al Thawr, Mina, Arafat, and Muzdalifah.</p><p><strong>Meals:</strong> Suhoor & Iftar</p>",
-                  "activities": ["Ziyarat Tour", "Religious Guidance"]
-                },
-                {
-                  "day": 4,
-                  "title": "Free Day for Ibadah",
-                  "description": "<h5>'Spiritual Reflection'</h5><p>Spend the day in personal prayers, Quran recitation, and Taraweeh at Masjid Al Haram.</p><p><strong>Meals:</strong> Suhoor & Iftar</p>",
-                  "activities": ["Personal Ibadah", "Taraweeh Prayers"]
-                },
-                {
-                  "day": 5,
-                  "title": "Makkah to Madinah",
-                  "description": "<h5>'Journey to the Prophet’s City'</h5><p>Travel to Madinah by AC coach or train. Check-in and visit Masjid An-Nabawi.</p><p><strong>Accommodation:</strong> Hotel in Madinah</p><p><strong>Meals:</strong> Suhoor & Iftar</p>",
-                  "activities": ["Intercity Transfer", "Masjid An-Nabawi Visit"]
-                },
-                {
-                  "day": 6,
-                  "title": "Madinah Ziyarat",
-                  "description": "<h5>'Sacred Landmarks of Madinah'</h5><p>Visit Jannatul Baqi, Masjid Quba, Masjid Qiblatain, and Uhud Mountain.</p><p><strong>Meals:</strong> Suhoor & Iftar</p>",
-                  "activities": ["Ziyarat Tour", "Religious Learning"]
-                },
-                {
-                  "day": 7,
-                  "title": "Free Day in Madinah",
-                  "description": "<h5>'Peace & Reflection'</h5><p>Spend the day in prayers, Quran recitation, and Taraweeh at Masjid An-Nabawi.</p><p><strong>Meals:</strong> Suhoor & Iftar</p>",
-                  "activities": ["Personal Ibadah", "Taraweeh Prayers"]
-                },
-                {
-                  "day": 8,
-                  "title": "Optional Additional Umrah",
-                  "description": "<h5>'Renewed Intentions'</h5><p>Optional travel for performing an additional Umrah (at own cost).</p><p><strong>Meals:</strong> Suhoor & Iftar</p>",
-                  "activities": ["Optional Umrah"]
-                },
-                {
-                  "day": 9,
-                  "title": "Farewell Tawaf Preparation",
-                  "description": "<h5>'Moments of Gratitude'</h5><p>Prepare spiritually for Farewell Tawaf and final prayers.</p><p><strong>Meals:</strong> Suhoor & Iftar</p>",
-                  "activities": ["Farewell Preparation", "Prayers"]
-                },
-                {
-                  "day": 10,
-                  "title": "Departure",
-                  "description": "<h5>'Return with Blessings'</h5><p>Transfer to Jeddah Airport for departure with cherished spiritual memories.</p><p><strong>Meals:</strong> Suhoor</p>",
-                  "activities": ["Hotel Check-out", "Airport Transfer"]
-                }
-              ],
-              "gallery": [
-                "asset/image/packages/umrah/ramadan/masjid-al-haram.jpg",
-                "asset/image/packages/umrah/ramadan/iftar-haram.jpg",
-                "asset/image/packages/umrah/ramadan/masjid-nabawi.jpg",
-                "asset/image/packages/umrah/ramadan/taraweeh.jpg"
-              ]
-            }
-          ]
-        },
-        {
-          "id": "jyotirlinga",
-          "name": "Jyotirlinga Darshan",
-          "packages": [
-            {
-              "id": "maha-jyotirlinga",
-              "title": "12 Jyotirlinga Complete Darshan",
-              "duration": "21 Days / 20 Nights",
-              "startingPrice": 185000,
-              "currency": "INR",
-              "bannerImage": "asset/image/packages/SightSeeingTBnhzM.png",
-              "highlights": [
-                "All 12 Jyotirlingas",
-                "VIP Darshan",
-                "AC Transport"
-              ]
-            },
-            {
-              "id": "twelve-jyotirlinga-darshan",
-              "tourid": "TID0006",
-              "title": "12 Jyotirlinga Complete Darshan",
-              "slug": "12-jyotirlinga-complete-darshan",
-              "subtitle": "Sacred Journey to All 12 Abodes of Lord Shiva",
-              "tourType": "Religious Tour",
-              "departureDate": "Monthly Fixed Departures",
-              "duration": "14 Days / 13 Nights",
-              "startingPrice": 149990,
-              "currency": "INR",
-              "bannerImage": "asset/image/packages/SightSeeingTBnhzM.png",
-              "description": "<h2>Overview</h2><p>Embark on a spiritually enriching pilgrimage covering all the 12 sacred Jyotirlingas of Lord Shiva across India. This 12 Jyotirlinga Complete Darshan tour is thoughtfully planned to ensure smooth travel, comfortable stays, and guided temple visits.</p><p>Experience divine blessings at the most revered Shiva temples including Somnath, Kedarnath, Kashi Vishwanath, Mahakaleshwar, Rameshwaram, and more—each holding deep spiritual and mythological significance.</p><p><strong>Duration:</strong> 14 days, 13 nights</p><p><strong>Departure:</strong> Fixed departures from major Indian cities</p><p><strong>Style:</strong> Spiritual pilgrimage with guided darshan</p>",
-              "highlights": [
-                "Darshan of All 12 Jyotirlingas",
-                "Guided Temple Visits",
-                "Kedarnath & Rameshwaram Special Darshan",
-                "Holy Ganga Aarti at Varanasi",
-                "Comfortable Hotels & Transfers",
-                "Experienced Tour Escort"
-              ],
-              "inclusions": [
-                "<p><strong>Accommodation:</strong> 13 nights in comfortable hotels & dharamshalas</p>",
-                "<p><strong>Meals:</strong> Daily breakfast & dinner</p>",
-                "<p><strong>Transportation:</strong> All intercity transfers by AC coach / train / flight (as per itinerary)</p>",
-                "<p><strong>Darshan:</strong> Assisted darshan at all Jyotirlinga temples</p>",
-                "<p><strong>Guide:</strong> Experienced spiritual tour escort</p>",
-                "<p><strong>Sightseeing:</strong> All major pilgrimage sightseeing as per itinerary</p>"
-              ],
-              "exclusions": [
-                "<p><strong>Airfare:</strong> Flights unless specifically mentioned</p>",
-                "<p><strong>VIP Darshan tickets:</strong> Temple special entry charges</p>",
-                "<p><strong>Personal expenses:</strong> Laundry, shopping, tips</p>",
-                "<p><strong>Travel insurance:</strong> Recommended</p>",
-                "<p><strong>Pony/Doli charges:</strong> At Kedarnath (if required)</p>"
-              ],
-              "hotelAccommodation": [
-                {
-                  "city": "Somnath",
-                  "nights": 1,
-                  "hotel": "Hotel Somnath Atithigruh / Similar",
-                  "rating": 3
-                },
-                {
-                  "city": "Ujjain",
-                  "nights": 1,
-                  "hotel": "Hotel Rudraksh / Similar",
-                  "rating": 3
-                },
-                {
-                  "city": "Omkareshwar",
-                  "nights": 1,
-                  "hotel": "Narmada Retreat / Similar",
-                  "rating": 3
-                },
-                {
-                  "city": "Varanasi",
-                  "nights": 2,
-                  "hotel": "Hotel Temple On Ganges / Similar",
-                  "rating": 4
-                },
-                {
-                  "city": "Kedarnath",
-                  "nights": 1,
-                  "hotel": "Govt Guest House / Similar",
-                  "rating": 3
-                },
-                {
-                  "city": "Rameshwaram",
-                  "nights": 1,
-                  "hotel": "Hotel Daiwik / Similar",
-                  "rating": 4
-                }
-              ],
-              "itinerary": [
-                {
-                  "day": 1,
-                  "title": "Arrival – Somnath Jyotirlinga",
-                  "description": "<h5>'First Divine Darshan'</h5><p>Arrive at Somnath and visit Somnath Jyotirlinga. Attend evening Aarti at the temple.</p><p><strong>Accommodation:</strong> Hotel in Somnath</p><p><strong>Meals:</strong> Dinner</p>",
-                  "activities": [
-                    "Arrival",
-                    "Somnath Temple Darshan",
-                    "Evening Aarti"
-                  ]
-                },
-                {
-                  "day": 2,
-                  "title": "Somnath – Nageshwar – Dwarka",
-                  "description": "<h5>'Sacred Gujarat'</h5><p>Visit Nageshwar Jyotirlinga near Dwarka followed by Dwarkadhish Temple darshan.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
-                  "activities": ["Nageshwar Jyotirlinga", "Dwarkadhish Temple"]
-                },
-                {
-                  "day": 3,
-                  "title": "Ujjain – Mahakaleshwar",
-                  "description": "<h5>'Abode of Time'</h5><p>Visit Mahakaleshwar Jyotirlinga, one of the most powerful Shiva temples.</p><p><strong>Accommodation:</strong> Hotel in Ujjain</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
-                  "activities": ["Mahakaleshwar Darshan", "Temple Rituals"]
-                },
-                {
-                  "day": 4,
-                  "title": "Omkareshwar Jyotirlinga",
-                  "description": "<h5>'Island of Om'</h5><p>Visit Omkareshwar Jyotirlinga located on the sacred Narmada River.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
-                  "activities": ["Omkareshwar Temple", "Narmada Parikrama"]
-                },
-                {
-                  "day": 5,
-                  "title": "Varanasi – Kashi Vishwanath",
-                  "description": "<h5>'City of Moksha'</h5><p>Visit Kashi Vishwanath Jyotirlinga and attend the divine Ganga Aarti in the evening.</p><p><strong>Accommodation:</strong> Hotel in Varanasi</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
-                  "activities": ["Kashi Vishwanath Darshan", "Ganga Aarti"]
-                },
-                {
-                  "day": 6,
-                  "title": "Kedarnath Jyotirlinga",
-                  "description": "<h5>'Himalayan Abode of Shiva'</h5><p>Travel to Kedarnath and perform darshan at Kedarnath Jyotirlinga.</p><p><strong>Accommodation:</strong> Kedarnath</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
-                  "activities": ["Kedarnath Darshan", "Spiritual Prayers"]
-                },
-                {
-                  "day": 7,
-                  "title": "Bhimashankar Jyotirlinga",
-                  "description": "<h5>'Shiva in the Sahyadris'</h5><p>Visit Bhimashankar Jyotirlinga surrounded by lush forests.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
-                  "activities": ["Bhimashankar Darshan"]
-                },
-                {
-                  "day": 8,
-                  "title": "Trimbakeshwar Jyotirlinga",
-                  "description": "<h5>'Source of the Godavari'</h5><p>Visit Trimbakeshwar Jyotirlinga near Nashik.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
-                  "activities": ["Trimbakeshwar Temple"]
-                },
-                {
-                  "day": 9,
-                  "title": "Grishneshwar Jyotirlinga",
-                  "description": "<h5>'Ellora Sacred Site'</h5><p>Visit Grishneshwar Jyotirlinga near Ellora Caves.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
-                  "activities": ["Grishneshwar Darshan"]
-                },
-                {
-                  "day": 10,
-                  "title": "Baidyanath Dham",
-                  "description": "<h5>'Healing Abode'</h5><p>Visit Baidyanath Jyotirlinga in Deoghar.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
-                  "activities": ["Baidyanath Darshan"]
-                },
-                {
-                  "day": 11,
-                  "title": "Mallikarjuna Jyotirlinga",
-                  "description": "<h5>'Sacred Hill Temple'</h5><p>Visit Mallikarjuna Jyotirlinga at Srisailam.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
-                  "activities": ["Mallikarjuna Darshan"]
-                },
-                {
-                  "day": 12,
-                  "title": "Rameshwaram Jyotirlinga",
-                  "description": "<h5>'Southern Sacred Shrine'</h5><p>Visit Ramanathaswamy Jyotirlinga and perform holy bath rituals.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
-                  "activities": ["Rameshwaram Darshan", "Temple Rituals"]
-                },
-                {
-                  "day": 13,
-                  "title": "Return Journey",
-                  "description": "<h5>'Gratitude & Reflection'</h5><p>Begin return journey after completing all 12 Jyotirlinga darshans.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
-                  "activities": ["Return Travel"]
-                },
-                {
-                  "day": 14,
-                  "title": "Departure",
-                  "description": "<h5>'Journey Complete'</h5><p>Tour concludes with divine blessings and cherished spiritual memories.</p><p><strong>Meals:</strong> Breakfast</p>",
-                  "activities": ["Tour Completion"]
-                }
-              ],
-              "gallery": [
-                "asset/image/packages/jyotirlinga/somnath.jpg",
-                "asset/image/packages/jyotirlinga/kedarnath.jpg",
-                "asset/image/packages/jyotirlinga/kashi-vishwanath.jpg",
-                "asset/image/packages/jyotirlinga/rameshwaram.jpg"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-
-    {
-      "id": "domestic-tours",
-      "name": "Domestic Tours",
-      "children": [
-        {
+         {
           "id": "northeast-india",
           "name": "North East India",
           "packages": [
@@ -1141,8 +602,8 @@
               "tourType": "Adventure & Nature Tour",
               "departureDate": "March to May",
               "duration": "8 Days / 7 Nights",
-              "startingPrice": 64990,
-              "currency": "INR",
+              "startingPrice": 2630,
+              "currency": "AED",
               "bannerImage": "asset/image/packages/SightSeeingTBnhzM.png",
               "description": "<h2>Overview</h2><p>Discover the untouched beauty of Northeast India with the Arunachal – Tawang Spring Trail. This scenic journey takes you through breathtaking mountain passes, serene monasteries, alpine valleys, and vibrant tribal culture.</p><p>Spring is the perfect season to experience blooming rhododendrons, snow-draped landscapes at Sela Pass, and crystal-clear views of the Eastern Himalayas. Ideal for nature lovers, adventure seekers, and cultural explorers.</p><p><strong>Duration:</strong> 8 days, 7 nights</p><p><strong>Departure:</strong> Fixed departures from Guwahati</p><p><strong>Style:</strong> Scenic, cultural & soft adventure</p>",
               "highlights": [
@@ -1272,8 +733,8 @@
               "tourType": "Cultural & Nature Tour",
               "departureDate": "October to April",
               "duration": "14 Days / 13 Nights",
-              "startingPrice": 119990,
-              "currency": "INR",
+              "startingPrice": 4860,
+              "currency": "AED",
               "bannerImage": "asset/image/packages/SightSeeingSRkxGA.png",
               "description": "<h2>Overview</h2><p>Explore the enchanting Northeast India with the Seven Sisters Complete Tour, covering all seven states—Assam, Meghalaya, Arunachal Pradesh, Nagaland, Manipur, Mizoram, and Tripura. This immersive journey blends breathtaking landscapes, vibrant tribal cultures, historic monasteries, lush valleys, and serene lakes.</p><p>From the living root bridges of Meghalaya and monasteries of Arunachal to the cultural heartlands of Manipur and Mizoram, this tour offers a comprehensive exploration of India’s most diverse and unexplored region.</p><p><strong>Duration:</strong> 14 days, 13 nights</p><p><strong>Departure:</strong> Fixed departures from Guwahati</p><p><strong>Style:</strong> Cultural immersion, scenic & exploratory</p>",
               "highlights": [
@@ -1463,8 +924,8 @@
               "tourType": "Adventure Tour",
               "departureDate": "15 May 2026",
               "duration": "9 Days / 8 Nights",
-              "startingPrice": 42990,
-              "currency": "INR",
+              "startingPrice": 1740,
+              "currency": "AED",
               "bannerImage": "asset/image/packages/SightSeeingQEOw8B.png",
               "description": "<h2>Overview</h2><p>The Himachal Adventure Trail is crafted for thrill-seekers and nature lovers who crave mountains, adrenaline, and raw Himalayan beauty. This journey blends adventure sports, scenic drives, riverside camping, and high-altitude landscapes.</p><p>From paragliding in Solang Valley to trekking trails near Spiti’s edge, river rafting in Kullu, and peaceful escapes in Kasol, this tour offers a perfect balance of excitement and serenity.</p><p><strong>Duration:</strong> 9 days, 8 nights</p><p><strong>Departure:</strong> Ex-Delhi / Chandigarh</p><p><strong>Style:</strong> Adventure, mountains & outdoor experiences</p>",
               "highlights": [
@@ -1588,8 +1049,8 @@
               "tourType": "Domestic Leisure Tour",
               "departureDate": "10 April 2026",
               "duration": "7 Days / 6 Nights",
-              "startingPrice": 32990,
-              "currency": "INR",
+              "startingPrice": 1340,
+              "currency": "AED",
               "bannerImage": "asset/image/packages/himachal 1.jpg",
               "description": "<h2>Overview</h2><p>The Himachal Scenic Escape is a perfect domestic holiday designed for families, couples, and first-time Himalayan travelers. This tour blends snow-capped mountains, pine forests, colonial hill towns, and peaceful valleys.</p><p>Experience the charm of Manali, the adventure-filled Solang Valley, and the colonial elegance of Shimla with comfortable stays and relaxed sightseeing.</p><p><strong>Duration:</strong> 7 days, 6 nights</p><p><strong>Departure:</strong> Ex-Delhi / Chandigarh</p><p><strong>Style:</strong> Leisure, mountains & scenic sightseeing</p>",
               "highlights": [
@@ -1688,8 +1149,8 @@
               "tourType": "Domestic Family Tour",
               "departureDate": "05 June 2026",
               "duration": "6 Days / 5 Nights",
-              "startingPrice": 28990,
-              "currency": "INR",
+              "startingPrice": 1180,
+              "currency": "AED",
               "bannerImage": "asset/image/packages/himachal 3.jfif",
               "description": "<h2>Overview</h2><p>The Himachal Family Delight tour is specially designed for families seeking a relaxed and comfortable holiday in the mountains. This tour covers popular hill destinations with easy travel pace and enjoyable sightseeing.</p><p>From temple visits in Manali to snow fun in Kufri and scenic drives through Kullu Valley, this package ensures a memorable family vacation.</p>",
               "highlights": [
@@ -1777,8 +1238,8 @@
               "tourType": "Domestic Honeymoon Tour",
               "departureDate": "20 March 2026",
               "duration": "5 Days / 4 Nights",
-              "startingPrice": 34990,
-              "currency": "INR",
+              "startingPrice": 1420,
+              "currency": "AED",
               "bannerImage": "asset/image/packages/himachal 4.jpg",
               "description": "<h2>Overview</h2><p>The Romantic Himachal Honeymoon is a perfect escape for newlyweds seeking scenic beauty, cozy stays, and peaceful moments in the Himalayas.</p><p>Enjoy candlelight dinners, snow landscapes, and leisure time amidst breathtaking mountain views.</p>",
               "highlights": [
@@ -1866,8 +1327,8 @@
               "tourType": "Wellness & Leisure Tour",
               "departureDate": "10 June 2026",
               "duration": "8 Days / 7 Nights",
-              "startingPrice": 58990,
-              "currency": "INR",
+              "startingPrice": 2390,
+              "currency": "AED",
               "bannerImage": "asset/image/packages/SightSeeingfivXT9.png",
               "description": "<h2>Overview</h2><p>Kerala Backwaters & Ayurveda is a soul-soothing journey designed for travelers seeking relaxation, natural beauty, and holistic wellness. This experience blends misty hill stations, tranquil backwaters, serene beaches, and authentic Ayurvedic therapies.</p><p>Drift through palm-lined canals on a traditional houseboat, rejuvenate your body with time-tested Ayurvedic treatments, and explore Kerala’s rich culture and lush landscapes.</p><p><strong>Duration:</strong> 8 days, 7 nights</p><p><strong>Departure:</strong> Ex-Cochin</p><p><strong>Style:</strong> Wellness, nature & slow travel</p>",
               "highlights": [
@@ -1991,8 +1452,8 @@
               "tourType": "Domestic Heritage Tour",
               "departureDate": "12 October 2026",
               "duration": "7 Days / 6 Nights",
-              "startingPrice": 35990,
-              "currency": "INR",
+              "startingPrice": 1460,
+              "currency": "AED",
               "bannerImage": "asset/image/packages/rajasthan.jfif",
               "description": "<h2>Overview</h2><p>Explore the royal legacy of Rajasthan with majestic forts, palaces, and colorful bazaars.</p>",
               "highlights": [
@@ -2087,8 +1548,8 @@
               "tourType": "Domestic Honeymoon Tour",
               "departureDate": "20 November 2026",
               "duration": "5 Days / 4 Nights",
-              "startingPrice": 39990,
-              "currency": "INR",
+              "startingPrice": 1618,
+              "currency": "AED",
               "bannerImage": "asset/image/packages/rajasthan1.jpg",
               "description": "<h2>Overview</h2><p>A romantic escape through Rajasthan’s most charming cities.</p>",
               "highlights": [
@@ -2164,8 +1625,8 @@
               "tourType": "Domestic Adventure Tour",
               "departureDate": "05 December 2026",
               "duration": "4 Days / 3 Nights",
-              "startingPrice": 24990,
-              "currency": "INR",
+              "startingPrice": 1011,
+              "currency": "AED",
               "bannerImage": "asset/image/packages/rajasthan4.jfif",
               "description": "<h2>Overview</h2><p>Experience the golden desert with camel safaris and cultural nights.</p>",
               "highlights": [
@@ -2240,8 +1701,8 @@
               "tourType": "Bike Expedition Tour",
               "departureDate": "25 June 2026",
               "duration": "10 Days / 9 Nights",
-              "startingPrice": 68990,
-              "currency": "INR",
+              "startingPrice": 3000,
+              "currency": "AED",
               "bannerImage": "asset/image/packages/dubaitour13-960x430.webp",
               "description": "<h2>Overview</h2><p>The Ladakh Bike Expedition is a dream ride for adventure enthusiasts seeking extreme terrains, high-altitude passes, and breathtaking Himalayan landscapes. Designed for riders who crave thrill and endurance, this expedition takes you through some of the world’s highest motorable roads.</p><p>Experience the raw beauty of Nubra Valley, the serene Pangong Lake, mystical monasteries, and challenging mountain passes while riding through Leh–Ladakh’s iconic routes.</p><p><strong>Duration:</strong> 10 days, 9 nights</p><p><strong>Departure:</strong> Ex-Leh</p><p><strong>Style:</strong> Motorcycle expedition & high-altitude adventure</p>",
               "highlights": [
@@ -2370,6 +1831,547 @@
             }
           ]
         }
+      
+      ]
+    },
+    {
+      "id": "religious-tours",
+      "name": "Religious Tours",
+      "children": [
+        {
+          "id": "umrah",
+          "name": "Umrah Packages",
+          "packages": [
+            {
+              "id": "ramadan-umrah-package",
+              "tourid": "TID0005",
+              "title": "Ramadan Umrah Package",
+              "slug": "ramadan-umrah-package",
+              "subtitle": "Spiritual Journey During the Blessed Month of Ramadan",
+              "tourType": "Religious Tour",
+              "departureDate": "Ramadan 2026",
+              "duration": "10 Days / 9 Nights",
+              "startingPrice": 7290,
+              "currency": "AED",
+              "bannerImage": "asset/image/packages/SightSeeinguAzBmB.jpg",
+              "description": "<h2>Overview</h2><p>Perform Umrah during the sacred month of Ramadan and experience unmatched spiritual rewards in the holy cities of Makkah and Madinah. This Ramadan Umrah Package is thoughtfully designed to provide comfort, convenience, and guided religious support throughout your journey.</p><p>Experience the serenity of fasting in the Haram, breaking fast with Iftar near the Holy Mosque, and offering Taraweeh prayers in the most sacred places of Islam.</p><p><strong>Duration:</strong> 10 days, 9 nights</p><p><strong>Departure:</strong> Fixed departures during Ramadan</p><p><strong>Style:</strong> Spiritual, guided & comfortable pilgrimage</p>",
+              "highlights": [
+                "Umrah During Holy Month of Ramadan",
+                "Iftar & Suhoor Near Haram",
+                "Stay Close to Masjid Al Haram",
+                "Guided Umrah Rituals",
+                "Ziyarat in Makkah & Madinah",
+                "Taraweeh Prayers in Holy Mosques"
+              ],
+              "inclusions": [
+                "<p><strong>Visa assistance:</strong> Saudi Umrah visa processing</p>",
+                "<p><strong>Accommodation:</strong> 9 nights in well-located hotels near Haram</p>",
+                "<p><strong>Meals:</strong> Daily Suhoor & Iftar during Ramadan</p>",
+                "<p><strong>Transportation:</strong> Airport transfers & intercity travel by AC coach</p>",
+                "<p><strong>Guidance:</strong> Experienced religious guide for Umrah rituals</p>",
+                "<p><strong>Ziyarat:</strong> Makkah & Madinah guided visits</p>"
+              ],
+              "exclusions": [
+                "<p><strong>International flights:</strong> Airfare to and from Saudi Arabia</p>",
+                "<p><strong>Personal expenses:</strong> Laundry, shopping, room service</p>",
+                "<p><strong>Extra services:</strong> Wheelchair, porter services</p>",
+                "<p><strong>Travel insurance:</strong> Recommended</p>",
+                "<p><strong>Qurbani:</strong> Not included</p>"
+              ],
+              "hotelAccommodation": [
+                {
+                  "city": "Makkah",
+                  "nights": 5,
+                  "hotel": "Anjum Hotel / Similar",
+                  "rating": 4
+                },
+                {
+                  "city": "Madinah",
+                  "nights": 4,
+                  "hotel": "Oberoi Madinah / Similar",
+                  "rating": 5
+                }
+              ],
+              "itinerary": [
+                {
+                  "day": 1,
+                  "title": "Arrival in Jeddah – Transfer to Makkah",
+                  "description": "<h5>'Journey Begins'</h5><p>Arrive at Jeddah International Airport, complete immigration formalities, and transfer to Makkah. Check-in and rest before preparing for Umrah.</p><p><strong>Accommodation:</strong> Hotel in Makkah</p><p><strong>Meals:</strong> Suhoor & Iftar</p>",
+                  "activities": [
+                    "Airport Transfer",
+                    "Hotel Check-in",
+                    "Rest & Preparation"
+                  ]
+                },
+                {
+                  "day": 2,
+                  "title": "Perform Umrah",
+                  "description": "<h5>'Sacred Umrah Rituals'</h5><p>Perform Umrah with guidance including Tawaf, Sa’i, and Halq/Qasr. Spend the rest of the day in prayers at Masjid Al Haram.</p><p><strong>Meals:</strong> Suhoor & Iftar</p>",
+                  "activities": ["Umrah Rituals", "Tawaf", "Sa’i"]
+                },
+                {
+                  "day": 3,
+                  "title": "Makkah Ziyarat",
+                  "description": "<h5>'Historical Islamic Sites'</h5><p>Visit important Islamic landmarks including Jabal Al Noor, Jabal Al Thawr, Mina, Arafat, and Muzdalifah.</p><p><strong>Meals:</strong> Suhoor & Iftar</p>",
+                  "activities": ["Ziyarat Tour", "Religious Guidance"]
+                },
+                {
+                  "day": 4,
+                  "title": "Free Day for Ibadah",
+                  "description": "<h5>'Spiritual Reflection'</h5><p>Spend the day in personal prayers, Quran recitation, and Taraweeh at Masjid Al Haram.</p><p><strong>Meals:</strong> Suhoor & Iftar</p>",
+                  "activities": ["Personal Ibadah", "Taraweeh Prayers"]
+                },
+                {
+                  "day": 5,
+                  "title": "Makkah to Madinah",
+                  "description": "<h5>'Journey to the Prophet’s City'</h5><p>Travel to Madinah by AC coach or train. Check-in and visit Masjid An-Nabawi.</p><p><strong>Accommodation:</strong> Hotel in Madinah</p><p><strong>Meals:</strong> Suhoor & Iftar</p>",
+                  "activities": ["Intercity Transfer", "Masjid An-Nabawi Visit"]
+                },
+                {
+                  "day": 6,
+                  "title": "Madinah Ziyarat",
+                  "description": "<h5>'Sacred Landmarks of Madinah'</h5><p>Visit Jannatul Baqi, Masjid Quba, Masjid Qiblatain, and Uhud Mountain.</p><p><strong>Meals:</strong> Suhoor & Iftar</p>",
+                  "activities": ["Ziyarat Tour", "Religious Learning"]
+                },
+                {
+                  "day": 7,
+                  "title": "Free Day in Madinah",
+                  "description": "<h5>'Peace & Reflection'</h5><p>Spend the day in prayers, Quran recitation, and Taraweeh at Masjid An-Nabawi.</p><p><strong>Meals:</strong> Suhoor & Iftar</p>",
+                  "activities": ["Personal Ibadah", "Taraweeh Prayers"]
+                },
+                {
+                  "day": 8,
+                  "title": "Optional Additional Umrah",
+                  "description": "<h5>'Renewed Intentions'</h5><p>Optional travel for performing an additional Umrah (at own cost).</p><p><strong>Meals:</strong> Suhoor & Iftar</p>",
+                  "activities": ["Optional Umrah"]
+                },
+                {
+                  "day": 9,
+                  "title": "Farewell Tawaf Preparation",
+                  "description": "<h5>'Moments of Gratitude'</h5><p>Prepare spiritually for Farewell Tawaf and final prayers.</p><p><strong>Meals:</strong> Suhoor & Iftar</p>",
+                  "activities": ["Farewell Preparation", "Prayers"]
+                },
+                {
+                  "day": 10,
+                  "title": "Departure",
+                  "description": "<h5>'Return with Blessings'</h5><p>Transfer to Jeddah Airport for departure with cherished spiritual memories.</p><p><strong>Meals:</strong> Suhoor</p>",
+                  "activities": ["Hotel Check-out", "Airport Transfer"]
+                }
+              ],
+              "gallery": [
+                "asset/image/packages/umrah/ramadan/masjid-al-haram.jpg",
+                "asset/image/packages/umrah/ramadan/iftar-haram.jpg",
+                "asset/image/packages/umrah/ramadan/masjid-nabawi.jpg",
+                "asset/image/packages/umrah/ramadan/taraweeh.jpg"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "jyotirlinga",
+          "name": "Jyotirlinga Darshan",
+          "packages": [
+            {
+              "id": "maha-jyotirlinga",
+              "title": "12 Jyotirlinga Complete Darshan",
+              "duration": "21 Days / 20 Nights",
+              "startingPrice": 7490,
+              "currency": "AED",
+              "bannerImage": "asset/image/packages/SightSeeingTBnhzM.png",
+              "highlights": [
+                "All 12 Jyotirlingas",
+                "VIP Darshan",
+                "AC Transport"
+              ]
+            },
+            {
+              "id": "twelve-jyotirlinga-darshan",
+              "tourid": "TID0006",
+              "title": "12 Jyotirlinga Complete Darshan",
+              "slug": "12-jyotirlinga-complete-darshan",
+              "subtitle": "Sacred Journey to All 12 Abodes of Lord Shiva",
+              "tourType": "Religious Tour",
+              "departureDate": "Monthly Fixed Departures",
+              "duration": "14 Days / 13 Nights",
+              "startingPrice": 6070,
+              "currency": "AED",
+              "bannerImage": "asset/image/packages/SightSeeingTBnhzM.png",
+              "description": "<h2>Overview</h2><p>Embark on a spiritually enriching pilgrimage covering all the 12 sacred Jyotirlingas of Lord Shiva across India. This 12 Jyotirlinga Complete Darshan tour is thoughtfully planned to ensure smooth travel, comfortable stays, and guided temple visits.</p><p>Experience divine blessings at the most revered Shiva temples including Somnath, Kedarnath, Kashi Vishwanath, Mahakaleshwar, Rameshwaram, and more—each holding deep spiritual and mythological significance.</p><p><strong>Duration:</strong> 14 days, 13 nights</p><p><strong>Departure:</strong> Fixed departures from major Indian cities</p><p><strong>Style:</strong> Spiritual pilgrimage with guided darshan</p>",
+              "highlights": [
+                "Darshan of All 12 Jyotirlingas",
+                "Guided Temple Visits",
+                "Kedarnath & Rameshwaram Special Darshan",
+                "Holy Ganga Aarti at Varanasi",
+                "Comfortable Hotels & Transfers",
+                "Experienced Tour Escort"
+              ],
+              "inclusions": [
+                "<p><strong>Accommodation:</strong> 13 nights in comfortable hotels & dharamshalas</p>",
+                "<p><strong>Meals:</strong> Daily breakfast & dinner</p>",
+                "<p><strong>Transportation:</strong> All intercity transfers by AC coach / train / flight (as per itinerary)</p>",
+                "<p><strong>Darshan:</strong> Assisted darshan at all Jyotirlinga temples</p>",
+                "<p><strong>Guide:</strong> Experienced spiritual tour escort</p>",
+                "<p><strong>Sightseeing:</strong> All major pilgrimage sightseeing as per itinerary</p>"
+              ],
+              "exclusions": [
+                "<p><strong>Airfare:</strong> Flights unless specifically mentioned</p>",
+                "<p><strong>VIP Darshan tickets:</strong> Temple special entry charges</p>",
+                "<p><strong>Personal expenses:</strong> Laundry, shopping, tips</p>",
+                "<p><strong>Travel insurance:</strong> Recommended</p>",
+                "<p><strong>Pony/Doli charges:</strong> At Kedarnath (if required)</p>"
+              ],
+              "hotelAccommodation": [
+                {
+                  "city": "Somnath",
+                  "nights": 1,
+                  "hotel": "Hotel Somnath Atithigruh / Similar",
+                  "rating": 3
+                },
+                {
+                  "city": "Ujjain",
+                  "nights": 1,
+                  "hotel": "Hotel Rudraksh / Similar",
+                  "rating": 3
+                },
+                {
+                  "city": "Omkareshwar",
+                  "nights": 1,
+                  "hotel": "Narmada Retreat / Similar",
+                  "rating": 3
+                },
+                {
+                  "city": "Varanasi",
+                  "nights": 2,
+                  "hotel": "Hotel Temple On Ganges / Similar",
+                  "rating": 4
+                },
+                {
+                  "city": "Kedarnath",
+                  "nights": 1,
+                  "hotel": "Govt Guest House / Similar",
+                  "rating": 3
+                },
+                {
+                  "city": "Rameshwaram",
+                  "nights": 1,
+                  "hotel": "Hotel Daiwik / Similar",
+                  "rating": 4
+                }
+              ],
+              "itinerary": [
+                {
+                  "day": 1,
+                  "title": "Arrival – Somnath Jyotirlinga",
+                  "description": "<h5>'First Divine Darshan'</h5><p>Arrive at Somnath and visit Somnath Jyotirlinga. Attend evening Aarti at the temple.</p><p><strong>Accommodation:</strong> Hotel in Somnath</p><p><strong>Meals:</strong> Dinner</p>",
+                  "activities": [
+                    "Arrival",
+                    "Somnath Temple Darshan",
+                    "Evening Aarti"
+                  ]
+                },
+                {
+                  "day": 2,
+                  "title": "Somnath – Nageshwar – Dwarka",
+                  "description": "<h5>'Sacred Gujarat'</h5><p>Visit Nageshwar Jyotirlinga near Dwarka followed by Dwarkadhish Temple darshan.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Nageshwar Jyotirlinga", "Dwarkadhish Temple"]
+                },
+                {
+                  "day": 3,
+                  "title": "Ujjain – Mahakaleshwar",
+                  "description": "<h5>'Abode of Time'</h5><p>Visit Mahakaleshwar Jyotirlinga, one of the most powerful Shiva temples.</p><p><strong>Accommodation:</strong> Hotel in Ujjain</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Mahakaleshwar Darshan", "Temple Rituals"]
+                },
+                {
+                  "day": 4,
+                  "title": "Omkareshwar Jyotirlinga",
+                  "description": "<h5>'Island of Om'</h5><p>Visit Omkareshwar Jyotirlinga located on the sacred Narmada River.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Omkareshwar Temple", "Narmada Parikrama"]
+                },
+                {
+                  "day": 5,
+                  "title": "Varanasi – Kashi Vishwanath",
+                  "description": "<h5>'City of Moksha'</h5><p>Visit Kashi Vishwanath Jyotirlinga and attend the divine Ganga Aarti in the evening.</p><p><strong>Accommodation:</strong> Hotel in Varanasi</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Kashi Vishwanath Darshan", "Ganga Aarti"]
+                },
+                {
+                  "day": 6,
+                  "title": "Kedarnath Jyotirlinga",
+                  "description": "<h5>'Himalayan Abode of Shiva'</h5><p>Travel to Kedarnath and perform darshan at Kedarnath Jyotirlinga.</p><p><strong>Accommodation:</strong> Kedarnath</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Kedarnath Darshan", "Spiritual Prayers"]
+                },
+                {
+                  "day": 7,
+                  "title": "Bhimashankar Jyotirlinga",
+                  "description": "<h5>'Shiva in the Sahyadris'</h5><p>Visit Bhimashankar Jyotirlinga surrounded by lush forests.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Bhimashankar Darshan"]
+                },
+                {
+                  "day": 8,
+                  "title": "Trimbakeshwar Jyotirlinga",
+                  "description": "<h5>'Source of the Godavari'</h5><p>Visit Trimbakeshwar Jyotirlinga near Nashik.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Trimbakeshwar Temple"]
+                },
+                {
+                  "day": 9,
+                  "title": "Grishneshwar Jyotirlinga",
+                  "description": "<h5>'Ellora Sacred Site'</h5><p>Visit Grishneshwar Jyotirlinga near Ellora Caves.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Grishneshwar Darshan"]
+                },
+                {
+                  "day": 10,
+                  "title": "Baidyanath Dham",
+                  "description": "<h5>'Healing Abode'</h5><p>Visit Baidyanath Jyotirlinga in Deoghar.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Baidyanath Darshan"]
+                },
+                {
+                  "day": 11,
+                  "title": "Mallikarjuna Jyotirlinga",
+                  "description": "<h5>'Sacred Hill Temple'</h5><p>Visit Mallikarjuna Jyotirlinga at Srisailam.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Mallikarjuna Darshan"]
+                },
+                {
+                  "day": 12,
+                  "title": "Rameshwaram Jyotirlinga",
+                  "description": "<h5>'Southern Sacred Shrine'</h5><p>Visit Ramanathaswamy Jyotirlinga and perform holy bath rituals.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Rameshwaram Darshan", "Temple Rituals"]
+                },
+                {
+                  "day": 13,
+                  "title": "Return Journey",
+                  "description": "<h5>'Gratitude & Reflection'</h5><p>Begin return journey after completing all 12 Jyotirlinga darshans.</p><p><strong>Meals:</strong> Breakfast, Dinner</p>",
+                  "activities": ["Return Travel"]
+                },
+                {
+                  "day": 14,
+                  "title": "Departure",
+                  "description": "<h5>'Journey Complete'</h5><p>Tour concludes with divine blessings and cherished spiritual memories.</p><p><strong>Meals:</strong> Breakfast</p>",
+                  "activities": ["Tour Completion"]
+                }
+              ],
+              "gallery": [
+                "asset/image/packages/jyotirlinga/somnath.jpg",
+                "asset/image/packages/jyotirlinga/kedarnath.jpg",
+                "asset/image/packages/jyotirlinga/kashi-vishwanath.jpg",
+                "asset/image/packages/jyotirlinga/rameshwaram.jpg"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "domestic-tours",
+      "name": "Domestic Tours",
+      "children": [
+          {
+          "id": "dubai-tour",
+          "name": "Dubai",
+          "packages": [
+            {
+              "id": "dubai-city-desert-safari",
+              "tourid": "TID0003",
+              "title": "Dubai City Tour & Desert Safari",
+              "slug": "dubai-city-tour-desert-safari",
+              "subtitle": "Modern Marvels, Arabian Culture & Golden Dunes",
+              "tourType": "Leisure Tour",
+              "departureDate": "Daily Departures",
+              "duration": "5 Days / 4 Nights",
+              "startingPrice": 3650,
+              "currency": "AED",
+              "bannerImage": "asset/image/packages/tour-wide-2.jpg",
+              "description": "<h2>Overview</h2><p>Experience the best of Dubai with an exciting blend of ultra-modern attractions, rich cultural heritage, and thrilling desert adventures. This Dubai City Tour & Desert Safari package is perfect for travelers seeking iconic sightseeing, luxury experiences, and unforgettable moments in the Arabian desert.</p><p>From towering skyscrapers and luxury malls to dune bashing, camel rides, and traditional Arabian entertainment, this journey showcases Dubai’s unique contrasts.</p><p><strong>Duration:</strong> 5 days, 4 nights</p><p><strong>Departure:</strong> Daily from Dubai</p><p><strong>Style:</strong> City sightseeing & desert adventure</p>",
+              "highlights": [
+                "Half Day Dubai City Tour",
+                "Burj Khalifa Photo Stop",
+                "Palm Jumeirah & Atlantis View",
+                "Dubai Marina Walk",
+                "Desert Safari with Dune Bashing",
+                "BBQ Dinner with Live Entertainment"
+              ],
+              "inclusions": [
+                "<p><strong>Airport transfers:</strong> Return airport transfers on private or shared basis</p>",
+                "<p><strong>Accommodation:</strong> 4 nights in well-appointed 4-star hotel in Dubai</p>",
+                "<p><strong>Meals:</strong> Daily breakfast & BBQ dinner during desert safari</p>",
+                "<p><strong>Sightseeing:</strong> Guided Dubai city tour & desert safari experience</p>",
+                "<p><strong>Experiences:</strong> Dune bashing, camel ride, belly dance, Tanoura & fire show</p>",
+                "<p><strong>Taxes:</strong> All applicable hotel taxes & tourism fees</p>"
+              ],
+              "exclusions": [
+                "<p><strong>International flights:</strong> Flights to and from Dubai</p>",
+                "<p><strong>Visa fees:</strong> UAE tourist visa charges</p>",
+                "<p><strong>Personal expenses:</strong> Shopping, tips, optional activities</p>",
+                "<p><strong>Travel insurance:</strong> Strongly recommended</p>",
+                "<p><strong>Optional tours:</strong> Burj Khalifa entry, Dhow cruise, theme parks</p>"
+              ],
+              "hotelAccommodation": [
+                {
+                  "city": "Dubai",
+                  "nights": 4,
+                  "hotel": "Citymax Hotel / Similar",
+                  "rating": 4
+                }
+              ],
+              "itinerary": [
+                {
+                  "day": 1,
+                  "title": "Arrival in Dubai",
+                  "description": "<h5>'Welcome to the City of Gold'</h5><p>Arrive at Dubai International Airport and transfer to your hotel. The rest of the day is free for leisure or exploring nearby areas.</p><p><strong>Accommodation:</strong> Hotel in Dubai</p><p><strong>Meals:</strong> None</p>",
+                  "activities": [
+                    "Airport Transfer",
+                    "Hotel Check-in",
+                    "Leisure Time"
+                  ]
+                },
+                {
+                  "day": 2,
+                  "title": "Dubai City Tour",
+                  "description": "<h5>'Icons of Modern Dubai'</h5><p>Enjoy a guided half-day Dubai city tour covering Jumeirah Mosque, Burj Al Arab photo stop, Palm Jumeirah, Atlantis The Palm, Dubai Marina, and Burj Khalifa (outside view).</p><p><strong>Meals:</strong> Breakfast</p>",
+                  "activities": [
+                    "City Sightseeing",
+                    "Photo Stops",
+                    "Dubai Marina Walk"
+                  ]
+                },
+                {
+                  "day": 3,
+                  "title": "Desert Safari with BBQ Dinner",
+                  "description": "<h5>'Adventure in the Arabian Desert'</h5><p>Head into the desert for an unforgettable safari experience. Enjoy dune bashing, sandboarding, camel rides, followed by a BBQ dinner with live entertainment at a desert camp.</p><p><strong>Meals:</strong> Breakfast, BBQ Dinner</p>",
+                  "activities": [
+                    "Dune Bashing",
+                    "Camel Ride",
+                    "BBQ Dinner",
+                    "Live Shows"
+                  ]
+                },
+                {
+                  "day": 4,
+                  "title": "Day at Leisure",
+                  "description": "<h5>'Explore at Your Own Pace'</h5><p>A free day to explore Dubai on your own or opt for additional tours such as Burj Khalifa At The Top, Dhow Cruise, or theme parks.</p><p><strong>Meals:</strong> Breakfast</p>",
+                  "activities": ["Leisure Time", "Optional Tours"]
+                },
+                {
+                  "day": 5,
+                  "title": "Departure",
+                  "description": "<h5>'Goodbye Dubai'</h5><p>After breakfast, transfer to the airport for your onward journey with unforgettable memories.</p><p><strong>Meals:</strong> Breakfast</p>",
+                  "activities": ["Hotel Check-out", "Airport Transfer"]
+                }
+              ],
+              "gallery": [
+                "asset/image/packages/dubai/city/burj-khalifa.jpg",
+                "asset/image/packages/dubai/city/palm-jumeirah.jpg",
+                "asset/image/packages/dubai/desert/dune-bashing.jpg",
+                "asset/image/packages/dubai/desert/bbq-dinner.jpg"
+              ]
+            },
+            {
+              "id": "dubai-luxury-experience",
+              "tourid": "TID0004",
+              "title": "Dubai Luxury Experience",
+              "slug": "dubai-luxury-experience",
+              "subtitle": "Ultra-Luxury, Iconic Experiences & Desert Elegance",
+              "tourType": "Luxury Tour",
+              "departureDate": "Daily Departures",
+              "duration": "6 Days / 5 Nights",
+              "startingPrice": 7690,
+              "currency": "AED",
+              "bannerImage": "asset/image/packages/SightSeeinguGmRLZ.jpg",
+              "description": "<h2>Overview</h2><p>Indulge in the ultimate Dubai Luxury Experience crafted for travelers who seek exclusivity, comfort, and world-class hospitality. This premium journey combines iconic landmarks, VIP services, luxury accommodations, and bespoke experiences across the city and desert.</p><p>From staying in luxury hotels and enjoying private city tours to VIP Burj Khalifa access, yacht cruising, and a royal-style desert safari, every moment reflects Dubai’s signature opulence.</p><p><strong>Duration:</strong> 6 days, 5 nights</p><p><strong>Departure:</strong> Daily from Dubai</p><p><strong>Style:</strong> Ultra-luxury, private & premium experiences</p>",
+              "highlights": [
+                "Luxury 5-Star Hotel Stay",
+                "VIP Burj Khalifa At The Top",
+                "Private Dubai City Tour",
+                "Luxury Yacht Cruise at Marina",
+                "Premium Desert Safari Experience",
+                "Fine Dining & Exclusive Experiences"
+              ],
+              "inclusions": [
+                "<p><strong>Private airport transfers:</strong> Luxury vehicle transfers with meet & greet service</p>",
+                "<p><strong>Luxury accommodation:</strong> 5 nights in handpicked 5-star luxury hotels</p>",
+                "<p><strong>Meals:</strong> Daily breakfast, gourmet dining experiences, desert safari dinner</p>",
+                "<p><strong>Sightseeing:</strong> Private guided city tour with VIP entry experiences</p>",
+                "<p><strong>Experiences:</strong> VIP Burj Khalifa, luxury yacht cruise, premium desert safari</p>",
+                "<p><strong>Services:</strong> Personalized assistance & luxury travel support</p>"
+              ],
+              "exclusions": [
+                "<p><strong>International flights:</strong> Flights to and from Dubai</p>",
+                "<p><strong>Visa fees:</strong> UAE tourist visa charges</p>",
+                "<p><strong>Personal expenses:</strong> Spa treatments, shopping, minibar</p>",
+                "<p><strong>Travel insurance:</strong> Strongly recommended</p>",
+                "<p><strong>Optional upgrades:</strong> Helicopter ride, Burj Al Arab dining</p>"
+              ],
+              "hotelAccommodation": [
+                {
+                  "city": "Dubai",
+                  "nights": 5,
+                  "hotel": "Atlantis The Palm / Address Downtown / Similar",
+                  "rating": 5
+                }
+              ],
+              "itinerary": [
+                {
+                  "day": 1,
+                  "title": "Arrival in Dubai – Luxury Welcome",
+                  "description": "<h5>'Welcome to Premium Dubai'</h5><p>Arrive at Dubai International Airport and enjoy a private luxury transfer to your 5-star hotel. Spend the evening relaxing or enjoying hotel amenities.</p><p><strong>Accommodation:</strong> 5-star luxury hotel</p><p><strong>Meals:</strong> None</p>",
+                  "activities": [
+                    "Private Airport Transfer",
+                    "Luxury Hotel Check-in",
+                    "Leisure Time"
+                  ]
+                },
+                {
+                  "day": 2,
+                  "title": "Private Dubai City Tour",
+                  "description": "<h5>'Icons of Elegance'</h5><p>Explore Dubai on a private guided city tour including Jumeirah Mosque, Burj Al Arab photo stop, Palm Jumeirah, Atlantis The Palm, Dubai Marina, and VIP Burj Khalifa At The Top experience.</p><p><strong>Meals:</strong> Breakfast</p>",
+                  "activities": [
+                    "Private City Tour",
+                    "Burj Khalifa VIP Access",
+                    "Photo Stops"
+                  ]
+                },
+                {
+                  "day": 3,
+                  "title": "Luxury Yacht Cruise – Dubai Marina",
+                  "description": "<h5>'Sail in Style'</h5><p>Enjoy a private luxury yacht cruise along Dubai Marina with refreshments, skyline views, and premium onboard service.</p><p><strong>Meals:</strong> Breakfast</p>",
+                  "activities": [
+                    "Private Yacht Cruise",
+                    "Marina Sightseeing",
+                    "Luxury Refreshments"
+                  ]
+                },
+                {
+                  "day": 4,
+                  "title": "Premium Desert Safari",
+                  "description": "<h5>'Royal Desert Experience'</h5><p>Experience a premium desert safari with luxury 4x4 vehicles, extended dune bashing, camel ride, sunset photography, and gourmet dinner at a luxury desert camp.</p><p><strong>Meals:</strong> Breakfast, Luxury Dinner</p>",
+                  "activities": [
+                    "Premium Dune Bashing",
+                    "Camel Ride",
+                    "Luxury Desert Camp Dinner"
+                  ]
+                },
+                {
+                  "day": 5,
+                  "title": "Day at Leisure or Optional Luxury Experiences",
+                  "description": "<h5>'Indulge Your Way'</h5><p>Enjoy a free day for shopping, spa treatments, or opt for exclusive add-ons like helicopter ride, Burj Al Arab dining, or private beach club access.</p><p><strong>Meals:</strong> Breakfast</p>",
+                  "activities": ["Leisure Time", "Optional Luxury Add-ons"]
+                },
+                {
+                  "day": 6,
+                  "title": "Departure",
+                  "description": "<h5>'Until Next Luxury Escape'</h5><p>After breakfast, enjoy a private transfer to the airport for your onward journey.</p><p><strong>Meals:</strong> Breakfast</p>",
+                  "activities": ["Hotel Check-out", "Private Airport Transfer"]
+                }
+              ],
+              "gallery": [
+                "asset/image/packages/dubai/luxury/burj-khalifa-vip.jpg",
+                "asset/image/packages/dubai/luxury/yacht-cruise.jpg",
+                "asset/image/packages/dubai/luxury/desert-camp.jpg",
+                "asset/image/packages/dubai/luxury/atlantis-hotel.jpg"
+              ]
+            }
+          ]
+        }
+       
       ]
     },
 
@@ -2390,8 +2392,8 @@
   "tourType": "Corporate Tour",
   "departureDate": "Flexible Dates",
   "duration": "5 Days / 4 Nights",
-  "startingPrice": 69990,
-  "currency": "INR",
+  "startingPrice": 2830,
+  "currency": "AED",
   "bannerImage": "asset/image/packages/thailand1.jfif",
   "description": "<h2>Overview</h2><p>An ideal corporate offsite combining business, relaxation, and team bonding. Experience luxury stays, beachside meetings, fun activities, and gala dinners designed to boost collaboration and morale.</p>",
   "highlights": [
@@ -2459,8 +2461,8 @@
   "tourType": "Corporate Tour",
   "departureDate": "Flexible Dates",
   "duration": "4 Days / 3 Nights",
-  "startingPrice": 89990,
-  "currency": "INR",
+  "startingPrice": 3640,
+  "currency": "AED",
   "bannerImage": "asset/image/packages/dubai.jfif",
   "description": "<h2>Overview</h2><p>A premium corporate experience in Dubai with luxury hotels, desert safari, yacht networking party, and business-friendly venues.</p>",
   "highlights": [
@@ -2517,8 +2519,8 @@
   "tourType": "Corporate Tour",
   "departureDate": "All Year",
   "duration": "3 Days / 2 Nights",
-  "startingPrice": 29990,
-  "currency": "INR",
+  "startingPrice": 1220,
+  "currency": "AED",
   "bannerImage": "asset/image/packages/goa.jfif",
   "description": "<h2>Overview</h2><p>A fun-filled corporate getaway focused on team bonding, leadership activities, and relaxation at Goa’s best beach resorts.</p>",
   "highlights": [
@@ -2573,8 +2575,8 @@
   "tourType": "Corporate Tour",
   "departureDate": "Flexible",
   "duration": "4 Days / 3 Nights",
-  "startingPrice": 109990,
-  "currency": "INR",
+  "startingPrice": 4420,
+  "currency": "AED",
   "bannerImage": "asset/image/packages/singapore.jfif",
   "description": "<h2>Overview</h2><p>A high-energy corporate incentive tour featuring world-class attractions, luxury stays, and curated networking experiences.</p>",
   "highlights": [
@@ -2630,8 +2632,8 @@
   "tourType": "Corporate Tour",
   "departureDate": "Flexible Dates",
   "duration": "5 Days / 4 Nights",
-  "startingPrice": 79990,
-  "currency": "INR",
+  "startingPrice": 3270,
+  "currency": "AED",
   "bannerImage": "asset/image/packages/malaysia.jfif",
   "description": "<h2>Overview</h2><p>A perfect blend of leadership development and leisure, this corporate retreat in Malaysia is designed for executive teams and high-performing organizations. Engage in leadership workshops, strategy sessions, and team challenges while enjoying premium hospitality and scenic highlands.</p>",
   "highlights": [
@@ -2713,8 +2715,8 @@
               "tourType": "Student Group Tour",
               "departureDate": "10 June 2026",
               "duration": "7 Days / 6 Nights",
-              "startingPrice": 89990,
-              "currency": "INR",
+              "startingPrice": 3640,
+              "currency": "AED",
               "bannerImage": "asset/image/packages/vietname-student1.webp",
               "description": "<h2>Overview</h2><p>This Vietnam Student Discovery Tour is designed to combine education, cultural exchange, and adventure. Ideal for school and college groups, the tour focuses on Vietnam’s history, traditions, and student-friendly experiences.</p><p>Students explore Hanoi, Halong Bay, and Da Nang while participating in interactive workshops, cultural activities, and heritage walks guided by local experts.</p><p><strong>Duration:</strong> 7 Days / 6 Nights</p><p><strong>Style:</strong> Educational & Cultural</p>",
               "highlights": [
@@ -2788,8 +2790,8 @@
               "tourType": "Student Adventure Tour",
               "departureDate": "5 July 2026",
               "duration": "8 Days / 7 Nights",
-              "startingPrice": 99990,
-              "currency": "INR",
+              "startingPrice": 4050,
+              "currency": "AED",
               "bannerImage": "asset/image/packages/veitname-adventure.jpg",
               "description": "<h2>Overview</h2><p>An adventure-focused student tour featuring trekking, cultural immersion, and teamwork activities. Perfect for youth groups seeking leadership, exposure, and fun.</p>",
               "highlights": [
@@ -2853,8 +2855,8 @@
               "tourType": "Educational Industrial Tour",
               "departureDate": "15 August 2026",
               "duration": "6 Days / 5 Nights",
-              "startingPrice": 84990,
-              "currency": "INR",
+              "startingPrice": 3440,
+              "currency": "AED",
               "bannerImage": "asset/image/packages/veitname-industrial.png",
               "description": "<h2>Overview</h2><p>This tour introduces students to Vietnam’s growing tech and industrial ecosystem, blending academic visits with cultural sightseeing.</p>",
               "highlights": [
@@ -2917,8 +2919,8 @@
               "tourType": "Student Educational Tour",
               "departureDate": "10 October 2026",
               "duration": "9 Days / 8 Nights",
-              "startingPrice": 249990,
-              "currency": "INR",
+              "startingPrice": 10120,
+              "currency": "AED",
               "bannerImage": "asset/image/packages/nasa-tour.jpg",
               "description": "<h2>Overview</h2><p>Discover the thrilling world of space exploration with the NASA Student Space Mission Tour. This exclusive educational tour takes students and space enthusiasts behind the scenes of NASA space centers, spacecraft facilities, simulators, and interactive learning labs.</p><p>Experience firsthand what it takes to be part of space missions, meet experts, and engage with state-of-the-art technology. From rocket assembly buildings and mission control centers to astronaut training simulators, this tour is a dream experience for aspiring scientists and engineers.</p>",
               "highlights": [

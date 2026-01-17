@@ -182,9 +182,7 @@ fetch("asset/json/packages.json")
                   <a href="package-details.html?id=${pkg.id}" class="text-decoration-none text-dark">
                   <h5>${pkg.title}</h5>
                   </a>
-                  <p class="text-muted small">
-                    <i class="bi bi-geo-alt"></i> ${region.name}
-                  </p>
+ 
                   <strong>${pkg.currency} ${pkg.startingPrice.toLocaleString()}</strong>
                   <small class="text-muted"> per person</small>
                 </div>
