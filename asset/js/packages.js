@@ -171,7 +171,7 @@ fetch("asset/json/packages.json")
           container.innerHTML += `
             <div class="col-lg-4 col-md-6 mb-4">
               <div class="card tour-card h-100 shadow-sm border-0">
-                <a href="package-details.html?id=${pkg.id}">
+                <a href="package-details.php?id=${pkg.id}">
                   <div class="tour-img-wrapper">
                     <img src="${pkg.bannerImage}" class="card-img-top" alt="${pkg.title}">
                     <span class="tour-duration">${pkg.duration}</span>

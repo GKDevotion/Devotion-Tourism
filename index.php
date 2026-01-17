@@ -1,0 +1,940 @@
+ <?php
+    $pageTitle = "Devotion Tourism ";
+    include 'includes/head.php';
+    ?>
+
+ <?php include 'includes/head.php'; ?>
+
+ <style>
+     .nav-pills .nav-link.active,
+     .nav-pills .show>.nav-link {
+         color: var(--bs-nav-pills-link-active-color);
+         background-color: #ab823e;
+         border-radius: 100px;
+     }
+
+
+     .swiper {
+         margin-left: auto;
+         margin-right: auto;
+         position: relative;
+         overflow: hidden;
+         list-style: none;
+         padding: 0;
+         z-index: 1;
+         display: block;
+         padding-bottom: 50px;
+     }
+
+     .read-btn {
+         background: #ab823e;
+         color: #fff;
+         border-radius: 25px;
+         font-size: 0.9rem;
+         padding: 10px;
+     }
+
+     .read-btn:hover {
+         background: #ab823e;
+         color: #fff;
+     }
+
+     @media (max-width: 768px) {
+         .hero-tagline {
+             font-size: 26px;
+
+         }
+     }
+
+     .hand.second {
+         transition: transform 0.2s linear;
+     }
+ </style>
+
+ <body>
+
+     <?php include 'navbar.php'; ?>
+
+     <!-- home banner watch section  -->
+     <section class="hero-section position-relative">
+
+         <!-- Carousel -->
+         <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+             <div class="carousel-inner">
+                 <div class="carousel-item active">
+                     <img src="asset/image/slide1.webp" class="d-block w-100 hero-img" alt="Slide 1">
+                 </div>
+                 <div class="carousel-item">
+                     <img src="asset/image/slide2.webp" class="d-block w-100 hero-img" alt="Slide 2">
+                 </div>
+             </div>
+         </div>
+
+         <!-- Overlay -->
+         <div class="hero-overlay position-absolute top-50 start-50 translate-middle text-center w-100">
+
+             <!-- Clock Row -->
+             <div class="d-flex flex-wrap justify-content-center extra-gap mb-4">
+
+                 <div class="clock-item text-center">
+                     <div class="clock-img" id="clock-sg">
+                         <span class="hand hour"></span>
+                         <span class="hand minute"></span>
+                         <span class="hand second"></span>
+                     </div>
+                     <p class="clock-label mb-0">SINGAPORE</p>
+                 </div>
+
+                 <div class="clock-item text-center">
+                     <div class="clock-img" id="clock-nd">
+                         <span class="hand hour"></span>
+                         <span class="hand minute"></span>
+                         <span class="hand second"></span>
+                     </div>
+                     <p class="clock-label mb-0">NEW DELHI</p>
+                 </div>
+
+                 <div class="clock-item text-center">
+                     <div class="clock-img" id="clock-dubai">
+                         <span class="hand hour"></span>
+                         <span class="hand minute"></span>
+                         <span class="hand second"></span>
+                     </div>
+                     <p class="clock-label mb-0">DUBAI</p>
+                 </div>
+
+                 <div class="clock-item text-center">
+                     <div class="clock-img" id="clock-london">
+                         <span class="hand hour"></span>
+                         <span class="hand minute"></span>
+                         <span class="hand second"></span>
+                     </div>
+                     <p class="clock-label mb-0">LONDON</p>
+                 </div>
+
+                 <div class="clock-item text-center">
+                     <div class="clock-img" id="clock-ny">
+                         <span class="hand hour"></span>
+                         <span class="hand minute"></span>
+                         <span class="hand second"></span>
+                     </div>
+                     <p class="clock-label mb-0">NEW YORK</p>
+                 </div>
+
+             </div>
+
+             <!-- Heading -->
+             <h1 class="hero-tagline fw-bold text-white">Your Premier Sightseeing Expert in Dubai</h1>
+         </div>
+
+     </section>
+
+     <!-- flyer slider section  -->
+     <section class=" pb-5 align-items-center d-flex ">
+
+         <div class="custom-container">
+
+             <h1 class="text-center" style="font-family: 'Merienda',  cursive; color: #ab823e;">
+                 Go beyond your imagination
+             </h1>
+
+             <p class="  text-center mx-auto" style=" font-size: 1.2rem;">
+                 Discover your ideal experience with us
+             </p>
+
+             <!-- MAIN SWIPER -->
+             <div class="swiper placeSwiper">
+                 <div class="swiper-controls">
+                     <div class="swiper-button-prev custom-btn"></div>
+                     <div class="swiper-button-next custom-btn"></div>
+                 </div>
+
+                 <div class="swiper-wrapper">
+                     <div class="swiper-slide place-card" data-index="0">
+                         <img src="asset/image/visa/1001.jpeg" alt="">
+                     </div>
+                     <div class="swiper-slide place-card" data-index="1">
+                         <img src="asset/image/visa/1002.jpeg" alt="">
+                     </div>
+                     <div class="swiper-slide place-card" data-index="2">
+                         <img src="asset/image/visa/1003.jpeg" alt="">
+                     </div>
+                     <div class="swiper-slide place-card" data-index="3">
+                         <img src="asset/image/visa/1004.jpeg" alt="">
+                     </div>
+                 </div>
+             </div>
+
+             <!-- POPUP MODAL -->
+             <div class="image-popup" id="imagePopup">
+                 <span class="popup-close">&times;</span>
+
+                 <div class="swiper popupSwiper">
+                     <div class="swiper-wrapper">
+                         <div class="swiper-slide"><img src="asset/image/visa/1001.jpeg"></div>
+                         <div class="swiper-slide"><img src="asset/image/visa/1002.jpeg"></div>
+                         <div class="swiper-slide"><img src="asset/image/visa/1003.jpeg"></div>
+                         <div class="swiper-slide"><img src="asset/image/visa/1004.jpeg"></div>
+                     </div>
+
+                     <div class="swiper-button-next" style="color: #ab823e;"></div>
+                     <div class="swiper-button-prev" style="color: #ab823e;"></div>
+                 </div>
+             </div>
+
+         </div>
+
+     </section>
+
+     <style>
+         .placeSwiper {
+             position: relative;
+             padding-bottom: 60px;
+             margin-top: 40px;
+             /* space for buttons */
+         }
+
+         /* Center buttons horizontally */
+         .swiper-controls {
+             position: absolute;
+             bottom: 20px;
+             left: 50%;
+             transform: translateX(-50%);
+             display: flex;
+             gap: 14px;
+             z-index: 10;
+         }
+
+         /* Circular buttons */
+         .custom-btn {
+             width: 42px;
+             height: 42px;
+             background: #ab823e;
+             border-radius: 50%;
+         }
+
+         /* Arrow styling */
+         .custom-btn::after {
+             font-size: 14px;
+             color: #fff;
+             font-weight: bold;
+         }
+
+
+         .place-card img {
+             width: 100%;
+             height: 100%;
+             object-fit: cover;
+             transition: transform 0.4s ease;
+         }
+
+
+         /* Hover effect */
+         .place-card:hover img {
+             transform: scale(1.1);
+         }
+
+         /* CARD */
+         .place-card {
+             border-radius: 16px;
+             overflow: hidden;
+             cursor: pointer;
+             height: 80%;
+         }
+
+
+         /* POPUP */
+         .image-popup {
+             position: fixed;
+             inset: 0;
+             background: rgba(0, 0, 0, .85);
+             display: none;
+             align-items: center;
+             justify-content: center;
+             z-index: 9999;
+         }
+
+         .image-popup.active {
+             display: flex;
+         }
+
+         .popupSwiper {
+             width: 80%;
+             max-width: 900px;
+         }
+
+         .popupSwiper img {
+             width: 100%;
+             height: 80vh;
+             object-fit: contain;
+         }
+
+         /* CLOSE BUTTON */
+         .popup-close {
+             position: absolute;
+             top: 20px;
+             right: 30px;
+             font-size: 40px;
+             color: #fff;
+             cursor: pointer;
+         }
+     </style>
+
+     <!-- Begin Your Travel  -->
+     <section class="text-center travel-section">
+         <div class="container">
+             <h3 class=" mb-2 golden-text"
+                 style="font-size: 2.5rem;  font-family: 'Merienda', cursive; font-weight: 500;">Begin Your Travel</h3>
+             <h2 class=" mb-4 golden-text" style="font-size: 3rem;  font-family: 'Merienda', cursive; font-weight: 300;">
+                 Plans With The Best Travel Agency</h2>
+
+             <p class="lead mb-5 dark-text">
+                 While we're happy to accommodate 11th-hour travel plans, you don't really have to wait until the last
+                 minute. Call our travel experts to find the perfect itinerary for you.
+             </p>
+
+             <div class="row justify-content-center statistics-row">
+                 <div class="col-6 col-md-auto mb-4 px-4 statistic-item">
+                     <h3 class="display-5 golden-text statistic-number">50+</h3>
+                     <p class="statistic-label">Sandy Beaches</p>
+                 </div>
+
+                 <div class="col-6 col-md-auto mb-4 px-4 statistic-item">
+                     <h3 class="display-5 golden-text statistic-number">90+</h3>
+                     <p class="statistic-label">Destinations</p>
+                 </div>
+
+                 <div class="col-6 col-md-auto mb-4 px-4 statistic-item">
+                     <h3 class="display-5 golden-text statistic-number">90%</h3>
+                     <p class="statistic-label">Thrilled Customers</p>
+                 </div>
+
+                 <div class="col-6 col-md-auto mb-4 px-4 statistic-item">
+                     <h3 class="display-5 golden-text statistic-number">100%</h3>
+                     <p class="statistic-label">Best Price Guarantee</p>
+                 </div>
+
+                 <div class="col-6 col-md-auto mb-4 px-4 statistic-item">
+                     <h3 class="display-5 golden-text statistic-number">24/7</h3>
+                     <p class="statistic-label">Support</p>
+                 </div>
+             </div>
+         </div>
+     </section>
+
+     <!-- International Package  -->
+     <section class="py-5" style="background-color: #ffffff;">
+         <div class="container text-center custom-container">
+
+             <h1 class=" mb-3" style="font-family: 'Merienda', cursive; color: #ab823e;">
+                 International Packages
+             </h1>
+             <p class=" mb-5 mx-auto" style=" font-size: 0.9rem;">
+                 Business travel doesn't have to be a hassle. Our best in the industry travel advisors provide a complete
+                 suite of travel services for discerning corporate clients, whether individual travelers or groups of any
+                 size. From exclusively negotiated airfares & custom travel arrangements, to transfers, visas, and other
+                 privileges, we strive to create authentic and personalized travel experiences.
+             </p>
+
+             <h3 class=" mb-5" style="font-family: 'Merienda', cursive; color: #ab823e; font-size: 2.5rem;">
+                 Explore The World
+             </h3>
+
+             <div class="row g-4 justify-content-center mt-4 row-cols-2 row-cols-sm-4 row-cols-md-5">
+
+                 <!-- UAE -->
+                 <div class="col">
+                     <div class="flag-item">
+                         <img src="asset\image\New folder\uae.svg"
+                             class="img-fluid rounded-circle border  border-secondary mx-auto d-block"
+                             style="width: 100px; height: 100px; object-fit: cover;" alt="UAE Flag">
+                         <p class="mt-2 text-uppercase fw-semibold">UAE</p>
+                     </div>
+                 </div>
+
+                 <!-- USA -->
+                 <div class="col">
+                     <div class="flag-item">
+                         <img src="asset\image\New folder\usa.svg"
+                             class="img-fluid rounded-circle border border-secondary mx-auto d-block"
+                             style="width: 100px; height: 100px; object-fit: cover;" alt="USA Flag">
+                         <p class="mt-2 text-uppercase fw-semibold">USA</p>
+                     </div>
+                 </div>
+
+                 <!-- CANADA -->
+                 <div class="col">
+                     <div class="flag-item">
+                         <img src="asset\image\New folder\Canada.svg"
+                             class="img-fluid rounded-circle border border-secondary mx-auto d-block"
+                             style="width: 100px; height: 100px; object-fit: cover;" alt="Canada Flag">
+                         <p class="mt-2 text-uppercase fw-semibold">CANADA</p>
+                     </div>
+                 </div>
+
+                 <!-- AUSTRALIA -->
+                 <div class="col">
+                     <div class="flag-item">
+                         <img src="asset\image\New folder\AUSTRALIA.svg"
+                             class="img-fluid rounded-circle border border-secondary mx-auto d-block"
+                             style="width: 100px; height: 100px; object-fit: cover;" alt="Australia Flag">
+                         <p class="mt-2 text-uppercase fw-semibold">AUSTRALIA</p>
+                     </div>
+                 </div>
+
+                 <!-- EUROPE -->
+                 <div class="col">
+                     <div class="flag-item">
+                         <img src="asset\image\New folder\Europe.png"
+                             class="img-fluid rounded-circle border border-secondary mx-auto d-block"
+                             style="width: 100px; height: 100px; object-fit: cover;" alt="Europe Flag">
+                         <p class="mt-2 text-uppercase fw-semibold">EUROPE</p>
+                     </div>
+                 </div>
+
+                 <!-- INDONESIA -->
+                 <div class="col">
+                     <div class="flag-item">
+                         <img src="asset\image\New folder\indonasia.png"
+                             class="img-fluid rounded-circle border border-secondary mx-auto d-block"
+                             style="width: 100px; height: 100px; object-fit: cover;" alt="Indonesia Flag">
+                         <p class="mt-2 text-uppercase fw-semibold">INDONESIA</p>
+                     </div>
+                 </div>
+
+                 <!-- JAPAN -->
+                 <div class="col">
+                     <div class="flag-item">
+                         <img src="asset\image\New folder\japan.png"
+                             class="img-fluid rounded-circle border border-secondary mx-auto d-block"
+                             style="width: 100px; height: 100px; object-fit: cover;" alt="Japan Flag">
+                         <p class="mt-2 text-uppercase fw-semibold">JAPAN</p>
+                     </div>
+                 </div>
+
+                 <!-- KOREA -->
+                 <div class="col">
+                     <div class="flag-item">
+                         <img src="asset\image\New folder\Korea.png"
+                             class="img-fluid rounded-circle border border-secondary mx-auto d-block"
+                             style="width: 100px; height: 100px; object-fit: cover;" alt="Korea Flag">
+                         <p class="mt-2 text-uppercase fw-semibold">KOREA</p>
+                     </div>
+                 </div>
+
+                 <!-- LONDON -->
+                 <div class="col">
+                     <div class="flag-item">
+                         <img src="asset\image\New folder\London.png"
+                             class="img-fluid rounded-circle border border-secondary mx-auto d-block"
+                             style="width: 100px; height: 100px; object-fit: cover;" alt="United Kingdom Flag">
+                         <p class="mt-2 text-uppercase fw-semibold">LONDON</p>
+                     </div>
+                 </div>
+
+                 <!-- MALDIVES -->
+                 <div class="col">
+                     <div class="flag-item">
+                         <img src="asset\image\New folder\Maldives.png"
+                             class="img-fluid rounded-circle border border-secondary mx-auto d-block"
+                             style="width: 100px; height: 100px; object-fit: cover;" alt="Maldives Flag">
+                         <p class="mt-2 text-uppercase fw-semibold">MALDIVES</p>
+                     </div>
+                 </div>
+
+                 <!-- CHINA -->
+                 <div class="col">
+                     <div class="flag-item">
+                         <img src="asset\image\New folder\China.svg"
+                             class="img-fluid rounded-circle border border-secondary mx-auto d-block"
+                             style="width: 100px; height: 100px; object-fit: cover;" alt="Maldives Flag">
+                         <p class="mt-2 text-uppercase fw-semibold">China</p>
+                     </div>
+                 </div>
+
+             </div>
+         </div>
+     </section>
+
+     <!-- Domestic Packages  -->
+     <section class="py-5">
+         <div class="container custom-container">
+             <div class="row">
+                 <div class="col-12 text-center mb-4">
+                     <h2 style="font-family: 'Merienda', cursive; color: #ab823e;">
+                         Domestic Packages
+                     </h2>
+                 </div>
+             </div>
+
+             <div class="row">
+                 <div class="col-12 col-lg-12 ">
+
+                     <p class="mx-auto" style="font-size: 1.1rem; line-height: 1.8;">
+                         At Devotion, our team of local travel aficionados handpick the creme de la creme of
+                         destinations, hotels and experiences to create highly customized packages. Our knowledge,
+                         experience, and passion for this incredible city are apparent in all that we do, right down to
+                         the finest details. From crafting unique experiences tailored to your requirements to providing
+                         insights into local customs and traditions, we are your gateway to an unforgettable Dubai trip.
+                     </p>
+                 </div>
+             </div>
+         </div>
+     </section>
+
+     <!-- Packages  -->
+     <section class="py-5" style="background:#111827;">
+         <div class="container text-center">
+
+
+             <h2 class="text-white mb-5" style="color: #a47c3f; font-family: 'Merienda', cursive; ">Packages</h2>
+
+             <!-- Swiper -->
+             <div class="swiper myVisaSwiper">
+                 <div class="swiper-wrapper">
+
+                     <!-- Dubai -->
+                     <div class="swiper-slide">
+                         <div class="visa-card p-4">
+                             <div class="d-flex justify-content-between align-items-center mb-3">
+
+                                 <div class="d-flex align-items-center">
+                                     <img src="asset/image/packages/dubaitour13-960x430.webp" class="flag-img me-2">
+                                     <div class="ms-4 text-start">
+                                         <p class="visa-service-label mb-0">6 Nights / 7 Days </p>
+                                         <h4 class="country-name mb-0">Dubai</h4>
+                                         <h5 class="text-price mb-3 small pt-2">Starting from AED 2,299 per person</h5>
+                                     </div>
+                                 </div>
+                                 <a href="https://wa.me/+971503139469" class="btn read-btn">Plan Your Trip <i
+                                         class="bi bi-arrow-right-circle-fill ms-1"></i></a>
+                             </div>
+
+                             <ul class="visa-list row row-cols-1 row-cols-md-2 g-2 mt-2">
+                                 <li class="col"><i class="bi bi-arrow-right-circle me-2"></i> Hotel
+                                 </li>
+                                 <li class="col"><i class="bi bi-arrow-right-circle me-2"></i>City Tour </li>
+                                 <li class="col"><i class="bi bi-arrow-right-circle me-2"></i> Desert Safari </li>
+                                 <li class="col"><i class="bi bi-arrow-right-circle me-2"></i> Dhow Cruise </li>
+                             </ul>
+                         </div>
+                     </div>
+
+                     <!-- ARMENIA -->
+                     <div class="swiper-slide">
+                         <div class="visa-card p-4">
+                             <div class="d-flex justify-content-between align-items-center mb-3">
+                                 <div class="d-flex align-items-center">
+                                     <img src="asset\image\packages\SightSeeingQEOw8B.png" class="flag-img me-2">
+                                     <div class="ms-4 text-start">
+                                         <p class="visa-service-label mb-0">4 Nights / 5 Days </p>
+                                         <h5 class="country-name mb-0">Armenia</h5>
+                                         <h5 class="text-price mb-3 small pt-2">Starting from AED 1,799 per person</h5>
+                                     </div>
+                                 </div>
+                                 <a href="https://wa.me/+971503139469" class="btn read-btn">Plan Your Trip <i
+                                         class="bi bi-arrow-right-circle-fill ms-1"></i></a>
+                             </div>
+                             <ul class="visa-list row row-cols-1 row-cols-md-2 g-2 mt-2">
+                                 <li class="col"><i class="bi bi-arrow-right-circle me-2"></i> Yerevan </li>
+                                 <li class="col"><i class="bi bi-arrow-right-circle me-2"></i> Lake Sevan </li>
+                                 <li class="col"><i class="bi bi-arrow-right-circle me-2"></i> Local Tours </li>
+                                 <li class="col"><i class="bi bi-arrow-right-circle me-2"></i> Professional Guide
+                                 </li>
+                             </ul>
+                         </div>
+                     </div>
+
+                     <!-- Georgia -->
+                     <div class="swiper-slide">
+                         <div class="visa-card p-4">
+                             <div class="d-flex justify-content-between align-items-center mb-3">
+                                 <div class="d-flex align-items-center">
+                                     <img src="asset\image\packages\SightSeeingnIIT1w.png" class="flag-img me-2">
+                                     <div class="ms-4 text-start">
+                                         <p class="visa-service-label mb-0">4 Nights / 5 Days </p>
+                                         <h5 class="country-name mb-0">Georgia </h5>
+                                         <h5 class="text-price mb-3 small pt-2">Starting from AED 1,799 per person</h5>
+                                     </div>
+                                 </div>
+                                 <a href="https://wa.me/+971503139469" class="btn read-btn">Plan Your Trip <i
+                                         class="bi bi-arrow-right-circle-fill ms-1"></i></a>
+                             </div>
+                             <ul class="visa-list row row-cols-1 row-cols-md-2 g-2 mt-2">
+                                 <li class="col"><i class="bi bi-arrow-right-circle me-2"></i> Tbilisi</li>
+                                 <li class="col"><i class="bi bi-arrow-right-circle me-2"></i> Gudauri Snow Tour </li>
+                                 <li class="col"><i class="bi bi-arrow-right-circle me-2"></i> Scenic Mountain Views</li>
+
+                             </ul>
+                         </div>
+                     </div>
+
+                     <!-- singapore -->
+                     <div class="swiper-slide">
+                         <div class="visa-card p-4">
+                             <div class="d-flex justify-content-between align-items-center mb-3">
+                                 <div class="d-flex align-items-center">
+                                     <img src="asset\image\packages\SightSeeinguGmRLZ.jpg" class="flag-img me-2">
+                                     <div class="ms-4 text-start">
+                                         <p class="visa-service-label mb-0">5 Nights / 6 Days </p>
+                                         <h5 class="country-name mb-0">Singapore </h5>
+                                         <h5 class="text-price mb-3 small pt-2">Starting from AED 2,950 per person</h5>
+                                     </div>
+                                 </div>
+                                 <a href="https://wa.me/+971503139469" class="btn read-btn">Plan Your Trip <i
+                                         class="bi bi-arrow-right-circle-fill ms-1"></i></a>
+                             </div>
+                             <ul class="visa-list row row-cols-1 row-cols-md-2 g-2 mt-2">
+                                 <li class="col"><i class="bi bi-arrow-right-circle me-2"></i>City Tour
+                                 </li>
+                                 <li class="col"><i class="bi bi-arrow-right-circle me-2"></i> Sentosa</li>
+                                 <li class="col"><i class="bi bi-arrow-right-circle me-2"></i> Night Safari
+                                 </li>
+                                 <li class="col"><i class="bi bi-arrow-right-circle me-2"></i> Optional Universal Studios
+                                 </li>
+                             </ul>
+                         </div>
+                     </div>
+
+                     <!-- Malasysia -->
+                     <div class="swiper-slide">
+                         <div class="visa-card p-4">
+                             <div class="d-flex justify-content-between align-items-center mb-3">
+                                 <div class="d-flex align-items-center">
+                                     <img src="asset\image\packages\SightSeeingTBnhzM.png" class="flag-img me-2">
+                                     <div class="ms-4 text-start">
+                                         <p class="visa-service-label mb-0">4 Nights / 5 Days</p>
+                                         <h5 class="country-name mb-0">Malaysia </h5>
+                                         <h5 class="text-price mb-3 small pt-2">Starting from AED 1,850 per person</h5>
+                                     </div>
+                                 </div>
+                                 <a href="https://wa.me/+971503139469" class="btn read-btn">Plan Your Trip <i
+                                         class="bi bi-arrow-right-circle-fill ms-1"></i></a>
+                             </div>
+                             <ul class="visa-list row row-cols-1 row-cols-md-2 g-2 mt-2">
+                                 <li class="col"><i class="bi bi-arrow-right-circle me-2"></i>Kuala Lumpur </li>
+                                 <li class="col"><i class="bi bi-arrow-right-circle me-2"></i> City Tour </li>
+                                 <li class="col"><i class="bi bi-arrow-right-circle me-2"></i> Genting Highlands</li>
+
+                             </ul>
+                         </div>
+                     </div>
+
+                     <!-- Bali -->
+                     <div class="swiper-slide">
+                         <div class="visa-card p-4">
+                             <div class="d-flex justify-content-between align-items-center mb-3">
+                                 <div class="d-flex align-items-center">
+                                     <img src="asset\image\packages\SightSeeingfivXT9.png" class="flag-img me-2">
+                                     <div class="ms-4 text-start">
+                                         <p class="visa-service-label mb-0">5 Nights / 6 Days </p>
+                                         <h5 class="country-name mb-0">Bali </h5>
+                                         <h5 class="text-price mb-3 small pt-2">Starting from AED 2,499 per person</h5>
+                                     </div>
+                                 </div>
+                                 <a href="https://wa.me/+971503139469" class="btn read-btn">Plan Your Trip <i
+                                         class="bi bi-arrow-right-circle-fill ms-1"></i></a>
+                             </div>
+                             <ul class="visa-list row row-cols-1 row-cols-md-2 g-2 mt-2">
+                                 <li class="col"><i class="bi bi-arrow-right-circle me-2"></i>Private Pool Villa </li>
+                                 <li class="col"><i class="bi bi-arrow-right-circle me-2"></i> Island Tours </li>
+                                 <li class="col"><i class="bi bi-arrow-right-circle me-2"></i>Water Sports Options</li>
+
+                             </ul>
+                         </div>
+                     </div>
+
+                 </div>
+                 <!-- Pagination Dots -->
+                 <div class="swiper-pagination mt-4"></div>
+             </div>
+         </div>
+     </section>
+
+     <!-- Faqs  -->
+     <section class="py-5" style="background-color: #ffffff;">
+         <div class="container custom-container">
+
+             <!-- Top Title: FAQs -->
+             <div class="text-center mb-5">
+                 <h1 class="faq-header">FAQs</h1>
+             </div>
+
+             <!-- Navigation Container (The main white, shadowed box) -->
+             <div class="nav-container-wrapper">
+
+                 <!-- Bootstrap Pills Navigation -->
+                 <ul class="nav nav-pills nav-justified" id="faq-pills-tab" role="tablist">
+
+                     <li class="nav-item" role="presentation">
+                         <!-- Note: We are using data-bs-toggle="pill" for tab functionality on a single page -->
+                         <button class="nav-link active" id="pills-flight-tab" data-bs-toggle="pill"
+                             data-bs-target="#pills-flight" type="button" role="tab" aria-controls="pills-flight"
+                             aria-selected="false">
+                             Flight Booking
+                         </button>
+                     </li>
+
+                     <li class="nav-item" role="presentation">
+                         <button class="nav-link" id="pills-packages-tab" data-bs-toggle="pill"
+                             data-bs-target="#pills-packages" type="button" role="tab" aria-controls="pills-packages"
+                             aria-selected="false">
+                             Packages
+                         </button>
+                     </li>
+
+                     <li class="nav-item" role="presentation">
+                         <!-- This is the default active tab, styled with the custom gold/brown color -->
+                         <button class="nav-link" id="pills-visa-tab" data-bs-toggle="pill" data-bs-target="#pills-visa"
+                             type="button" role="tab" aria-controls="pills-visa" aria-selected="true">
+                             Visa
+                         </button>
+                     </li>
+
+                     <li class="nav-item" role="presentation">
+                         <button class="nav-link" id="pills-hotel-tab" data-bs-toggle="pill"
+                             data-bs-target="#pills-hotel" type="button" role="tab" aria-controls="pills-hotel"
+                             aria-selected="false">
+                             Hotel Booking
+                         </button>
+                     </li>
+
+                 </ul>
+             </div>
+
+             <!-- Tab Content Area -->
+             <div class="tab-content mt-5" id="faq-pills-content">
+
+                 <!-- FLIGHT BOOKING Tab Content -->
+                 <div class="tab-pane fade show active p-3 bg-white rounded-3 shadow-lg" id="pills-flight"
+                     role="tabpanel" aria-labelledby="pills-flight-tab">
+                     <h3 class="text-xl text-center text-gray-700">Flight Booking FAQs</h3>
+                 </div>
+
+                 <!-- VISA Tab Content (Default Active) -->
+                 <div class="tab-pane fade p-3 bg-white rounded-3 shadow-lg" id="pills-visa" role="tabpanel"
+                     aria-labelledby="pills-visa-tab">
+                     <h3 class="text-xl text-center text-gray-700">Visa Application FAQs</h3>
+                 </div>
+
+
+                 <!-- PACKAGES Tab Content -->
+                 <div class="tab-pane fade p-3 bg-white rounded-3 shadow-lg" id="pills-packages" role="tabpanel"
+                     aria-labelledby="pills-packages-tab">
+                     <h3 class="text-xl text-center text-gray-700">Package Packages FAQs</h3>
+                 </div>
+
+                 <!-- HOTEL BOOKING Tab Content -->
+                 <div class="tab-pane fade p-3 bg-white rounded-3 shadow-lg" id="pills-hotel" role="tabpanel"
+                     aria-labelledby="pills-hotel-tab">
+                     <h3 class="text-xl text-center text-gray-700">Hotel Booking FAQs</h3>
+                 </div>
+
+             </div>
+     </section>
+
+     <!-- Newsletter  -->
+     <section class="py-5" style=" background: linear-gradient(to bottom, #ffffff 0%, #eee9e5 100%);">
+         <div class="container custom-container">
+
+             <div class="row g-4 align-items-center">
+
+                 <div class="col-md-6 col-lg-5">
+                     <div class="mb-5">
+                         <h2 class="text-uppercase fw-normal mb-1"
+                             style="font-family: 'Merienda', cursive; color: #ab823e;">NEWSLETTER</h2>
+                         <p class="text-muted">Exclusive travel tips, giveaways, and more!</p>
+
+                         <form class="d-flex mt-3">
+                             <input type="email" class="form-control me-2" placeholder="Enter Email"
+                                 aria-label="Enter Email" style="  width: 250px;
+                            height: 47px;
+                            border: 2px solid #fff;
+                            border-radius: 16px;
+                            padding: 7px 35px 7px 12px;
+                            color: #9a9a9a;
+                            background-color: #e9e9e7;
+                            box-shadow: none !important;">
+                             <button type="submit" class="btn text-white"
+                                 style="background-color: #a47c3f;  border-radius: 16px; border-color: #a47c3f;">Join
+                                 Devotion</button>
+                         </form>
+                     </div>
+
+                     <ul class="list-unstyled">
+                         <li class="d-flex align-items-start mb-2">
+                             <i class="bi bi-geo-alt-fill me-3  " style="color: #ab823e; font-size: 1.2rem;"></i>
+                             <div>
+                                 <p class="mb-0">Aspect Tower, Bay Avenue - 2801,</p>
+                                 <p class="mb-0">A-Zone, Business Bay, Dubai UAE</p>
+                             </div>
+                         </li>
+                         <li class="d-flex align-items-start mb-2">
+                             <i class="bi bi-phone-fill me-3" style="color:#ab823e; font-size:1.2rem;"></i>
+                             <a href="tel:+971585775469" class="text-decoration-none text-dark">
+                                 +971 585775469
+                             </a>
+                         </li>
+
+                         <li class="d-flex align-items-start">
+                             <i class="bi bi-envelope-fill me-3" style="color:#ab823e; font-size:1.2rem;"></i>
+                             <a href="mailto:support@devotiontourism.com" class="text-decoration-none text-dark">
+                                 support@devotiontourism.com
+                             </a>
+                         </li>
+
+                     </ul>
+
+                 </div>
+
+                 <div class="col-md-6 col-lg-7 d-none d-md-block">
+                     <div class="row g-3">
+                         <div class="col-sm-6">
+                             <img src="asset\image\flightG.webp" class="img-fluid rounded"
+                                 alt="Woman winking with paper airplane">
+                         </div>
+                         <div class="col-sm-6">
+                             <img src="asset\image\333.webp" class="img-fluid rounded" alt="Woman walking in airport">
+                         </div>
+                     </div>
+                 </div>
+
+             </div>
+
+             <div class="row py-5">
+
+                 <div class="col-md-3 mb-4 mb-md-0">
+                     <h5 class="text-uppercase mb-3" style="color: #ab823e;">UAE Activities</h5>
+                     <ul class="list-unstyled" style="line-height: 2rem;">
+                         <li><a href="#" class="text-decoration-none text-muted">Desert Safari Dubai</a></li>
+                         <li><a href="#" class="text-decoration-none text-muted">Dubai City Tours</a></li>
+                         <li><a href="#" class="text-decoration-none text-muted">Dhow Cruise Dubai</a></li>
+                         <li><a href="#" class="text-decoration-none text-muted">Ras Al Khaimah Desert Safari</a></li>
+                         <li><a href="#" class="text-decoration-none text-muted">Dubai Parks</a></li>
+                         <li><a href="#" class="text-decoration-none text-muted">Burj Khalifa Tours</a></li>
+                         <li><a href="#" class="text-decoration-none text-muted">Abu Dhabi City Tours</a></li>
+                         <li><a href="#" class="text-decoration-none text-muted">Dubai Theme Park</a></li>
+                         <li><a href="#" class="text-decoration-none text-muted">Dubai Water Activities</a></li>
+                         <li><a href="#" class="text-decoration-none text-muted">Abu Dhabi Water Parks</a></li>
+                         <li><a href="#" class="text-decoration-none text-muted">Dubai Adventure Tours</a></li>
+                         <li><a href="#" class="text-decoration-none text-muted">Abu Dhabi Theme Parks</a></li>
+                         <li><a href="#" class="text-decoration-none text-muted">Dubai Helicopter Tours</a></li>
+                     </ul>
+                 </div>
+
+                 <div class="col-md-3 mb-4 mb-md-0">
+                     <h5 class="text-uppercase  mb-3" style="color: #ab823e;">Best Selling Activities</h5>
+                     <ul class="list-unstyled" style="line-height: 2rem;">
+                         <li><a href="#" class="text-decoration-none text-muted">Desert Safari</a></li>
+                         <li><a href="#" class="text-decoration-none text-muted">Abu Dhabi City Tour</a></li>
+                         <li><a href="#" class="text-decoration-none text-muted">Dubai Burj Khalifa</a></li>
+                         <li><a href="#" class="text-decoration-none text-muted">Global Village Dubai</a></li>
+                         <li><a href="#" class="text-decoration-none text-muted">Atlantis Aquaventure</a></li>
+                         <li><a href="#" class="text-decoration-none text-muted">The Green Planet Dubai</a></li>
+                         <li><a href="#" class="text-decoration-none text-muted">Dhow Cruise Dinner Marina</a></li>
+                         <li><a href="#" class="text-decoration-none text-muted">Ain Dubai</a></li>
+                         <li><a href="#" class="text-decoration-none text-muted">IMG Worlds of Adventure</a></li>
+                         <li><a href="#" class="text-decoration-none text-muted">Private Limousine Rental Dubai</a></li>
+                         <li><a href="#" class="text-decoration-none text-muted">Luxury Yacht Rental Dubai</a></li>
+                     </ul>
+                 </div>
+
+                 <div class="col-md-3 mb-4 mb-md-0">
+                     <h5 class="text-uppercase mb-3" style="color: #ab823e;">Thrilling Activities</h5>
+                     <ul class="list-unstyled" style="line-height: 2rem;">
+                         <li><a href="#" class="text-decoration-none text-muted">Private Limo</a></li>
+                         <li><a href="#" class="text-decoration-none text-muted">Dubai Mall Aquarium</a></li>
+                         <li><a href="#" class="text-decoration-none text-muted">Ski Dubai Tickets</a></li>
+                         <li><a href="#" class="text-decoration-none text-muted">Motiongate Dubai</a></li>
+                         <li><a href="#" class="text-decoration-none text-muted">Dhow Cruise</a></li>
+                         <li><a href="#" class="text-decoration-none text-muted">La Perle by Dragone Dubai</a></li>
+                         <li><a href="#" class="text-decoration-none text-muted">Ferrari World Abu Dhabi</a></li>
+                     </ul>
+                 </div>
+
+                 <div class="col-md-3">
+                     <h5 class="text-uppercase mb-3" style="color: #ab823e;">International Visa</h5>
+                     <ul class="list-unstyled" style="line-height: 2rem;">
+                         <li><a href="#" class="text-decoration-none text-muted">UK Visa</a></li>
+                         <li><a href="#" class="text-decoration-none text-muted">UAE Visa</a></li>
+                         <li><a href="#" class="text-decoration-none text-muted">UAE Visa Extension</a></li>
+                         <li><a href="#" class="text-decoration-none text-muted">Canada Visa</a></li>
+                         <li><a href="#" class="text-decoration-none text-muted">USA Visa</a></li>
+                         <li><a href="#" class="text-decoration-none text-muted">Turkey Visa</a></li>
+                         <li><a href="#" class="text-decoration-none text-muted">Egypt Visa</a></li>
+                         <li><a href="#" class="text-decoration-none text-muted">Singapore Visa</a></li>
+                         <li><a href="#" class="text-decoration-none text-muted">Thailand Visa</a></li>
+                         <li><a href="#" class="text-decoration-none text-muted">Malaysia Visa</a></li>
+                         <li><a href="#" class="text-decoration-none text-muted">Sri Lanka Visa</a></li>
+                     </ul>
+                 </div>
+
+             </div>
+
+         </div>
+     </section>
+
+     <?php include 'footer.php'; ?>
+
+     <!-- Start Sticky Social Icons -->
+     <div class="sticky-social d-none d-md-block">
+
+         <a href="mailto:support@devotiontourism.com" class="insta">
+             <img src="asset/image/icons/Group3.png" alt="Email" style="width:30px; height:30px; margin-right:6px;">
+             Email Us
+         </a>
+
+         <a href="tel:+ 97144576077" class="insta">
+             <img src="asset/image/icons/phone-bg.png" alt="Call Us" style="width:30px; height:30px; margin-right:6px;">
+             Call Us
+         </a>
+
+         <a href="https://www.instagram.com/devotiontourism/" target="_blank" class="insta">
+             <img src="asset/image/icons/insta-icon.png" alt="Instagram"
+                 style="width:30px; height:30px; margin-right:5px;">
+             Instagram
+         </a>
+
+         <a href="https://www.linkedin.com/company/92558268/admin/" target="_blank" class="insta">
+             <img src="asset/image/icons/linkedin-icon.png" alt="LinkedIn"
+                 style="width:30px; height:30px; margin-right:6px;">
+             LinkedIn
+         </a>
+
+         <a href="https://wa.me/971585775469" target="_blank" class="wa">
+             <img src="asset/image/icons/whatsapp.png" alt="WhatsApp" style="width:30px; height:30px; margin-right:6px;">
+             WhatsApp
+         </a>
+
+         <a href="https://www.facebook.com/profile.php?id=100091695764298" target="_blank" class="fb">
+             <img src="asset/image/icons/facebook-icon.png" alt="Facebook"
+                 style="width:30px; height:30px; margin-right:6px;">
+             Facebook
+         </a>
+
+
+         <a href="https://www.youtube.com/@Devotiontravelandtourism" target="_blank" class="yt">
+             <img src="asset/image/icons/youtube-icon.png" alt="YouTube"
+                 style="width:30px; height:30px; margin-right:6px;">
+             YouTube
+         </a>
+
+         <a href="https://pin.it/1O6HPbY" target="_blank" class="insta">
+             <img src="asset/image/icons/pintrest.png" alt="Pinterest"
+                 style="width:30px; height:30px; margin-right:6px;">
+             Pinterest
+         </a>
+
+     </div>
+     <!-- End Sticky Social Icons -->
+
+     <?php include 'includes/whatsapp.php'; ?>
+
+     <!-- Swiper JS -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+     <script src="asset/js/index.js"></script>
+     <!-- menu script -->
+     <script src="asset/js/menu.js"></script>
+     <script src="asset/js/script.js"></script>
+ </body>

@@ -18,13 +18,13 @@
     {
       "title": "Domestic Package",
       "categoryId": "domestic-tours",
-      "url": "packages.html?category=domestic-tours"
+      "url": "packages.php?category=domestic-tours"
     
     },
     {
       "title": "International Package",
       "categoryId": "international",
-      "url": "packages.html?category=international"
+      "url": "packages.php?category=international"
     }
   ]
 },
@@ -37,11 +37,11 @@
       "title": "Exclusives",
       "icon": "bi bi-bookmark",
       "children": [
-        { "title": "Corporate Tour and Events", "url": "corporate_tour.html" },
-        { "title": "Student Tour", "url": "student_tour.html" },
-        { "title": "Trade Fair and Exhibitions", "url": "trade_fair.html" },
-        { "title": "MICE", "url": "mice.html" },
-         { "title": "Destination Weddings", "url": "wedding.html" }
+        { "title": "Corporate Tour and Events", "url": "corporate_tour.php" },
+        { "title": "Student Tour", "url": "student_tour.php" },
+        { "title": "Trade Fair and Exhibitions", "url": "trade_fair.php" },
+        { "title": "MICE", "url": "mice.php" },
+         { "title": "Destination Weddings", "url": "wedding.php" }
       ]
     },
 

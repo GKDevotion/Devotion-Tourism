@@ -1,0 +1,630 @@
+ <?php
+$pageTitle = "Devotion Tourism - student Tour";
+include 'includes/head.php';
+?>
+ 
+  <style>
+
+    .corporate-service-card {
+      width: 100%;
+      object-fit: contain;
+      transition: transform 0.4s ease;
+    }
+
+    .corporate-service-card:hover .service-img {
+      transform: scale(1.15);
+    }
+
+    .package-card {
+      background: #fff;
+      border-radius: 14px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .package-card:hover {
+      border: 1px solid black;
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Image */
+    .package-img {
+      height: 220px;
+      object-fit: cover;
+    }
+
+    /* Duration badge */
+    .duration-badge {
+      position: absolute;
+      left: 12px;
+      bottom: 12px;
+      background: rgba(0, 0, 0, 0.75);
+      color: #fff;
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 20px;
+    }
+
+    .student-prev,
+    .student-next {
+      position: static;
+      /* VERY IMPORTANT */
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #ab823e;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .student-prev::after,
+    .student-next::after {
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .travel-card {
+      background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+        url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee");
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+    }
+
+    .travel-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at center, transparent 0%, #000 75%);
+      opacity: 0.4;
+    }
+
+    .btn-student {
+      background-color: #ab823e;
+      color: white;
+    }
+
+    .btn-student:hover {
+      background-color: #ab823e;
+      color: white;
+    }
+
+    .faq-section {
+      background: #f8f9fa;
+    }
+
+    .accordion-button {
+      font-weight: 600;
+    }
+
+    .accordion-button:not(.collapsed) {
+      background-color: #fff;
+      color: #ab823e;
+      box-shadow: none;
+    }
+
+    .accordion-item {
+      border: 1px solid #e5e5e5;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+  </style>
+ 
+<body>
+
+  <?php include 'navbar.php'; ?>
+
+  <style>
+    .student-section {
+      background: url("asset/image/contact-us/contactsPage.webp") no-repeat center center;
+      background-size: cover;
+      color: white;
+      /* Set text color to white for better contrast on a dark image */
+      padding: 150px 0;
+      justify-content: center;
+      /* Adjust padding as needed */
+      text-align: center;
+      position: relative;
+    }
+
+    /* Optional: Add an overlay to make the text more readable */
+    .student-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    .student-section .container {
+      position: relative;
+      /* Ensure container content is above the overlay */
+      z-index: 1;
+    }
+
+    .student-section h2 {
+      font-family: "Merienda", cursive;
+      font-size: 3rem;
+    }
+
+    @media (max-width: 991px) {
+      .student-section {
+        padding-top: 30vh;
+      }
+    }
+  </style>
+
+  <section class="student-section">
+    <div class="container">
+      <h2 class="display-4">Student Tour</h2>
+      <p class="lead">
+        Our Student Tour programs are designed to inspire learning through
+        travel and unforgettable real-world experiences. From educational city
+        tours and cultural exchange programs to adventure camps and industrial
+        visits, we ensure a perfect balance of fun, safety, and knowledge. We
+        manage travel, accommodation, meals, sightseeing, and expert
+        guidance—making every journey enriching and stress-free for students
+        and institutions alike. Explore, learn, and grow beyond the classroom
+        with us.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-5">
+    <div class="custom-container">
+      <!-- Title + Arrows Row -->
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h3 class="fw-semibold mb-0">Student Tour Packages</h3>
+
+        <div class="d-flex gap-2">
+          <div class="swiper-button-prev student-prev"></div>
+          <div class="swiper-button-next student-next"></div>
+        </div>
+      </div>
+
+      <!-- Swiper -->
+      <div class="swiper studentSwiper">
+        <div class="swiper-wrapper" id="studentPackageWrapper">
+          <!-- JS inject slides -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5 bg-light">
+    <div class="custom-container">
+      <div class="row g-4 align-items-stretch">
+        <!-- LEFT CARD -->
+        <div class="col-lg-6">
+          <div class="p-4 bg-white h-100 rounded-4 shadow-sm">
+            <h5 class="fw-bold mb-1">
+              Students' Special Tour Packages Coming Soon!
+            </h5>
+            <p class="text-muted mb-3">Click “Notify Me” to stay informed.</p>
+
+            <button class="btn btn-student fw-semibold mb-4">
+              <i class="bi bi-bell-fill"></i> Notify Me
+            </button>
+
+            <hr />
+
+            <h6 class="fw-bold mb-3">Contact Us Today!</h6>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <small class="text-muted">For Indian Guests</small>
+                <div class="mt-1">
+                  <i class="bi bi-telephone-outbound"></i>
+                  <strong>1800 313 5555</strong><br />
+                  <i class="bi bi-envelope"></i>
+                  <a href="#" class="text-dark">travel@devotiontourism.com</a>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <small class="text-muted">For Foreign Nationals / NRIs</small>
+                <div class="mt-1">
+                  <i class="bi bi-telephone-outbound"></i>
+                  <strong>+991 915 200 4511</strong><br />
+                  <i class="bi bi-envelope"></i>
+                  <a href="#" class="text-dark">inbound@devotiontourism.com</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT CARD -->
+        <div class="col-lg-6">
+          <div
+            class="travel-card text-white h-100 rounded-4 p-4 position-relative">
+            <div class="position-relative z-2">
+              <h4 class="fw-bold">
+                Mark the countries and states you’ve visited
+              </h4>
+              <p class="mb-4">
+                and share your travel milestones with your loved ones!
+              </p>
+
+              <button class="btn btn-student rounded-pill px-4 fw-semibold">
+                <i class="bi bi-play-fill"></i> Explore Your Travel Portfolio
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section py-5">
+    <div class="custom-container">
+      <!-- Section Heading -->
+      <div class="text-center mb-4">
+        <h2 class="fw-bold">Frequently Asked Questions</h2>
+        <p class="text-muted">
+          Everything you need to know about planning a sacred destination
+          wedding.
+        </p>
+      </div>
+
+      <!-- FAQ Accordion -->
+      <div class="accordion accordion-flush" id="faqAccordion">
+        <!-- Item 1 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq1">
+              1. What are student tour packages?
+            </button>
+          </h2>
+          <div
+            id="faq1"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Student tour packages are specially designed travel programs for
+              school and college students that combine education, sightseeing,
+              cultural experiences, and fun activities in a safe and
+              well-planned itinerary.
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq2">
+              2. Who can join a student tour?
+            </button>
+          </h2>
+          <div
+            id="faq2"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Our student tours are ideal for school students, college
+              students, universities, coaching institutes, and educational
+              groups, typically aged 10 to 25 years. Customized tours are also
+              available for specific age groups.
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq3">
+              3. Are student tours safe?
+            </button>
+          </h2>
+          <div
+            id="faq3"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Yes, student safety is our top priority. All tours include
+              experienced tour leaders, verified accommodations, reliable
+              transport, emergency support, and group supervision throughout
+              the journey.
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq4">
+              4. What destinations are covered in student tours?
+            </button>
+          </h2>
+          <div
+            id="faq4"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              We offer both domestic and international student tours,
+              including destinations such as Singapore, Dubai, Thailand,
+              Vietnam, Europe, and popular educational hubs in India.
+              Destinations can be customized based on academic goals and
+              budget.
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq5">
+              5. What is included in a student tour package?
+            </button>
+          </h2>
+          <div
+            id="faq5"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              A typical student tour package includes:
+              <ul class="mb-0 ps-3">
+                <li>Accommodation</li>
+                <li>Meals (as per itinerary)</li>
+                <li>Sightseeing & activities</li>
+                <li>Transportation</li>
+                <li>Tour manager / guide</li>
+                <li>Travel insurance (for international tours)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq6">
+              6. Are educational visits included in the tours?
+            </button>
+          </h2>
+          <div
+            id="faq6"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Yes. Student tours often include universities, science museums,
+              innovation centers, cultural heritage sites, industrial visits,
+              and workshops, depending on the tour theme.
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 7 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq7">
+              7. Can the tour itinerary be customized?
+            </button>
+          </h2>
+          <div
+            id="faq7"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Absolutely! We offer fully customizable itineraries based on the
+              institution’s requirements, duration, subjects of interest, and
+              budget.
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 8 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq8">
+              8. Do students need a passport and visa?
+            </button>
+          </h2>
+          <div
+            id="faq8"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              For international tours, a valid passport and visa are required.
+              Our team provides complete visa guidance and documentation
+              support to make the process hassle-free.
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 9 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq9">
+              9. Are teachers or group leaders allowed to accompany students?
+            </button>
+          </h2>
+          <div
+            id="faq9"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Yes, teachers, professors, or group coordinators are welcome and
+              encouraged to accompany students. Special benefits may apply for
+              group leaders.
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 10 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq10">
+              10. How many students are required to form a group?
+            </button>
+          </h2>
+          <div
+            id="faq10"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Group size usually starts from 10–15 students, but this may vary
+              depending on the destination and travel plan.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <?php include 'footer.php'; ?>
+
+  <?php include 'includes/whatsapp.php'; ?>
+
+  <!-- menu script -->
+  <script src="asset/js/menu.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    fetch("asset/json/packages.json")
+      .then((res) => res.json())
+      .then((data) => {
+        const wrapper = document.getElementById("studentPackageWrapper");
+
+        const studentCategory = data.categories.find(
+          (cat) => cat.id === "student-tours"
+        );
+
+        if (!studentCategory) {
+          wrapper.innerHTML = `<p class="text-muted">No student category found</p>`;
+          return;
+        }
+
+        // ✅ Collect ALL packages from child categories
+        let allPackages = [];
+
+        studentCategory.children.forEach((child) => {
+          if (child.packages && child.packages.length) {
+            allPackages.push(...child.packages);
+          }
+        });
+
+        if (!allPackages.length) {
+          wrapper.innerHTML = `<p class="text-muted">No student packages found</p>`;
+          return;
+        }
+
+        // ✅ Render packages
+        allPackages.forEach((pkg) => {
+          wrapper.innerHTML += `
+      <div class="swiper-slide">
+  <div class="package-card mt-3 h-100 shadow-sm">
+    
+    <div>
+    <!-- Image -->
+    <a href="package-details.html?id=${
+      pkg.id
+    }" class="position-relative d-block">
+      <img
+        src="${pkg.bannerImage}"
+        class="w-100 package-img"
+        alt="${pkg.title}"
+      />
+
+      <!-- Duration Badge -->
+      <span class="badge duration-badge">
+        ${pkg.duration}
+      </span>
+    </a>
+    </div>
+
+    <!-- Content -->
+    <div class="p-3">
+      <h6 class="fw-semibold mb-1">${pkg.title}</h6>
+ 
+      <div class="fw-bold text-dark">
+        AED ${pkg.startingPrice.toLocaleString()}
+        <span class="fw-normal text-muted small">per person</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+      `;
+        });
+
+        // ✅ Swiper init
+        new Swiper(".studentSwiper", {
+          slidesPerView: 3,
+          spaceBetween: 20,
+          loop: true, // 🔁 required for smooth auto sliding
+
+          autoplay: {
+            delay: 3000, // ⏱️ 3 seconds
+            disableOnInteraction: false, // keeps autoplay after arrow click
+            pauseOnMouseEnter: true, // ⏸️ pause on hover
+          },
+          loop: true,
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          breakpoints: {
+            0: {
+              slidesPerView: 1
+            },
+            576: {
+              slidesPerView: 2
+            },
+            992: {
+              slidesPerView: 3
+            },
+          },
+        });
+      })
+      .catch((err) => console.error("JSON Load Error:", err));
+  </script>
+  
+</body>
+
+ 
