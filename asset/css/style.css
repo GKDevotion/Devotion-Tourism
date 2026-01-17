@@ -642,15 +642,7 @@ body {
     margin-top: 5px;
   }
 
-  /* Tagline */
-  .hero-tagline {
-    font-size: 16px;
-    width: 100%;
-    margin-top: 15px;
-    text-align: center;
-    padding: 0 10px;
-    line-height: 1.3;
-  }
+   
 }
 
 /* Pagination dots */
@@ -1256,7 +1248,7 @@ body {
   }
 
   .extra-gap {
-    gap: 2rem !important;
+    gap: 5rem !important;
   }
 }
 
@@ -1306,7 +1298,7 @@ body {
 
   .hand.second {
     width: 2px;
-    height: 52%;
+    height: 42%;
   }
 
   .extra-gap {
@@ -1348,11 +1340,7 @@ body {
     font-size: 11px;
   }
 
-  .hero-tagline {
-    font-size: 22px;
-    padding: 3px 15px;
-    line-height: 1.3;
-  }
+   
 }
 
 /* ===========================
@@ -1399,10 +1387,8 @@ body {
   }
 
   /* Tagline */
-  .hero-tagline {
-    font-size: 16px;
-    width: 100%;
-    margin-top: 15px;
+  .hero-tagline { 
+    width: 100%; 
     text-align: center;
     padding: 0 10px;
     line-height: 1.3;
@@ -1944,20 +1930,15 @@ body {
     height: 50px;
   }
 
-  .hero-tagline {
-    font-size: 1.6rem;
-  }
+   
 }
 
 @media (max-width: 480px) {
   .clock-img {
-    width: 40px;
-    height: 40px;
+    width: 70px;
+    height: 70px;
   }
-
-  .hero-tagline {
-    font-size: 1.3rem;
-  }
+ 
 }
 
 /* Style for the main tagline */
