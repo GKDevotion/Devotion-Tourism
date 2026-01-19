@@ -2,8 +2,7 @@
 $pageTitle = "Devotion Tourism - Trade Fair and Exhibitions";
 include 'includes/head.php';
 ?>
-
-
+ 
 <style>
   .trade-fair-section {
     background: #fff;
@@ -109,8 +108,7 @@ include 'includes/head.php';
     background-color: #ab823e;
     color: white;
   }
-</style>
-
+</style> 
 
 <body>
 

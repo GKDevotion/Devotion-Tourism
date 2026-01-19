@@ -167,7 +167,12 @@ include 'includes/head.php';
                     height="20"
                     alt="Phone" />
                 </div>
-                <p class="mb-0 text-muted w-100">+971 58 577 5469</p>
+                <a
+                  href="tel:+971 585775469"
+                  class="text-muted mb-0 text-decoration-none w-100">
+                  +971 58 577 5469
+                </a>
+                <!-- <p class="mb-0 text-muted w-100">+971 58 577 5469</p> -->
               </div>
 
               <!-- Email -->
@@ -197,9 +202,9 @@ include 'includes/head.php';
                     alt="WhatsApp" />
                 </div>
                 <a
-                  href="https://wa.me/971585775469"
+                  href="https://wa.me/971585775469?text=Hi%20Devotion%20Tourism!%20I%20need%20more%20info%20about%20your%20services"
                   target="_blank"
-                  class="text-muted text-decoration-none w-100">
+                  class="text-muted text-decoration-none w-100" aria-label="Chat on WhatsApp">
                   Whatsapp
                 </a>
               </div>
