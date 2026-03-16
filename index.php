@@ -151,16 +151,16 @@
 
                  <div class="swiper-wrapper">
                      <div class="swiper-slide place-card" data-index="0">
-                         <img src="asset/image/visa/1001.jpeg" alt="">
+                         <img src="asset/image/visa/1001.jpeg" alt="flyer image">
                      </div>
                      <div class="swiper-slide place-card" data-index="1">
-                         <img src="asset/image/visa/1002.jpeg" alt="">
+                         <img src="asset/image/visa/1002.jpeg" alt="flyer image">
                      </div>
                      <div class="swiper-slide place-card" data-index="2">
-                         <img src="asset/image/visa/1003.jpeg" alt="">
+                         <img src="asset/image/visa/1003.jpeg" alt="flyer image">
                      </div>
                      <div class="swiper-slide place-card" data-index="3">
-                         <img src="asset/image/visa/1004.jpeg" alt="">
+                         <img src="asset/image/visa/1004.jpeg" alt="flyer image">
                      </div>
                  </div>
              </div>
@@ -484,8 +484,7 @@
 
      <!-- Packages  -->
      <section class="py-5" style="background:#111827;">
-         <div class="container text-center">
-
+         <div class="container text-center"> 
 
              <h2 class="text-white mb-5" style="color: #a47c3f; font-family: 'Merienda', cursive; ">Packages</h2>
 
@@ -506,7 +505,7 @@
                                          <h5 class="text-price mb-3 small pt-2">Starting from AED 2,299 per person</h5>
                                      </div>
                                  </div>
-                                 <a href="https://wa.me/+971503139469" class="btn read-btn">Plan Your Trip <i
+                                 <a href="https://wa.me/+971562184475" class="btn read-btn">Plan Your Trip <i
                                          class="bi bi-arrow-right-circle-fill ms-1"></i></a>
                              </div>
 
@@ -532,7 +531,7 @@
                                          <h5 class="text-price mb-3 small pt-2">Starting from AED 1,799 per person</h5>
                                      </div>
                                  </div>
-                                 <a href="https://wa.me/+971503139469" class="btn read-btn">Plan Your Trip <i
+                                 <a href="https://wa.me/+971562184475" class="btn read-btn">Plan Your Trip <i
                                          class="bi bi-arrow-right-circle-fill ms-1"></i></a>
                              </div>
                              <ul class="visa-list row row-cols-1 row-cols-md-2 g-2 mt-2">
@@ -557,7 +556,7 @@
                                          <h5 class="text-price mb-3 small pt-2">Starting from AED 1,799 per person</h5>
                                      </div>
                                  </div>
-                                 <a href="https://wa.me/+971503139469" class="btn read-btn">Plan Your Trip <i
+                                 <a href="https://wa.me/+971562184475" class="btn read-btn">Plan Your Trip <i
                                          class="bi bi-arrow-right-circle-fill ms-1"></i></a>
                              </div>
                              <ul class="visa-list row row-cols-1 row-cols-md-2 g-2 mt-2">
@@ -581,7 +580,7 @@
                                          <h5 class="text-price mb-3 small pt-2">Starting from AED 2,950 per person</h5>
                                      </div>
                                  </div>
-                                 <a href="https://wa.me/+971503139469" class="btn read-btn">Plan Your Trip <i
+                                 <a href="https://wa.me/+971562184475" class="btn read-btn">Plan Your Trip <i
                                          class="bi bi-arrow-right-circle-fill ms-1"></i></a>
                              </div>
                              <ul class="visa-list row row-cols-1 row-cols-md-2 g-2 mt-2">
@@ -608,7 +607,7 @@
                                          <h5 class="text-price mb-3 small pt-2">Starting from AED 1,850 per person</h5>
                                      </div>
                                  </div>
-                                 <a href="https://wa.me/+971503139469" class="btn read-btn">Plan Your Trip <i
+                                 <a href="https://wa.me/+971562184475" class="btn read-btn">Plan Your Trip <i
                                          class="bi bi-arrow-right-circle-fill ms-1"></i></a>
                              </div>
                              <ul class="visa-list row row-cols-1 row-cols-md-2 g-2 mt-2">
@@ -632,7 +631,7 @@
                                          <h5 class="text-price mb-3 small pt-2">Starting from AED 2,499 per person</h5>
                                      </div>
                                  </div>
-                                 <a href="https://wa.me/+971503139469" class="btn read-btn">Plan Your Trip <i
+                                 <a href="https://wa.me/+971562184475" class="btn read-btn">Plan Your Trip <i
                                          class="bi bi-arrow-right-circle-fill ms-1"></i></a>
                              </div>
                              <ul class="visa-list row row-cols-1 row-cols-md-2 g-2 mt-2">
@@ -771,8 +770,8 @@
                          </li>
                          <li class="d-flex align-items-start mb-2">
                              <i class="bi bi-phone-fill me-3" style="color:#ab823e; font-size:1.2rem;"></i>
-                             <a href="tel:+971585775469" class="text-decoration-none text-dark">
-                                 +971 585775469
+                             <a href="tel:+971562184475" class="text-decoration-none text-dark">
+                                 +971 562184475
                              </a>
                          </li>
 
@@ -884,7 +883,7 @@
              Email Us
          </a>
 
-         <a href="tel:+ 97144576077" class="insta">
+         <a href="tel:+ 971562184475" class="insta">
              <img src="asset/image/icons/phone-bg.png" alt="Call Us" style="width:30px; height:30px; margin-right:6px;">
              Call Us
          </a>
@@ -901,7 +900,7 @@
              LinkedIn
          </a>
 
-         <a href="https://wa.me/971585775469" target="_blank" class="wa">
+         <a href="https://wa.me/971562184475?text=Hi%20Devotion%20Tourism!%20I%20need%20more%20info%20about%20your%20services" target="_blank" class="wa" aria-label="Chat on WhatsApp">
              <img src="asset/image/icons/whatsapp.png" alt="WhatsApp" style="width:30px; height:30px; margin-right:6px;">
              WhatsApp
          </a>
@@ -911,8 +910,7 @@
                  style="width:30px; height:30px; margin-right:6px;">
              Facebook
          </a>
-
-
+ 
          <a href="https://www.youtube.com/@Devotiontravelandtourism" target="_blank" class="yt">
              <img src="asset/image/icons/youtube-icon.png" alt="YouTube"
                  style="width:30px; height:30px; margin-right:6px;">

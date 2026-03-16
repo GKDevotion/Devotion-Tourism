@@ -168,9 +168,9 @@ include 'includes/head.php';
                     alt="Phone" />
                 </div>
                 <a
-                  href="tel:+971 585775469"
+                  href="tel:+971 562184475"
                   class="text-muted mb-0 text-decoration-none w-100">
-                  +971 58 577 5469
+                  +971 562184475
                 </a>
                 <!-- <p class="mb-0 text-muted w-100">+971 58 577 5469</p> -->
               </div>

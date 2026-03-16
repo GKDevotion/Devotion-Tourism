@@ -35,9 +35,9 @@
 
                         <span>
                             <i class="bi bi-phone"></i>
-                            <a href="tel:+971585775469"
+                            <a href="tel:+971562184475"
                                 class="text-decoration-none text-reset">
-                                +971 585775469
+                                +971 562184475
                             </a>
                         </span>
 
