@@ -1,3 +1,6 @@
+<?php
+include_once "helper/config.php"
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -78,4 +81,8 @@
             }
         }
     </style>
+    
+    <script>
+    const phone = "<?= str_replace(['tel:+','+',' '],'', getCall()); ?>";
+    </script>
 </head>

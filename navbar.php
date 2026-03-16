@@ -35,9 +35,9 @@
 
                         <span>
                             <i class="bi bi-phone"></i>
-                            <a href="tel:+971562184475"
+                            <a href="tel:<?= getCall(); ?>"
                                 class="text-decoration-none text-reset">
-                                +971 562184475
+                                <?= getCall(); ?>
                             </a>
                         </span>
 

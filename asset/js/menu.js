@@ -1,14 +1,14 @@
 fetch("asset/json/menu.json")
   .then((res) => res.json())
   .then((data) => {
-    const menuContainer = document.getElementById("main-menu");
-
+    const menuContainer = document.getElementById("main-menu"); 
+ 
     const renderMenu = (menu, isSub = false) => {
       return menu.map((item) => {
         if (!item.children) {
           return `
             <li class="nav-item ${isSub ? "" : ""}">
-              <a href="${item.url}" class="${
+              <a href="https://wa.me/${phone}?text=Hi%20Devotion%20Tourism!%20I%20need%20more%20info%20about%20your%20services" class="${
             isSub ? "dropdown-item" : "nav-link fw-bold"
           }">  ${item.icon ? `<i class="${item.icon} me-2"></i>` : ""}${
             item.title

@@ -168,9 +168,9 @@ include 'includes/head.php';
                     alt="Phone" />
                 </div>
                 <a
-                  href="tel:+971 562184475"
+                  href="tel:<?= getCall(); ?>"
                   class="text-muted mb-0 text-decoration-none w-100">
-                  +971 562184475
+                  <?= getCall(); ?>
                 </a>
                 <!-- <p class="mb-0 text-muted w-100">+971 58 577 5469</p> -->
               </div>
@@ -202,7 +202,7 @@ include 'includes/head.php';
                     alt="WhatsApp" />
                 </div>
                 <a
-                  href="https://wa.me/971585775469?text=Hi%20Devotion%20Tourism!%20I%20need%20more%20info%20about%20your%20services"
+                  href="https://wa.me/<?= str_replace(['tel:+','+',' '],'', getCall()); ?>?text=Hi%20Devotion%20Tourism!%20I%20need%20more%20info%20about%20your%20services"
                   target="_blank"
                   class="text-muted text-decoration-none w-100" aria-label="Chat on WhatsApp">
                   Whatsapp

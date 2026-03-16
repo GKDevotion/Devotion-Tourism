@@ -21,7 +21,7 @@
                  <div class="d-flex justify-content-center" style="gap: 3rem; margin-bottom: 0.5rem;">
 
 
-                     <a href="tel:+971562184475"
+                     <a href="tel:<?= getCall(); ?>"
                          class="d-flex align-items-center justify-content-center gap-2 contact-item"
                          style="text-decoration: none;">
                          <div class="icon-circle d-flex align-items-center justify-content-center">

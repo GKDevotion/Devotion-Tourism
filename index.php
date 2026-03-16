@@ -505,7 +505,7 @@
                                          <h5 class="text-price mb-3 small pt-2">Starting from AED 2,299 per person</h5>
                                      </div>
                                  </div>
-                                 <a href="https://wa.me/+971562184475" class="btn read-btn">Plan Your Trip <i
+                                 <a href="https://wa.me/<?= str_replace(['tel:+','+',' '],'', getCall()); ?>" class="btn read-btn">Plan Your Trip <i
                                          class="bi bi-arrow-right-circle-fill ms-1"></i></a>
                              </div>
 
@@ -531,7 +531,7 @@
                                          <h5 class="text-price mb-3 small pt-2">Starting from AED 1,799 per person</h5>
                                      </div>
                                  </div>
-                                 <a href="https://wa.me/+971562184475" class="btn read-btn">Plan Your Trip <i
+                                 <a href="https://wa.me/<?= str_replace(['tel:+','+',' '],'', getCall()); ?>" class="btn read-btn">Plan Your Trip <i
                                          class="bi bi-arrow-right-circle-fill ms-1"></i></a>
                              </div>
                              <ul class="visa-list row row-cols-1 row-cols-md-2 g-2 mt-2">
@@ -556,7 +556,7 @@
                                          <h5 class="text-price mb-3 small pt-2">Starting from AED 1,799 per person</h5>
                                      </div>
                                  </div>
-                                 <a href="https://wa.me/+971562184475" class="btn read-btn">Plan Your Trip <i
+                                 <a href="https://wa.me/<?= str_replace(['tel:+','+',' '],'', getCall()); ?>" class="btn read-btn">Plan Your Trip <i
                                          class="bi bi-arrow-right-circle-fill ms-1"></i></a>
                              </div>
                              <ul class="visa-list row row-cols-1 row-cols-md-2 g-2 mt-2">
@@ -580,7 +580,7 @@
                                          <h5 class="text-price mb-3 small pt-2">Starting from AED 2,950 per person</h5>
                                      </div>
                                  </div>
-                                 <a href="https://wa.me/+971562184475" class="btn read-btn">Plan Your Trip <i
+                                 <a href="https://wa.me/<?= str_replace(['tel:+','+',' '],'', getCall()); ?>" class="btn read-btn">Plan Your Trip <i
                                          class="bi bi-arrow-right-circle-fill ms-1"></i></a>
                              </div>
                              <ul class="visa-list row row-cols-1 row-cols-md-2 g-2 mt-2">
@@ -607,7 +607,7 @@
                                          <h5 class="text-price mb-3 small pt-2">Starting from AED 1,850 per person</h5>
                                      </div>
                                  </div>
-                                 <a href="https://wa.me/+971562184475" class="btn read-btn">Plan Your Trip <i
+                                 <a href="https://wa.me/<?= str_replace(['tel:+','+',' '],'', getCall()); ?>" class="btn read-btn">Plan Your Trip <i
                                          class="bi bi-arrow-right-circle-fill ms-1"></i></a>
                              </div>
                              <ul class="visa-list row row-cols-1 row-cols-md-2 g-2 mt-2">
@@ -631,7 +631,7 @@
                                          <h5 class="text-price mb-3 small pt-2">Starting from AED 2,499 per person</h5>
                                      </div>
                                  </div>
-                                 <a href="https://wa.me/+971562184475" class="btn read-btn">Plan Your Trip <i
+                                 <a href="https://wa.me/<?= str_replace(['tel:+','+',' '],'', getCall()); ?>" class="btn read-btn">Plan Your Trip <i
                                          class="bi bi-arrow-right-circle-fill ms-1"></i></a>
                              </div>
                              <ul class="visa-list row row-cols-1 row-cols-md-2 g-2 mt-2">
@@ -770,8 +770,8 @@
                          </li>
                          <li class="d-flex align-items-start mb-2">
                              <i class="bi bi-phone-fill me-3" style="color:#ab823e; font-size:1.2rem;"></i>
-                             <a href="tel:+971562184475" class="text-decoration-none text-dark">
-                                 +971 562184475
+                             <a href="tel:<?= getCall(); ?>" class="text-decoration-none text-dark">
+                                 <?= getCall(); ?>
                              </a>
                          </li>
 
@@ -883,7 +883,7 @@
              Email Us
          </a>
 
-         <a href="tel:+ 971562184475" class="insta">
+         <a href="tel:<?= getCall(); ?>" class="insta">
              <img src="asset/image/icons/phone-bg.png" alt="Call Us" style="width:30px; height:30px; margin-right:6px;">
              Call Us
          </a>
@@ -900,7 +900,7 @@
              LinkedIn
          </a>
 
-         <a href="https://wa.me/971562184475?text=Hi%20Devotion%20Tourism!%20I%20need%20more%20info%20about%20your%20services" target="_blank" class="wa" aria-label="Chat on WhatsApp">
+         <a href="https://wa.me/<?= str_replace(['tel:+','+',' '],'', getCall()); ?>?text=Hi%20Devotion%20Tourism!%20I%20need%20more%20info%20about%20your%20services" target="_blank" class="wa" aria-label="Chat on WhatsApp">
              <img src="asset/image/icons/whatsapp.png" alt="WhatsApp" style="width:30px; height:30px; margin-right:6px;">
              WhatsApp
          </a>
